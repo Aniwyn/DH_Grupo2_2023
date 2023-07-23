@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-# Tecnoweb
+# NombrePagina (?
 
-Proyecto correspondiente a el sprint 1 de Digital House
+?
 
 # Temática del sitio
 
@@ -26,14 +25,13 @@ Proyecto correspondiente a el sprint 1 de Digital House
 
 ## Home
 
-![Wireframe de home.](https://github.com/Aniwyn/grupo_1_prueba/blob/master/wireframes/home.jpeg)
+![Wireframe de home.]()
 
 ## Detalle producto
 
 
 
 ## Registro
-
 
 
 ## Login
