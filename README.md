@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tecnoweb
 
 Proyecto correspondiente a el sprint 1 de Digital House
