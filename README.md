@@ -2,14 +2,14 @@
 
 ?
 
-# Temática del sitio
+## Temática del sitio
 
 ?
-# Público objetivo
+## Público objetivo
 
 ?
 
-# Sitios de referencia
+## Sitios de referencia
 
 - GitHub [(github.com)](https://github.com/signup): Tomamos inspiracion de su formulario de registro.
 - Fan Gamer [(fangamer.com)](https://www.fangamer.com/): Nos intereso la estética de su header y las dropdown list.
@@ -19,26 +19,28 @@
 - Pixel Empire [(pixelempire.com)](https://www.pixelempire.com/): Nos gusto su header y su estética general.
 - CD Keys [(cdkeys.com)](https://www.cdkeys.com/): Nos llamo la atencios su esquemas de colores, los blur que aplican y su armonia en general.
 
-# Integrantes del equipo
+## 🚀 Integrantes del equipo
 
 - **Tiano, Kevin Paul**: 
-- **Tiano, Jonathan Alexis**: 
+- [@Aniwyn](https://github.com/Aniwyn): Hola soy **Jonathan Alexis Tiano**, estudio ingeniería informática en la UNJu, me encanta leer literatura fantastica y jugar en la pc, me gusta el diseño y la programación.
 - **Sales Vargas, Pablo Pedro**:
 - **Blas, Yamila**:
 - **Mamani, Leonel Jose Maria**:
 
-# Wireframe
+## Wireframes
 
-## Home
+### Home
 
-![Wireframe de home.]()
+https://github.com/Aniwyn
 
-## Detalle producto
+### Detalle producto
 
+https://github.com/Aniwyn
 
+### Registro
 
-## Registro
+https://github.com/Aniwyn
 
+### Login
 
-## Login
-
+https://github.com/Aniwyn
