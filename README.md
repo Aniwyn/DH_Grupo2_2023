@@ -27,7 +27,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 
 ## 🚀 Integrantes del equipo
 
-- [@KevinP-T](https://github.com/KevinP-T): Me presento soy **Tiano, Kevin Paul** aparte de programar mis hobbys son los juegos RPG, las buenas historias y el basquet!
+- [@KevinP-T](https://github.com/KevinP-T): Me presento soy **Kevin Paul Tiano** aparte de programar mis hobbys son los juegos RPG, las buenas historias y el basquet!
 - [@Aniwyn](https://github.com/Aniwyn): Hola soy **Jonathan Alexis Tiano**, estudio ingeniería informática en la UNJu, me encanta leer literatura fantastica y jugar en la pc, me gusta el diseño y la programación.
 - [@pablo-sales](https://github.com/pablo-sales): ... **Sales Vargas, Pablo Pedro** ...
 - [@Yamilablas](https://github.com/Yamilablas): ... **Blas, Yamila** ...
