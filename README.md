@@ -39,7 +39,7 @@ https://github.com/Aniwyn
 
 ### Registro
 
-https://github.com/Aniwyn
+![Formulario de registro](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/wireframes/Formulario%20de%20registro.png)
 
 ### Login
 
