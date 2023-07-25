@@ -7,7 +7,7 @@ En (nombre >.<), revivimos la magia de los clásicos con consolas y juegos que m
 
 El amor por los videojuegos va más allá de jugarlos, por eso nuestra sección de merchandising te ofrece una amplia gama de productos inspirados en tus franquicias favoritas, desde camisetas y sudaderas con diseños únicos hasta tazas, llaveros y posters. Aquí encontrarás la manera perfecta de mostrar tu pasión por los videojuegos al mundo.
 
-## Público objetivo
+## 👨‍👩‍👧‍👦 Público objetivo
 
 Nuestra tienda mezcla a diversidad de personas entusiastas del gaming, desde aquellos que buscan la nostalgia de los videojuegos retro hasta los que buscan estar a la vanguardia. ofrecemos una experiencia única tanto para jugadores apasionados como para quienes deseen encontrar regalos únicos y exclusivos relacionados con el mundo de los videojuegos.
 
@@ -15,7 +15,7 @@ Apuntamos a aquellas personas amantes de nostalgia y coleccionistas que sienten 
 
 Tambien estamos comprometidos con entusiastas de los videojuegos actuales, personas que disfrutan de los últimos lanzamientos y tambien aquellas personas que se sienten atraídas por el merchandising y productos relacionados con sus videojuegos favoritos.
 
-## Sitios de referencia
+## 💻 Sitios de referencia
 
 - GitHub [(github.com)](https://github.com/signup): Tomamos inspiracion de su formulario de registro.
 - Fan Gamer [(fangamer.com)](https://www.fangamer.com/): Nos intereso la estética de su header y las dropdown list.
@@ -33,7 +33,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 - [@Yamilablas](https://github.com/Yamilablas): Hola, soy **Blas, Yamila Antonela**, soy estudiante del secundario, mi pasión es el arte y la música, y aspiro a la carrera de Administrción de Empresas.
 - [@LeoosMG](https://github.com/LeoosMG): ... **Mamani, Leonel Jose Maria** ...
 
-## Wireframes
+## 🖼️ Wireframes
 
 ### Home
 
