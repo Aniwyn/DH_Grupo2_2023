@@ -37,7 +37,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 
 ### Home
 
-![]()
+![Home](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/wireframes/Home.png)
 
 ### Detalle producto
 
