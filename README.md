@@ -30,7 +30,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 
 - [@KevinP-T](https://github.com/KevinP-T): Me presento soy **Kevin Paul Tiano** aparte de programar mis hobbys son los juegos RPG, las buenas historias y el basquet!
 - [@Aniwyn](https://github.com/Aniwyn): Hola soy **Jonathan Alexis Tiano**, estudio ingeniería informática en la UNJu, me encanta leer literatura fantastica y jugar en la pc, me gusta el diseño y la programación.
-- [@pablo-sales](https://github.com/pablo-sales): ... **Sales Vargas, Pablo Pedro** ...
+- [@pablo-sales](https://github.com/pablo-sales): Hola mi nombre es, **Sales Vargas, Pablo Pedro**, ingeniero informatico en proceso, me gusta el futbol, el judo, pensar, escribir y leer de ciencia o filosofia. Mi hija es un felino. 
 - [@Yamilablas](https://github.com/Yamilablas): Hola, soy **Blas, Yamila Antonela**, soy estudiante del secundario, mi pasión es el arte y la música, y aspiro a la carrera de Administrción de Empresas.
 - [@LeoosMG](https://github.com/LeoosMG): Hola soy **Mamani, Leonel Jose Maria**, estudio ingeniería informática y tecnicatura integral en desarrollo de videoJuegos, me gusta leer y por el momento estoy enfocado en poder dedicarme a la programación.
 
@@ -54,4 +54,4 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 
 ### login
 
-![]()
+![Login](https://github.com/Aniwyn/DH_Grupo2_2023/tree/main#login)
