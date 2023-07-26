@@ -36,9 +36,13 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 - [@Yamilablas](https://github.com/Yamilablas): Hola, soy **Blas, Yamila Antonela**, soy estudiante del secundario, mi pasión es el arte y la música, y aspiro a la carrera de Administrción de Empresas.
 - [@LeoosMG](https://github.com/LeoosMG): Hola soy **Mamani, Leonel Jose Maria**, estudio ingeniería informática y tecnicatura integral en desarrollo de videoJuegos, me gusta leer y por el momento estoy enfocado en poder dedicarme a la programación.
 
-# 🎨 Paleta de colores
+## 🎨 Paleta de colores
 
 ![Paleta de colores](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/color_palette.png)
+
+## 🔠 Fuentes
+
+![Fuente](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/Font.png)
 
 ## 🖼️ Wireframes
 
