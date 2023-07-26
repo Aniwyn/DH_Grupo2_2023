@@ -24,6 +24,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 - Develver digital [(devolverdigital.com)](https://www.devolverdigital.com/): Nos llamo la atención las cards que utilizan para sus productos.
 - Pixel Empire [(pixelempire.com)](https://www.pixelempire.com/): Nos gusto su header y su estética general.
 - CD Keys [(cdkeys.com)](https://www.cdkeys.com/): Nos llamo la atencios su esquemas de colores, los blur que aplican y su armonia en general.
+- Mercado Libre [(mercadolibre.com)](https://www.mercadolibre.com.ar/): Nos gusto su interfaz amigable respecto a descripcion del producto
 
 ## 🚀 Integrantes del equipo
 
@@ -31,7 +32,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 - [@Aniwyn](https://github.com/Aniwyn): Hola soy **Jonathan Alexis Tiano**, estudio ingeniería informática en la UNJu, me encanta leer literatura fantastica y jugar en la pc, me gusta el diseño y la programación.
 - [@pablo-sales](https://github.com/pablo-sales): ... **Sales Vargas, Pablo Pedro** ...
 - [@Yamilablas](https://github.com/Yamilablas): Hola, soy **Blas, Yamila Antonela**, soy estudiante del secundario, mi pasión es el arte y la música, y aspiro a la carrera de Administrción de Empresas.
-- [@LeoosMG](https://github.com/LeoosMG): ... **Mamani, Leonel Jose Maria** ...
+- [@LeoosMG](https://github.com/LeoosMG): Hola soy **Mamani, Leonel Jose Maria**, estudio ingeniería informática y tecnicatura integral en desarrollo de videoJuegos, me gusta leer y por el momento estoy enfocado en poder dedicarme a la programación.
 
 ## 🖼️ Wireframes
 
@@ -41,7 +42,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 
 ### Detalle producto
 
-![]()
+![Detalle del producto](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/wireframes/DescripcionDelProducto.png)
 
 ### Carrito de compras
 
