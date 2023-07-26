@@ -1,7 +1,7 @@
 
 # Nombre pendiente (?
 
-![icono]()
+![icono](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/icono.png)
 
 Somos una tienda apasionada por el universo gaming, ofreciendo una gran selección de consolas y videojuegos retro, así como los títulos más actuales y todo lo que necesitas para vivir una experiencia única en el mundo de los videojuegos.
 
@@ -26,7 +26,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 - Develver digital [(devolverdigital.com)](https://www.devolverdigital.com/): Nos llamo la atención las cards que utilizan para sus productos.
 - Pixel Empire [(pixelempire.com)](https://www.pixelempire.com/): Nos gusto su header y su estética general.
 - CD Keys [(cdkeys.com)](https://www.cdkeys.com/): Nos llamo la atencios su esquemas de colores, los blur que aplican y su armonia en general.
-- Mercado Libre [(mercadolibre.com)](https://www.mercadolibre.com.ar/): Nos gusto su interfaz amigable respecto a descripcion del producto
+- Mercado Libre [(mercadolibre.com)](https://www.mercadolibre.com.ar/): Nos gusto su interfaz amigable respecto a descripcion del producto.
 
 ## 🚀 Integrantes del equipo
 
@@ -38,7 +38,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 
 # 🎨 Paleta de colores
 
-![Paleta de colores]()
+![Paleta de colores](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/color_palette.png)
 
 ## 🖼️ Wireframes
 
