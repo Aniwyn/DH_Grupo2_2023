@@ -1,0 +1,22 @@
+/* ----------------- Definitions ----------------- */
+
+:root {
+    --color-dark_green: #092429;
+    --color-violet: #322566;
+    --color-light_blue: #24d1d3;
+    --color-bone: #e1ffb4;
+    --color-pink: #ff56d1;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray-translucid: rgba(9, 36, 41, 100);
+}
+
+body {
+    font-family: 'Quantico', sans-serif;
+}
+
+/* ----------------- Imports ----------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+
+/* ----------------- ??? ----------------- */
