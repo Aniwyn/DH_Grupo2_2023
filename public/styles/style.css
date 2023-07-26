@@ -1,3 +1,7 @@
+/* ----------------- Imports ----------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+
 /* ----------------- Definitions ----------------- */
 
 :root {
@@ -15,8 +19,6 @@ body {
     font-family: 'Quantico', sans-serif;
 }
 
-/* ----------------- Imports ----------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 
 /* ----------------- ??? ----------------- */

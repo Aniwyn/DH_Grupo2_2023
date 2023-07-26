@@ -8,19 +8,50 @@ body {
 /* ----------------- Header ----------------- */
 
 .navBar {
-    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 95vw;
     height: 4rem;
     border-radius: 2rem;
     margin: auto;
     background-color: var(--color-black);
     opacity: 0.80;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navBar .navigation {
     display: inline;
+    margin-left: 1rem;
+}
+
+.navBar .icon {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    width: 3.6rem;
+    
+    /* border: 2px solid var(--color-bone); */
+}
+
+.navBar .icon-image {
+    padding: auto;
+    width: 3.6rem;
+}
+
+.navBar .loginBar {
+    display: inline;
+    margin-right: 1rem;
 }
 
 .navBar .text {
+    padding: 1rem;
     color: var(--color-bone);
 }
 
