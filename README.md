@@ -54,4 +54,4 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 
 ### login
 
-![Login](https://github.com/Aniwyn/DH_Grupo2_2023/tree/main#login)
+![Login](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/wireframes/Login.png)
