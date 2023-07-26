@@ -1,6 +1,8 @@
 
 # Nombre pendiente (?
 
+![icono]()
+
 Somos una tienda apasionada por el universo gaming, ofreciendo una gran selección de consolas y videojuegos retro, así como los títulos más actuales y todo lo que necesitas para vivir una experiencia única en el mundo de los videojuegos.
 
 En (nombre >.<), revivimos la magia de los clásicos con consolas y juegos que marcaron una era dorada en la industria del entretenimiento digital, pero tambien estamos firmemente arraigados en el presente, manteniendonos actualizados con los últimos lanzamientos para las consolas más modernas.
@@ -33,6 +35,10 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 - [@pablo-sales](https://github.com/pablo-sales): Hola mi nombre es, **Sales Vargas, Pablo Pedro**, ingeniero informatico en proceso, me gusta el futbol, el judo, pensar, escribir y leer de ciencia o filosofia. Mi hija es un felino. 
 - [@Yamilablas](https://github.com/Yamilablas): Hola, soy **Blas, Yamila Antonela**, soy estudiante del secundario, mi pasión es el arte y la música, y aspiro a la carrera de Administrción de Empresas.
 - [@LeoosMG](https://github.com/LeoosMG): Hola soy **Mamani, Leonel Jose Maria**, estudio ingeniería informática y tecnicatura integral en desarrollo de videoJuegos, me gusta leer y por el momento estoy enfocado en poder dedicarme a la programación.
+
+# 🎨 Paleta de colores
+
+![Paleta de colores]()
 
 ## 🖼️ Wireframes
 
