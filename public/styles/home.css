@@ -3,29 +3,33 @@
 body {
     background-image: url("../images/home/background.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    margin-top: 0.5rem;
 }
 
 /* ----------------- Header ----------------- */
 
-.navBar {
+nav {
     display: flex;
     flex-wrap: wrap;
-    width: 95vw;
+    width: 90vw;
     height: 4rem;
     border-radius: 2rem;
     margin: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/header/header_texture.jpg");;
+    background-size: 100%;
     background-color: var(--color-black);
     opacity: 0.90;
     justify-content: space-between;
     align-items: center;
 }
 
-.navBar .navigation {
+nav .navigation {
     display: inline;
     margin-left: 1rem;
 }
 
-.navBar .icon {
+nav .icon {
     display: flex;
     position: absolute;
     left: 0;
@@ -34,49 +38,176 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    border-radius: 2rem;
+    border-radius: 2.2rem;
     width: 3.6rem;
-
-    /* border: 2px solid var(--color-bone); */
+    padding: 0.4rem;
+    border: 2px solid var(--color-bone);
+    background: var(--color-black);
+    box-shadow: 0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 12px var(--color-translucid-lightblue);
 }
 
-.navBar .icon-image {
+nav .icon:hover {
+    border: 2px solid var(--color-white);
+    box-shadow: 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 12px var(--color-translucid-pink);
+}
+nav .icon-image {
     padding: auto;
     width: 3.6rem;
 }
 
-.navBar .loginBar {
+nav .loginBar {
     display: inline;
-    margin-right: 1rem;
+    margin-right: 5px;
 }
 
-.navBar .link {
+nav .link, nav .link:visited {
     line-height: 24px;
     padding: 1rem;
-    color: var(--color-light_blue);
-    text-shadow: 0 0 12px var(--color-pink);
+    color: var(--color-white);
+    text-shadow: 0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 12px var(--color-translucid-lightblue);
     text-decoration: none;
+    text-transform: uppercase;
 }
 
-.navBar .link:visited {
-    padding: 1rem;
-    color: var(--color-light_blue);
-    text-shadow: 0 0 10px var(--color-bone);
-    text-decoration: none;
-
+nav .link:hover {
+    text-shadow: 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 12px var(--color-translucid-pink);
 }
 
-.navBar .link:hover {
-    color: var(--color-pink);
+.loginBar .login {
+    border: 1px solid white;
+    border-radius: 2rem;
+    box-shadow: 0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 12px var(--color-translucid-lightblue);
 }
 
-
+.loginBar .login:hover {
+    box-shadow: 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 12px var(--color-translucid-pink);
+}
 
 
 /* ----------------- Main ----------------- */
 
+main {
+    width: 90vw;
+    margin: 2rem auto 0;
+}
 
+.main-dashboard {
+    display: flex;
+    height: 500px;
+}
 
+.carousel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("../images/home/sega.jpg");
+    background-size: cover;
+    width: 50%;
+    box-sizing: border-box;
+    
+    /* border: 30px solid white; */
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel .card {
+    padding: 0 2rem 1rem;
+    width: 70%;
+    text-align: end;
+    color: white;
+}
+
+.carousel .card p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+
+.mostValue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: flex-start;
+    background-image: url("../images/home/brickwall.jpg");
+    background-size: cover;
+    width: 50%;
+    height: 500px;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.mostValue article {
+    box-sizing: border-box;
+    width: 40%;
+    padding: 1rem;
+    /* background-color: blue; */
+}
+
+.mostValue article img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mostValue article .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-gray);
+    color: var(--color-bone);
+}
+
+.mostValue article .info .name {
+    height: 2rem;
+    padding: 0.5rem;
+}
+
+.mostValue article .info .name h4 {
+    color: var(--color-white);
+    margin: 0;
+}
+
+.mostValue article .info .tag {
+    font-size: 0.6rem;
+    border-radius: 0.3rem;
+    padding: 0 2px;
+    color: var(--color-black);
+    background-color: var(--color-pink);
+}
+
+.mostValue article .info .price {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    flex-wrap: 1;
+    padding: 0 4px;
+    background-color: var(--color-darkgray);
+}
+
+.mostValue article .info .price span {
+    color: var(--color-white);
+}
 
 /* ----------------- Header ----------------- */
 
