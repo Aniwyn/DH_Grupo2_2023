@@ -21,7 +21,7 @@ app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/login.html"))
 })
 
-app.get("/shopping_cart", (req, res) => {
+app.get("/mycart", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/shopping_cart.html"))
 })
 
