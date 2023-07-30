@@ -7,6 +7,7 @@
 
 :root {
     --color-darkgreen: #092429;
+    --color-green: #3fff1b;
     --color-violet: #322566;
     --color-lightblue: #24d1d3;
     --color-bone: #e1ffb4;
@@ -15,7 +16,7 @@
     --color-darkgray: #212121;
     --color-white: #fff;
     --color-black: #000;
-    --color-translucid-gray: rgba(9, 36, 41, 100);
+    --color-translucid-gray: rgba(25, 25, 25, 0.8);
     --color-translucid-lightblue: rgba(37, 154, 245, 0.9);
     --color-translucid-pink: rgba(255, 86, 209, 0.9);
 }

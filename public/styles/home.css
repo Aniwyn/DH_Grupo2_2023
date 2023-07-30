@@ -55,6 +55,7 @@ nav .icon:hover {
         0 0 9px var(--color-translucid-pink),
         0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
+    transition: .5s;
 }
 nav .icon-image {
     padding: auto;
@@ -83,6 +84,15 @@ nav .link:hover {
         0 0 9px var(--color-translucid-pink),
         0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
+    transition: .3s;
+}
+
+nav .link:hover {
+    text-shadow: 0 0 12px var(--color-translucid-pink),
+        0 0 125px var(--color-translucid-pink),
+        0 0 12px var(--color-translucid-pink),
+        0 0 15px var(--color-translucid-pink);
+    transition: .8s;
 }
 
 .loginBar .login {
@@ -120,6 +130,7 @@ main {
     align-items: flex-end;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("../images/home/sega.jpg");
     background-size: cover;
+    background-position: center;
     width: 50%;
     box-sizing: border-box;
     
@@ -148,8 +159,9 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-self: flex-start;
-    background-image: url("../images/home/brickwall.jpg");
+    background-image: url("../images/home/back.jpg");
     background-size: cover;
+    background-position: center;
     width: 50%;
     height: 500px;
     align-items: flex-start;
@@ -158,7 +170,7 @@ main {
 
 .mostValue article {
     box-sizing: border-box;
-    width: 40%;
+    width: 45%;
     padding: 1rem;
     /* background-color: blue; */
 }
@@ -208,6 +220,52 @@ main {
 .mostValue article .info .price span {
     color: var(--color-white);
 }
+
+.mostValue article .discount {
+    display: flex;
+    position: relative;
+    color: var(--color-white);
+}
+
+.mostValue article .discount .discount_box {
+    background-color: var(--color-black);
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 20px;
+    right: -10%;
+    color: var(--color-green);
+    box-shadow: 0 0 9px var(--color-green),
+        0 0 9px var(--color-green),
+        0 0 9px var(--color-green),
+        0 0 12px var(--color-white);
+    
+}
+
+.section_tittle {
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: 100%;
+    background-color: var(--color-black);
+    opacity: 0.90;    
+    color: var(--color-white);
+    padding-left: 1rem;
+    border-left: 5px solid var(--color-pink);
+
+}
+
+.products {
+    background-color: red;
+    display: flex;
+}
+
+.products article {
+    background-color: blueviolet;
+}
+
+.products article .info {
+    display: flex;
+}
+
+
 
 /* ----------------- Header ----------------- */
 
