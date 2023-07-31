@@ -55,7 +55,7 @@ nav .icon:hover {
         0 0 9px var(--color-translucid-pink),
         0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
-    transition: .5s;
+    transition: .2s;
 }
 nav .icon-image {
     padding: auto;
@@ -84,15 +84,7 @@ nav .link:hover {
         0 0 9px var(--color-translucid-pink),
         0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
-    transition: .3s;
-}
-
-nav .link:hover {
-    text-shadow: 0 0 12px var(--color-translucid-pink),
-        0 0 125px var(--color-translucid-pink),
-        0 0 12px var(--color-translucid-pink),
-        0 0 15px var(--color-translucid-pink);
-    transition: .8s;
+    transition: .2s;
 }
 
 .loginBar .login {
@@ -234,8 +226,8 @@ main {
     bottom: 20px;
     right: -10%;
     color: var(--color-green);
-    box-shadow: 0 0 9px var(--color-green),
-        0 0 9px var(--color-green),
+    box-shadow: 0 0 3px var(--color-green),
+        0 0 6px var(--color-green),
         0 0 9px var(--color-green),
         0 0 12px var(--color-white);
     
@@ -263,10 +255,43 @@ main {
 
 .products article .info {
     display: flex;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+.products article .info h4 {
+    margin: 0;
 }
 
 
 
-/* ----------------- Header ----------------- */
+/* ----------------- Footer ----------------- */
 
-/* ----------------- Header ----------------- */
+footer {
+    height: 12rem;
+    margin-top: 2rem;
+    background-color: black;
+    color: white;
+}
+
+/* ----------------- Pruebas ----------------- */
+
+
+.hover-3 {
+    --b: 0.1em;   /* the thickness of the line */
+    --c: #1095c1; /* the color */
+    
+    color: #0000;
+    padding-block: var(--b);
+    background: 
+      linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+      linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+  }
+  
+  .hover-3:hover {
+    --_p: 100%;
+    --_s: .3s;
+  }
