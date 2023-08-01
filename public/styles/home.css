@@ -16,10 +16,11 @@ nav {
     height: 4rem;
     border-radius: 2rem;
     margin: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/header/header_texture.jpg");;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url("../images/header/header_texture.jpg");
     background-size: 100%;
     background-color: var(--color-black);
-    opacity: 0.90;
+    opacity: 0.9;
     justify-content: space-between;
     align-items: center;
 }
@@ -52,11 +53,11 @@ nav .icon {
 nav .icon:hover {
     border: 2px solid var(--color-white);
     box-shadow: 0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink), 0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
-    transition: .2s;
+    transition: 0.2s;
 }
+
 nav .icon-image {
     padding: auto;
     width: 3.6rem;
@@ -67,7 +68,8 @@ nav .loginBar {
     margin-right: 5px;
 }
 
-nav .link, nav .link:visited {
+nav .link,
+nav .link:visited {
     line-height: 24px;
     padding: 1rem;
     color: var(--color-white);
@@ -81,10 +83,9 @@ nav .link, nav .link:visited {
 
 nav .link:hover {
     text-shadow: 0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink), 0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
-    transition: .2s;
+    transition: 0.2s;
 }
 
 .loginBar .login {
@@ -98,11 +99,9 @@ nav .link:hover {
 
 .loginBar .login:hover {
     box-shadow: 0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink), 0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
 }
-
 
 /* ----------------- Main ----------------- */
 
@@ -120,12 +119,13 @@ main {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("../images/home/sega.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+        url("../images/home/sega.jpg");
     background-size: cover;
     background-position: center;
     width: 50%;
     box-sizing: border-box;
-    
+
     /* border: 30px solid white; */
 }
 
@@ -142,7 +142,7 @@ main {
 }
 
 .carousel .card p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 100;
 }
 
@@ -226,22 +226,18 @@ main {
     bottom: 20px;
     right: -10%;
     color: var(--color-green);
-    box-shadow: 0 0 3px var(--color-green),
-        0 0 6px var(--color-green),
-        0 0 9px var(--color-green),
-        0 0 12px var(--color-white);
-    
+    box-shadow: 0 0 3px var(--color-green), 0 0 6px var(--color-green),
+        0 0 9px var(--color-green), 0 0 12px var(--color-white);
 }
 
 .section_tittle {
     background-color: rgba(0, 0, 0, 0.9);
     background-size: 100%;
     background-color: var(--color-black);
-    opacity: 0.90;    
+    opacity: 0.9;
     color: var(--color-white);
     padding-left: 1rem;
     border-left: 5px solid var(--color-pink);
-
 }
 
 .products {
@@ -263,8 +259,6 @@ main {
     margin: 0;
 }
 
-
-
 /* ----------------- Footer ----------------- */
 
 footer {
@@ -276,22 +270,23 @@ footer {
 
 /* ----------------- Pruebas ----------------- */
 
-
 .hover-3 {
-    --b: 0.1em;   /* the thickness of the line */
-    --c: #1095c1; /* the color */
-    
+    --b: 0.1em;
+    /* the thickness of the line */
+    --c: #1095c1;
+    /* the color */
+
     color: #0000;
     padding-block: var(--b);
-    background: 
-      linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-      linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-    -webkit-background-clip: text,padding-box;
-            background-clip: text,padding-box;
-    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
-  }
-  
-  .hover-3:hover {
+    background: linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
+        linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.3s var(--_s, 0s) linear,
+        background-size 0.3s calc(0.3s - var(--_s, 0s));
+}
+
+.hover-3:hover {
     --_p: 100%;
-    --_s: .3s;
-  }
+    --_s: 0.3s;
+}
