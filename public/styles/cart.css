@@ -1,6 +1,6 @@
 :root {
-    --hexagon_height: 110px;
-    --hexagon_width: $hexagon_height * 1.2;
+    --hexagon_width: 15rem;
+    --hexagon_height: calc(var(--hexagon_width) * 1.155)
 }
 
 
@@ -294,95 +294,57 @@ td {
 }
 
 .item {
-    width: 300px;
-    padding: 0 0 346.5px 0;
+    position: relative;
+    width: var(--hexagon_width);
+    padding: 0 0 var(--hexagon_height) 0;
     transform: rotate(-60deg) skewY(30deg);
     background: #fd005f;
     overflow: hidden;
     visibility: hidden;
     margin-top: -50px;
 
+    transition-duration: 1000ms;
 }
+
+.item:hover {
+    scale: 1.18;
+}
+
+.item:hover .hexagon *{
+    opacity: 1;
+}
+
 
 .hexagon {
     display: flex;
     justify-content: center;
-    align-items: ce;
-
 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: var(--color-darkgray);
     transform: skewY(-30deg) rotate(60deg);
     overflow: hidden;
 }
-.hexagon img{
+
+.hexagon img {
     width: 100%;
+    transition-duration: 1s;
+}
+
+.item:hover .hexagon img {
+    scale: 0.45;
 }
 
 
-.test {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    gap: 10px;
+.hexagon-price {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1rem;
 
-
-}
-
-.test div {
-    width: 13vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5vw;
-}
-
-.test .test-icon {
-    display: flex;
-    flex-direction: row;
-    gap: 0.8vw;
-}
-
-.test div i {
     color: var(--color-white);
-    font-size: 2vw;
-    text-shadow:
-        0 0 0.6vw #7c7c7c,
-        0 0 1.2vw #00ff22;
-}
-
-.test div img {
-    width: 12vw;
-
-    box-shadow: 0 0 .001rem #fff,
-        0 0 .3rem #fff,
-        0 0 1.5rem var(--color-pink),
-        0 0 0.8rem var(--color-white),
-        0 0 0.1rem var(--color-pink),
-        inset 0 0 1.3rem #a38c06;
-}
-
-.test .test-line {
-    border: 1px solid var(--color-white);
-    padding-top: 2px;
-    border-radius: 10px;
-    filter: blur(0.5px);
-    box-shadow: 0 0 .2rem #fff,
-        0 0 .2rem #fff,
-        0 0 2rem var(--color-violet),
-        0 0 0.8rem red,
-        0 0 2.8rem blue,
-        inset 0 0 1.3rem #bc13fe;
-}
-
-.test-precio {
-    color: var(--color-white);
-
     text-shadow:
         0 0 4px #fff,
         0 0 11px #fff,
@@ -392,4 +354,95 @@ td {
         0 0 90px #bc13fe,
         0 0 100px #cf2020,
         0 0 150px #e6b13f;
+
+    opacity: 0;
+    transition: 1s;
+}
+
+.hexagon-txt-icon{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    white-space: nowrap;
+    letter-spacing: -.5rem;
+    font-weight: 800;
+    position: absolute;
+    bottom: 4.5rem;
+    left: .8rem;
+    color: var(--color-white);
+    font-size: 1rem;
+    text-shadow:
+        0 0 0.6vw #7c7c7c,
+        0 0 1.2vw #00ff22;
+
+    opacity: 0;
+    transition: 1s;
+}
+
+.hexagon-icon{
+    position: absolute;
+    bottom: 5.6rem;
+    left: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+
+    opacity: 0;
+    transition: 1s;
+}
+.hexagon-icon i{
+    color: var(--color-white);
+    font-size: 1rem;
+    text-shadow:
+        0 0 0.6vw #7c7c7c,
+        0 0 1.2vw #00ff22;
+}
+
+.hexagon-count{
+    position: absolute;
+    top: 2.5rem;
+    color:var(--color-white);
+    background: var(--color-darkgray);
+    border: none;
+    border-radius: .3rem;
+    padding: .2rem;
+    font-size: 1rem;
+    text-decoration: none;
+
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem var(--color-lightblue),
+    inset 0 0 .5rem #006b5d;
+
+    opacity: 0;
+    transition: 1s;
+}
+
+.hexagon-delete{
+    position: absolute;
+    bottom: 7.5rem;
+    right: 1rem;
+    background: none;
+    border: none;
+
+    opacity: 0;
+    transition: 1s;
+}
+
+.hexagon-delete i{
+    color: var(--color-white);
+    font-size: 1rem;
+    padding: .5rem;
+    text-shadow:
+    0 0 0.6vw #7c7c7c,
+    0 0 1.2vw #a82200;
+
+    transition: .1s;
+}
+
+.hexagon-delete i:hover{
+    scale: 1.3;
+    text-shadow:
+    0 0 0.6vw #bd8100,
+    0 0 1.2vw #ff0000;
 }
