@@ -288,6 +288,16 @@ td {
     }
 }
 
+.hexagon-container{
+    display: flex;
+}
+
+.hexagon-card{
+    width: 16rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
 
 .item * {
     visibility: visible;
@@ -301,14 +311,17 @@ td {
     background: #fd005f;
     overflow: hidden;
     visibility: hidden;
-    margin-top: -50px;
+
 
     transition-duration: 1000ms;
 }
 
-.item:hover {
+.item:hover{
     scale: 1.18;
 }
+
+.item:hover .hexagon{
+    background: linear-gradient(90deg, rgb(49, 49, 49) 0%, rgb(46, 46, 46) 36%, rgba(41, 41, 41, 0.692) 50%, rgb(46, 46, 46) 63%, rgb(41, 41, 41) 100%);}
 
 .item:hover .hexagon *{
     opacity: 1;
@@ -327,6 +340,8 @@ td {
     background-color: var(--color-darkgray);
     transform: skewY(-30deg) rotate(60deg);
     overflow: hidden;
+
+    transition: 1s;
 }
 
 .hexagon img {
@@ -341,7 +356,7 @@ td {
 
 .hexagon-price {
     position: absolute;
-    bottom: 2rem;
+    bottom: 2.5rem;
     font-size: 1rem;
 
     color: var(--color-white);
@@ -355,7 +370,7 @@ td {
         0 0 100px #cf2020,
         0 0 150px #e6b13f;
 
-    opacity: 0;
+
     transition: 1s;
 }
 
@@ -419,14 +434,23 @@ td {
 }
 
 .hexagon-delete{
+    height: 2.5rem;
+    width: 3rem;
+    transform: rotateZ(30deg);
     position: absolute;
-    bottom: 7.5rem;
-    right: 1rem;
-    background: none;
-    border: none;
+    right: 2rem;
+    background: black;
+    border: 1px solid red;
 
-    opacity: 0;
+    opacity: 1    ;
     transition: 1s;
+}
+
+.item:hover + .hexagon-delete{
+    transform: translateY(-20px) rotateZ(30deg);
+    opacity: 1;
+    background-color: red;
+
 }
 
 .hexagon-delete i{
