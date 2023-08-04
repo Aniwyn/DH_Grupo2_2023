@@ -10,6 +10,7 @@ body {
 /* ----------------- Header ----------------- */
 
 nav {
+    /* position: sticky; */
     display: flex;
     flex-wrap: wrap;
     width: 90vw;
@@ -53,7 +54,8 @@ nav .icon {
 nav .icon:hover {
     border: 2px solid var(--color-white);
     box-shadow: 0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink), 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
     transition: 0.2s;
 }
@@ -83,9 +85,14 @@ nav .link:visited {
 
 nav .link:hover {
     text-shadow: 0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink), 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
     transition: 0.2s;
+}
+
+nav .burguerMenu {
+    display: none;
 }
 
 .loginBar .login {
@@ -99,9 +106,34 @@ nav .link:hover {
 
 .loginBar .login:hover {
     box-shadow: 0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink), 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
         0 0 12px var(--color-translucid-pink);
 }
+
+.loginBar .loginMenu {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .desktopMenu {
+        display: none;
+    }
+
+    nav .burguerMenu {
+        display: block;
+    }
+
+    .loginBar .loginMenu {
+        display: inline;
+    }
+
+    .loginBar .loginExtend {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {}
 
 /* ----------------- Main ----------------- */
 
@@ -192,14 +224,6 @@ main {
     margin: 0;
 }
 
-.mostValue article .info .tag {
-    font-size: 0.6rem;
-    border-radius: 0.3rem;
-    padding: 0 2px;
-    color: var(--color-black);
-    background-color: var(--color-pink);
-}
-
 .mostValue article .info .price {
     display: flex;
     align-items: center;
@@ -241,22 +265,112 @@ main {
 }
 
 .products {
-    background-color: red;
+    /* background-color: red; */
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .products article {
-    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    width: 250px;
+    overflow: hidden;
+    margin: 2rem 1rem;
+    transition: 0.2s;
+}
+
+.products article:hover {
+    transition: 0.2s;
+    margin-top: 0;
+    box-shadow: 0 0 1px #000,
+        0 0 2px #000,
+        0 0 6px #000,
+        0 0 12px #000;
+}
+
+.products img {
+    align-self: center;
+    justify-self: center;
+    width: 100%;
 }
 
 .products article .info {
+    width: 100%;
+    height: 120px;
     display: flex;
     flex-direction: column;
-    background-color: aqua;
+    justify-content: space-between;
+    border-top: 3px solid var(--color-black);
+    color: var(--color-white);
+    padding: 0 0.5rem;
 }
 
 .products article .info h4 {
+    padding: 0.5rem 0;
     margin: 0;
+}
+
+.products article .info .tag {
+    font-size: 0.8rem;
+    background: var(--color-pink);
+    color: var(--color-black);
+    border-radius: 0.4rem;
+    padding: 0 0.2rem;
+}
+
+.products article .info .price {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-green);
+    padding: 0.5rem 0;
+    text-align: center;
+    background: var(--color-black);
+}
+
+.products article .info .price span {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.products article .info .price .cart {
+    font-size: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.products article .info .price:hover .cart {
+    font-size: 1rem;
+    padding: 0 1rem;
+    color: var(--color-green);
+    transition: 0.3s;
+}
+
+@media (max-width: 1023px) {
+    .main-dashboard {
+        flex-direction: column;
+        height: auto;
+        transition: 0.2s;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 400px;
+    }
+
+    .mostValue {
+        width: 100%;
+        height: auto;
+        max-height: 800px;
+    }
+
+    .mostValue article {
+        width: 45%;
+        max-width: 250px;
+    }
 }
 
 /* ----------------- Footer ----------------- */
