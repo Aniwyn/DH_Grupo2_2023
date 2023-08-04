@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+.subtitle{
+    font-family:Handjet;
+    background-color: black;
+}
+.detalle{
+    font-size:8px
+    line-height:18px;
+    display: block;
+    background-color: #b6d2d3;
+    border-style:solid;
+    border-color: black;
+}
