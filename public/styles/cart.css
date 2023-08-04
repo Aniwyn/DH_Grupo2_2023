@@ -1,6 +1,9 @@
 :root {
-    --hexagon_width: 15rem;
-    --hexagon_height: calc(var(--hexagon_width) * 1.155)
+    --hexagon_width: 235px;
+    --hexagon_height: 260px;
+    --hexagon_delay: 600ms;
+    --hexagon_duration: 400ms;
+    --container_padding: 5rem;
 }
 
 
@@ -18,12 +21,6 @@ main {
     width: 90vw;
     margin-left: 5vw;
     margin-right: 5vw;
-}
-
-.container-general {
-    display: flex;
-    margin-top: 5vh;
-    flex-wrap: wrap;
 }
 
 .mycart-tittle {
@@ -48,140 +45,6 @@ main {
         0 0 0.8rem #bc13fe,
         0 0 2.8rem #bc13fe,
         inset 0 0 1.3rem #bc13fe;
-}
-
-/*ES LA TABLA QUE CONTIENE LOS ITEMS*/
-.shop-cart {
-
-    width: 65vw;
-    margin-left: 0.5vw;
-
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-.shop-cart thead {
-    background: linear-gradient(90deg, rgba(50, 37, 96, 0.7) 0%, rgba(50, 37, 102, 0.7) 100%);
-}
-
-.shop-cart tbody {
-    background: var(--color-gray);
-}
-
-.shop-cart thead th:nth-child(1) {
-    width: 55%;
-    border: var(--color-white);
-}
-
-.shop-cart thead th:nth-child(2) {
-    width: 15%;
-}
-
-.shop-cart thead th:nth-child(3) {
-    width: 20%;
-}
-
-.shop-cart thead th:nth-child(4) {
-    width: 10%;
-}
-
-.shop-cart th,
-td {
-    padding: 8px;
-    padding-bottom: 0;
-    color: var(--color-white);
-    text-align: center;
-}
-
-
-.product {
-    padding-bottom: 8px;
-}
-
-.quantity {
-    padding-bottom: 8px;
-}
-
-.subtotal {
-    padding-bottom: 8px;
-}
-
-.action {
-    padding-bottom: 8px;
-}
-
-/*CARDS DE CADA ITEM*/
-
-
-.item-img-text {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.item-img {
-    width: 7vw;
-    margin: 5px;
-    box-shadow: 0px 0px 10px var(--color-white);
-}
-
-
-.shop-cart tbody tr .item-product {
-    border-left: solid 1px var(--color-white);
-    border-top: solid 1px var(--color-white);
-    border-bottom: solid 1px var(--color-white);
-
-
-
-}
-
-.shop-cart tbody tr .item-quantity {
-    border-top: solid 1px var(--color-white);
-    border-bottom: solid 1px var(--color-white);
-}
-
-.shop-cart tbody tr .item-subtotal {
-    border-top: solid 1px var(--color-white);
-    border-bottom: solid 1px var(--color-white);
-
-    font-size: 1.5vw;
-}
-
-.shop-cart tbody tr .item-action {
-    border-right: solid 1px var(--color-white);
-    border-top: solid 1px var(--color-white);
-    border-bottom: solid 1px var(--color-white);
-}
-
-.item-name {
-    font-size: 2vw;
-    font-weight: bold;
-}
-
-.item-descr {
-    font-weight: lighter;
-}
-
-.item-quantity select {
-    text-align: center;
-    color: var(--color-white);
-    font-size: 1vw;
-    font-weight: 400;
-    background-color: var(--color-dark_green);
-    border-radius: 5px;
-    border: solid 3px var(--color-violet);
-    padding: 10px;
-    box-shadow: 0 0 20px var(--color-violet);
-}
-
-
-.item-action button {
-    border: none;
-    background: none;
-}
-
-.item-action button i {
-    color: var(--color-white);
-    font-size: 18px;
 }
 
 .resume-container {
@@ -288,42 +151,30 @@ td {
     }
 }
 
-.hexagon-container{
+.hexagon-container {
     display: flex;
-}
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: var(--container_padding) 0 var(--container_padding) 0;
 
-.hexagon-card{
-    width: 16rem;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.item * {
-    visibility: visible;
+    gap: .7rem;
 }
 
 .item {
-    position: relative;
     width: var(--hexagon_width);
-    padding: 0 0 var(--hexagon_height) 0;
-    transform: rotate(-60deg) skewY(30deg);
-    background: #fd005f;
-    overflow: hidden;
-    visibility: hidden;
+    height: calc(var(--hexagon_height)/1.33);
+    position: relative;
 
 
-    transition-duration: 1000ms;
+    transition-duration: var(--hexagon_duration);
 }
 
-.item:hover{
+.item:hover {   
     scale: 1.18;
+    z-index: 999;
 }
 
-.item:hover .hexagon{
-    background: linear-gradient(90deg, rgb(49, 49, 49) 0%, rgb(46, 46, 46) 36%, rgba(41, 41, 41, 0.692) 50%, rgb(46, 46, 46) 63%, rgb(41, 41, 41) 100%);}
-
-.item:hover .hexagon *{
+.item:hover .hexagon * {
     opacity: 1;
 }
 
@@ -335,23 +186,37 @@ td {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-darkgray);
-    transform: skewY(-30deg) rotate(60deg);
-    overflow: hidden;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: var(--hexagon_width);
+    height: var(--hexagon_height);
 
-    transition: 1s;
+    background-image: url(/images/3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: var(--hexagon_duration);
 }
 
 .hexagon img {
     width: 100%;
-    transition-duration: 1s;
+    transition-duration: var(--hexagon_duration);
 }
 
 .item:hover .hexagon img {
     scale: 0.45;
 }
+
+/* Tamaño del hexagono */
+.item:not(:hover) {
+    transition-delay: var(--hexagon_delay);
+}
+
+/* Items dentro del hexagono */
+.item:not(:hover) * {
+    transition-delay: var(--hexagon_delay);
+}
+
 
 
 .hexagon-price {
@@ -371,10 +236,10 @@ td {
         0 0 150px #e6b13f;
 
 
-    transition: 1s;
+    transition: var(--hexagon_duration);
 }
 
-.hexagon-txt-icon{
+.hexagon-txt-icon {
     writing-mode: vertical-rl;
     text-orientation: upright;
     white-space: nowrap;
@@ -390,10 +255,10 @@ td {
         0 0 1.2vw #00ff22;
 
     opacity: 0;
-    transition: 1s;
+    transition: var(--hexagon_duration);
 }
 
-.hexagon-icon{
+.hexagon-icon {
     position: absolute;
     bottom: 5.6rem;
     left: 2.5rem;
@@ -403,9 +268,10 @@ td {
     gap: 0.8vw;
 
     opacity: 0;
-    transition: 1s;
+    transition: var(--hexagon_duration);
 }
-.hexagon-icon i{
+
+.hexagon-icon i {
     color: var(--color-white);
     font-size: 1rem;
     text-shadow:
@@ -413,60 +279,85 @@ td {
         0 0 1.2vw #00ff22;
 }
 
-.hexagon-count{
+.hexagon-count {
     position: absolute;
-    top: 2.5rem;
-    color:var(--color-white);
+    top: 9.5rem;
+    right: 1rem;
+    color: var(--color-white);
     background: var(--color-darkgray);
     border: none;
     border-radius: .3rem;
     padding: .2rem;
     font-size: 1rem;
     text-decoration: none;
+    cursor: pointer;
 
     box-shadow: 0 0 .2rem #fff,
-    0 0 .2rem #fff,
-    0 0 2rem var(--color-lightblue),
-    inset 0 0 .5rem #006b5d;
+        0 0 .2rem #fff,
+        0 0 2rem var(--color-lightblue),
+        inset 0 0 .5rem #006b5d;
 
     opacity: 0;
-    transition: 1s;
+    transition: var(--hexagon_duration);
 }
 
-.hexagon-delete{
-    height: 2.5rem;
-    width: 3rem;
-    transform: rotateZ(30deg);
+.hexagon-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.6rem;
+    width: 1.5rem;
     position: absolute;
-    right: 2rem;
-    background: black;
-    border: 1px solid red;
+    right: 1.2rem;
+    top: 6.5rem;
 
-    opacity: 1    ;
-    transition: 1s;
+    background: var(--color-darkgray);
+    border: none;
+    box-shadow:
+        0 0 1px #ff7b7b,
+        0 0 4px #ff0000,
+        0 0 20px #f10800,
+        inset 0 0 1px red;
+
+    opacity: 0;
+
+    transition: var(--hexagon_duration);
 }
 
-.item:hover + .hexagon-delete{
-    transform: translateY(-20px) rotateZ(30deg);
+.item:hover .hexagon-delete {
     opacity: 1;
-    background-color: red;
-
 }
 
-.hexagon-delete i{
+.item:not(:hover) .hexagon-delete {
+    transition-delay: var(--hexagon_delay);
+}
+
+.item:not(:hover) .hexagon-delete i {
+    transition-delay: var(--hexagon_delay);
+}
+
+.hexagon-delete i {
     color: var(--color-white);
-    font-size: 1rem;
-    padding: .5rem;
+    font-size: .8rem;
     text-shadow:
-    0 0 0.6vw #7c7c7c,
-    0 0 1.2vw #a82200;
+        0 0 0.6vw #c03e3e,
+        0 0 1.2vw #cc2900;
 
-    transition: .1s;
+
+    transition: .3s;
 }
 
-.hexagon-delete i:hover{
-    scale: 1.3;
+.hexagon-delete i:hover {
+    cursor: pointer;
+    scale: 1.2;
     text-shadow:
-    0 0 0.6vw #bd8100,
-    0 0 1.2vw #ff0000;
+        0 0 0.6vw #bd4500,
+        0 0 1.2vw #ff0000;
+}
+
+.item:nth-child(9n+6){
+    margin-left: 10%;
+}
+.item:nth-child(9n+9){
+    margin-right: 2%;
 }
