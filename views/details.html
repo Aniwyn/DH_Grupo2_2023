@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/styles/product_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Detalle de producto</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <div>
+        <img src="images/detalle/mario.jpg" alt="imagen de mario">
+    </div>
+    <h1>SUPER MARIO</h1>
+    <section>
+        <div>
+            <h1>Descripción del producto:</h1>
+            <p>....</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <form class="product__options mt-3" id="formAddDetalle">
+
+
+                <div class="form-group product__option">
+        
+                    <label class="product__option-label" for="product-quantity" data-ar="Cantidad" data-br="Quantidade" data-en="Quantity">Cantidad</label>
+        
+        
+                    <div class="product__actions">
+                            <div class="product__actions-item">
+                                <div class="input-number product__quantity">
+                                    <input id="product-quantity" class="input-number__input form-control form-control-lg" type="number" min="1" value="1">
+                                    <div class="input-number__add"></div>
+                                    <div class="input-number__sub"></div>
+                                </div>
+                            </div>
+                            <div class="product__actions-item product__actions-item--addtocart">
+                                <button style="font-size: .85rem;" class="btn btn-primary btn-lg glow-on-hover" type="button" onclick="AgregarDetalle(196839, '196839-videojuegos-nintendo-switch-juego-xenoblade-chronicles-3-nsw');" data-ar="Agregar al carrito" data-br="Adicionar" data-en="Add">Agregar al carrito</button>
+                            </div>
+                    </div>
+        
+                </div>
+        
+        
+            </form>
+        </div>
+    </section>
+ 
+    <main class="detalles">
+        <section>
+            <div>
+                <span>Caracteristicas Generales</span>
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>Precio </span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Modelo</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Color</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Tamaño</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <span>Maquinaria</span>
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>Sistema</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Formato</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Cantidad de Jugadores posibles</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Soporte Electrico</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <span>otras Caracteristicas</span>
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>Tema</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Trama</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Época</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Público</span>
+                                </td>
+                                <td>...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <span>otros</span>
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>Efectivo/Contado</span>
+                                </td>
+                                <td>$...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Tarjeta</span>
+                                </td>
+                                <td>$...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Transferencia</span>
+                                </td>
+                                <td>$...</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Deposito</span>
+                                </td>
+                                <td>$...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                 <h2>Productos Recomendados</h2>
+                 <i class="fa-regular fa-angles-right"></i>
+                 <div>
+                     <img src="images/detalle/minecraft.png" alt="imagen de minecraft"/>
+                     <div>
+                         <p class="descripcion">Minecraft</p>
+                         <p class="precios">$6.770</p>
+                     </div>
+                 </div>
+
+                 <div>
+                    <img src="images/detalle/champions.png" alt="imagen de champions"/>
+                    <div>
+                        <p class="descripcion">Champions</p>
+                        <p class="precios">$6.770</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+</body>
+</html>
