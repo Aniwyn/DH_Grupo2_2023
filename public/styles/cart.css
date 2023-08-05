@@ -132,8 +132,6 @@ main {
     overflow: hidden;
     transition: 0.5s;
     filter: hue-rotate(290deg);
-
-    border-radius: 5px;
 }
 
 .resume-container-buttons .payment-btn span {
@@ -219,6 +217,7 @@ main {
     background: #03e9f4;
     color: #050801;
     box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px;
+    text-shadow: none;
 }
 
 .resume-container-buttons .payment-method-btn {
@@ -226,14 +225,16 @@ main {
 }
 
 .discount-container {
-    background: var(--color-gray);
-
-    padding: 2vw 18vw;
-    margin-right: 55vw;
+    height: min-content;
     margin-top: 1rem;
     margin-bottom: 1rem;
 
     text-align: left;
+}
+
+.discount-container input{
+    border: none;
+    outline: none;
 }
 
 
