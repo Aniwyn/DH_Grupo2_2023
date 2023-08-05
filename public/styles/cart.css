@@ -14,13 +14,19 @@
 }
 
 body {
-    background-image: url("../images/home/background.jpg");
+    background-image: url(/images/mycart/5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 main {
     width: 90vw;
     margin-left: 5vw;
     margin-right: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .mycart-tittle {
@@ -38,6 +44,7 @@ main {
 
     border: 0.2rem solid #fff;
     border-radius: 2rem;
+    
 
     box-shadow: 0 0 .2rem #fff,
         0 0 .2rem #fff,
@@ -48,16 +55,174 @@ main {
 }
 
 .resume-container {
-    border-radius: 6px;
-    border: solid 1px var(--color-darkgray);
-    background: var(--color-gray);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 45%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+
+    background-image: url(/images/mycart/3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.resume-container .resume-container-tittle {
+    margin: 50px 50px 20px 50px;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+    font-family: "Sacramento", cursive;
+    font-size: 1.5rem;
+    text-align: center;
+
+    animation: blink 12s infinite;
+}
+
+.resume-container .resume-container-body {
+    background: var(--color-darkgray);
+    border: none;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #d66800,
+    0 0 0.8rem #d66800,
+    0 0 1.8rem #d66800,
+    inset 0 0 1.3rem #d66800;
+    width: 75%;
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 25px;
+
     color: var(--color-white);
-    text-align: left;
+    font-size: .9rem;
+}
 
+.resume-container .resume-container-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 100px 20px;
+    gap: 10px;
+    width: 75%;
+}
 
+.resume-container-buttons .payment-btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    text-shadow:
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #bc13fe,
+    0 0 80px #bc13fe,
+    0 0 90px #bc13fe;
 
-    margin-left: 1vw;
-    margin-bottom: 13vw;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    width: 100%;
+    color: white;
+    background: rgb(17, 17, 17);
+    overflow: hidden;
+    transition: 0.5s;
+    filter: hue-rotate(290deg);
+
+    border-radius: 5px;
+}
+
+.resume-container-buttons .payment-btn span {
+    position: absolute;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+}
+
+.resume-container-buttons .payment-btn span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    animation: borderAnimation1 3s linear infinite;
+}
+
+.resume-container-buttons .payment-btn span:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    animation: borderAnimation2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+.resume-container-buttons .payment-btn span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    animation: borderAnimation3 3s linear infinite;
+}
+
+.resume-container-buttons .payment-btn span:nth-child(4) {
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    animation: borderAnimation4 2s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes borderAnimation1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes borderAnimation2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes borderAnimation3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes borderAnimation4 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.resume-container-buttons .payment-btn:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px;
+}
+
+.resume-container-buttons .payment-method-btn {
+    width: 100%;
 }
 
 .discount-container {
@@ -74,6 +239,28 @@ main {
 
 #offset {
     animation: letter-flicker 2s linear infinite;
+}
+
+@keyframes blink {
+
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+        color: #fff6a9;
+    }
 }
 
 @keyframes pulsate {
@@ -169,7 +356,7 @@ main {
     transition-duration: var(--hexagon_duration);
 }
 
-.item:hover {   
+.item:hover {
     scale: 1.18;
     z-index: 999;
 }
@@ -194,6 +381,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
 
     transition: var(--hexagon_duration);
 }
@@ -239,29 +427,10 @@ main {
     transition: var(--hexagon_duration);
 }
 
-.hexagon-txt-icon {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    white-space: nowrap;
-    letter-spacing: -.5rem;
-    font-weight: 800;
-    position: absolute;
-    bottom: 4.5rem;
-    left: .8rem;
-    color: var(--color-white);
-    font-size: 1rem;
-    text-shadow:
-        0 0 0.6vw #7c7c7c,
-        0 0 1.2vw #00ff22;
-
-    opacity: 0;
-    transition: var(--hexagon_duration);
-}
-
 .hexagon-icon {
     position: absolute;
-    bottom: 5.6rem;
-    left: 2.5rem;
+    bottom: 5.2rem;
+    left: 1.5rem;
 
     display: flex;
     flex-direction: column;
@@ -355,9 +524,10 @@ main {
         0 0 1.2vw #ff0000;
 }
 
-.item:nth-child(9n+6){
+.item:nth-child(9n+6) {
     margin-left: 10%;
 }
-.item:nth-child(9n+9){
+
+.item:nth-child(9n+9) {
     margin-right: 2%;
 }
