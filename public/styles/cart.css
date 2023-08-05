@@ -55,8 +55,8 @@ main {
 }
 
 .resume-container {
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    width: 45%;
+    /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+    width: 60%;
     height: auto;
     position: relative;
     display: flex;
@@ -68,6 +68,9 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    border-radius: 1rem;
+    border: 1px solid black;
 }
 
 .resume-container .resume-container-tittle {
