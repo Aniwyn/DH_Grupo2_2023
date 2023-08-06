@@ -71,7 +71,9 @@ main {
     background-repeat: no-repeat;
 
     border-radius: 1rem;
-    border: 1px solid black;
+    border: 2px solid black;
+    box-shadow: 0 0 .2rem #1f1f1f,
+    0 0 1.8rem #474747;
 }
 
 .resume-container .resume-container-tittle {
@@ -414,8 +416,8 @@ main {
 
 .hexagon-price {
     position: absolute;
-    bottom: 2.5rem;
-    font-size: 1rem;
+    bottom: 13%;
+    font-size: 90%;
 
     color: var(--color-white);
     text-shadow:
@@ -434,8 +436,8 @@ main {
 
 .hexagon-icon {
     position: absolute;
-    bottom: 5.2rem;
-    left: 1.5rem;
+    bottom: 32%;
+    left: 10%;
 
     display: flex;
     flex-direction: column;
@@ -447,7 +449,7 @@ main {
 
 .hexagon-icon i {
     color: var(--color-white);
-    font-size: 1rem;
+    font-size: 100%;
     text-shadow:
         0 0 0.6vw #7c7c7c,
         0 0 1.2vw #00ff22;
@@ -455,14 +457,14 @@ main {
 
 .hexagon-count {
     position: absolute;
-    top: 9.5rem;
-    right: 1rem;
+    bottom: 32%;
+    right: 7%;
     color: var(--color-white);
     background: var(--color-darkgray);
     border: none;
     border-radius: .3rem;
     padding: .2rem;
-    font-size: 1rem;
+    font-size: 80%;
     text-decoration: none;
     cursor: pointer;
 
@@ -479,11 +481,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1.6rem;
-    width: 1.5rem;
+    height: 11%;
+    width: 13%;
     position: absolute;
-    right: 1.2rem;
-    top: 6.5rem;
+    right: 7%;
+    top: 35%;
 
     background: var(--color-darkgray);
     border: none;
@@ -512,7 +514,7 @@ main {
 
 .hexagon-delete i {
     color: var(--color-white);
-    font-size: .8rem;
+    font-size: 80%;
     text-shadow:
         0 0 0.6vw #c03e3e,
         0 0 1.2vw #cc2900;
@@ -533,7 +535,7 @@ main {
 @media (max-width: 620px){
     :root {
         --hexagon_width: 44.5vw;
-        --hexagon_height: 230px;
+        --hexagon_height: 46vw;
         --hexagon_delay: 600ms;
         --hexagon_duration: 400ms;
         --container_padding: 3rem;
@@ -549,7 +551,7 @@ main {
 @media (min-width:621px) and (max-width: 767px){
     :root {
         --hexagon_width: 29.33vw;
-        --hexagon_height: 230px;
+        --hexagon_height: 32vw;
         --hexagon_delay: 600ms;
         --hexagon_duration: 400ms;
         --container_padding: 3rem;
@@ -565,7 +567,7 @@ main {
 @media (min-width:768px) and (max-width: 991px){
     :root {
         --hexagon_width: 21.75vw;
-        --hexagon_height: 230px;
+        --hexagon_height: 25vw;
         --hexagon_delay: 600ms;
         --hexagon_duration: 400ms;
         --container_padding: 3rem;
@@ -582,7 +584,7 @@ main {
 @media (min-width:992px) and (max-width: 1199px){
     :root {
         --hexagon_width: 21.75vw;
-        --hexagon_height: 230px;
+        --hexagon_height: 25vw;
         --hexagon_delay: 600ms;
         --hexagon_duration: 400ms;
         --container_padding: 3rem;
@@ -598,7 +600,7 @@ main {
 @media (min-width:1200px) and (max-width: 1919px){
     :root {
         --hexagon_width: 17.2vw;
-        --hexagon_height: 230px;
+        --hexagon_height: 19vw;
         --hexagon_delay: 600ms;
         --hexagon_duration: 400ms;
         --container_padding: 3rem;
