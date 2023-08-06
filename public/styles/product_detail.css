@@ -14,7 +14,11 @@
 
 .imagen{
     border: 5px solid darkblue;
-    width: 500px;
+    width: 700px;
+}
+
+.imagen img{
+    width: 100%;
 }
 
 .producto-pricipal{
@@ -36,13 +40,17 @@
     width: 500px;
     color:black;
     height:400px;
-    background-color: #b6d2d3;
+    background-color: darkmagenta;
     border-style:solid;
     border-color: black;
     position:relative;
     left: 900px;
-    bottom: 285px;
+    bottom: 485px;
     
+}
+
+.descr{
+    text-decoration:overline;
 }
 
 .compra{
@@ -58,7 +66,7 @@
 .cantidad{
     position: relative;
     right:400px;
-    bottom: 210px;
+    bottom: 580px;
 }
 
 .tema{
@@ -68,7 +76,7 @@
 .carrito{
     position: relative;
     left: 300px;
-    bottom: 20px;
+    bottom: 30px;
 }
 
 .agregar{
@@ -86,14 +94,18 @@
    justify-content: space-around;
    align-items:flex-start ;
    height: 300px;
+   background-color: darkmagenta;
+   position: relative;
+   bottom: 100px;
+   text-align: center;
 }
 
 
 .detail{
-    background-color: antiquewhite;
+    background-color: darkmagenta;
     border-style: dashed;
     border-color: black;
-    color: antiquewhite;
+    color: darkmagenta;
     justify-content: space-around;
     box-sizing: none;
 }
@@ -112,31 +124,31 @@
 
 .colum1{
     position: relative;
-    bottom:200px;
+    top:15px;
 }
 
 .colum2{
     position: relative;
-    bottom:200px ;
+    top:15px ;
 }
 
 .colum3{
     position: relative;
-    bottom: 50px;
-    right: 750px;
+    top: 170px;
+    right: 758px;
 }
 
 .colum4{
     position: relative;
-    bottom:50px ;
-    right: 750px;
+    top:170px ;
+    right: 758px;
 }
 
 .articulos{
     background-image: url("../images/detalle/space.jpg");
     width: 50%;
     height: 540px;
-    width: 1503px;
+    width: 1519px;
     align-items: flex-start;
 
 }
@@ -191,5 +203,6 @@
 
     background-color:darkmagenta;
     display: block;
-    color:aqua;
+    color:rgb(214, 231, 231);
+    padding: 15px;
 }
