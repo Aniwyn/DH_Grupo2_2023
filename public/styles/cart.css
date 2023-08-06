@@ -4,6 +4,7 @@
     --hexagon_delay: 600ms;
     --hexagon_duration: 400ms;
     --container_padding: 5rem;
+    --item_gap: .7rem;
 }
 
 
@@ -348,7 +349,7 @@ main {
     list-style-type: none;
     margin: var(--container_padding) 0 var(--container_padding) 0;
 
-    gap: .7rem;
+    gap: var(--item_gap);
 }
 
 .item {
@@ -528,10 +529,105 @@ main {
         0 0 1.2vw #ff0000;
 }
 
-.item:nth-child(9n+6) {
-    margin-left: 10%;
+/* mobile */
+@media (max-width: 620px){
+    :root {
+        --hexagon_width: 44.5vw;
+        --hexagon_height: 230px;
+        --hexagon_delay: 600ms;
+        --hexagon_duration: 400ms;
+        --container_padding: 3rem;
+        --item_gap: 1vw;
+    }
+
+    .item.item:nth-child(3n+3) {
+        margin-left: 22.5vw;
+    }
 }
 
-.item:nth-child(9n+9) {
-    margin-right: 2%;
+/* extra small device  */
+@media (min-width:621px) and (max-width: 767px){
+    :root {
+        --hexagon_width: 29.33vw;
+        --hexagon_height: 230px;
+        --hexagon_delay: 600ms;
+        --hexagon_duration: 400ms;
+        --container_padding: 3rem;
+        --item_gap: 1vw;
+    }
+
+    .item:nth-child(5n+4) {
+        margin-left: 15vw;
+    }
 }
+
+/* small tablets  */
+@media (min-width:768px) and (max-width: 991px){
+    :root {
+        --hexagon_width: 21.75vw;
+        --hexagon_height: 230px;
+        --hexagon_delay: 600ms;
+        --hexagon_duration: 400ms;
+        --container_padding: 3rem;
+        --item_gap: 1vw;
+    }
+
+    .item:nth-child(7n+5) {
+        margin-left: 11vw;
+    }
+    
+}
+
+/* large tablets laptops  */
+@media (min-width:992px) and (max-width: 1199px){
+    :root {
+        --hexagon_width: 21.75vw;
+        --hexagon_height: 230px;
+        --hexagon_delay: 600ms;
+        --hexagon_duration: 400ms;
+        --container_padding: 3rem;
+        --item_gap: 1vw;
+    }
+
+    .item:nth-child(7n+5) {
+        margin-left: 11vw;
+    }
+}
+
+/* desktops */
+@media (min-width:1200px) and (max-width: 1919px){
+    :root {
+        --hexagon_width: 17.2vw;
+        --hexagon_height: 230px;
+        --hexagon_delay: 600ms;
+        --hexagon_duration: 400ms;
+        --container_padding: 3rem;
+        --item_gap: 1vw;
+    }
+
+    .item:nth-child(9n+6) {
+        margin-left: 9vw;
+    }
+}
+
+/* extra large screens */
+@media (min-width: 1920px){
+    
+    :root {
+        --hexagon_width: 335px;
+        --hexagon_height: 360px;
+        --hexagon_delay: 600ms;
+        --hexagon_duration: 400ms;
+        --container_padding: 10rem;
+    }
+
+    .item:nth-child(9n+6) {
+        margin-left: 10%;
+    }
+    
+    .item:nth-child(9n+9) {
+        margin-right: 2%;
+    }
+}
+
+
