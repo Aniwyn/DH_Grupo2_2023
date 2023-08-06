@@ -5,6 +5,7 @@
     --hexagon_duration: 400ms;
     --container_padding: 5rem;
     --item_gap: .7rem;
+    --mode: ":hover";
 }
 
 
@@ -28,17 +29,20 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 .mycart-tittle {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 5vw;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .mycart-tittle i {
-    padding: 50px;
-    font-size: 50px;
+    padding: 4vw;
+    font-size: 4vw;
     color: white;
 
     animation: pulsate 3s infinite alternate;
@@ -57,13 +61,15 @@ main {
 
 .resume-container {
     /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
-    width: 60%;
+    width: 80%;
     height: auto;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
 
     background-image: url(/images/mycart/3.jpg);
     background-size: cover;
@@ -77,11 +83,12 @@ main {
 }
 
 .resume-container .resume-container-tittle {
-    margin: 50px 50px 20px 50px;
+    margin: 50px 30% 20px 30%;
+    padding-bottom: 2rem;
     text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
     font-family: "Sacramento", cursive;
-    font-size: 1.5rem;
+    font-size: 150%;
     text-align: center;
 
     animation: blink 12s infinite;
@@ -102,7 +109,11 @@ main {
     margin-bottom: 25px;
 
     color: var(--color-white);
-    font-size: .9rem;
+    font-size: 100%;
+}
+
+.resume-container .resume-container-body table{
+    width: 100%;
 }
 
 .resume-container .resume-container-buttons {
@@ -111,6 +122,7 @@ main {
     margin: 0 20px 100px 20px;
     gap: 10px;
     width: 75%;
+    font-size: 100%;
 }
 
 .resume-container-buttons .payment-btn {
@@ -464,7 +476,7 @@ main {
     border: none;
     border-radius: .3rem;
     padding: .2rem;
-    font-size: 80%;
+    font-size: 100%;
     text-decoration: none;
     cursor: pointer;
 
@@ -514,7 +526,7 @@ main {
 
 .hexagon-delete i {
     color: var(--color-white);
-    font-size: 80%;
+    font-size: 100%;
     text-shadow:
         0 0 0.6vw #c03e3e,
         0 0 1.2vw #cc2900;
@@ -542,8 +554,45 @@ main {
         --item_gap: 1vw;
     }
 
+    .item:focus {
+        scale: 1.18;
+        z-index: 999;
+    }
+
     .item.item:nth-child(3n+3) {
         margin-left: 22.5vw;
+    }
+
+    .mycart-tittle {
+        display: flex;
+        justify-content: center;
+        margin-top: 5vw;
+    }
+
+    .mycart-tittle i {
+        padding: 5vw;
+        font-size: 5.5vw;
+    }
+
+    
+    .resume-container {
+        width: 99%;
+        margin-left: .5%;
+        margin-right: .5%;
+    }
+
+    .resume-container .resume-container-body {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .resume-container .resume-container-buttons {
+        width: 80%;
+    }
+
+    .hexagon-icon i {
+        font-size: 80%;
     }
 }
 
@@ -560,6 +609,18 @@ main {
 
     .item:nth-child(5n+4) {
         margin-left: 15vw;
+    }
+
+
+    .mycart-tittle i {
+        padding: 5.5vw;
+        font-size: 4vw;
+    }
+
+    .resume-container {
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
     }
 }
 
@@ -578,6 +639,16 @@ main {
         margin-left: 11vw;
     }
     
+    .mycart-tittle i {
+        padding: 5vw;
+        font-size: 5vw;
+    }
+
+    .resume-container {
+        width: 96%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+    }
 }
 
 /* large tablets laptops  */
@@ -593,6 +664,11 @@ main {
 
     .item:nth-child(7n+5) {
         margin-left: 11vw;
+    }
+
+    .mycart-tittle i {
+        padding: 5vw;
+        font-size: 5vw;
     }
 }
 
@@ -610,6 +686,12 @@ main {
     .item:nth-child(9n+6) {
         margin-left: 9vw;
     }
+
+    .mycart-tittle i {
+        padding: 4vw;
+        font-size: 4vw;
+    }
+
 }
 
 /* extra large screens */
@@ -629,6 +711,21 @@ main {
     
     .item:nth-child(9n+9) {
         margin-right: 2%;
+    }
+
+    .mycart-tittle i {
+        padding: 4vw;
+        font-size: 4vw;
+    }
+
+    .resume-container {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .hexagon-icon i {
+        font-size: 150%;
     }
 }
 
