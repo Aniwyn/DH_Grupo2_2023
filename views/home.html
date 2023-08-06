@@ -29,10 +29,10 @@
             </div>
             <div class="nav__loginBar">
                 <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
-                <i class="fa-regular fa-message nav__link loginBar__phone"></i>
+                <i class="fa-regular fa-message nav__link loginBar__btnMessage"></i>
                 <a class="nav__link loginBar__btnExtend" href="/join">Registrarse</a>
                 <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>
-                <a href="#"><i class="fa-regular fa-user nav__link loginBar__phone"></i></a>
+                <a href="#"><i class="fa-regular fa-user nav__link loginBar__btnUser"></i></a>
             </div>
         </nav>
     </header>
@@ -40,10 +40,9 @@
     <!---------------------------- Main ---------------------------->
 
     <main>
-        <section class="main-dashboard">
-            <div class="carousel">
-                <!-- <img src="images/home/sega.jpg" alt="imagen del carrusel"> -->
-                <div class="card">
+        <section class="dashboard">
+            <div class="dashboard__carousel">
+                <div class="carousel__card">
                     <h3>Fin de semana Sega</h3>
                     <p>
                         Viví la experiencia de la era dorada de los videojuegos con
@@ -51,78 +50,149 @@
                     </p>
                 </div>
             </div>
-            <div class="mostValue">
+            <div class="dashboard__offers">
                 <article>
-                    <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="discount">
+                    <img src="images/home/Sonic2.jpg" alt="" />
+                    <div class="offers__discountTag">
                         <div class="discount_box">
                             <span>-33%</span>
                         </div>
                     </div>
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
+                    <div class="products__info">
+                        <div class="info__name">
+                            <h4>Sonic 2</h4>
                         </div>
-                        <div class="price">
-                            <span>$799.<sup>99</sup></span>
+                        <div class="info__price">
+                            <span>$899.<sup>99</sup></span>
                         </div>
                     </div>
                 </article>
                 <article>
-                    <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="discount">
+                    <img src="images/home/Worm.jpg" alt="" />
+                    <div class="offers__discountTag">
                         <div class="discount_box">
                             <span>-$200</span>
                         </div>
                     </div>
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
+                    <div class="products__info">
+                        <div class="info__name">
+                            <h4>Worm Jim</h4>
                         </div>
-                        <div class="price">
+                        <div class="info__price">
                             <span>$799.<sup>99</sup></span>
                         </div>
                     </div>
                 </article>
                 <article>
-                    <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="discount">
+                    <img src="images/home/TinyToon.jpg" alt="" />
+                    <div class="offers__discountTag">
                         <div class="discount_box">
                             <span>2 X 1</span>
                         </div>
                     </div>
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
+                    <div class="products__info">
+                        <div class="info__name">
+                            <h4>Tiny Toon Adventures</h4>
                         </div>
-                        <div class="price">
+                        <div class="info__price">
                             <span>$799.<sup>99</sup></span>
                         </div>
                     </div>
                 </article>
                 <article>
-                    <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="discount">
+                    <img src="images/home/Ghostbuster.jpg" alt="" />
+                    <div class="offers__discountTag">
                         <div class="discount_box">
                             <span>-25%</span>
                         </div>
                     </div>
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
+                    <div class="products__info">
+                        <div class="info__name">
+                            <h4>GHOSTBUSTER</h4>
                         </div>
-                        <div class="price">
+                        <div class="info__price">
                             <span>$799.<sup>99</sup></span>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
-
-
         <section>
-            <h2 class="section_tittle">Mas vendidos</h2>
-            <div class="products">
+            <h2 class="section__tittle">Mas vendidos</h2>
+            <div class="section__products">
+                <article>
+                    <img src="images/home/SuperMario.jpg" alt="" />
+                    <div class="products__info">
+                        <div class="info__name">
+                            <a href="/details" class="name__link">
+                                <h4>SuperMario Bro. U Deluxe</h4>
+                            </a>
+                            <span class="products__tag">Switch</span>
+                        </div>
+                        <div class="info__price">
+                            <span>$799.<sup>99</sup></span>
+                            <div class="products__cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="images/home/MetalSlug.jpg" alt="" />
+                    <div class="products__info">
+                        <div class="info__name">
+                            <a href="/details" class="name__link">
+                                <h4>Metal Slug 3</h4>
+                            </a>
+                            <span class="products__tag">PlayStation 2</span>
+                        </div>
+                        <div class="info__price">
+                            <span>$799.<sup>99</sup></span>
+                            <div class="products__cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="images/home/AlienStorm.jpg" alt="" />
+                    <div class="products__info">
+                        <div class="info__name">
+                            <a href="/details" class="name__link">
+                                <h4>ALIEN STORM</h4>
+                            </a>
+                            <span class="products__tag">genesis</span>
+                        </div>
+                        <div class="info__price">
+                            <span>$799.<sup>99</sup></span>
+                            <div class="products__cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="images/home/AlienStorm.jpg" alt="" />
+                    <div class="products__info">
+                        <div class="info__name">
+                            <a href="/details" class="name__link">
+                                <h4>ALIEN STORM</h4>
+                            </a>
+                            <span class="products__tag">genesis</span>
+                        </div>
+                        <div class="info__price">
+                            <span>$799.<sup>99</sup></span>
+                            <div class="products__cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section>
+            <h2 class="section__tittle">Ultimas Novedades</h2>
+            <div class="section__products">
                 <article>
                     <img src="images/home/AlienStorm.jpg" alt="" />
                     <div class="products__info">
@@ -130,27 +200,11 @@
                             <a href="/details" class="name__link">
                                 <h4>ALIEN STORM asdad asdad adasd asdas</h4>
                             </a>
-                            <span class="tag">genesis</span>
+                            <span class="products__tag">genesis</span>
                         </div>
                         <div class="info__price">
                             <span>$799.<sup>99</sup></span>
-                            <div class="cart">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
-                            <span class="tag">genesis</span>
-                        </div>
-                        <div class="price">
-                            <span>$799.<sup>99</sup></span>
-                            <div class="cart">
+                            <div class="products__cart">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                         </div>
@@ -158,14 +212,16 @@
                 </article>
                 <article>
                     <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
-                            <span class="tag">genesis</span>
+                    <div class="products__info">
+                        <div class="info__name">
+                            <a href="/details" class="name__link">
+                                <h4>ALIEN STORM</h4>
+                            </a>
+                            <span class="products__tag">genesis</span>
                         </div>
-                        <div class="price">
+                        <div class="info__price">
                             <span>$799.<sup>99</sup></span>
-                            <div class="cart">
+                            <div class="products__cart">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                         </div>
@@ -173,14 +229,33 @@
                 </article>
                 <article>
                     <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
-                            <span class="tag">genesis</span>
+                    <div class="products__info">
+                        <div class="info__name">
+                            <a href="/details" class="name__link">
+                                <h4>ALIEN STORM</h4>
+                            </a>
+                            <span class="products__tag">genesis</span>
                         </div>
-                        <div class="price">
+                        <div class="info__price">
                             <span>$799.<sup>99</sup></span>
-                            <div class="cart">
+                            <div class="products__cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="images/home/AlienStorm.jpg" alt="" />
+                    <div class="products__info">
+                        <div class="info__name">
+                            <a href="/details" class="name__link">
+                                <h4>ALIEN STORM</h4>
+                            </a>
+                            <span class="products__tag">genesis</span>
+                        </div>
+                        <div class="info__price">
+                            <span>$799.<sup>99</sup></span>
+                            <div class="products__cart">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                         </div>
@@ -188,83 +263,13 @@
                 </article>
             </div>
         </section>
-
-
-        <section>
-            <h2 class="section_tittle">Ultimas novedades</h2>
-            <div class="products">
-                <article>
-                    <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
-                            <span class="tag">genesis</span>
-                            <span class="tag">sega</span>
-                        </div>
-                        <div class="price">
-                            <span>$799.<sup>99</sup></span>
-                            <div class="cart">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
-                            <span class="tag">genesis</span>
-                        </div>
-                        <div class="price">
-                            <span>$799.<sup>99</sup></span>
-                            <div class="cart">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
-                            <span class="tag">genesis</span>
-                        </div>
-                        <div class="price">
-                            <span>$799.<sup>99</sup></span>
-                            <div class="cart">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <img src="images/home/AlienStorm.jpg" alt="" />
-                    <div class="info">
-                        <div class="name">
-                            <h4>ALIEN STORM</h4>
-                            <span class="tag">genesis</span>
-                        </div>
-                        <div class="price">
-                            <span>$799.<sup>99</sup></span>
-                            <div class="cart">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-
-
     </main>
-</body>
 
-<footer>
-    <span class="hover-3">proximamente (?</span>
-</footer>
+    <!---------------------------- Footer ---------------------------->
+
+    <footer>
+        <span class="hover-3">proximamente (?</span>
+    </footer>
+</body>
 
 </html>
