@@ -1,0 +1,100 @@
+:root {
+    --label-color: rgb(19, 19, 19);
+}
+
+body {
+    background-image: url(/images/register/2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 90vw;
+    margin: 0 5vw;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container-form{
+    margin: 50px 0;
+    background: var(--label-color);
+    width: 30vw;
+    height: 30vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 5px;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem var(--color-lightblue),
+    0 0 0.8rem var(--color-lightblue),
+    inset 0 0 1.3rem var(--color-lightblue);
+}
+
+.container-form div{
+    width: 80%;
+}
+
+.container-form div p {
+    position: relative;
+    color: white;
+    width: 100%;
+}
+
+.container-form div p label{
+    color: white;
+
+    position: absolute;
+    font-size: 1vw;
+    top: -30%;
+    left: 12%;
+    background: var(--label-color);
+    padding: 0 5px;
+}
+
+.container-form div p input{
+    width: 95%;
+
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+button{
+    width: 100%;
+    padding: .5rem 0;
+    margin: .5rem 0;
+}
+
+.btn-continue{
+    
+}
+
+.btn-extra{
+
+}
+
+.separator{
+    position: relative;
+    border-bottom: 1px white solid;
+    display: flex;
+    justify-content: center;
+}
+
+.separator span{
+    position: absolute;
+    background: var(--label-color);
+    padding: 0 5px;
+    bottom: -7px;
+}

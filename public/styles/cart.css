@@ -272,12 +272,14 @@ tr {
     transition-duration: var(--hexagon_duration);
 }
 
-.item:hover {
+.item:hover,
+.item:focus {
     scale: 1.18;
     z-index: 999;
 }
 
-.item:hover .hexagon * {
+.item:hover .hexagon * ,
+.item:focus .hexagon * {
     opacity: 1;
 }
 
@@ -308,7 +310,8 @@ tr {
     transition-duration: var(--hexagon_duration);
 }
 
-.item:hover .hexagon img {
+.item:hover .hexagon img,
+.item:focus .hexagon img {
     scale: 0.45;
     transform: translateY(-20%);
 }
@@ -428,11 +431,14 @@ tr {
     transition: var(--hexagon_duration);
 }
 
-.item:hover .hexagon-price-discount {
+.item:hover .hexagon-price-discount,
+.item:focus .hexagon-price-discount
+{
     opacity: 1;
 }
 
-.item:hover .hexagon-delete {
+.item:hover .hexagon-delete,
+.item:focus .hexagon-delete {
     opacity: 1;
 }
 
@@ -455,7 +461,8 @@ tr {
     transition: .3s;
 }
 
-.hexagon-delete i:hover {
+.hexagon-delete i:hover,
+.hexagon-delete i:focus {
     cursor: pointer;
     scale: 1.2;
     text-shadow:

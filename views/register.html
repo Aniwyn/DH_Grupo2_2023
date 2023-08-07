@@ -18,53 +18,49 @@
 </head>
 
 <body>
-    <header>
 
+    <header>
+        <nav>
+            <a class="nav__logo" href="/">
+                <img class="logo__image" src="images/header/icono.png" alt="logo de la pagina" />
+            </a>
+            <div class="nav__bar">
+                <a href="#"><i class="fa-solid fa-bars bar__burguerMenu nav__link"></i></a>
+                <a class="nav__link bar__desktopMenu" href="/details">Categorias</a>
+                <a class="nav__link bar__desktopMenu" href="/">Colecciones</a>
+                <a class="nav__link bar__desktopMenu" href="/">Ofertas</a>
+            </div>
+            <div class="nav__loginBar">
+                <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
+                <i class="fa-regular fa-message nav__link loginBar__btnMessage"></i>
+                <a class="nav__link loginBar__btnExtend" href="/join">Registrarse</a>
+                <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>
+                <a href="#"><i class="fa-regular fa-user nav__link loginBar__btnUser"></i></a>
+            </div>
+        </nav>
     </header>
 
     <main>
-        
-        <form class="container-form" action="register.html" method="POST">
+        <!-- <label for="nombre">Nombre </label> 
+        <label for="apodo">Apodo</label>
+        <label for="email">Email</label>
+        <label for="contrasena">Contraseña</label>
+        <label for="repetir-contrasena">Repetir Contraseña</label> -->
+        <form class="container-form">
             <div>
-                En los confines digitales de la realidad, un código ancestral se manifiesta como una red interconectada de posibilidades. En este vasto cosmos cibernético, una figura misteriosa emerge de las sombras, destinada a moldear su propia leyenda.
-                Un ser virtual conocido como
+                En los confines digitales de la realidad, un código ancestral se manifiesta como una red interconectada
+                de posibilidades. En este vasto cosmos cibernético, una figura misteriosa emerge de las sombras,
+                destinada a moldear su propia leyenda.
+                Un ser virtual conocido como <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre..." required> <br>
+                Pero un héroe sin un alias es solo un fragmento del código. ¿Cómo te llamarás jugador? <input type="text" id="apodo" name="apodo" placeholder="Ingresa tu apodo..." required> <br>
+                En este reino de bytes y circuitos, la comunicación fluye a través de canales insondables. El canal que
+                te unirá a otros exploradores de la matriz es <input type="email" id="email" name="email" placeholder="Email..." required> <br>
+                Y así, [ingresa nombre], forjaste tu contraseña, un patrón de seguridad único entre la corriente de
+                datos. Como un algoritmo inscrito en los cimientos de la realidad virtual el cual era <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required> <br>
+                Pero incluso en este laberinto de información, la simetría es clave. La confirmación de tu contraseña
+                sella la conexión entre tu esencia y la marea de información que te rodea <input type="password" id="repetir-contrasena" name="repetir-contrasena" placeholder="Repetir contraseña" required>. <br>
             </div>
-            <div>
-                <label for="nombre">Nombre </label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre..." required>
-            </div>
-            <p>
-                Pero un héroe sin un alias es solo un fragmento del código. ¿Cómo te llamarás, trascendente jugador?
-            </p>
-            <p>
-                <label for="apodo">Apodo</label>
-                <input type="text" id="apodo" name="apodo" placeholder="Ingresa tu apodo..." required>
-            </p>
-            <p>
-                En este reino de bytes y circuitos, la comunicación fluye a través de canales insondables. El canal que te unirá a otros exploradores de la matriz es 
-            </p>
-            
-            <p>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </p>
-            <p>
-                Y así, [ingresa nombre], forjaste tu contraseña, un patrón de seguridad único entre la corriente de datos. Como un algoritmo inscrito en los cimientos de la realidad virtual el cual era 
-            </p>
-            
-            <p>
-                <label for="contrasena">Contraseña</label>
-                <input type="password" id="contrasena" name="contrasena" required>
-            </p>
-            <p>
-                Pero incluso en este laberinto de información, la simetría es clave. La confirmación de tu contraseña sella la conexión entre tu esencia y la marea de información que te rodea. 
-            </p>
-            <p>
-                <label for="repetir-contrasena">Repetir Contraseña</label>
-                <input type="password" id="repetir-contrasena" name="repetir-contrasena" required>
-            </p>
-            
-            <input type="submit" value="Registrarse">
+            <button type="submit" class="btn-5">Registrarse</button>
         </form>
     </main>
 
