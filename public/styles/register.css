@@ -1,0 +1,47 @@
+:root{
+    --label-color: white;
+}
+
+main{
+    width: 90vw;
+    margin: 0 5vw;
+}
+
+.container-form{
+    width: 60vw;
+    margin: 0 15vw;
+    padding: 1.5rem;
+
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    background: white;
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .container-form p {
+    position: relative;
+}
+
+.container-form p label{
+    position: absolute;
+    font-size: 1vw;
+    top: -30%;
+    left: 4%;
+    background: var(--label-color);
+    padding: 0 5px;
+}
+
+.container-form p input{
+    border: none;
+
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 5px;
+    outline: none;
+    background: none;
+    cursor: pointer;
+} */
+
