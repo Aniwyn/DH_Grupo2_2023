@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/cart.css">
+
+    <link rel="icon" type="image/x-icon" href="images/header/icono.png">
+
+    <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,7 +19,24 @@
 
 <body>
     <header>
-
+        <nav>
+            <a class="nav__logo" href="/">
+                <img class="logo__image" src="images/header/icono.png" alt="logo de la pagina" />
+            </a>
+            <div class="nav__bar">
+                <a href="#"><i class="fa-solid fa-bars bar__burguerMenu nav__link"></i></a>
+                <a class="nav__link bar__desktopMenu" href="/details">Categorias</a>
+                <a class="nav__link bar__desktopMenu" href="/">Colecciones</a>
+                <a class="nav__link bar__desktopMenu" href="/">Ofertas</a>
+            </div>
+            <div class="nav__loginBar">
+                <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
+                <i class="fa-regular fa-message nav__link loginBar__phone"></i>
+                <a class="nav__link loginBar__btnExtend" href="/join">Registrarse</a>
+                <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>
+                <a href="#"><i class="fa-regular fa-user nav__link loginBar__phone"></i></a>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -26,6 +48,50 @@
             <li class="item">
                 <div class="hexagon">
                     <img src="/images/mycart/cxxccx.jpg" alt="">
+                    <div class="hexagon-price">$21,586.59</div>
+                    <div class="hexagon-icon">
+                        <i class="fa-brands fa-windows"></i>
+                        <i class="fa-brands fa-playstation"></i>
+                        <i class="fa-brands fa-xbox"></i>
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <select class="hexagon-count" name="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button class="hexagon-delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="hexagon">
+                    <img src="/images/home/Worm.jpg" alt="">
+                    <div class="hexagon-price">$849.99</div>
+                    <div class="hexagon-icon">
+                        <i class="fa-brands fa-windows"></i>
+                        <i class="fa-brands fa-playstation"></i>
+                        <i class="fa-brands fa-xbox"></i>
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <select class="hexagon-count" name="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button class="hexagon-delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </li>
+            <li class="item">
+                <div class="hexagon">
+                    <img src="/images/home/MetalSlug.jpg" alt="">
                     <div class="hexagon-price">$XXXXX.XX</div>
                     <div class="hexagon-icon">
                         <i class="fa-brands fa-windows"></i>
@@ -47,29 +113,7 @@
             </li>
             <li class="item">
                 <div class="hexagon">
-                    <img src="/images/mycart/cxxccx.jpg" alt="">
-                    <div class="hexagon-price">$XXXXX.XX</div>
-                    <div class="hexagon-icon">
-                        <i class="fa-brands fa-windows"></i>
-                        <i class="fa-brands fa-playstation"></i>
-                        <i class="fa-brands fa-xbox"></i>
-                        <i class="fa-solid fa-gamepad"></i>
-                    </div>
-                    <select class="hexagon-count" name="cantidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <button class="hexagon-delete">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            </li>
-            <li class="item">
-                <div class="hexagon">
-                    <img src="/images/mycart/cxxccx.jpg" alt="">
+                    <img src="/images/home/Sonic2.jpg" alt="">
                     <div class="hexagon-price">$XXXXX.XX</div>
                     <div class="hexagon-icon">
                         <i class="fa-brands fa-windows"></i>
@@ -99,26 +143,28 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td>NOMBRE DE PRUEBA CONCHETUNADRE</td>
-                            <td>$XXXXX.XX</td>
+                            <td>STARFIELD PREMIUM EDITION (Early Access) + PRE-ORDER BONUS PC</td>
+                            <td>$21,586.59</td>
                         </tr>
                         <tr>
-                            <td>NOMBRE DE PRUEBA CONCHETUNADRE</td>
-                            <td>$XXXXX.XX</td>
+                            <td>Worm Jim</td>
+                            <td>$849.99</td>
                         </tr>
                         <tr>
-                            <td>NOMBRE DE PRUEBA CONCHETUNADRE</td>
-                            <td>$XXXXX.XX</td>
+                            <td>Metal Slug 3</td>
+                            <td>$1199.99</td>
                         </tr>
                         <tr>
-                            <td>NOMBRE DE PRUEBA CONCHETUNADRE</td>
-                            <td>$XXXXX.XX</td>
-                        </tr>
-                        <tr>
-                            <td>TOTAL</td>
-                            <td>$XXXXX.XX</td>
+                            <td>Nsonic 2 the hedgehog</td>
+                            <td>$679.99</td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>TOTAL</td>
+                            <td>$48,633.12</td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
             <div class="resume-container-buttons">
@@ -138,18 +184,18 @@
                     b
                 </button>
             </div>
+            <div class="discount-container">
+                <input type="text" name="discount" id="discount">
+                <label for="discount">Discount code </label>
+            </div>
         </div>
 
-        <!-- <div class="discount-container">
-            <input type="text" name="discount" id="discount">
-            <label for="discount">Discount code </label>
-        </div> -->
         </div>
 
     </main>
 
     <footer>
-
+        <span class="hover-3">proximamente (?</span>
     </footer>
 </body>
 
