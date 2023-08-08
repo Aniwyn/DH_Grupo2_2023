@@ -18,6 +18,8 @@ body {
     margin-top: 30px;
 }
 
+
+
 .form-heading {
     position: relative;
     top: -20px;
@@ -46,7 +48,7 @@ form {
 
 .form-group input {
     position: relative;
-    top: 10px; 
+    top: 10px;
 }
 
 label {
@@ -86,6 +88,30 @@ button:hover {
     background-color: #4700a0;
     filter: brightness(1.5);
     box-shadow: 0 0 12px rgba(71, 0, 160, 0.8), 0 0 14px rgba(255, 0, 0, 0.8);
+}
+
+@media (max-width: 1023px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form-group input,
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .form-group input,
+    button {
+        width: 100%;
+    }
 }
 
 
