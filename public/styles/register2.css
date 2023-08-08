@@ -2,34 +2,51 @@ body {
     /*margin: 0;
     padding: 0;*/
     background-color: #f5f5f5;
-    color: #ffffff;
+    color: #f5f5f5;
+    text-shadow: 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 12px var(--color-translucid-pink);
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 70px);
+    min-height: 100hv;
     flex-direction: column;
+    margin-top: 30px;
 }
 
-.form-heading{
-    color: white;
+.form-heading {
+    position: relative;
+    top: -20px;
+    text-shadow: 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 12px var(--color-translucid-pink);
     text-align: center;
-    margin-bottom: 20px;
 }
 
 form {
     background-color: rgba(255, 255, 255, 0.2);
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 12px var(--color-translucid-lightblue);
     width: 400px;
-    text-align: center;
+    text-align: left;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.form-group input {
+    position: relative;
+    top: 10px; 
 }
 
 label {
@@ -39,24 +56,38 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
+    box-shadow: 0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 12px var(--color-translucid-lightblue);
     border-radius: 5px;
 }
 
 button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #651fff;
+    text-shadow: 0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 12px var(--color-translucid-lightblue);
+    color: #f5f5f5;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, filter 0.3s ease;
+    transition: background-color 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px rgba(101, 31, 255, 0.8), 0 0 10px rgba(255, 0, 0, 0.8);
 }
 
 button:hover {
-    background-color: #0056b3;
-    filter: brightness(1.2);
+    background-color: #4700a0;
+    filter: brightness(1.5);
+    box-shadow: 0 0 12px rgba(71, 0, 160, 0.8), 0 0 14px rgba(255, 0, 0, 0.8);
 }
+
+
+
+
