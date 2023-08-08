@@ -29,6 +29,10 @@ app.get("/register", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/register.html"))
 })
 
+app.get("/register2", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/register2.html"))
+})
+
 
 app.listen(port, () => {
     console.log(`[server] corriendo en el puerto ${port} (http://localhost:5000/)`);

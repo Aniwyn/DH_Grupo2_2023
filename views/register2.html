@@ -4,34 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/header/icono.png">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="styles/register2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Formulario de Registro</title>
 </head>
 
 <body>
-    <div class="banner">
-        <div class="logo">
-            <img src="images/header/Sonic2.jpg" alt="Logo">
-        </div>
-        <div class="menu-left">
-            <button class="menu-button">Categorías</button>
-            <button class="menu-button">Ofertas</button>
-            <button class="menu-button">Historial</button>
-        </div>
-        <div class="menu-right">
-            <button class="menu-button">Usuario</button>
-            <button class="menu-button">Mis compras</button>
-            <div class="notifications">
-                <img src="notification.png" alt="Notificaciones">
+
+    <header>
+        <nav>
+            <a class="nav__logo" href="/">
+                <img class="logo__image" src="images/header/icono.png" alt="logo de la pagina" />
+            </a>
+            <div class="nav__bar">
+                <a href="#"><i class="fa-solid fa-bars bar__burguerMenu nav__link"></i></a>
+                <a class="nav__link bar__desktopMenu" href="/details">Categorias</a>
+                <a class="nav__link bar__desktopMenu" href="/">Colecciones</a>
+                <a class="nav__link bar__desktopMenu" href="/">Ofertas</a>
             </div>
-            <div class="cart">
-                <img src="cart.png" alt="Carrito de Compras">
+            <div class="nav__loginBar">
+                <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
+                <i class="fa-regular fa-message nav__link loginBar__btnMessage"></i>
+                <a class="nav__link loginBar__btnExtend" href="/join">Registrarse</a>
+                <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>
+                <a href="#"><i class="fa-regular fa-user nav__link loginBar__btnUser"></i></a>
             </div>
-        </div>
-    </div>
+        </nav>
+    </header>
 
     <div class="container">
-        <h1>Registro de Usuario</h1>
+        <h1 class="form-heading">Registro de Usuario</h1>
         <form>
             <div class="form-group">
                 <label for="nombre">Nombres:</label>
@@ -62,4 +70,5 @@
         </form>
     </div>
 </body>
+
 </html>
