@@ -265,15 +265,6 @@ main {
         0 0 9px var(--color-green), 0 0 12px var(--color-white);
 }
 
-
-
-
-
-
-
-
-
-
 .section__tittle {
     background-color: rgba(0, 0, 0, 0.9);
     background-size: 100%;
@@ -318,14 +309,14 @@ main {
 }
 
 .section__products article .products__info {
-    width: 100%;
+    width: 90%;
     height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-top: 3px solid var(--color-black);
     color: var(--color-white);
-    padding: 0 0.5rem;
+    padding: 0 5%;
 }
 
 .section__products article .products__info .info__name .name__link,
@@ -424,8 +415,13 @@ main {
 footer {
     height: 15rem;
     margin-top: 2rem;
-    background-color: black;
+    background-color: #242353;
     color: white;
+}
+
+footer .container {
+    width: 90vw;
+    margin: 0 5vw;
 }
 
 /* ----------------- Pruebas ----------------- */
@@ -436,7 +432,7 @@ footer {
     --c: #1095c1;
     /* the color */
 
-    color: #0000;
+    color: #FFF;
     padding-block: var(--b);
     background: linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
         linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b) no-repeat;

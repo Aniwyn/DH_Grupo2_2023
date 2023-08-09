@@ -12,7 +12,6 @@ body {
 main {
     width: 90vw;
     margin: 0 5vw;
-
     display: flex;
     justify-content: center;
 }

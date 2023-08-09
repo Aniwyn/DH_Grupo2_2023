@@ -13,26 +13,17 @@ app.get("/details", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/details.html"))
 })
 
-app.get("/join", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/join.html"))
-})
-
 app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/login.html"))
-})
-
-app.get("/mycart", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/shopping_cart.html"))
 })
 
 app.get("/register", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/register.html"))
 })
 
-app.get("/register2", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/register2.html"))
+app.get("/mycart", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/shopping_cart.html"))
 })
-
 
 app.listen(port, () => {
     console.log(`[server] corriendo en el puerto ${port} (http://localhost:5000/)`);
