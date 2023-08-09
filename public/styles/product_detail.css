@@ -38,7 +38,7 @@ main{
     width: 60%;
     border-radius:solid 1px ;
     color: aliceblue;
-    padding: 0 2rem 1rem;
+    padding: 0 2rem 1rem 0 ;
     text-align: left;
 
 }
@@ -73,13 +73,23 @@ main{
     
 }
 
+.detallito{
+    display: flex;
+    justify-content: center;
+}
+
+.detallito img{
+    width: 20%;
+    margin-bottom: 1rem;
+}
+
 .descr{
     text-decoration:overline;
     padding:10px;
 }
 
 .texto-descriptivo{
-    padding: 20px;
+    padding: 20px 20px 0;
 }
 
 .comp{
@@ -264,13 +274,6 @@ input:focus{
 }
 
 @media (max-width: 1023px) {
-<<<<<<< HEAD
-
-
-
-}
-
-=======
     .principal{
         flex-direction: column;
     }
@@ -294,4 +297,4 @@ input:focus{
         padding: 20%;
     }
 }
->>>>>>> 024e45fea7e1b8d918ec54caf3a26259f3d8d7fb
+
