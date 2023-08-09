@@ -10,7 +10,6 @@ body {
 /* ----------------- Header ----------------- */
 
 nav {
-    /* position: sticky; */
     display: flex;
     flex-wrap: wrap;
     width: 90vw;

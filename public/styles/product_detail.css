@@ -264,49 +264,7 @@ input:focus{
 }
 
 @media (max-width: 1023px) {
-   .producto-pricipal{
-   width: 600px;
-   height: 500px;
-   }
-    
-   .imagen{
-    width: 500px;
-    height: 400px;
-   }
 
-   .descripcion{
-    position: relative;
-    left: 50px;
-    bottom: 0px;
-    top:180px;
-    
-    width: 500px;
-    height: 300px;
-   }
-
-   .descr{
-    font-size: 20px;
-   }
-
-   .texto-descriptivo{
-    font-size: 16px;
-   }
-
-   .cantidad{
-    position: relative;
-    right:550px;
-    bottom: 0px;
-    top:10px;
-   }
-   .carrito{
-    position: relative;
-    right:0px;
-    bottom: 40px;
-   }
-
-   .detalles{
-    display: block;
-   }
 
 
 }
