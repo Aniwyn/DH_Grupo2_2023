@@ -264,8 +264,34 @@ input:focus{
 }
 
 @media (max-width: 1023px) {
+<<<<<<< HEAD
 
 
 
 }
 
+=======
+    .principal{
+        flex-direction: column;
+    }
+    .producto-pricipal{
+        width: 100%;
+        padding: 00%;
+    }
+    .imagen{
+        width: auto;
+    }
+    .descripcion{
+        width: auto;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+    .colum{
+       width: 90%;
+    }
+    .prod{
+        width: 90%;
+        padding: 20%;
+    }
+}
+>>>>>>> 024e45fea7e1b8d918ec54caf3a26259f3d8d7fb
