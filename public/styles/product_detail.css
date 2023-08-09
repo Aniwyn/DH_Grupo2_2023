@@ -1,147 +1,9 @@
-*{
+/*{
     box-sizing: border-box;
     background-image: url("../images/home/background,jpg");
 }
+*/
 
-.header1{
-    padding: 10px;
-}
-
-nav {
-    /* position: sticky; */
-    display: flex;
-    flex-wrap: wrap;
-    width: 90vw;
-    height: 4rem;
-    border-radius: 2rem;
-    margin: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-        url("../images/header/header_texture.jpg");
-    background-size: 100%;
-    background-color: var(--color-black);
-    opacity: 0.9;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .nav__bar {
-    display: inline;
-    margin-left: 1rem;
-}
-
-nav .nav__logo {
-    display: flex;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2.2rem;
-    width: 3.6rem;
-    padding: 0.4rem;
-    border: 2px solid var(--color-bone);
-    background: var(--color-black);
-    box-shadow: 0 0 9px var(--color-translucid-lightblue),
-        0 0 9px var(--color-translucid-lightblue),
-        0 0 9px var(--color-translucid-lightblue),
-        0 0 12px var(--color-translucid-lightblue);
-}
-
-nav .nav__logo:hover {
-    border: 2px solid var(--color-white);
-    box-shadow: 0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
-        0 0 12px var(--color-translucid-pink);
-    transition: 0.2s;
-}
-
-nav .logo__image {
-    padding: auto;
-    width: 3.6rem;
-}
-
-nav .nav__loginBar {
-    display: inline;
-    margin-right: 5px;
-}
-
-nav .nav__link,
-nav .nav__link:visited {
-    line-height: 24px;
-    padding: 1rem;
-    color: var(--color-white);
-    text-shadow: 0 0 9px var(--color-translucid-lightblue),
-        0 0 9px var(--color-translucid-lightblue),
-        0 0 9px var(--color-translucid-lightblue),
-        0 0 12px var(--color-translucid-lightblue);
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-nav .nav__link:hover {
-    text-shadow: 0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
-        0 0 12px var(--color-translucid-pink);
-    transition: 0.2s;
-}
-
-nav .bar__burguerMenu {
-    display: none;
-}
-
-.nav__loginBar .loginBar__btnLogin {
-    border: 1px solid white;
-    border-radius: 2rem;
-    box-shadow: 0 0 9px var(--color-translucid-lightblue),
-        0 0 9px var(--color-translucid-lightblue),
-        0 0 9px var(--color-translucid-lightblue),
-        0 0 12px var(--color-translucid-lightblue);
-}
-
-.nav__loginBar .loginBar__btnLogin:hover {
-    box-shadow: 0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
-        0 0 9px var(--color-translucid-pink),
-        0 0 12px var(--color-translucid-pink);
-}
-
-.nav__loginBar .loginBar__btnUser {
-    display: none;
-}
-
-@media (max-width: 1023px) {
-    nav .nav__loginBar {
-        margin-right: 1rem;
-    }
-
-    .bar__desktopMenu {
-        display: none;
-    }
-
-    .nav__bar .bar__burguerMenu {
-        display: block;
-    }
-
-    .nav__loginBar .loginBar__btnUser {
-        display: inline;
-    }
-
-    .nav__loginBar .loginBar__btnExtend {
-        display: none;
-    }
-}
-
-@media (max-width: 460px) {
-
-    nav .nav__loginBar .loginBar__btnUser,
-    nav .nav__loginBar .loginBar__btnMessage {
-        display: none;
-    }
-}
 
 .todo{
     background-image: url("../images/home/background,jpg");
@@ -152,10 +14,18 @@ nav .bar__burguerMenu {
 
 }
 
+main{
+    width: 90vw;
+    margin: 0 5vw;
+}
+
+.principal{
+    display: flex;
+}
+
 .imagen{
     border: 5px solid darkmagenta ;
-    width: 700px;
-    padding: 10px;
+    width: 100%;
 }
 
 .imagen img{
@@ -164,17 +34,12 @@ nav .bar__burguerMenu {
 }
 
 .producto-pricipal{
-    background-image:url("../images/detalle/primer-fondo.webp");
-    width: 700px;
-    padding: 10px;
+    width: 60%;
     border-radius:solid 1px ;
     color: aliceblue;
     padding: 0 2rem 1rem;
-    width: 800px;
     text-align: left;
-    position: relative;
-    top: 150px;
-    left: 50px;
+
 }
 
 .producto-pricipal img:hover {
@@ -187,17 +52,15 @@ nav .bar__burguerMenu {
     transform: scale(1.05);
 }
 
-.descripcion{: sol
+.descripcion{
     margin-bottom: auto;
-    width: 500px;
+    width: 40%;
     color:black;
     height:400px;
     background-color: darkmagenta;
     border-style:solid;
     border-color: black;
-    position:relative;
-    left: 900px;
-    bottom: 485px;
+
 
     animation: pulsate 3s infinite alternate;
     border: 0.1rem solid #35609b;

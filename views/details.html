@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/product_detail.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -35,64 +36,77 @@
             </div>
         </nav>
     </header>
-    <div class="producto-pricipal">
-        <div class="imagen">
-            <img src="images/detalle/mario.jpg" alt="imagen de mario">
-        </div>
-        <h1>SUPER MARIO</h1>
-    </div>
-
-    <section class="descripcion">
-        <div>
-            <h1 class="descr">Descripción del producto:</h1>
-
-             <p class="texto-descriptivo"> Los videojuegos de Super Mario siguen las aventuras del fontanero Mario, por lo general en el ficticio Reino Champiñón. A menudo se le une su hermano, Luigi, y ocasionalmente, otros miembros de la franquicia. Al igual que en la mayoría de los videojuegos de plataformas, el jugador principalmente corre y salta a través de plataformas y sobre enemigos en distintos niveles temáticos. Los videojuegos tienen tramas generalmente simples, en los que Mario debe rescatar a la princesa Peach (Princesa Toadstool) que es secuestrada por el villano principal de la franquicia, Bowser.</p>
-        </div>
-    </section>
-    <section class="compra">
-        <div>
-            <form class="product__options mt-3" id="formAddDetalle">
-
-
-                <div class="form-group product__option">
-
-                    <div class="cantidad">
-                        <div class="tema">
-                            <label class="product__option-label" for="product-quantity" data-ar="Cantidad" data-br="Quantidade"
-                            data-en="Quantity">Cantidad</label>
-    
-                        </div>
-    
-                        <div class="product__actions">
-                            <div class="product__actions-item">
-                                <div class="input-number product__quantity">
-                                    <input id="product-quantity" class="input-number__input form-control form-control-lg"
-                                        type="number" min="1" value="1">
-                                    <div class="input-number__add"></div>
-                                    <div class="input-number__sub"></div>
-                                </div>
-                            </div>
-                    </div>
-                    
-                        <div class="carrito">
-                            <div class="product__actions-item product__actions-item--addtocart">
-                                <button style="font-size: .85rem;" class="btn btn-primary btn-lg glow-on-hover"
-                                    type="button"
-                                    onclick="AgregarDetalle(196839, '196839-videojuegos-nintendo-switch-juego-xenoblade-chronicles-3-nsw');"
-                                    data-ar="Agregar al carrito" data-br="Adicionar" data-en="Add" class="agregar">Agregar al
-                                    carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </form>
-        </div>
-    </section>
 
     <main>
+        <div class="principal">
+            <div class="producto-pricipal">
+                <div class="imagen">
+                    <img src="images/detalle/mario.jpg" alt="imagen de mario">
+                </div>
+                <h1>SUPER MARIO</h1>
+            </div>
+    
+            <section class="descripcion">
+                <div>
+                    <h1 class="descr">Descripción del producto:</h1>
+    
+                    <p class="texto-descriptivo"> Los videojuegos de Super Mario siguen las aventuras del fontanero Mario,
+                        por lo general en el ficticio Reino Champiñón. A menudo se le une su hermano, Luigi, y
+                        ocasionalmente, otros miembros de la franquicia. Al igual que en la mayoría de los videojuegos de
+                        plataformas, el jugador principalmente corre y salta a través de plataformas y sobre enemigos en
+                        distintos niveles temáticos. Los videojuegos tienen tramas generalmente simples, en los que Mario
+                        debe rescatar a la princesa Peach (Princesa Toadstool) que es secuestrada por el villano principal
+                        de la franquicia, Bowser.</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="compra">
+            <div>
+                <form class="product__options mt-3" id="formAddDetalle">
+
+
+                    <div class="form-group product__option">
+
+                        <div class="cantidad">
+                            <div class="tema">
+                                <label class="product__option-label" for="product-quantity" data-ar="Cantidad"
+                                    data-br="Quantidade" data-en="Quantity">Cantidad</label>
+
+                            </div>
+
+                            <div class="product__actions">
+                                <div class="product__actions-item">
+                                    <div class="input-number product__quantity">
+                                        <input id="product-quantity"
+                                            class="input-number__input form-control form-control-lg" type="number"
+                                            min="1" value="1">
+                                        <div class="input-number__add"></div>
+                                        <div class="input-number__sub"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carrito">
+                                <div class="product__actions-item product__actions-item--addtocart">
+                                    <button style="font-size: .85rem;" class="btn btn-primary btn-lg glow-on-hover"
+                                        type="button"
+                                        onclick="AgregarDetalle(196839, '196839-videojuegos-nintendo-switch-juego-xenoblade-chronicles-3-nsw');"
+                                        data-ar="Agregar al carrito" data-br="Adicionar" data-en="Add"
+                                        class="agregar">Agregar al
+                                        carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </form>
+            </div>
+        </section>
+
+
         <div class="detalles">
             <section class="colum1">
                 <div>
@@ -106,21 +120,21 @@
                                     </td>
                                     <td>...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Modelo</span>
                                     </td>
                                     <td>...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Color</span>
                                     </td>
                                     <td>...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Tamaño</span>
@@ -132,7 +146,7 @@
                     </div>
                 </div>
             </section>
-    
+
             <section class="colum2">
                 <div>
                     <span>Maquinaria</span>
@@ -145,21 +159,21 @@
                                     </td>
                                     <td>...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Formato</span>
                                     </td>
                                     <td>...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Jugadores posibles</span>
                                     </td>
                                     <td>...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Soporte Electrico</span>
@@ -171,7 +185,7 @@
                     </div>
                 </div>
             </section>
-    
+
             <section class="colum3">
                 <div>
                     <span>otras Caracteristicas</span>
@@ -184,21 +198,21 @@
                                     </td>
                                     <td>...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Trama</span>
                                     </td>
                                     <td>...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Época</span>
                                     </td>
                                     <td>...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Público</span>
@@ -210,7 +224,7 @@
                     </div>
                 </div>
             </section>
-    
+
             <section class="colum4">
                 <div>
                     <span>otros</span>
@@ -223,21 +237,21 @@
                                     </td>
                                     <td>$...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Tarjeta</span>
                                     </td>
                                     <td>$...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Transferencia</span>
                                     </td>
                                     <td>$...</td>
                                 </tr>
-    
+
                                 <tr class="datos">
                                     <td>
                                         <span>Deposito</span>
@@ -250,35 +264,36 @@
                 </div>
             </section>
         </div>
-        
+
         <section class="recomendados">
             <div>
-                <h2 class="ultimotitle"><a><i class="fa-solid fa-gamepad"></i></a>Productos Recomendados<a><i class="fa-solid fa-gamepad"></i></a></h2>
+                <h2 class="ultimotitle"><a><i class="fa-solid fa-gamepad"></i></a>Productos Recomendados<a><i
+                            class="fa-solid fa-gamepad"></i></a></h2>
                 <div class="articulos">
-                        <div class="imagenes">
-                            <div class="prod">
-                                <div>
-                                    <img src="images/detalle/champions.jpg" alt="imagen de champions" />
-                                </div>
-                            
-                                <div class="team">
-                                    <p>Champions<a class="coment"><i class="fa-solid fa-comment-dollar"></i>
-                                    </a></p>
-                                    <p class="precios">$6.770</p>
-                                </div>
+                    <div class="imagenes">
+                        <div class="prod">
+                            <div>
+                                <img src="images/detalle/champions.jpg" alt="imagen de champions" />
                             </div>
-                            <div class="prod">
-                                <div>
-                                    <img src="images/detalle/champions.jpg" alt="imagen de champions" />
-                                </div>
-                            
-                                <div class="team">
-                                    <p>Champions<a class="coment"><i class="fa-solid fa-comment-dollar"></i>
+
+                            <div class="team">
+                                <p>Champions<a class="coment"><i class="fa-solid fa-comment-dollar"></i>
                                     </a></p>
-                                    <p class="precios">$6.770</p>
-                                </div>
+                                <p class="precios">$6.770</p>
                             </div>
                         </div>
+                        <div class="prod">
+                            <div>
+                                <img src="images/detalle/champions.jpg" alt="imagen de champions" />
+                            </div>
+
+                            <div class="team">
+                                <p>Champions<a class="coment"><i class="fa-solid fa-comment-dollar"></i>
+                                    </a></p>
+                                <p class="precios">$6.770</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
