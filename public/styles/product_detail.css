@@ -135,11 +135,8 @@ input:focus{
     display: flex;
    justify-content: space-around;
    align-items:flex-start ;
-   height: 300px;
+    padding: 2rem 0;
    background-color: darkmagenta;
-   position: relative;
-   bottom: 100px;
-   text-align: center;
 
    animation: pulsate 3s infinite alternate;
    border: 0.1rem solid #35609b;
@@ -148,6 +145,8 @@ input:focus{
        0 0 1.8rem darkmagenta,
        0 0 0.8rem darkmagenta,
        inset 0 0 1.1rem darkmagenta;
+    flex-wrap: wrap;
+       
 }
 
 .datos{
@@ -161,38 +160,19 @@ input:focus{
     text-align: center;
 }
 
-.colum1{
-    position: relative;
-    top:15px;
-}
-
-.colum2{
-    position: relative;
-    top:15px ;
-}
-
-.colum3{
-    position: relative;
-    top: 170px;
-    right: 758px;
-}
-
-.colum4{
-    position: relative;
-    top:170px ;
-    right: 758px;
+.colum{
+    width: 45%;
+    display: flex;
+    justify-content: center;
 }
 
 .articulos{
     background-image: url("../images/detalle/space.jpg");
-    width: 50%;
-    height: 580px;
-    width: 1519px;
     align-items: flex-start;
 
 }
 
-.articulos article img {
+.articulos  img {
     width: 100%;
     height: auto;
     display: block;
@@ -203,8 +183,9 @@ input:focus{
     flex-direction: column;
     background-image: url("images/detalle/space.jpg");
     padding: 40px;
+    width: 50%;
+    box-sizing: border-box;
 
-    gap: var(--item_gap);
 }
 
 .articulos img:hover {
@@ -222,13 +203,11 @@ input:focus{
 }
 
 .recomendado{
-    background-color: rgba(0, 0, 0, 0.9);
     background-size: 100%;
     background-color: var(--color-black);
     opacity: 0.9;
     color: var(--color-white);
-    padding-left: 1rem;
-    border-left: 5px solid var(--color-pink);
+
 }
 
 .ultimotitle{
@@ -240,12 +219,12 @@ input:focus{
     margin-inline-end: 0px;
     font-weight: bold;
     background-color:darkmagenta;
-    height:40px;
     border-style: dotted;
     border-color:indigo;
     text-align: center;
+    padding: 1em 0;
     
-  animation: pulsate 3s infinite alternate;
+
     border: 0.1rem solid #35609b;
     border-radius: 2rem;
     box-shadow:0 0 1rem darkmagenta,
@@ -255,19 +234,20 @@ input:focus{
 }
 
 .imagenes{
-    height:200px;
-    width: 5px;
+    
     display: flex;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     justify-content: space-between;
 }
 
 .team{
 
     background-color:darkmagenta;
-    display: block;
+    display: flex;
     color:rgb(214, 231, 231);
     padding: 15px;
+    justify-content: space-between;
+    align-items: center;
 
     animation: pulsate 3s infinite alternate;
     border: 0.1rem solid #35609b;
@@ -279,9 +259,7 @@ input:focus{
 }
 
 .coment{
-    position:relative;
-    left: 500px;
-    top: 20px;
+
     font-size: 40px;
 }
 
