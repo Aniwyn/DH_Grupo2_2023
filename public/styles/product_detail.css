@@ -21,6 +21,7 @@ main{
 
 .principal{
     display: flex;
+    margin-top: 2rem;
 }
 
 .imagen{
@@ -30,7 +31,7 @@ main{
 
 .imagen img{
     width: 100%;
-    padding-bottom:5px;
+    padding-bottom: 5px;
 }
 
 .producto-pricipal{
@@ -55,9 +56,9 @@ main{
 .descripcion{
     margin-bottom: auto;
     width: 40%;
-    color:black;
-    height:400px;
-    background-color: darkmagenta;
+    height: 100%;
+    color:white;
+    background-color:rgba(0, 0, 0, 0.9);
     border-style:solid;
     border-color: black;
 
@@ -81,32 +82,31 @@ main{
     padding: 20px;
 }
 
+.comp{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
 .compra{
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    border-style: double;
-    border-color: black;
-    position: relative;
-    top:200px;
+
+    
 }
 
-.cantidad{
-    position: relative;
-    right:400px;
-    bottom: 580px;
+.form-group{
+    display: flex;
+    justify-content: space-around;
 }
 
 .tema{
-    font-size: x-large;
     background-color:violet;
 }
 
-.carrito{
-    position: relative;
-    left: 300px;
-    bottom: 30px;
-}
+
 
 .carrito button:hover{
     background-color: forestgreen;
@@ -121,10 +121,10 @@ input:focus{
 
 }
 
-.agregar{
+/*.agregar{
     font-size:15px;
     width: 20px;
-}
+}*/
 
 .subtitle{
     font-family:Handjet;
