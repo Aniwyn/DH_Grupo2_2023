@@ -16,6 +16,8 @@
     --color-darkgray: #212121;
     --color-white: #fff;
     --color-black: #000;
+    --color-translucid-black50: rgba(0, 0, 0, 0.5);
+    --color-translucid-black90: rgba(0, 0, 0, 0.9);
     --color-translucid-gray: rgba(25, 25, 25, 0.8);
     --color-translucid-lightblue: rgba(37, 154, 245, 0.9);
     --color-translucid-pink: rgba(255, 86, 209, 0.9);

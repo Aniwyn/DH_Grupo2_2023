@@ -1,11 +1,4 @@
-/*{
-    box-sizing: border-box;
-    background-image: url("../images/home/background,jpg");
-}
-*/
-
-
-.todo{
+.todo {
     background-image: url("../images/home/background,jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -14,181 +7,185 @@
 
 }
 
-main{
+main {
     width: 90vw;
     margin: 0 5vw;
 }
 
-.principal{
+.principal {
     display: flex;
+    align-items: center;
     margin-top: 2rem;
 }
 
-.imagen{
-    border: 5px solid darkmagenta ;
-    width: 100%;
-}
-
-.imagen img{
-    width: 100%;
-    padding-bottom: 5px;
-}
-
-.producto-pricipal{
+.producto-pricipal {
     width: 60%;
-    border-radius:solid 1px ;
+    border-radius: solid 1px;
     color: aliceblue;
-    padding: 0 2rem 1rem 0 ;
+    padding-right: 1rem;
     text-align: left;
 
 }
 
+.producto-pricipal img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
 .producto-pricipal img:hover {
     transition: 0.2s;
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
-.producto-pricipal h1:hover {
-    transition: 0.2s;
-    transform: scale(1.05);
-}
-
-.descripcion{
-    margin-bottom: auto;
+.descripcion {
     width: 40%;
-    height: 100%;
-    color:white;
-    background-color:rgba(0, 0, 0, 0.9);
-    border-style:solid;
-    border-color: black;
-
-
-    animation: pulsate 3s infinite alternate;
-    border: 0.1rem solid #35609b;
-    border-radius: 2rem;
-    box-shadow:0 0 1rem darkmagenta,
-        0 0 0.8rem darkmagenta,
-        0 0 0.8rem darkmagenta,
-        inset 0 0 0.3rem darkmagenta;
-    
+    align-self: stretch;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 1rem;
 }
 
-.detallito{
+.nameProduct {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 0.5rem;
+}
+
+.nameProduct__text {
+    padding-left: 1rem;
+    color: var(--color-white);
+}
+
+.detallito {
     display: flex;
     justify-content: center;
 }
 
-.detallito img{
+.detallito img {
     width: 20%;
     margin-bottom: 1rem;
 }
 
-.descr{
-    text-decoration:overline;
-    padding:10px;
+.descr {
+    /* text-decoration:overline; */
+    padding: 10px;
+    text-align: center;
+    text-shadow: 0 0 1px var(--color-translucid-lightblue),
+        0 0 2px var(--color-translucid-lightblue),
+        0 0 4px var(--color-translucid-lightblue),
+        0 0 6px var(--color-translucid-lightblue);
 }
 
-.texto-descriptivo{
+.texto-descriptivo {
     padding: 20px 20px 0;
 }
 
-.comp{
+.product__options {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
+.cantidad {
+    width: 30%;
+    border-radius: 0.2rem;
+}
 
+.tema {
+    text-shadow: 0 0 1px var(--color-translucid-pink),
+        0 0 2px var(--color-translucid-pink),
+        0 0 4px var(--color-translucid-pink),
+        0 0 6px var(--color-translucid-pink);
+}
 
-.compra{
+.input-number__input {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.carrito {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    background: var(--color-pink);
+    border-radius: 1rem;
+    box-shadow: 0 0 1px var(--color-translucid-pink),
+        0 0 2px var(--color-translucid-pink),
+        0 0 4px var(--color-translucid-pink),
+        0 0 6px var(--color-translucid-pink);
+}
+
+.carrito:hover {
+    transition: 0.2s;
+    transform: scale(1.02);
+    box-shadow: 0 0 1px var(--color-white),
+        0 0 2px var(--color-white),
+        0 0 4px var(--color-white),
+        0 0 6px var(--color-white);
+}
+
+.carrito button {
+    border: none;
+    background: transparent;
+    color: var(--color-white);
+}
+
+.detalles {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2rem 0;
+    background-color: darkmagenta;
+    border: 0.1rem solid #35609b;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem darkmagenta,
+        0 0 1.8rem darkmagenta,
+        0 0 0.8rem darkmagenta,
+        inset 0 0 1.1rem darkmagenta;
+    flex-wrap: wrap;
+}
+
+.datos {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-end;
-
-    
-}
-
-.form-group{
-    display: flex;
-    justify-content: space-around;
-}
-
-.tema{
-    background-color:violet;
-}
-
-
-
-.carrito button:hover{
-    background-color: forestgreen;
-
-    transition: 0.4s;
-    transform: scale(1.55);
-}
-
-input:focus{
-    color:darkmagenta;
-    font-weight:bold ;
-
-}
-
-/*.agregar{
-    font-size:15px;
-    width: 20px;
-}*/
-
-.subtitle{
-    font-family:Handjet;
-    background-color: black;
-}
-
-.detalles{
-    display: flex;
-   justify-content: space-around;
-   align-items:flex-start ;
-    padding: 2rem 0;
-   background-color: darkmagenta;
-
-   animation: pulsate 3s infinite alternate;
-   border: 0.1rem solid #35609b;
-   border-radius: 2rem;
-   box-shadow:0 0 2rem darkmagenta,
-       0 0 1.8rem darkmagenta,
-       0 0 0.8rem darkmagenta,
-       inset 0 0 1.1rem darkmagenta;
-    flex-wrap: wrap;
-       
-}
-
-.datos{
-    display: flex;
-    flex-wrap:nowrap;
     justify-content: space-between;
     background-color: cadetblue;
     border-style: double;
     border-color: #000;
-    width:230px;
+    width: 230px;
     text-align: center;
 }
 
-.colum{
+.colum {
     width: 45%;
     display: flex;
     justify-content: center;
 }
 
-.articulos{
+.articulos {
     background-image: url("../images/detalle/space.jpg");
     align-items: flex-start;
 
 }
 
-.articulos  img {
+.articulos img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.prod{
+.imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.prod {
     display: flex;
     flex-direction: column;
     background-image: url("images/detalle/space.jpg");
@@ -212,7 +209,7 @@ input:focus{
     transform: scale(2.05);
 }
 
-.recomendado{
+.recomendado {
     background-size: 100%;
     background-color: var(--color-black);
     opacity: 0.9;
@@ -220,7 +217,7 @@ input:focus{
 
 }
 
-.ultimotitle{
+.ultimotitle {
     display: block;
     font-size: 1.5em;
     margin-block-start: 0.83em;
@@ -228,33 +225,23 @@ input:focus{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    background-color:darkmagenta;
+    background-color: darkmagenta;
     border-style: dotted;
-    border-color:indigo;
+    border-color: indigo;
     text-align: center;
-    padding: 1em 0;
-    
-
+    padding: 1rem 0;
     border: 0.1rem solid #35609b;
     border-radius: 2rem;
-    box-shadow:0 0 1rem darkmagenta,
+    box-shadow: 0 0 1rem darkmagenta,
         0 0 1.8rem darkmagenta,
         0 0 0.8rem darkmagenta,
         inset 0 0 1.1rem darkmagenta;
 }
 
-.imagenes{
-    
+.team {
+    background-color: darkmagenta;
     display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-}
-
-.team{
-
-    background-color:darkmagenta;
-    display: flex;
-    color:rgb(214, 231, 231);
+    color: rgb(214, 231, 231);
     padding: 15px;
     justify-content: space-between;
     align-items: center;
@@ -262,39 +249,47 @@ input:focus{
     animation: pulsate 3s infinite alternate;
     border: 0.1rem solid #35609b;
     border-radius: 2rem;
-    box-shadow:0 0 1rem darkmagenta,
+    box-shadow: 0 0 1rem darkmagenta,
         0 0 1.8rem darkmagenta,
         0 0 0.8rem darkmagenta,
         inset 0 0 1.1rem darkmagenta;
 }
 
-.coment{
-
+.coment {
     font-size: 40px;
 }
 
 @media (max-width: 1023px) {
-    .principal{
+    .principal {
         flex-direction: column;
     }
-    .producto-pricipal{
+
+    .producto-pricipal {
         width: 100%;
-        padding: 00%;
+        padding: 0;
     }
-    .imagen{
+
+    .imagen {
         width: auto;
     }
-    .descripcion{
+
+    .descripcion {
         width: auto;
         margin-bottom: 1rem;
         padding-bottom: 1rem;
     }
-    .colum{
-       width: 90%;
-    }
-    .prod{
+
+    .colum {
         width: 90%;
-        padding: 20%;
+    }
+
+    .prod {
+        width: 80%;
     }
 }
 
+@media (max-width: 460px) {
+    .prod {
+        width: 100%;
+    }
+}

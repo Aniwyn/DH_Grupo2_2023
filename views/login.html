@@ -32,7 +32,7 @@
             <div class="nav__loginBar">
                 <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
                 <i class="fa-regular fa-message nav__link loginBar__btnMessage"></i>
-                <a class="nav__link loginBar__btnExtend" href="/join">Registrarse</a>
+                <a class="nav__link loginBar__btnExtend" href="/register">Registrarse</a>
                 <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>
                 <a href="#"><i class="fa-regular fa-user nav__link loginBar__btnUser"></i></a>
             </div>
@@ -42,24 +42,27 @@
     <main>
         <form class="container-form">
             <div>
-                <p>
+                <div class="inputText">
                     <label for="nombre">Nombre </label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre..." required>
-                </p>
-                <p>
+                </div>
+                <div class="inputText">
                     <label for="contrasena">Contraseña</label>
                     <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
-                </p>
-                <button type="submit" class="btn-continue">Registrarse</button>
-                <p class="separator"><span>or</span></p>
-                <button type="submit" class="btn-extra"><i class="fa-brands fa-google"></i>Continuar con Google</button>
-                <button type="submit" class="btn-extra"><i class="fa-brands fa-facebook"></i>Continuar con Facebook</button>
+                </div>
+                <button type="submit" class="btn-continue">Iniciar Sesión</button>
+                <div class="separator">
+                    <span>or</span>
+                </div>
+                <button type="submit" class="btn-extra"><i class="fa-brands fa-google icon--google"></i>Continuar con Google</button>
+                <button type="submit" class="btn-extra"><i class="fa-brands fa-facebook icon--facebook"></i>Continuar con
+                    Facebook</button>
             </div>
 
         </form>
     </main>
 
-    <footer>
+    <!-- <footer>
 
-    </footer>
+    </footer> -->
 </body>
