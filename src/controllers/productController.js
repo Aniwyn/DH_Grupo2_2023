@@ -4,11 +4,11 @@ const path = require("path")
 /* GETS SET */
 const productController = {
     mycart : (req,res) => {
-        res.sendFile(path.join(__dirname, "../views/products/shopping_cart.html"))
+        res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"))
     },
     details : (req,res) => {
         let idPag = req.params.id;
-        res.sendFile(path.join(__dirname, "../views/products/details.html"))
+        res.render(path.join(__dirname, "../views/products/details.ejs"))
     }
 }
 

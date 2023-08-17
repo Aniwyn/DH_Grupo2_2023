@@ -16,7 +16,7 @@
 }
 
 body {
-    background-image: url(/images/mycart/5.jpg);
+    background-image: url(/images/background/B-myCart.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,7 +64,6 @@ tr {
 }
 
 .resume-container {
-    /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
     width: 80%;
     height: auto;
     margin-top: 5%;
@@ -75,10 +74,7 @@ tr {
     flex-wrap: wrap;
     justify-content: center;
 
-    background-image: url(/images/mycart/3.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--color-translucid-gray);
 
     border-radius: 1rem;
     border: 2px solid black;
@@ -295,7 +291,7 @@ tr {
     width: var(--hexagon_width);
     height: var(--hexagon_height);
 
-    background-image: url(/images/mycart/3.jpg);
+    background-image: url(/images/background/B-Hexagon.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
