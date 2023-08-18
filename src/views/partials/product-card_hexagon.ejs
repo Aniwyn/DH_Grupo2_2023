@@ -1,11 +1,11 @@
 <li class="item">
     <div class="hexagon">
-        <img src="/images/caratulas/Starfield.jpg" alt="">
-        <div class="hexagon-price">$21,586.59</div>
-        <div class="hexagon-price-discount">$21,586.59</div>
+        <img src="<%= data_item.image %>" alt="">
+        <div class="hexagon-price">$<%= data_item.price %></div>
+        <div class="hexagon-price-discount">$29,586.59</div>
         <div class="hexagon-icon">
-            <% for(let i=0; i < 1; i++) { %>
-                <%= data_item.plataform[i] %>
+            <% for(let i=0; i < data_item.plataform.length; i++) { %>
+                <i class="<%= data_item.plataform[i] %>"></i>
             <% } %>
         </div>
         <select class="hexagon-count" name="cantidad">

@@ -45,7 +45,7 @@
         </div>
 
         <ul class="hexagon-container">
-            <% for(let i=0; i < 5; i++) { %>
+            <% for(let i=0; i < BD.length; i++) { %>
                 <%- include('../partials/product-card_hexagon', {data_item: BD[i]}) %>
             <% } %>
         </ul>
@@ -57,27 +57,17 @@
             <div class="resume-container-body">
                 <table>
                     <tbody>
-                        <tr>
-                            <td>STARFIELD PREMIUM EDITION (Early Access) + PRE-ORDER BONUS PC</td>
-                            <td>$21,586.59</td>
-                        </tr>
-                        <tr>
-                            <td>Worm Jim</td>
-                            <td>$849.99</td>
-                        </tr>
-                        <tr>
-                            <td>Metal Slug 3</td>
-                            <td>$1199.99</td>
-                        </tr>
-                        <tr>
-                            <td>Nsonic 2 the hedgehog</td>
-                            <td>$679.99</td>
-                        </tr>
+                        <% for(let i=0; i < BD.length; i++) { %>
+                            <tr>
+                                <td><%= BD[i].name %></td>
+                                <td><%= BD[i].price %></td>
+                            </tr>
+                        <% } %>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td>TOTAL</td>
-                            <td>$28,633.12</td>
+                            <td><%= BD.reduce((accumulator, currentPrice) => accumulator + currentPrice.price, 0) %></td>
                         </tr>
                     </tfoot>
                 </table>
