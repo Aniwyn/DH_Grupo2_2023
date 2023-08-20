@@ -16,26 +16,8 @@
 </head>
 
 <body class="todo">
-    <header class="header1">
-        <nav>
-            <a class="nav__logo" href="/">
-                <img class="logo__image" src="images/header/icono.png" alt="logo de la pagina" />
-            </a>
-            <div class="nav__bar">
-                <a href="#"><i class="fa-solid fa-bars bar__burguerMenu nav__link"></i></a>
-                <a class="nav__link bar__desktopMenu" href="/details">Categorias</a>
-                <a class="nav__link bar__desktopMenu" href="/">Colecciones</a>
-                <a class="nav__link bar__desktopMenu" href="/">Ofertas</a>
-            </div>
-            <div class="nav__loginBar">
-                <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
-                <i class="fa-regular fa-message nav__link loginBar__btnMessage"></i>
-                <a class="nav__link loginBar__btnExtend" href="/join">Registrarse</a>
-                <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>
-                <a href="#"><i class="fa-regular fa-user nav__link loginBar__btnUser"></i></a>
-            </div>
-        </nav>
-    </header>
+ 
+    <%-include('../partials/header.ejs')%>
 
     <main>
         <div class="principal">
