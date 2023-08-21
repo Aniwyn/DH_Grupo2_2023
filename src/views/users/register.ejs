@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/header/icono.png">
-    <link rel="stylesheet" href="/styles/normalize.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/home.css">
-    <link rel="stylesheet" href="styles/register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Formulario de Registro</title>
-</head>
+<!---------------------------- Head ---------------------------->
+
+<%- include('../partials/head.ejs') %>
 
 <body>
+    <!---------------------------- Header ---------------------------->
 
     <%-include('../partials/header.ejs')%>
 
     <main>
-        <div class="container">
-            <form class="container-form">
+        <div class="register__container">
+            <form class="container__form">
                 <div>
-                    <div class="containter__input">
+                    <div class="container__input">
                         En los confines digitales de la realidad, un código ancestral se manifiesta como una red
-                        interconectada
-                        de posibilidades. En este vasto cosmos cibernético, una figura misteriosa emerge de las sombras,
+                        interconectada de posibilidades. En este vasto cosmos cibernético, una figura misteriosa emerge de las sombras,
                         destinada a moldear su propia leyenda. Un ser virtual conocido como <input type="text"
                             id="nombre" name="nombre" placeholder="Ingresa tu nombre..." required>
                     </div>
-                    <div class="containter__input">
+                    <div class="container__input">
                         Pero un héroe sin un alias es solo un fragmento del código. ¿Cómo te llamarás jugador? <input
                             type="text" id="apodo" name="apodo" placeholder="Ingresa tu apodo..." required>
                     </div>
-                    <div class="containter__input">
+                    <div class="container__input">
                         En este reino de bytes y circuitos, la comunicación fluye a través de canales insondables. El
                         canal que te unirá a otros exploradores de la matriz es <input type="email" id="email"
                             name="email" placeholder="Ingresa tu Email..." required>
                     </div>
-                    <div class="containter__input">
+                    <div class="container__input">
                         Y así, [ingresa nombre], forjaste tu contraseña, un patrón de seguridad único entre la corriente
                         de datos. Como un algoritmo inscrito en los cimientos de la realidad virtual el cual era <input
                             type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
                     </div>
-                    <div class="containter__input">
+                    <div class="container__input">
                         Pero incluso en este laberinto de información, la simetría es clave. La confirmación de tu
-                        contraseña
-                        sella la conexión entre tu esencia y la marea de información que te rodea <input type="password"
+                        contraseña sella la conexión entre tu esencia y la marea de información que te rodea <input type="password"
                             id="repetir-contrasena" name="repetir-contrasena" placeholder="Repetir contraseña"
                             required>.
                     </div>
@@ -56,6 +45,10 @@
             </form>
         </div>
     </main>
+
+    <!---------------------------- Footer ---------------------------->
+
+    <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>

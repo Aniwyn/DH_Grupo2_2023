@@ -1,18 +1,11 @@
-body {
-    background-image: url("../images/home/background.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    margin-top: 0.5rem;
-}
-
-main {
+.main__login {
     width: 90vw;
     margin: 0 5vw;
     display: flex;
     justify-content: center;
 }
 
-.container-form {
+.login__container {
     margin: 4rem 0;
     padding: 3rem;
     background: var(--color-translucid-black50);
@@ -29,7 +22,7 @@ main {
         inset 0 0 0.5rem var(--color-translucid-pink);
 }
 
-.container-form .inputText {
+.login__container .container__inputText {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -38,7 +31,7 @@ main {
     margin-bottom: 2rem;
 }
 
-.container-form .inputText label {
+.login__container .container__inputText label {
     color: white;
     position: absolute;
     top: -30%;
@@ -46,7 +39,7 @@ main {
     background: var(--color-translucid-black90);
 }
 
-.container-form .inputText input {
+.login__container .container__inputText input {
     box-sizing: border-box;
     width: 100%;
     border: 1px solid white;
@@ -57,7 +50,7 @@ main {
     background: none;
 }
 
-button {
+.login__container button {
     width: 100%;
     padding: .5rem 0;
     margin: .5rem 0;
@@ -69,20 +62,20 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.login__container button:hover {
     box-shadow: 0 0 0.5rem var(--color-translucid-pink);
     border: 1px solid var(--color-pink);
 }
 
-button:hover .icon--facebook {
+.login__container button:hover .icon--facebook {
     color: #087bea;
 }
 
-button:hover .icon--google {
+.login__container button:hover .icon--google {
     color: #eb493b;
 }
 
-button:active {
+.login__container button:active {
     box-shadow: 0 0 0.2rem var(--color-translucid-pink),
         0 0 0.2rem var(--color-translucid-pink),
         0 0 0.8rem var(--color-translucid-pink),
@@ -90,11 +83,11 @@ button:active {
         inset 0 0 0.5rem var(--color-translucid-pink);
 }
 
-button i {
+.login__container button i {
     padding-right: 1rem;
 }
 
-.separator {
+.login__container .container__separator {
     color: var(--color-white);
     position: relative;
     border-bottom: 1px white solid;
@@ -104,7 +97,7 @@ button i {
 
 }
 
-.separator span {
+.login__container .container__separator span {
     position: absolute;
     background: var(--color-translucid-black90);
     padding: 0 5px;

@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
 
-body {
+.register__container {
     color: var(--color-white);
-}
-
-main {
-    width: 90vw;
-    margin: 0 5vw;
-}
-
-.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +9,7 @@ main {
     margin-top: 4rem;
 }
 
-.container-form {
+.register__container .container__form {
     background-color: var(--color-translucid-black50);
     width: 60vw;
     position: relative;
@@ -38,11 +30,11 @@ main {
         inset 0 0 0.5rem var(--color-translucid-pink);
 }
 
-.container-form .containter__input {
+.register__container .container__form .container__input {
     padding: 0.5rem 0;
 }
 
-.container-form div input {
+.register__container .container__form .container__input input {
     font-size: 1rem;
     padding-left: 0.5rem;
     outline: 0;
@@ -52,18 +44,7 @@ main {
     color: white;
 }
 
-.form-group input {
-    position: relative;
-    top: 10px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-button {
+.register__container .container__form button {
     margin-top: 10px;
     padding: 10px 20px;
     background-color: var(--color-translucid-black90);
@@ -80,49 +61,25 @@ button {
     box-shadow: 0 0 8px rgba(101, 31, 255, 0.8), 0 0 10px rgba(255, 0, 0, 0.8);
 }
 
-button:hover {
+.register__container .container__form button:hover {
     filter: brightness(1.5);
     box-shadow: 0 0 12px rgba(71, 0, 160, 0.8), 0 0 14px rgba(255, 0, 0, 0.8);
 }
 
 @media (max-width: 1023px) {
-    .container {
+    .container__form {
         width: 90%;
         padding: 20px;
-    }
-
-    .form-group input,
-    button {
-        width: 100%;
     }
 }
 
 @media (max-width: 460px) {
-    .container {
+    .register__container .container__form {
         width: 90%;
-        padding: 15px;
+        padding: 18px;
     }
 
-    .form-group input,
-    button {
+    .register__container .container__form button {
         width: 100%;
-    }
-
-    .form-heading {
-        top: 0;
-    }
-
-    form {
-        width: 100%;
-        padding: 15px;
-    }
-
-    label {
-        font-size: 14px;
-    }
-
-    input {
-        font-size: 8px;
-        padding: 5px;
     }
 }

@@ -1,0 +1,136 @@
+/* ----------------- Header ----------------- */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    height: 4rem;
+    border-radius: 2rem;
+    margin: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url("../images/header/header_texture.jpg");
+    background-size: 100%;
+    background-color: var(--color-black);
+    opacity: 0.9;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav__bar {
+    display: inline;
+    margin-left: 1rem;
+}
+
+nav .nav__logo {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.2rem;
+    width: 3.6rem;
+    padding: 0.4rem;
+    border: 2px solid var(--color-bone);
+    background: var(--color-black);
+    box-shadow: 0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 12px var(--color-translucid-lightblue);
+}
+
+nav .nav__logo:hover {
+    border: 2px solid var(--color-white);
+    box-shadow: 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 12px var(--color-translucid-pink);
+    transition: 0.2s;
+}
+
+nav .logo__image {
+    padding: auto;
+    width: 3.6rem;
+}
+
+nav .nav__loginBar {
+    display: inline;
+    margin-right: 5px;
+}
+
+nav .nav__link,
+nav .nav__link:visited {
+    line-height: 24px;
+    padding: 1rem;
+    color: var(--color-white);
+    text-shadow: 0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 12px var(--color-translucid-lightblue);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav .nav__link:hover {
+    text-shadow: 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 12px var(--color-translucid-pink);
+    transition: 0.2s;
+}
+
+nav .bar__burguerMenu {
+    display: none;
+}
+
+.nav__loginBar .loginBar__btnLogin {
+    border: 1px solid white;
+    border-radius: 2rem;
+    box-shadow: 0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 9px var(--color-translucid-lightblue),
+        0 0 12px var(--color-translucid-lightblue);
+}
+
+.nav__loginBar .loginBar__btnLogin:hover {
+    box-shadow: 0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 9px var(--color-translucid-pink),
+        0 0 12px var(--color-translucid-pink);
+}
+
+.nav__loginBar .loginBar__btnUser {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    nav .nav__loginBar {
+        margin-right: 1rem;
+    }
+
+    .bar__desktopMenu {
+        display: none;
+    }
+
+    .nav__bar .bar__burguerMenu {
+        display: block;
+    }
+
+    .nav__loginBar .loginBar__btnUser {
+        display: inline;
+    }
+
+    .nav__loginBar .loginBar__btnExtend {
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+
+    nav .nav__loginBar .loginBar__btnUser,
+    nav .nav__loginBar .loginBar__btnMessage {
+        display: none;
+    }
+}
