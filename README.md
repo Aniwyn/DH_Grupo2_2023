@@ -1,5 +1,5 @@
 
-# Nombre pendiente (?
+# Gamesbook
 
 ![icono](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/icono.png)
 
