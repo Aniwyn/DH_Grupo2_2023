@@ -1,35 +1,22 @@
-.todo {
-    background-image: url("../images/home/background,jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    margin-top: 0.5rem;
-    background-image: url("../images/home/background.jpg");
-
-}
-
-main {
-    width: 90vw;
-    margin: 0 5vw;
-}
-
-.principal {
+.details__dashboard {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
 }
 
-.producto-pricipal {
-    width: 60%;
+.details__dashboard .dashboard__image-product {
+    display: flex;
+    justify-content: center;
+    width: 55%;
     border-radius: solid 1px;
-    color: aliceblue;
+    background: var(--color-translucid-black50);
     padding-right: 1rem;
     text-align: left;
-
 }
 
-.producto-pricipal img {
+.details__dashboard .dashboard__image-product img {
     object-fit: cover;
-    width: 100%;
     height: 100%;
     border-radius: 1rem;
 }

@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/normalize.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/home.css">
-    <link rel="stylesheet" href="/styles/product_detail.css">
+<!---------------------------- Head ---------------------------->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Detalle de producto</title>
-</head>
+<%- include('../partials/head.ejs') %>
 
-<body class="todo">
- 
-    <%-include('../partials/header.ejs')%>
+<body>
+    
+    <!---------------------------- Header ---------------------------->
+
+    <%- include('../partials/header.ejs') %>
 
     <main>
-        <div class="principal">
-            <div class="producto-pricipal">
-                <img src="images/detalle/mario.jpg" alt="imagen de mario">
+        <div class="details__dashboard">
+            <div class="dashboard__image-product">
+                <img src="/images/home/Warcraft.jpg" alt="imagen de mario">
             </div>
             <section class="descripcion">
                 <div>
-                    <h1 class="descr">Descripción del producto</h1>
-                    <p class="texto-descriptivo"> Los videojuegos de Super Mario siguen las aventuras del fontanero
-                        Mario, por lo general en el ficticio Reino Champiñón. A menudo se le une su hermano, Luigi, y
-                        ocasionalmente, otros miembros de la franquicia. Al igual que en la mayoría de los videojuegos
-                        de plataformas, el jugador principalmente corre y salta a través de plataformas y sobre enemigos
-                        en
-                        distintos niveles temáticos. Los videojuegos tienen tramas generalmente simples, en los que
-                        Mario debe rescatar a la princesa Peach (Princesa Toadstool) que es secuestrada por el villano
-                        principal de la franquicia, Bowser.</p>
+                    <h1 class="descr">Warcraft III</h1>
                     <div class="detallito">
                         <img src="/images/detalle/mario_render.webp" alt="imagen de Mario">
                     </div>
@@ -45,7 +29,8 @@
                             <label class="product__option-label" for="product-quantity">Cantidad</label>
                         </div>
                         <div class="product__actions">
-                            <input id="product-quantity" class="input-number__input " type="number" min="1" value="1">
+                            <input id="product-quantity" class="input-number__input " type="number" min="1"
+                                value="1">
                         </div>
                     </div>
                     <div class="carrito">
@@ -54,6 +39,8 @@
                 </form>
             </section>
         </div>
+        <p class="texto-descriptivo"> Los videojuegos de Super Mario siguen las aventuras del fontanero Mario, por lo general en el ficticio Reino Champiñón. A menudo se le une su hermano, Luigi, y ocasionalmente, otros miembros de la franquicia. Al igual que en la mayoría de los videojuegos de plataformas, el jugador principalmente corre y salta a través de plataformas y sobre enemigos en distintos niveles temáticos. Los videojuegos tienen tramas generalmente simples, en los que Mario debe rescatar a la princesa Peach (Princesa Toadstool) que es secuestrada por el villano principal de la franquicia, Bowser.</p>
+
         <div class="nameProduct">
             <h1 class="nameProduct__text">SUPER MARIO</h1>
         </div>
@@ -258,8 +245,6 @@
             </div>
         </section>
     </main>
-
-
 </body>
 
 </html>
