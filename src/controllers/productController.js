@@ -1,6 +1,5 @@
 /* VARIABLE DECLARATION */
 const path = require("path");
-console.log(__dirname)
 const BD_provisoria = require(path.join(__dirname, "../../public/BD-provisoria/BD"));
 
 /* GETS SET */
