@@ -51,7 +51,7 @@
                     <tfoot>
                         <tr>
                             <td>TOTAL</td>
-                            <td><%= BD.reduce((accumulator, currentPrice) => accumulator + currentPrice.price, 0) %></td>
+                            <td><%= BD.reduce((accumulator, currentPrice) => accumulator + currentPrice.price, 0).toFixed(2) %></td>
                         </tr>
                     </tfoot>
                 </table>
