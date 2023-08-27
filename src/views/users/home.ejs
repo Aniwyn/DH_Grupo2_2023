@@ -94,7 +94,10 @@
                 <section>
                     <h2 class="section__tittle">Mas vendidos</h2>
                     <div class="section__products">
-                        <article>
+                        <% for(let i=0; i < BD.length; i++) { %>
+                            <%- include('../partials/card--main', {data_item: BD[i]}) %>
+                        <% } %>
+                        <!-- <article>
                             <img src="images/home/Warcraft.jpg" alt="" />
                             <div class="products__info">
                                 <div class="info__name">
@@ -161,7 +164,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </article>
+                        </article> -->
                     </div>
                 </section>
                 <section>
