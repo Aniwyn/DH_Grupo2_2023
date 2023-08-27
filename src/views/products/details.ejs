@@ -19,6 +19,16 @@
             <section class="descripcion">
                 <div>
                     <h1 class="descr">Warcraft III</h1>
+<!-- =======
+        <div class="principal">
+            <div class="producto-pricipal">
+                <img src= <%= imagen %> alt="imagen deL PRODUCTO">
+            </div>
+            <section class="descripcion">
+                <div>
+                    <h1 class="descr">Descripción del producto</h1>
+                    <p class="texto-descriptivo"><%= description %></p>
+>>>>>>> f8fbefaa6b44e21b3a5148a721fa6cbaf26cadd9 -->
                     <div class="detallito">
                         <img src="/images/detalle/mario_render.webp" alt="imagen de Mario">
                     </div>
@@ -42,7 +52,7 @@
         <p class="texto-descriptivo"> Los videojuegos de Super Mario siguen las aventuras del fontanero Mario, por lo general en el ficticio Reino Champiñón. A menudo se le une su hermano, Luigi, y ocasionalmente, otros miembros de la franquicia. Al igual que en la mayoría de los videojuegos de plataformas, el jugador principalmente corre y salta a través de plataformas y sobre enemigos en distintos niveles temáticos. Los videojuegos tienen tramas generalmente simples, en los que Mario debe rescatar a la princesa Peach (Princesa Toadstool) que es secuestrada por el villano principal de la franquicia, Bowser.</p>
 
         <div class="nameProduct">
-            <h1 class="nameProduct__text">SUPER MARIO</h1>
+            <h1 class="nameProduct__text"><%= name %></h1>
         </div>
 
         <div class="detalles">
@@ -57,28 +67,28 @@
                                     <td>
                                         <span>Precio </span>
                                     </td>
-                                    <td>...</td>
+                                    <td><%= price %></td>
                                 </tr>
 
                                 <tr class="datos">
                                     <td>
-                                        <span>Modelo</span>
+                                        <span>Plataforma</span>
                                     </td>
-                                    <td>...</td>
+                                    <td><%= plataform %></td>
                                 </tr>
 
                                 <tr class="datos">
                                     <td>
-                                        <span>Color</span>
+                                        <span>Fecha de lanzamiento</span>
                                     </td>
-                                    <td>...</td>
+                                    <td><%= releaseDate %></td>
                                 </tr>
 
                                 <tr class="datos">
                                     <td>
-                                        <span>Tamaño</span>
+                                        <span>Desarrollador</span>
                                     </td>
-                                    <td>...</td>
+                                    <td><%= developer %></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -94,30 +104,30 @@
                             <tbody>
                                 <tr class="datos">
                                     <td>
-                                        <span>Sistema</span>
+                                        <span>Genero</span>
                                     </td>
-                                    <td>...</td>
+                                    <td><%= gender %></td>
                                 </tr>
 
                                 <tr class="datos">
                                     <td>
                                         <span>Formato</span>
                                     </td>
-                                    <td>...</td>
+                                    <td><%= format %></td>
                                 </tr>
 
                                 <tr class="datos">
                                     <td>
                                         <span>Jugadores posibles</span>
                                     </td>
-                                    <td>...</td>
+                                    <td><%= gamers %></td>
                                 </tr>
 
                                 <tr class="datos">
                                     <td>
-                                        <span>Soporte Electrico</span>
+                                        <span>Editorial</span>
                                     </td>
-                                    <td>...</td>
+                                    <td><%= editorial %></td>
                                 </tr>
                             </tbody>
                         </table>
