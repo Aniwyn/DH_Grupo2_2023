@@ -25,76 +25,15 @@
                         </div>
                     </div>
                     <div class="dashboard__offers">
-                        <article>
-                            <img src="images/home/Sonic2.jpg" alt="" />
-                            <div class="offers__discountTag">
-                                <div class="discount_box">
-                                    <span>-33%</span>
-                                </div>
-                            </div>
-                            <div class="products__info">
-                                <div class="info__name">
-                                    <h4>Sonic 2</h4>
-                                </div>
-                                <div class="info__price">
-                                    <span>$899.<sup>99</sup></span>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="images/home/Worm.jpg" alt="" />
-                            <div class="offers__discountTag">
-                                <div class="discount_box">
-                                    <span>-$200</span>
-                                </div>
-                            </div>
-                            <div class="products__info">
-                                <div class="info__name">
-                                    <h4>Worm Jim</h4>
-                                </div>
-                                <div class="info__price">
-                                    <span>$849.<sup>99</sup></span>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="images/home/TinyToon.jpg" alt="" />
-                            <div class="offers__discountTag">
-                                <div class="discount_box">
-                                    <span>2 X 1</span>
-                                </div>
-                            </div>
-                            <div class="products__info">
-                                <div class="info__name">
-                                    <h4>Tiny Toon Adventures</h4>
-                                </div>
-                                <div class="info__price">
-                                    <span>$799.<sup>99</sup></span>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="images/home/Ghostbuster.jpg" alt="" />
-                            <div class="offers__discountTag">
-                                <div class="discount_box">
-                                    <span>-25%</span>
-                                </div>
-                            </div>
-                            <div class="products__info">
-                                <div class="info__name">
-                                    <h4>GHOSTBUSTER</h4>
-                                </div>
-                                <div class="info__price">
-                                    <span>$799.<sup>99</sup></span>
-                                </div>
-                            </div>
-                        </article>
+                        <% for(let i=0; i < BD.length; i++) { %>
+                            <%- include('../partials/card--carrusel', {data_item: BD[i]}) %>
+                        <% } %>
                     </div>
                 </section>
                 <section>
                     <h2 class="section__tittle">Mas vendidos</h2>
                     <div class="section__products">
-                        <% for(let i=0; i < BD.length; i++) { %>
+                        <% for(let i=0; i < 4; i++) { %>
                             <%- include('../partials/card--main', {data_item: BD[i]}) %>
                         <% } %>
                     </div>
@@ -102,74 +41,9 @@
                 <section>
                     <h2 class="section__tittle">Ultimas Novedades</h2>
                     <div class="section__products">
-                        <article>
-                            <img src="images/home/FF.jpg" alt="" />
-                            <div class="products__info">
-                                <div class="info__name">
-                                    <a href="/details" class="name__link">
-                                        <h4>Final Fantasy XII: CRISIS CORE</h4>
-                                    </a>
-                                    <span class="products__tag">PlayStation 5</span>
-                                </div>
-                                <div class="info__price">
-                                    <span>$799.<sup>99</sup></span>
-                                    <div class="products__cart">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="images/home/Madden.jpg" alt="" />
-                            <div class="products__info">
-                                <div class="info__name">
-                                    <a href="/details" class="name__link">
-                                        <h4>Madden NFL 4</h4>
-                                    </a>
-                                    <span class="products__tag">PC</span>
-                                </div>
-                                <div class="info__price">
-                                    <span>$10499.<sup>99</sup></span>
-                                    <div class="products__cart">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="images/home/StarWars.jpg" alt="" />
-                            <div class="products__info">
-                                <div class="info__name">
-                                    <a href="/details" class="name__link">
-                                        <h4>Star Wars Battlefront ultimate</h4>
-                                    </a>
-                                    <span class="products__tag">PC</span>
-                                </div>
-                                <div class="info__price">
-                                    <span>$799.<sup>99</sup></span>
-                                    <div class="products__cart">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="images/home/Minecraft.jpg" alt="" />
-                            <div class="products__info">
-                                <div class="info__name">
-                                    <a href="/details" class="name__link">
-                                        <h4>Minecraft dungeons: Ultimate edition</h4>
-                                    </a>
-                                    <span class="products__tag">Xbox Live</span>
-                                </div>
-                                <div class="info__price">
-                                    <span>$799.<sup>99</sup></span>
-                                    <div class="products__cart">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+                        <% for(let i=5; i < 9; i++) { %>
+                            <%- include('../partials/card--main', {data_item: BD[i]}) %>
+                        <% } %>
                     </div>
                 </section>
             </main>

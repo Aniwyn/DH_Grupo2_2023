@@ -1,0 +1,16 @@
+<article>
+    <img src="<%= data_item.image %>" alt="" />
+    <div class="offers__discountTag">
+        <div class="discount_box">
+            <span>-33%</span>
+        </div>
+    </div>
+    <div class="products__info">
+        <div class="info__name">
+            <h4><%= data_item.name %></h4>
+        </div>
+        <div class="info__price">
+            <span>$<%= Math.floor(data_item.price) %><sup><%= (data_item.price - Math.floor(data_item.price)).toFixed(2) * 100 %></sup></span>
+        </div>
+    </div>
+</article>

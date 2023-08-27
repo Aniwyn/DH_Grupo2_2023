@@ -1,8 +1,8 @@
 const icon_plataform = {
-    "PC": "fa-brands fa-windows",
-    "PS": "fa-brands fa-playstation",
-    "XBOX": "fa-brands fa-xbox",
-    "SEGA": "fa-solid fa-gamepad"
+    "PC": ["PC","fa-brands fa-windows"],
+    "PS": ["PS","fa-brands fa-playstation"],
+    "XBOX": ["XBOX","fa-brands fa-xbox"],
+    "SEGA": ["SEGA","fa-solid fa-gamepad"]
 }
 
 const genderList = {
@@ -38,7 +38,7 @@ const product = [
         description:"Sumérgete en el mundo de Sonic Mania Plus, la edición mejorada del aclamado Sonic Mania para PS4. Disfruta de una aventura emocionante con tus personajes favoritos de Sonic en un formato físico que te permitirá conservar y coleccionar este clásico moderno. Desarrollado por Hyperkinectic Studios y publicado por SEGA, este juego de aventuras del 2018 te brinda horas de diversión y nostalgia.",
         image: "/images/home/Sonic2.jpg",
         price: 8999.99,
-        plataform: [icon_plataform.PS, icon_plataform.XBOX],
+        plataform: [icon_plataform.PS, icon_plataform.SEGA],
         releaseDate:"05-07-2022",
         developer:"Hyperkinectic Studios",
         gender:[genderList.accion, genderList.aventura],
@@ -134,7 +134,7 @@ const product = [
         description:"Los juegos de la franquicia The Legend of Zelda marcaron un antes y después en el género de aventura. Convertite en Link para vencer a los villanos que hicieron de un pacífico reino un lugar inmerso en las tinieblas.Diversión sin fronteras.Podrás compartir cada juego con personas de todo el mundo, ya que es posible conectarse de manera online.",
         image: "/images/home/Zelda.jpg",
         price: 4899.99,
-        plataform: [icon_plataform.PS2, icon_plataform.XBOX],
+        plataform: [icon_plataform.PS, icon_plataform.XBOX],
         releaseDate:"07-07-2017",
         developer:"Nintendo",
         gender:[genderList.accion,genderList.aventura],
@@ -150,7 +150,7 @@ const product = [
         description:"Metal Slug 3 es un videojuego que forma parte de la saga Metal Slug.",
         image: "/images/home/MetalSlug.jpg",
         price: 7599.99,
-        plataform: [icon_plataform.PS3, icon_plataform.XBOX],
+        plataform: [icon_plataform.PS, icon_plataform.SEGA],
         releaseDate:"02-10-2017",
         developer:"Sony",
         gender:[genderList.aventura],
@@ -182,7 +182,7 @@ const product = [
         description: "Con este juego de Madden NFL vas a disfrutar de horas de diversión y de nuevos desafíos que te permitirán mejorar como gamer.Interactuá con otros jugadores. Podrás disfrutar de una experiencia inigualable, ya que te permite jugar con tus amistades y compartir momentos inolvidables.Diversión sin fronteras.Podrás compartir cada juego con personas de todo el mundo, ya que es posible conectarse de manera online.",
         image: "/images/home/madden.jpg",
         price: 10499.99,
-        plataform: [icon_plataform.PS4, icon_plataform.XBOX],
+        plataform: [icon_plataform.PS, icon_plataform.XBOX],
         releaseDate:"08-10-2023",
         developer:"Electronic Arts",
         gender:[genderList.deporte],
