@@ -1,7 +1,7 @@
 /* VARIABLE DECLARATION */
 const path = require("path");
 console.log(__dirname)
-const BD_provisoria = require(path.join(__dirname, "../../public/BD-provisoria/BD"));
+const BD_provisoria = require(path.join(__dirname, "../../src/BD-provisoria/BD"));
 
 /* GETS SET */
 const productController = {
@@ -10,9 +10,10 @@ const productController = {
     },
     details : (req,res) => {
         let idPag = req.params.id;
-        res.render(path.join(__dirname, "../views/products/details.ejs"));
+        res.render(path.join(__dirname, "../views/products/details.ejs"),{BD: BD_provisoria});
     }
 }
 
 /* EXPORTS */
 module.exports = productController;
+
