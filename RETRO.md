@@ -48,4 +48,4 @@
     - Retrasar las tareas hasta ultimo momento
 
 ### Resumen
-    Este segundo sprint hubo mejora a nivel organizativo. En alguna reunion se ausentaron algunos integrantes del equipo, pero hubo mayor participacion de todos. La distribucion de tareas no fue muy equitativa debido a las habilidades de cada integrante. Es importante llevar los conocimientos al dia para los q estan atrasados y practicar para mejorar como developer, de esa forma sera mas ameno el desarrollo del sprint para todos.
+    Este tercer sprint hubo mejora a nivel organizativo. En alguna reunion se ausentaron algunos integrantes del equipo, pero hubo mayor participacion de todos. La distribucion de tareas no fue muy equitativa debido a las habilidades de cada integrante. Es importante llevar los conocimientos al dia para los q estan atrasados y practicar para mejorar como developer, de esa forma sera mas ameno el desarrollo del sprint para todos.
