@@ -1,7 +1,33 @@
-.main__editProduct {}
-
-.main__editProduct div {
-    color: red;
+.main-edit_product{
+    display: flex;
+    justify-content: center;
 }
 
-.main__editProduct .details {}
+.container-form-edit{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: salmon;
+    width: 90%;
+    margin: 15px 0px;
+    padding: 10px;
+    box-shadow: 0 0 0.2rem var(--color-translucid-pink),
+    0 0 0.2rem var(--color-translucid-pink),
+    0 0 0.8rem var(--color-translucid-pink),
+    0 0 2rem var(--color-translucid-pink),
+    inset 0 0 0.5rem var(--color-translucid-pink);
+}
+
+.container-items-form{
+    margin-top: 5px;
+    font-size: 25px;
+}
+
+#id-temporal{
+    display:flex;
+    justify-content: center;
+    width: 90%;
+    height:60px;
+    background-color: antiquewhite;
+}

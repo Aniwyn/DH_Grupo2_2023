@@ -5,6 +5,45 @@
 
 <%- include('../partials/head.ejs') %>
 
-<main class="main__editProduct">
-    <div>hola</div>
-</main>
+    <body>
+        <!---------------------------- Header ---------------------------->
+
+        <%- include('../partials/header.ejs') %>
+
+            <main class="main-edit_product">
+                <div class="container-form-edit">
+
+                    <h2>NOMBRE DEL PRODUCTO</h2>
+
+                    <p id="id-temporal">IMAGEN DEL PRODUCTO</p>
+
+                    <form acction="/edit_pruduct" method="">
+
+                        <div class="container-items-form">
+                            <label for="precioActual">Precio actual:$</label>
+                            <input type="tel" name="precioActual" id="precioActual">
+                        </div>
+
+                        <div class="container-items-form">
+                            <label for="nuevoPrecio">Nuevo precio:$</label>
+                            <input type="tel" name="nuevoPrecio" id="nuevoPrecio">
+                        </div>
+
+                        <div class="container-items-form">
+                            <label for="stock">En stock:</label>
+                            <input type="tel" name="stock" id="stock">
+                        </div>
+                        <div class="container-items-form">
+                            <label for="disponibilidad">Dsiponible para:</label>
+                            <input type="checkbox" name="disponibilidad" value="Play Station">
+                            <input type="checkbox" name="disponibilidad" value="X-box">
+                        </div>
+                    </form>
+                </div>
+            </main>
+
+            <!---------------------------- Footer ---------------------------->
+
+            <%- include('../partials/footer.ejs') %>
+
+    </body>
