@@ -23,3 +23,29 @@
 ### Resumen
     El primer sprint donde empezamos a intentar aplicar las daily pero de manera semanales, un poco de caos en la organización pero 
     se llego a realizar todo el trabajo.
+
+
+
+## 2️⃣ Retrospectiva Sprint 3
+
+### Empezar a hacer: 
+    - Reunirse a codear juntos
+    - Aumentar la comunicacion entre integrantes del equipo
+### Hacer más:
+    - Hacer reunion de control de avances
+    - Organizar Trello
+### Seguir haciendo:
+    - Realizar daily's de forma bisemanal
+    - Aplicar Scrums
+    - Hacer una lista de tareas para que cada uno tome la que quiera
+    - Reasignacion/ayuda con tareas retrasadas
+### Hacer menos:
+    - Llegar tarde a las reuniones
+    - No asistir a daily's
+    - No asistir a reunion de control de avances
+### Dejar de hacer: 
+    - No respetar las fechas acordadas
+    - Retrasar las tareas hasta ultimo momento
+
+### Resumen
+    Este segundo sprint hubo mejora a nivel organizativo. En alguna reunion se ausentaron algunos integrantes del equipo, pero hubo mayor participacion de todos. La distribucion de tareas no fue muy equitativa debido a las habilidades de cada integrante. Es importante llevar los conocimientos al dia para los q estan atrasados y practicar para mejorar como developer, de esa forma sera mas ameno el desarrollo del sprint para todos.
