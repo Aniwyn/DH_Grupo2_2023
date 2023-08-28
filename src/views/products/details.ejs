@@ -12,249 +12,101 @@
     <%- include('../partials/header.ejs') %>
 
     <main>
-        <div class="details__dashboard">
+        <section class="details__dashboard">
             <div class="dashboard__image-product">
                 <img src="/images/home/Warcraft.jpg" alt="imagen de mario">
             </div>
-            <section class="descripcion">
-                <div>
-                    <h1 class="descr">Warcraft III</h1>
-<!-- =======
-        <div class="principal">
-            <div class="producto-pricipal">
-                <img src= <%= imagen %> alt="imagen deL PRODUCTO">
-            </div>
-            <section class="descripcion">
-                <div>
-                    <h1 class="descr">Descripción del producto</h1>
-                    <p class="texto-descriptivo"><%= description %></p>
->>>>>>> f8fbefaa6b44e21b3a5148a721fa6cbaf26cadd9 -->
-                    <div class="detallito">
-                        <img src="/images/detalle/mario_render.webp" alt="imagen de Mario">
-                    </div>
+            <div class="dashboard__description">
+                <div class="description__title">
+                    <h2 class="description__title-main" >Warcraft III</h2>
+                    <span class="description__title-subTitle" >- The Frozen Throne -</span>
                 </div>
-                <form class="product__options">
-                    <div class="cantidad">
-                        <div class="tema">
-                            <label class="product__option-label" for="product-quantity">Cantidad</label>
+                <div class="descripcion__info">
+                    <div class="description__characteristics">
+                        <div class="characteristic">
+                            <span class="characteristic__name">Formato:</span>
+                            <span class="characteristic__value">Fisico</Span>
                         </div>
-                        <div class="product__actions">
-                            <input id="product-quantity" class="input-number__input " type="number" min="1"
-                                value="1">
+                        <hr class="divider">
+                        <div class="characteristic">
+                            <span class="characteristic__name">Plataforma:</span>
+                            <span class="characteristic__value">PC</Span>
+                        </div>
+                        <hr class="divider">
+                        <div class="characteristic">
+                            <span class="characteristic__name">Lanzamiento:</span>
+                            <span class="characteristic__value">03 - 07 - 22</Span>
+                        </div>
+                        <hr class="divider">
+                        <div class="characteristic">
+                            <span class="characteristic__name">Desarrollador:</span>
+                            <span class="characteristic__value">Blizzard Entertainment</Span>
+                        </div>
+                        <hr class="divider">
+                        <div class="characteristic">
+                            <span class="characteristic__name">Genero:</span>
+                            <span class="characteristic__value">Videojuego de rol, Estrategia en tiempo real</Span>
+                        </div>
+                        <div class="rankings">
+                            <img src="/images/rankings/PEGI_12.png" alt="clasificacion pegi 12">
+                            <img src="/images/rankings/ESRB_T.svg" alt="clasificacion esbr teen">
                         </div>
                     </div>
-                    <div class="carrito">
-                        <button type="button" class="agregar">Agregar al carrito</button>
-                    </div>
-                </form>
-            </section>
-        </div>
-        <p class="texto-descriptivo"> Los videojuegos de Super Mario siguen las aventuras del fontanero Mario, por lo general en el ficticio Reino Champiñón. A menudo se le une su hermano, Luigi, y ocasionalmente, otros miembros de la franquicia. Al igual que en la mayoría de los videojuegos de plataformas, el jugador principalmente corre y salta a través de plataformas y sobre enemigos en distintos niveles temáticos. Los videojuegos tienen tramas generalmente simples, en los que Mario debe rescatar a la princesa Peach (Princesa Toadstool) que es secuestrada por el villano principal de la franquicia, Bowser.</p>
-
-        <div class="nameProduct">
-            <h1 class="nameProduct__text"><%= name %></h1>
-        </div>
-
-        <div class="detalles">
-
-            <section class="colum">
-                <div>
-                    <span>Caracteristicas Generales</span>
-                    <div class="observ">
-                        <table>
-                            <tbody>
-                                <tr class="datos">
-                                    <td>
-                                        <span>Precio </span>
-                                    </td>
-                                    <td><%= price %></td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Plataforma</span>
-                                    </td>
-                                    <td><%= plataform %></td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Fecha de lanzamiento</span>
-                                    </td>
-                                    <td><%= releaseDate %></td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Desarrollador</span>
-                                    </td>
-                                    <td><%= developer %></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            <section class="colum">
-                <div>
-                    <span>Maquinaria</span>
-                    <div class="observ">
-                        <table>
-                            <tbody>
-                                <tr class="datos">
-                                    <td>
-                                        <span>Genero</span>
-                                    </td>
-                                    <td><%= gender %></td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Formato</span>
-                                    </td>
-                                    <td><%= format %></td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Jugadores posibles</span>
-                                    </td>
-                                    <td><%= gamers %></td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Editorial</span>
-                                    </td>
-                                    <td><%= editorial %></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            <section class="colum">
-                <div>
-                    <span>otras Caracteristicas</span>
-                    <div class="observ">
-                        <table>
-                            <tbody>
-                                <tr class="datos">
-                                    <td>
-                                        <span>Tema</span>
-                                    </td>
-                                    <td>...</td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Trama</span>
-                                    </td>
-                                    <td>...</td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Época</span>
-                                    </td>
-                                    <td>...</td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Público</span>
-                                    </td>
-                                    <td>...</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            <section class="colum">
-                <div>
-                    <span>otros</span>
-                    <div class="observ">
-                        <table>
-                            <tbody>
-                                <tr class="datos">
-                                    <td>
-                                        <span>Efectivo/Contado</span>
-                                    </td>
-                                    <td>$...</td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Tarjeta</span>
-                                    </td>
-                                    <td>$...</td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Transferencia</span>
-                                    </td>
-                                    <td>$...</td>
-                                </tr>
-
-                                <tr class="datos">
-                                    <td>
-                                        <span>Deposito</span>
-                                    </td>
-                                    <td>$...</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <section class="recomendados">
-            <div>
-                <h2 class="ultimotitle"><a><i class="fa-solid fa-gamepad"></i></a>Productos Recomendados<a><i
-                            class="fa-solid fa-gamepad"></i></a></h2>
-                <div class="articulos">
-                    <div class="imagenes">
-                        <div class="prod">
-                            <div>
-                                <img src="images/detalle/champions.jpg" alt="imagen de champions" />
-                            </div>
-
-                            <div class="team">
-                                <div>
-                                    <p>Champions</p>
-                                    <p class="precios">$6.770</p>
-                                </div>
-
-                                <a class="coment"><i class="fa-solid fa-comment-dollar"></i>
-                                </a>
-                            </div>
+                    <div class="description__shopping">
+                        <span class="price">$ 18500,50</span>
+                        <div class="shopping__button button--buy">
+                            <button>Comprar Ahora</button>
                         </div>
-                        <div class="prod">
-                            <div>
-                                <img src="images/detalle/champions.jpg" alt="imagen de champions" />
-                            </div>
-
-                            <div class="team">
-                                <div>
-                                    <p>Champion</p>
-                                    <p class="precios">$6.770</p>
-                                </div>
-
-                                <a class="coment"><i class="fa-solid fa-comment-dollar"></i>
-                                </a>
-                            </div>
+                        <div class="shopping__button button--cart">
+                            <button>Añadir al carrito</button>
+                        </div>
+                        <div class="shopping__button button--fav">
+                            <button><i class="fa-regular fa-star"></i>Añadir a la lista de deseos</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <h2 class="section__tittle">Descripción general</h2>
+
+        <section class="details__description">
+            <div class="description__body">
+                <p class="description__text">Sumérgete en el mundo épico de Azeroth una vez más con "Warcraft III: The Frozen Throne". Esta expansión del famoso juego de estrategia en tiempo real te transportará a un reino lleno de magia, batallas y traiciones. Prepárate para una experiencia que expande los límites de la fantasía mientras luchas por el dominio y la supervivencia en un mundo al borde del colapso.</p>
+
+                <iframe 
+                    width="1280"
+                    height="580"
+                    class="description__video" 
+                    src="https://www.youtube.com/embed/iqB3KeiBLuw" 
+                    title="Warcraft III: The Frozen Throne Intro" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+
+                <p class="description__text">En "Warcraft III: The Frozen Throne", la historia continúa con nuevas y emocionantes aventuras que amplían aún más el rico universo de Warcraft. Viajarás a tierras desconocidas y enemigas, enfrentando desafíos mortales y descubriendo secretos oscuros que amenazan con desgarrar Azeroth. Con nuevas facciones, héroes y unidades, deberás dominar la estrategia y la magia para sobrevivir y prevalecer en este mundo cambiante.</p>
+                <p class="description__text">El destino de héroes legendarios y villanos astutos descansa en tus manos mientras te sumerges en una campaña épica llena de giros inesperados y emocionantes batallas. Ya sea que elijas liderar a los nobles defensores de la Alianza o a los formidables miembros de la Horda, tus decisiones moldearán el destino de Azeroth y determinarán si la luz o las sombras prevalecen.</p>
+            
+                <img class="description__image" src="/images/products/W3TFT-gameplay.jpg" alt="gameplay del juego">
+
+                <p class="description__text">¿Estás listo para enfrentarte a nuevos desafíos, forjar alianzas inquebrantables y descubrir los secretos del Trono Helado? "Warcraft III: The Frozen Throne" te invita a embarcarte en una aventura única que cautivará tu imaginación y pondrá a prueba tus habilidades estratégicas como nunca antes.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section__tittle">Quizas tambien te interese</h2>
+            <div class="section__products">
+                <% for(let i=5; i < 9; i++) { %>
+                    <%- include('../partials/card--main', {data_item: BD[i]}) %>
+                <% } %>
+            </div>
+        </section>
     </main>
+
+    <!---------------------------- Footer ---------------------------->
+
+    <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>
