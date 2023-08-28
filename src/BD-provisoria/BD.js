@@ -2,7 +2,8 @@ const icon_plataform = {
     "PC": ["PC","fa-brands fa-windows"],
     "PS": ["PS","fa-brands fa-playstation"],
     "XBOX": ["XBOX","fa-brands fa-xbox"],
-    "SEGA": ["SEGA","fa-solid fa-gamepad"]
+    "SEGA": ["SEGA","fa-solid fa-gamepad"],
+    "SWITCH": ["SWITCH", "fa-solid fa-gamepad-modern"]
 }
 
 const genderList = {
