@@ -26,10 +26,9 @@
 
 
 
-## 2️⃣ Retrospectiva Sprint 3
+## 3️⃣ Retrospectiva Sprint 3
 
 ### Empezar a hacer: 
-    - Reunirse a codear juntos
     - Aumentar la comunicacion entre integrantes del equipo
 ### Hacer más:
     - Hacer reunion de control de avances
@@ -41,9 +40,8 @@
     - Reasignacion/ayuda con tareas retrasadas
 ### Hacer menos:
     - Llegar tarde a las reuniones
-    - No asistir a daily's
-    - No asistir a reunion de control de avances
 ### Dejar de hacer: 
+    - No asistir a las reuniones
     - No respetar las fechas acordadas
     - Retrasar las tareas hasta ultimo momento
 
