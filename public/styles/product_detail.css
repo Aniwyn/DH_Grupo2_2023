@@ -104,7 +104,7 @@
 }
 
 .details__dashboard .dashboard__description .description__shopping .price {
-    padding: 2rem 0 2rem;
+    padding: 0 0 2rem;
     font-size: 2rem;
     align-self: center;
     color: var(--color-bone);
@@ -174,6 +174,7 @@
 }
 
 .details__description .description__body {
+    width: 100%;
     max-width: 960px;
     margin: 0 auto;
 }
@@ -184,7 +185,24 @@
     line-height: 1.5;
 }
 
-.details__description .description__body .description__video,
+.details__description .description__body .description__video {
+    overflow: hidden;
+    /* padding-bottom: 56.25%; */
+    padding-bottom: 45%;
+    position: relative;
+    height: 0;
+}
+
+.details__description .description__body .description__video iframe {
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    margin: 0 10%;
+    position: absolute;
+}
+
+
 .details__description .description__body .description__image {
     width: 80%;
     margin: 0 10%;
@@ -193,31 +211,42 @@
 }
 
 @media (max-width: 1023px) {
-    .principal {
+    .details__dashboard {
         flex-direction: column;
     }
 
-    .producto-pricipal {
+    .details__dashboard .dashboard__image-product {
+        padding: 1rem 0;
         width: 100%;
-        padding: 0;
     }
 
-    .imagen {
-        width: auto;
+    .details__dashboard .dashboard__description {
+        width: 100%;
     }
 
-    .descripcion {
-        width: auto;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
+    .details__dashboard .dashboard__description .descripcion__info {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .colum {
-        width: 90%;
+    .details__dashboard .dashboard__description .description__characteristics,
+    .details__dashboard .dashboard__description .description__shopping {
+        box-sizing: border-box;
+        width: 100%;
     }
 
-    .prod {
-        width: 80%;
+    .details__dashboard .dashboard__description .description__characteristics .rankings {
+        justify-content: space-around;
+    }
+
+    .details__description .description__body .description__video {
+        padding-bottom: 56.25%;
+    }
+
+    .details__description .description__body .description__video iframe,
+    .details__description .description__body .description__image {
+        width: 100%;
+        margin: 0;
     }
 }
 
