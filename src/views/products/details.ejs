@@ -14,38 +14,43 @@
     <main>
         <section class="details__dashboard">
             <div class="dashboard__image-product">
-                <img src="/images/home/Warcraft.jpg" alt="imagen de mario">
+                <img src="<%= data_item.image %>" alt="imagen de mario">
             </div>
             <div class="dashboard__description">
                 <div class="description__title">
-                    <h2 class="description__title-main" >Warcraft III</h2>
+                    <h2 class="description__title-main" ><%= data_item.name %></h2>
                     <span class="description__title-subTitle" >- The Frozen Throne -</span>
                 </div>
                 <div class="descripcion__info">
                     <div class="description__characteristics">
                         <div class="characteristic">
                             <span class="characteristic__name">Formato:</span>
-                            <span class="characteristic__value">Fisico</Span>
+                            <span class="characteristic__value"><%= data_item.format %></Span>
                         </div>
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Plataforma:</span>
-                            <span class="characteristic__value">PC</Span>
+                            <% for(let i=0; i < data_item.plataform.length; i++) { %>
+                                <span class="characteristic__value"><%= data_item.plataform[i][0] %>&nbsp;</Span>
+                            <% } %>
                         </div>
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Lanzamiento:</span>
-                            <span class="characteristic__value">03 - 07 - 22</Span>
+                            <span class="characteristic__value"><%= data_item.releaseDate %></Span>
                         </div>
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Desarrollador:</span>
-                            <span class="characteristic__value">Blizzard Entertainment</Span>
+                            <span class="characteristic__value"><%= data_item.developer %></Span>
                         </div>
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Genero:</span>
-                            <span class="characteristic__value">Videojuego de rol, Estrategia en tiempo real</Span>
+                            <% for(let i=0; i < data_item.gender.length; i++) { %>
+                                <span class="characteristic__value"><%= data_item.gender[i] %>&nbsp;</Span>
+                            <% } %>
+
                         </div>
                         <div class="rankings">
                             <img src="/images/rankings/PEGI_12.png" alt="clasificacion pegi 12">
@@ -53,7 +58,7 @@
                         </div>
                     </div>
                     <div class="description__shopping">
-                        <span class="price">$ 18500,50</span>
+                        <span class="price">$<%= data_item.price %></span>
                         <div class="shopping__button button--buy">
                             <button>Comprar Ahora</button>
                         </div>
@@ -78,7 +83,7 @@
                     <iframe 
                         width="1280"
                         height="580"
-                        src="https://www.youtube.com/embed/iqB3KeiBLuw" 
+                        src=<%= data_item.trailer %>
                         title="Warcraft III: The Frozen Throne Intro" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -90,7 +95,7 @@
                 <p class="description__text">En "Warcraft III: The Frozen Throne", la historia continúa con nuevas y emocionantes aventuras que amplían aún más el rico universo de Warcraft. Viajarás a tierras desconocidas y enemigas, enfrentando desafíos mortales y descubriendo secretos oscuros que amenazan con desgarrar Azeroth. Con nuevas facciones, héroes y unidades, deberás dominar la estrategia y la magia para sobrevivir y prevalecer en este mundo cambiante.</p>
                 <p class="description__text">El destino de héroes legendarios y villanos astutos descansa en tus manos mientras te sumerges en una campaña épica llena de giros inesperados y emocionantes batallas. Ya sea que elijas liderar a los nobles defensores de la Alianza o a los formidables miembros de la Horda, tus decisiones moldearán el destino de Azeroth y determinarán si la luz o las sombras prevalecen.</p>
             
-                <img class="description__image" src="/images/products/W3TFT-gameplay.jpg" alt="gameplay del juego">
+                <img class="description__image" src=<%= data_item.gameplay %> alt="gameplay del juego">
 
                 <p class="description__text">¿Estás listo para enfrentarte a nuevos desafíos, forjar alianzas inquebrantables y descubrir los secretos del Trono Helado? "Warcraft III: The Frozen Throne" te invita a embarcarte en una aventura única que cautivará tu imaginación y pondrá a prueba tus habilidades estratégicas como nunca antes.</p>
             </div>

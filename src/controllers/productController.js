@@ -12,7 +12,7 @@ const productController = {
     },
     details : (req,res) => {
         let idPag = req.params.id;
-        res.render(path.join(__dirname, "../views/products/details.ejs"), {BD: BD_provisoria, id: idPag});
+        res.render(path.join(__dirname, "../views/products/details.ejs"), {BD: BD_provisoria, data_item: BD_provisoria[idPag-1]});
     },
     editProduct : (req, res) => {
         res.render(path.join(__dirname, "../views/products/edit_product.ejs"))

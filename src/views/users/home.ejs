@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="dashboard__offers">
-                        <% for(let i=0; i < BD.length; i++) { %>
+                        <% for(let i=0; i < 4; i++) { %>
                             <%- include('../partials/card--carrusel', {data_item: BD[i]}) %>
                         <% } %>
                     </div>
@@ -33,7 +33,7 @@
                 <section>
                     <h2 class="section__tittle">Mas vendidos</h2>
                     <div class="section__products">
-                        <% for(let i=0; i < 4; i++) { %>
+                        <% for(let i=4; i < 8; i++) { %>
                             <%- include('../partials/card--main', {data_item: BD[i]}) %>
                         <% } %>
                     </div>
@@ -41,7 +41,7 @@
                 <section>
                     <h2 class="section__tittle">Ultimas Novedades</h2>
                     <div class="section__products">
-                        <% for(let i=5; i < 9; i++) { %>
+                        <% for(let i=8; i < 12; i++) { %>
                             <%- include('../partials/card--main', {data_item: BD[i]}) %>
                         <% } %>
                     </div>
