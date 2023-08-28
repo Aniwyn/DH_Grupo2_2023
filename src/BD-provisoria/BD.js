@@ -8,30 +8,30 @@ const icon_plataform = {
 const genderList = {
     accion: "Acción",
     aventura: "Aventura",
-    estrategia: "Estrategia",
+    estrategia: "Estrategia en tiempo real",
     pelea: "Peleas",
     rpg: "RPG",
     deporte: "Deporte",
     multiplayer: "Multijugador",
     onePlayer: "Un jugador",
-
 }
 
 const product = [
     {
         id: 1,
-        name: "STARFIELD PREMIUM EDITION (Early Access) + PRE-ORDER BONUS PC",
-        description: "Starfield is the first new universe in over 25 years from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim and Fallout 4. In this next generation role-playing game set amongst the stars, create any character you want and explore with unparalleled freedom as you embark on an epic journey to answer humanity's greatest mystery.",
-        image: "/images/caratulas/Starfield.jpg",
-        price: 21586.59,
-        plataform:[icon_plataform.PC, icon_plataform.XBOX],
+        name: "GHOSTBUSTERS",
+        description:"Con este juego de Cazafantasmas vas a disfrutar de horas de diversión y de nuevos desafíos que te permitirán mejorar como gamer.",
+        image: "/images/home/Ghostbuster.jpg",
+        price: 2799.99,
+        plataform: [icon_plataform.PS, icon_plataform.SEGA],
         releaseDate:"08 - 10 - 2023",
-        developer:"Bethesda Game Studios",
-        gender: [genderList.accion,genderList.multiplayer],
-        format:"Fisico",
+        developer:"Remastered",
+        gender:[genderList.accion, genderList.aventura, genderList.multiplayer],
+        fomat:"Fisico",
+        trailer: "https://www.youtube.com/embed/CLLXiXh1onc",
+        gameplay: "/images/products/GHOSTBUSTERS-gameplay.jpg"
         /* aca agregar si faltan mas */
-    },
-
+    },   
     {
         id: 2,
         name: "Sonic 2",
@@ -43,12 +43,14 @@ const product = [
         developer:"Hyperkinectic Studios",
         gender:[genderList.accion, genderList.aventura, genderList.multiplayer],
         format:"Fisico",
+        trailer: "https://www.youtube.com/embed/ytistojxzn4",
+        gameplay: "/images/products/Sonic2-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
 
     {
         id: 3,
-        name: "Worm Jim",
+        name: "Earthworm Jim",
         description:"Worm Jim es un videojuego de plataformas cuyo protagonista es una Lombriz llamada Jim que, enfundado en un traje cibernético y armado con una pistola, se dedica a recorrer el universo en busca de la princesa 'Cuál es su nombre'.",
         image: "/images/home/Worm.jpg",
         price: 8599.99,
@@ -57,6 +59,8 @@ const product = [
         developer:"Earthworm Jim",
         gender:[genderList.accion, genderList.aventura, genderList.onePlayer],
         format:"Fisico",
+        trailer: "https://www.youtube.com/embed/jYKHummrJDw",
+        gameplay: "/images/products/EarthwormJim-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
     
@@ -70,40 +74,29 @@ const product = [
         releaseDate:"18 - 01 - 1990",
         developer:"SEGA",
         gender:[genderList.aventura, genderList.onePlayer],
-        fomat:"Fisico",
+        format:"Fisico",
+        trailer: "https://www.youtube.com/embed/EFtL3Ojp8Uk",
+        gameplay: "/images/products/TinyToonAventures-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
 
     {
         id: 5,
-        name: "GHOSTBUSTER",
-        description:"Con este juego de Cazafantasmas vas a disfrutar de horas de diversión y de nuevos desafíos que te permitirán mejorar como gamer.",
-        image: "/images/home/Ghostbuster.jpg",
-        price: 2799.99,
-        plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate:"08 - 10 - 2023",
-        developer:"Remastered",
-        gender:[genderList.accion, genderList.aventura, genderList.multiplayer],
-        fomat:"Fisico",
+        name: "Metal Slug 3",
+        description:"Metal Slug 3 es un videojuego que forma parte de la saga Metal Slug.",
+        image: "/images/home/MetalSlug.jpg",
+        price: 7599.99,
+        plataform: [icon_plataform.PS, icon_plataform.SEGA],
+        releaseDate:"02 - 10 - 2017",
+        developer:"Sony",
+        gender:[genderList.aventura, genderList.multiplayer],
+        format:"Fisico",
+        trailer: "https://www.youtube.com/embed/618yA_WYK4c",
+        gameplay: "/images/products/MetalSlug3-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
-
     {
         id: 6,
-        name:"Warcraft 3: The frozen throne",
-        description:"Warcraft: The Frozen Throne es un videojuego de estrategia en tiempo real y expansión de Warcraft III: Reign of Chaos desarrollado por Blizzard Entertainment. La instalación de Warcraft III: Reign of Chaos es necesaria para poder jugar a esta expansión.",
-        image:"/images/home/Warcraft.jpg",
-        price: 1899.99,
-        plataform: [icon_plataform.PC],
-        releaseDate:"01 - 11 - 2020",
-        developer:"Blizzard Entertainment",
-        gender:[genderList.estrategia, genderList.multiplayer],
-        fomat:"Fisico",
-        /* aca agregar si faltan mas */
-    },
-
-    {
-        id: 7,
         name: "SuperMario Bro. U Deluxe",
         description:"Con este juego de Mario vas a disfrutar de horas de diversión y de nuevos desafíos que te permitirán mejorar como gamer.Interactuá con otros jugadores.Podrás disfrutar de una experiencia inigualable, ya que te permite jugar con tus amistades y compartir momentos inolvidables.",
         image: "/images/home/SuperMario.jpg",
@@ -112,7 +105,24 @@ const product = [
         releaseDate:"08 - 10 - 2018",
         developer:"Nintendo, Sora, Bandai Namco",
         gender:[genderList.accion,genderList.pelea, genderList.multiplayer],
-        fomat:"Fisico",
+        format:"Fisico",
+        trailer: "https://www.youtube.com/embed/z3s8vB_hw6c",
+        gameplay: "/images/products/SuperMarioBroUDeluxe-gameplay.jpg"
+        /* aca agregar si faltan mas */
+    },
+    {
+        id: 7,
+        name:"Warcraft 3: The frozen throne",
+        description:"Warcraft: The Frozen Throne es un videojuego de estrategia en tiempo real y expansión de Warcraft III: Reign of Chaos desarrollado por Blizzard Entertainment. La instalación de Warcraft III: Reign of Chaos es necesaria para poder jugar a esta expansión.",
+        image:"/images/home/Warcraft.jpg",
+        price: 1899.99,
+        plataform: [icon_plataform.PC],
+        releaseDate:"01 - 11 - 2020",
+        developer:"Blizzard Entertainment",
+        gender:[genderList.estrategia, genderList.multiplayer],
+        format:"Fisico",
+        trailer: "https://www.youtube.com/embed/iqB3KeiBLuw",
+        gameplay: "/images/products/W3TFT-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
 
@@ -126,26 +136,14 @@ const product = [
         releaseDate:"07 - 07 - 2017",
         developer:"Nintendo",
         gender:[genderList.accion,genderList.aventura, genderList.multiplayer],
-        fomat:"Fisico",
+        format:"Fisico",
+        trailer: "https://www.youtube.com/embed/KzQRiYqt6LY",
+        gameplay: "/images/products/LOZ-BOTW-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
 
     {
         id: 9,
-        name: "Metal Slug 3",
-        description:"Metal Slug 3 es un videojuego que forma parte de la saga Metal Slug.",
-        image: "/images/home/MetalSlug.jpg",
-        price: 7599.99,
-        plataform: [icon_plataform.PS, icon_plataform.SEGA],
-        releaseDate:"02 - 10 - 2017",
-        developer:"Sony",
-        gender:[genderList.aventura, genderList.multiplayer],
-        fomat:"Fisico",
-        /* aca agregar si faltan mas */
-    },
-
-    {
-        id: 10,
         name: "Final Fantasy XII:CRISIS CORE",
         description: "Con este juego de Final Fantasy vas a disfrutar de horas de diversión y de nuevos desafíos que te permitirán mejorar como gamer.",
         image: "/images/home/FF.jpg",
@@ -154,13 +152,15 @@ const product = [
         releaseDate:"09 - 12 - 2022",
         developer:"Square Enix",
         gender:[genderList.accion,genderList.rpg, genderList.onePlayer],
-        fomat:"Fisico",
+        format:"Fisico",
+        trailer: "https://www.youtube.com/embed/lMGrC58PHqs",
+        gameplay: "/images/products/FFXII-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
 
     {
-        id: 11,
-        name: "Madden NFL 4",
+        id: 10,
+        name: "Madden NFL 24",
         description: "Con este juego de Madden NFL vas a disfrutar de horas de diversión y de nuevos desafíos que te permitirán mejorar como gamer.Interactuá con otros jugadores. Podrás disfrutar de una experiencia inigualable, ya que te permite jugar con tus amistades y compartir momentos inolvidables.Diversión sin fronteras.Podrás compartir cada juego con personas de todo el mundo, ya que es posible conectarse de manera online.",
         image: "/images/home/madden.jpg",
         price: 10499.99,
@@ -168,12 +168,14 @@ const product = [
         releaseDate:"08 - 10 - 2023",
         developer:"Electronic Arts",
         gender:[genderList.deporte, genderList.multiplayer],
-        fomat:"Digital",
+        format:"Digital",
+        trailer: "https://www.youtube.com/embed/UVZ0IIeW2mw",
+        gameplay: "/images/products/MaddenNFL24-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
 
     {
-        id: 12,
+        id: 11,
         name: "Star Wars Battlefront ultimate",
         description: "Starfield is the first new universe in over 25 years from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim and Fallout 4. In this next generation role-playing game set amongst the stars, create any character you want and explore with unparalleled freedom as you embark on an epic journey to answer humanity's greatest mystery.",
         image: "/images/home/StarWars.jpg",
@@ -182,12 +184,14 @@ const product = [
         releaseDate:"04 - 11 - 2020",
         developer:"DICE",
         gender:[genderList.acciond, genderList.multiplayer],
-        fomat:"Digital",
+        format:"Digital",
+        trailer: "https://www.youtube.com/embed/d0De2LdZvsI",
+        gameplay: "/images/products/StarWarsBattlefront-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
 
     {
-        id: 13,
+        id: 12,
         name: "Minecraft dungeons: Ultimate edition",
         description: "Minecraft es un videojuego líder dentro del género de la aventura y la acción, donde quien juega puede elegir entre supervivencia, creatividad y dificultad extrema. Gracias al casi infinito mundo de terrenos que presenta, es posible jugar durante horas y encontrar múltiples desafíos.Interactuá con otros jugadores.Podrás disfrutar de una experiencia inigualable, ya que te permite jugar con tus amistades y compartir momentos inolvidables.",
         image: "/images/home/Minecraft.jpg",
@@ -196,9 +200,28 @@ const product = [
         releaseDate:"08 - 10 - 2023",
         developer:"Mojang",
         gender:[genderList.accion,genderList.rpg,genderList.aventura,genderList.estrategia, genderList.multiplayer],
-        fomat:"Digital",
+        format:"Digital",
+        trailer: "https://www.youtube.com/embed/CoZ2V7XsSYk",
+        gameplay: "/images/products/MinecraftDungeons-gameplay.jpg"
         /* aca agregar si faltan mas */
     },
+
+ 
+    {
+        id: 13,
+        name: "STARFIELD PREMIUM EDITION (Early Access) + PRE-ORDER BONUS PC",
+        description: "Starfield is the first new universe in over 25 years from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim and Fallout 4. In this next generation role-playing game set amongst the stars, create any character you want and explore with unparalleled freedom as you embark on an epic journey to answer humanity's greatest mystery.",
+        image: "/images/caratulas/Starfield.jpg",
+        price: 21586.59,
+        plataform:[icon_plataform.PC, icon_plataform.XBOX],
+        releaseDate:"08 - 10 - 2023",
+        developer:"Bethesda Game Studios",
+        gender: [genderList.accion,genderList.multiplayer],
+        format:"Fisico",
+        trailer: "https://www.youtube.com/embed/kfYEiTdsyas",
+        gameplay: "/images/products/STARFIELD-gameplay.jpg"
+        /* aca agregar si faltan mas */
+    }, 
 
 ]
 /* EXPORTS */

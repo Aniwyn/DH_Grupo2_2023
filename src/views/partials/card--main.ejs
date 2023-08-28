@@ -2,7 +2,7 @@
     <img src="<%= data_item.image %>" alt="" />
     <div class="products__info">
         <div class="info__name">
-            <a href="/details/" class="name__link">
+            <a href="/details/<%= data_item.id %>" class="name__link">
                 <h4><%= data_item.name %></h4>
             </a>
             <% for(let i=0; i < data_item.plataform.length; i++) { %>
