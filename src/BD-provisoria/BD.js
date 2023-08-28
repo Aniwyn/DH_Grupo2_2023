@@ -12,6 +12,8 @@ const genderList = {
     pelea: "Peleas",
     rpg: "RPG",
     deporte: "Deporte",
+    multiplayer: "Multijugador",
+    onePlayer: "Un jugador",
 
 }
 
@@ -23,12 +25,10 @@ const product = [
         image: "/images/caratulas/Starfield.jpg",
         price: 21586.59,
         plataform:[icon_plataform.PC, icon_plataform.XBOX],
-        releaseDate:"08-10-2023",
+        releaseDate:"08 - 10 - 2023",
         developer:"Bethesda Game Studios",
-        gender: [genderList.accion],
+        gender: [genderList.accion,genderList.multiplayer],
         format:"Fisico",
-        gamers:"Multijugador",
-        fileSize:"Bethesda Game Studios",
         /* aca agregar si faltan mas */
     },
 
@@ -39,12 +39,10 @@ const product = [
         image: "/images/home/Sonic2.jpg",
         price: 8999.99,
         plataform: [icon_plataform.PS, icon_plataform.SEGA],
-        releaseDate:"05-07-2022",
+        releaseDate:"05 - 07 - 2022",
         developer:"Hyperkinectic Studios",
-        gender:[genderList.accion, genderList.aventura],
+        gender:[genderList.accion, genderList.aventura, genderList.multiplayer],
         format:"Fisico",
-        gamers:"Multijugador",
-        editorial:"SEGA",
         /* aca agregar si faltan mas */
     },
 
@@ -55,12 +53,10 @@ const product = [
         image: "/images/home/Worm.jpg",
         price: 8599.99,
         plataform: [icon_plataform.SEGA, icon_plataform.XBOX],
-        releaseDate:"08-03-1995",
+        releaseDate:"08 - 03 - 1995",
         developer:"Earthworm Jim",
-        gender:[genderList.accion, genderList.aventura],
+        gender:[genderList.accion, genderList.aventura, genderList.onePlayer],
         format:"Fisico",
-        gamers:"Un jugador",
-        fileSize:"SEGA",
         /* aca agregar si faltan mas */
     },
     
@@ -71,12 +67,10 @@ const product = [
         image: "/images/home/TinyToon.jpg",
         price: 7999.99,
         plataform: [icon_plataform.SEGA, icon_plataform.XBOX],
-        releaseDate:"18-01-1990",
+        releaseDate:"18 - 01 - 1990",
         developer:"SEGA",
-        gender:[genderList.aventura],
+        gender:[genderList.aventura, genderList.onePlayer],
         fomat:"Fisico",
-        gamers:"Un jugador",
-        fileSize:"SEGA",
         /* aca agregar si faltan mas */
     },
 
@@ -87,12 +81,10 @@ const product = [
         image: "/images/home/Ghostbuster.jpg",
         price: 2799.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate:"08-10-2023",
+        releaseDate:"08 - 10 - 2023",
         developer:"Remastered",
-        gender:[genderList.accion, genderList.aventura],
+        gender:[genderList.accion, genderList.aventura, genderList.multiplayer],
         fomat:"Fisico",
-        gamers:"Multijugador",
-        fileSize:"Remastered",
         /* aca agregar si faltan mas */
     },
 
@@ -103,12 +95,10 @@ const product = [
         image:"/images/home/Warcraft.jpg",
         price: 1899.99,
         plataform: [icon_plataform.PC],
-        releaseDate:"01-11-2020",
+        releaseDate:"01 - 11 - 2020",
         developer:"Blizzard Entertainment",
-        gender:[genderList.estrategia],
+        gender:[genderList.estrategia, genderList.multiplayer],
         fomat:"Fisico",
-        gamers:"Multijugador",
-        fileSize:"Original",
         /* aca agregar si faltan mas */
     },
 
@@ -119,12 +109,10 @@ const product = [
         image: "/images/home/SuperMario.jpg",
         price: 5099.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate:"08-10-2018",
+        releaseDate:"08 - 10 - 2018",
         developer:"Nintendo, Sora, Bandai Namco",
-        gender:[genderList.accion,genderList.pelea],
+        gender:[genderList.accion,genderList.pelea, genderList.multiplayer],
         fomat:"Fisico",
-        gamers:"Multijugador",
-        fileSize:"Nintendo",
         /* aca agregar si faltan mas */
     },
 
@@ -135,12 +123,10 @@ const product = [
         image: "/images/home/Zelda.jpg",
         price: 4899.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate:"07-07-2017",
+        releaseDate:"07 - 07 - 2017",
         developer:"Nintendo",
-        gender:[genderList.accion,genderList.aventura],
+        gender:[genderList.accion,genderList.aventura, genderList.multiplayer],
         fomat:"Fisico",
-        gamers:"Multijugador",
-        fileSize:"Nintendo",
         /* aca agregar si faltan mas */
     },
 
@@ -151,12 +137,10 @@ const product = [
         image: "/images/home/MetalSlug.jpg",
         price: 7599.99,
         plataform: [icon_plataform.PS, icon_plataform.SEGA],
-        releaseDate:"02-10-2017",
+        releaseDate:"02 - 10 - 2017",
         developer:"Sony",
-        gender:[genderList.aventura],
+        gender:[genderList.aventura, genderList.multiplayer],
         fomat:"Fisico",
-        gamers:"Multijugador",
-        fileSize:"Standar",
         /* aca agregar si faltan mas */
     },
 
@@ -167,12 +151,10 @@ const product = [
         image: "/images/home/FF.jpg",
         price: 799.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate:"09-12-2022",
+        releaseDate:"09 - 12 - 2022",
         developer:"Square Enix",
-        gender:[genderList.accion,genderList.rpg],
+        gender:[genderList.accion,genderList.rpg, genderList.onePlayer],
         fomat:"Fisico",
-        gamers:"Un jugador",
-        fileSize:"Square Enix",
         /* aca agregar si faltan mas */
     },
 
@@ -183,12 +165,10 @@ const product = [
         image: "/images/home/madden.jpg",
         price: 10499.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate:"08-10-2023",
+        releaseDate:"08 - 10 - 2023",
         developer:"Electronic Arts",
-        gender:[genderList.deporte],
+        gender:[genderList.deporte, genderList.multiplayer],
         fomat:"Digital",
-        gamers:"Multijugador",
-        fileSize:"Electronic Arts",
         /* aca agregar si faltan mas */
     },
 
@@ -199,12 +179,10 @@ const product = [
         image: "/images/home/StarWars.jpg",
         price: 7799.99,
         plataform: [icon_plataform.PC, icon_plataform.XBOX],
-        releaseDate:"04-11-2020",
+        releaseDate:"04 - 11 - 2020",
         developer:"DICE",
-        gender:[genderList.accion],
+        gender:[genderList.acciond, genderList.multiplayer],
         fomat:"Digital",
-        gamers:"Multijugador",
-        fileSize:"Electronic Arts",
         /* aca agregar si faltan mas */
     },
 
@@ -215,12 +193,10 @@ const product = [
         image: "/images/home/Minecraft.jpg",
         price: 9999.99,
         plataform: [icon_plataform.PC, icon_plataform.XBOX],
-        releaseDate:"08-10-2023",
+        releaseDate:"08 - 10 - 2023",
         developer:"Mojang",
-        gender:[genderList.accion,genderList.rpg,genderList.aventura,genderList.estrategia],
+        gender:[genderList.accion,genderList.rpg,genderList.aventura,genderList.estrategia, genderList.multiplayer],
         fomat:"Digital",
-        gamers:"Multijugador",
-        fileSize:"Xbox Game Studios",
         /* aca agregar si faltan mas */
     },
 
