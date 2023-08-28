@@ -1,0 +1,107 @@
+.main__editProduct {
+    max-width: 720px;
+    margin: 2rem auto;
+    background: var(--color-translucid-black90);
+    border-radius: 0.5rem;
+}
+
+.main__editProduct .editForm__inputText {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0.5rem 2rem;
+    width: 100%;
+}
+
+.editForm__inputText .field {
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.editForm__inputText .field .field__input {
+    position: relative;
+}
+
+.editForm__inputText .field .field__input .input {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    padding: 0.7rem 1rem 0.5rem;
+    border-top: none;
+    border-right: none;
+    border-left: solid 3px var(--color-violet);
+    border-bottom: solid 3px var(--color-violet);
+    color: var(--color-white);
+    border-radius: 5px 0 0 5px;
+}
+
+.editForm__inputText .field .field__input .input:focus {
+    outline: none;
+}
+
+.editForm__inputText .field .field__input .label {
+    position: absolute;
+    top: -0.5rem;
+    padding: 0 0 0 4rem;
+    color: var(--color-white);
+    font-size: 0.75rem;
+    line-height: 1.5em;
+    font-family: monospace, serif;
+    transition: all 0.25s linear;
+}
+
+.editForm__inputText .field .field__input .label::before {
+    border-left: solid 3px var(--color-violet);
+    border-top: solid 3px var(--color-violet);
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 1rem;
+    border-radius: 5px 0 0;
+    position: absolute;
+    left: 0;
+    top: .5rem;
+}
+
+.editForm__inputText .field .input--id .input {
+    color: var(--color-gray);
+}
+
+.editForm__inputText .field .input--radio .input__container {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0.7rem 3rem 0.5rem;
+    flex-wrap: wrap;
+}
+
+.editForm__inputText .field .input--radio .input__container .option {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 0.5rem 0;
+}
+
+.editForm__inputText .field .input--radio .label--radio {
+    color: var(--color-white);
+    padding-top: 1rem;
+}
+
+.editForm__inputText .field .input--radio .input--radio {
+    width: auto;
+}
+
+.editForm__inputText .field .input--radio .input__container .option__title {
+    color: var(--color-white);
+}
+
+.editForm__inputText .field .input--radio .input__container .option--classification {
+    display: flex;
+    width: fit-content;
+    padding: 0.5rem 0;
+}
+
+.editForm__inputText .field .input--radio .input__container .label--radio-classification {
+    color: var(--color-white);
+    padding-left: 1rem;
+}

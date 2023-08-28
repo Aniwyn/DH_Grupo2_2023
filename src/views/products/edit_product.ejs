@@ -5,6 +5,213 @@
 
 <%- include('../partials/head.ejs') %>
 
-<main class="main__editProduct">
-    <div>hola</div>
-</main>
+<body>
+    <!---------------------------- Header ---------------------------->
+
+    <%- include('../partials/header.ejs') %>
+
+    <main class="main__editProduct">
+        <form class="editProduct__editForm" action="">
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input input--id">
+                        <label class="label" for="f_title">Id</label>
+                        <input class="input" type="email" value="1" name="email" id="f_title" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_title">Titulo</label>
+                        <input class="input" type="email" value="" name="email" id="f_title">
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_subTitle">Sub titulo</label>
+                        <input class="input" type="email" value="" name="email" id="f_subTitle">
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input input--radio">
+                        <label class="label">Formato</label>
+                        <div class="input__container">
+                            <div class="option">
+                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                <label class="label--radio" for="f_radio-physic">Fisico</label>
+                            </div>
+                            <div class="option">
+                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-digital">
+                                <label class="label--radio" for="f_radio-digital">Digital</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input input--radio">
+                        <label class="label">Plataforma</label>
+                        <div class="input__container">
+                            <div class="option">
+                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-pc">
+                                <label class="label--radio" for="f_radio-pc">PC</label>
+                            </div>
+                            <div class="option">
+                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-ps">
+                                <label class="label--radio" for="f_radio-ps">Play Station</label>
+                            </div>
+                            <div class="option">
+                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-xbox">
+                                <label class="label--radio" for="f_radio-xbox">XBox</label>
+                            </div>
+                            <div class="option">
+                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-sega">
+                                <label class="label--radio" for="f_radio-sega">Sega</label>
+                            </div>
+                            <div class="option">
+                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-switch">
+                                <label class="label--radio" for="f_radio-switch">Switch</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_date">Lanzamiento</label>
+                        <input class="input" type="date" value="" name="email" id="f_date">
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_developer">Desarrollador</label>
+                        <input class="input" type="email" value="" name="email" id="f_developer">
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_gender">Genero</label>
+                        <input class="input" type="email" value="" name="email" id="f_gender">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input input--radio">
+                        <label class="label">Clasificacion</label>
+                        <div class="input__container">
+                            <div class="option">
+                                <span class="option__title">PEGI</span>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 3</label>
+                                </div>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 7</label>
+                                </div>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 12</label>
+                                </div>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 16</label>
+                                </div>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 18</label>
+                                </div>
+                            </div>
+                            <<div class="option">
+                                <span class="option__title">ESRB</span>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">ESRB E</label>
+                                </div>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">ESRB E10+</label>
+                                </div>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">ESRB T</label>
+                                </div>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">ESRB M</label>
+                                </div>
+                                <div class="option--classification">
+                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                    <label class="label--radio-classification" for="f_radio-physic">ESRB A</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_price">Precio</label>
+                        <input class="input" type="email" value="" name="email" id="f_price">
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_cover">Imagen caratula</label>
+                        <input class="input" type="file" value="" name="email" accept="image/*" id="f_cover">
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_gameplay">Imagen gameplay</label>
+                        <input class="input" type="file" value="" name="email" accept="image/*" id="f_gameplay">
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_triller">Triller</label>
+                        <input class="input" type="url" value="" name="email" id="f_triller">
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_description">Descripción</label>
+                        <textarea class="input" rows="20" name="email" id="f_description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <!---------------------------- Footer ---------------------------->
+
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+
+</html>

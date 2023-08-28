@@ -187,7 +187,6 @@
 
 .details__description .description__body .description__video {
     overflow: hidden;
-    /* padding-bottom: 56.25%; */
     padding-bottom: 45%;
     position: relative;
     height: 0;
