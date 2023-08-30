@@ -5,6 +5,19 @@
     border-radius: 0.5rem;
 }
 
+.main__editProduct .editproduct__title {
+    display: flex;
+    justify-content: center;
+    color: var(--color-white);
+}
+
+.main__editProduct .editproduct__title h2 {
+    text-shadow: 0 0 1px var(--color-translucid-lightblue),
+        0 0 2px var(--color-translucid-lightblue),
+        0 0 4px var(--color-translucid-lightblue),
+        0 0 6px var(--color-translucid-lightblue);
+}
+
 .main__editProduct .editForm__inputText {
     display: flex;
     box-sizing: border-box;
@@ -105,3 +118,71 @@
     color: var(--color-white);
     padding-left: 1rem;
 }
+
+.editProduct__editForm .editForm__buttonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem 2rem 2rem;
+}
+
+.editProduct__editForm .editForm__buttonBox .buttonBox__button {
+    width: 40%;
+}
+
+.editProduct__editForm .editForm__buttonBox .buttonBox__button button {
+    width: 100%;
+    background: var(--color-violet);
+    color: var(--color-white);
+    outline: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+
+.editProduct__editForm .editForm__buttonBox .buttonBox__button button:hover {
+    background: #614abd;
+}
+
+.editProduct__editForm .editForm__buttonBox .button--confirm button {
+    background: var(--color-pink);
+}
+
+.editProduct__editForm .editForm__buttonBox .button--confirm button:hover {
+    background: #f782d8;
+}
+
+
+
+/* .dashboard__description .description__shopping .button--buy button {
+    color: var(--color-black);
+    background: var(--color-yellow);
+    border: none;
+}
+
+.dashboard__description .description__shopping .button--buy button:hover {
+    background: #faf17a;
+    box-shadow: 0 0 8px var(--color-yellow);
+} */
+
+/* main__editProducteditProduct__editForm
+
+
+.details__dashboard .dashboard__description .description__shopping .shopping__button {
+    background: transparent;
+    margin: 0.5rem 2rem;
+}
+
+.dashboard__description .description__shopping .shopping__button button {
+    width: 100%;
+    color: var(--color-white);
+    outline: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid var(--color-yellow);
+} */

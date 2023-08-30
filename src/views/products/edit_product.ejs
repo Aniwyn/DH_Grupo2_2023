@@ -11,12 +11,15 @@
     <%- include('../partials/header.ejs') %>
 
     <main class="main__editProduct">
+        <div class="editproduct__title">
+            <h2><i class="fa-solid fa-gear"></i> Editar producto</h2>
+        </div>
         <form class="editProduct__editForm" action="">
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input input--id">
                         <label class="label" for="f_title">Id</label>
-                        <input class="input" type="email" value="1" name="email" id="f_title" disabled>
+                        <input class="input" type="text" value="" name="id" id="f_title" disabled>
                     </div>
                 </div>
             </div>
@@ -24,7 +27,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_title">Titulo</label>
-                        <input class="input" type="email" value="" name="email" id="f_title">
+                        <input class="input" type="text" value="" name="title" id="f_title">
                     </div>
                 </div>
             </div>
@@ -32,7 +35,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_subTitle">Sub titulo</label>
-                        <input class="input" type="email" value="" name="email" id="f_subTitle">
+                        <input class="input" type="text" value="" name="subtitle" id="f_subTitle">
                     </div>
                 </div>
             </div>
@@ -42,11 +45,11 @@
                         <label class="label">Formato</label>
                         <div class="input__container">
                             <div class="option">
-                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
+                                <input class="input input--radio" type="radio" value="" name="format" id="f_radio-physic">
                                 <label class="label--radio" for="f_radio-physic">Fisico</label>
                             </div>
                             <div class="option">
-                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-digital">
+                                <input class="input input--radio" type="radio" value="" name="format" id="f_radio-digital">
                                 <label class="label--radio" for="f_radio-digital">Digital</label>
                             </div>
                         </div>
@@ -59,23 +62,23 @@
                         <label class="label">Plataforma</label>
                         <div class="input__container">
                             <div class="option">
-                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-pc">
+                                <input class="input input--radio" type="radio" value="" name="plataform" id="f_radio-pc">
                                 <label class="label--radio" for="f_radio-pc">PC</label>
                             </div>
                             <div class="option">
-                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-ps">
+                                <input class="input input--radio" type="radio" value="" name="plataform" id="f_radio-ps">
                                 <label class="label--radio" for="f_radio-ps">Play Station</label>
                             </div>
                             <div class="option">
-                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-xbox">
+                                <input class="input input--radio" type="radio" value="" name="plataform" id="f_radio-xbox">
                                 <label class="label--radio" for="f_radio-xbox">XBox</label>
                             </div>
                             <div class="option">
-                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-sega">
+                                <input class="input input--radio" type="radio" value="" name="plataform" id="f_radio-sega">
                                 <label class="label--radio" for="f_radio-sega">Sega</label>
                             </div>
                             <div class="option">
-                                <input class="input input--radio" type="radio" value="" name="email" id="f_radio-switch">
+                                <input class="input input--radio" type="radio" value="" name="plataform" id="f_radio-switch">
                                 <label class="label--radio" for="f_radio-switch">Switch</label>
                             </div>
                         </div>
@@ -86,7 +89,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_date">Lanzamiento</label>
-                        <input class="input" type="date" value="" name="email" id="f_date">
+                        <input class="input" type="date" value="" name="date" id="f_date">
                     </div>
                 </div>
             </div>
@@ -94,7 +97,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_developer">Desarrollador</label>
-                        <input class="input" type="email" value="" name="email" id="f_developer">
+                        <input class="input" type="text" value="" name="developer" id="f_developer">
                     </div>
                 </div>
             </div>
@@ -102,14 +105,10 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_gender">Genero</label>
-                        <input class="input" type="email" value="" name="email" id="f_gender">
+                        <input class="input" type="text" value="" name="gender" id="f_gender">
                     </div>
                 </div>
             </div>
-
-
-
-
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input input--radio">
@@ -118,47 +117,47 @@
                             <div class="option">
                                 <span class="option__title">PEGI</span>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 3</label>
+                                    <input class="input input--radio" type="radio" value="" name="pegi-ranking" id="f_radio-pegi3">
+                                    <label class="label--radio-classification" for="f_radio-pegi3">PEGI 3</label>
                                 </div>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 7</label>
+                                    <input class="input input--radio" type="radio" value="" name="pegi-ranking" id="f_radio-pegi7">
+                                    <label class="label--radio-classification" for="f_radio-pegi7">PEGI 7</label>
                                 </div>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 12</label>
+                                    <input class="input input--radio" type="radio" value="" name="pegi-ranking" id="f_radio-pegi12">
+                                    <label class="label--radio-classification" for="f_radio-pegi12">PEGI 12</label>
                                 </div>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 16</label>
+                                    <input class="input input--radio" type="radio" value="" name="pegi-ranking" id="f_radio-pegi16">
+                                    <label class="label--radio-classification" for="f_radio-pegi16">PEGI 16</label>
                                 </div>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">PEGI 18</label>
+                                    <input class="input input--radio" type="radio" value="" name="pegi-ranking" id="f_radio-pegi18">
+                                    <label class="label--radio-classification" for="f_radio-pegi18">PEGI 18</label>
                                 </div>
                             </div>
                             <<div class="option">
                                 <span class="option__title">ESRB</span>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">ESRB E</label>
+                                    <input class="input input--radio" type="radio" value="" name="esrb-ranking" id="f_radio-esrbe">
+                                    <label class="label--radio-classification" for="f_radio-esrbe">ESRB E</label>
                                 </div>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">ESRB E10+</label>
+                                    <input class="input input--radio" type="radio" value="" name="esrb-ranking" id="f_radio-esrbe+">
+                                    <label class="label--radio-classification" for="f_radio-esrbe+">ESRB E10+</label>
                                 </div>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">ESRB T</label>
+                                    <input class="input input--radio" type="radio" value="" name="esrb-ranking" id="f_radio-esrbt">
+                                    <label class="label--radio-classification" for="f_radio-esrbt">ESRB T</label>
                                 </div>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">ESRB M</label>
+                                    <input class="input input--radio" type="radio" value="" name="esrb-ranking" id="f_radio-esrbm">
+                                    <label class="label--radio-classification" for="f_radio-esrbm">ESRB M</label>
                                 </div>
                                 <div class="option--classification">
-                                    <input class="input input--radio" type="radio" value="" name="email" id="f_radio-physic">
-                                    <label class="label--radio-classification" for="f_radio-physic">ESRB A</label>
+                                    <input class="input input--radio" type="radio" value="" name="esrb-ranking" id="f_radio-esrba">
+                                    <label class="label--radio-classification" for="f_radio-esrba">ESRB A</label>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +168,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_price">Precio</label>
-                        <input class="input" type="email" value="" name="email" id="f_price">
+                        <input class="input" type="number" value="" name="price" id="f_price">
                     </div>
                 </div>
             </div>
@@ -177,7 +176,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_cover">Imagen caratula</label>
-                        <input class="input" type="file" value="" name="email" accept="image/*" id="f_cover">
+                        <input class="input" type="file" value="" name="image-cover" accept="image/*" id="f_cover">
                     </div>
                 </div>
             </div>
@@ -185,7 +184,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_gameplay">Imagen gameplay</label>
-                        <input class="input" type="file" value="" name="email" accept="image/*" id="f_gameplay">
+                        <input class="input" type="file" value="" name="image-gameplay" accept="image/*" id="f_gameplay">
                     </div>
                 </div>
             </div>
@@ -193,7 +192,15 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_triller">Triller</label>
-                        <input class="input" type="url" value="" name="email" id="f_triller">
+                        <input class="input" type="url" value="" name="triller" id="f_triller">
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_description">Introducción</label>
+                        <textarea class="input" rows="10" name="description-header" id="f_description"></textarea>
                     </div>
                 </div>
             </div>
@@ -201,8 +208,24 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_description">Descripción</label>
-                        <textarea class="input" rows="20" name="email" id="f_description"></textarea>
+                        <textarea class="input" rows="20" name="description-body" id="f_description"></textarea>
                     </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_description">Desenlace</label>
+                        <textarea class="input" rows="10" name="description-footer" id="f_description"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__buttonBox">
+                <div class="buttonBox__button">
+                    <button>Borrar datos</button>
+                </div>
+                <div class="buttonBox__button button--confirm">
+                    <button type="submit">Confirmar</button>
                 </div>
             </div>
         </form>
