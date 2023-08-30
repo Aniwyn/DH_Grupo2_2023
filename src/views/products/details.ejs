@@ -56,8 +56,8 @@
 
                         </div>
                         <div class="rankings">
-                            <img src="/images/rankings/PEGI_12.png" alt="clasificacion pegi 12">
-                            <img src="/images/rankings/ESRB_T.svg" alt="clasificacion esbr teen">
+                            <img src="<%= data_item.ranking[0] %>" alt="clasificacion pegi">
+                            <img src="<%= data_item.ranking[1] %>" alt="clasificacion esbr">
                         </div>
                     </div>
                     <div class="description__shopping">
@@ -80,7 +80,7 @@
 
         <section class="details__description">
             <div class="description__body">
-                <p class="description__text">Sumérgete en el mundo épico de Azeroth una vez más con "Warcraft III: The Frozen Throne". Esta expansión del famoso juego de estrategia en tiempo real te transportará a un reino lleno de magia, batallas y traiciones. Prepárate para una experiencia que expande los límites de la fantasía mientras luchas por el dominio y la supervivencia en un mundo al borde del colapso.</p>
+                <p class="description__text"><%= data_item.description[0] %></p>
 
                 <div class="description__video">
                     <iframe 
@@ -95,12 +95,12 @@
                     </iframe>
                 </div>
 
-                <p class="description__text">En "Warcraft III: The Frozen Throne", la historia continúa con nuevas y emocionantes aventuras que amplían aún más el rico universo de Warcraft. Viajarás a tierras desconocidas y enemigas, enfrentando desafíos mortales y descubriendo secretos oscuros que amenazan con desgarrar Azeroth. Con nuevas facciones, héroes y unidades, deberás dominar la estrategia y la magia para sobrevivir y prevalecer en este mundo cambiante.</p>
-                <p class="description__text">El destino de héroes legendarios y villanos astutos descansa en tus manos mientras te sumerges en una campaña épica llena de giros inesperados y emocionantes batallas. Ya sea que elijas liderar a los nobles defensores de la Alianza o a los formidables miembros de la Horda, tus decisiones moldearán el destino de Azeroth y determinarán si la luz o las sombras prevalecen.</p>
+                <p class="description__text"><%= data_item.description[1] %></p>
+                <p class="description__text"><%= data_item.description[2] %></p>
             
                 <img class="description__image" src=<%= data_item.gameplay %> alt="gameplay del juego">
 
-                <p class="description__text">¿Estás listo para enfrentarte a nuevos desafíos, forjar alianzas inquebrantables y descubrir los secretos del Trono Helado? "Warcraft III: The Frozen Throne" te invita a embarcarte en una aventura única que cautivará tu imaginación y pondrá a prueba tus habilidades estratégicas como nunca antes.</p>
+                <p class="description__text"><%= data_item.description[3] %></p>
             </div>
         </section>
 
