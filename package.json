@@ -5,7 +5,8 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "method-override": "^3.0.0"
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1"
   },
   "name": "dh_grupo2_2023",
   "description": "![icono](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/icono.png)",

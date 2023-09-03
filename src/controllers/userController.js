@@ -1,6 +1,6 @@
 /* VARIABLE DECLARATION */
 const path = require("path")
-const BD_provisoria = require(path.join(__dirname, "../BD-provisoria/BD"));
+const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD"));
 
 /* GETS SET */
 const userController = {

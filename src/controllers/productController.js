@@ -3,7 +3,7 @@ const path = require("path");
 
 // borrar
 console.log(__dirname)
-const BD_provisoria = require(path.join(__dirname, "../../src/BD-provisoria/BD"));
+const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD"));
 
 /* GETS SET */
 const productController = {
