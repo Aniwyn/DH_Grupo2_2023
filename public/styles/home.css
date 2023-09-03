@@ -1,18 +1,4 @@
-/* ----------------- General ----------------- */
-
-body {
-    background-image: url("../images/home/background.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    margin-top: 0.5rem;
-}
-
 /* ----------------- Main ----------------- */
-
-main {
-    width: 90vw;
-    margin: 2rem 5vw 0;
-}
 
 .dashboard {
     display: flex;

@@ -1,8 +1,8 @@
 const icon_plataform = {
-    "PC": ["PC","fa-brands fa-windows"],
-    "PS": ["PS","fa-brands fa-playstation"],
-    "XBOX": ["XBOX","fa-brands fa-xbox"],
-    "SEGA": ["SEGA","fa-solid fa-gamepad"],
+    "PC": ["PC", "fa-brands fa-windows"],
+    "PS": ["PS", "fa-brands fa-playstation"],
+    "XBOX": ["XBOX", "fa-brands fa-xbox"],
+    "SEGA": ["SEGA", "fa-solid fa-gamepad"],
     "SWITCH": ["SWITCH", "fa-solid fa-gamepad-modern"]
 }
 
@@ -33,7 +33,7 @@ const product = [
         trailer: "https://www.youtube.com/embed/CLLXiXh1onc",
         gameplay: "/images/products/GHOSTBUSTERS-gameplay.jpg",
         ranking: ['/images/rankings/PEGI_7.png', '/images/rankings/ESRB_E.svg']
-    },   
+    },
     {
         id: 2,
         name: "Sonic 2",
@@ -67,7 +67,7 @@ const product = [
         gameplay: "/images/products/EarthwormJim-gameplay.jpg",
         ranking: ['/images/rankings/PEGI_7.png', '/images/rankings/ESRB_E.svg']
     },
-    
+
     {
         id: 4,
         name: "Tiny Toon Adventures",
@@ -104,14 +104,14 @@ const product = [
     {
         id: 6,
         name: "SuperMario Bro. U Deluxe",
-        sub_name:"Mario Saga",
+        sub_name: "Mario Saga",
         description: ['¡Prepárate para un viaje lleno de diversión y aventuras con "Super Mario Bros. U Deluxe"! Únete a Mario y sus amigos en una emocionante odisea a través del Reino Champiñón mientras luchan contra Bowser y su ejército de secuaces. Con saltos espectaculares, desafíos creativos y una jugabilidad clásica que ha cautivado a generaciones, este juego te llevará a un mundo lleno de color y sorpresas.', 'En "Super Mario Bros. U Deluxe", la diversión y la nostalgia se fusionan en un juego de plataformas clásico. Viaja a través de niveles ingeniosamente diseñados, recolecta monedas brillantes y power-ups icónicos, y descubre secretos ocultos en cada rincón. Con personajes como Mario, Luigi, Toad y Toadette, cada uno con habilidades únicas, tendrás la libertad de elegir un estilo de juego que se adapte a ti.', 'Explora una variedad de mundos temáticos, desde exuberantes praderas hasta desafiantes castillos, mientras te enfrentas a jefes épicos en tu búsqueda por salvar a la princesa. Además de la emocionante campaña principal, el desafiante modo "New Super Luigi U" pondrá a prueba tus habilidades de plataformas en niveles renovados para una experiencia fresca y emocionante.', 'Reúne a tus amigos en el modo multijugador cooperativo o competitivo y disfruten juntos de la diversión caótica. Con gráficos vibrantes, controles precisos y una jugabilidad atemporal, "Super Mario Bros. U Deluxe" te invita a sumergirte en un mundo lleno de aventuras y sonrisas.'],
-        image:"/images/home/SuperMario.jpg",
+        image: "/images/home/SuperMario.jpg",
         price: 5099.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
         releaseDate: "08 - 10 - 2018",
         developer: "Nintendo",
-        gender: [genderList.accion,genderList.pelea, genderList.multiplayer],
+        gender: [genderList.accion, genderList.pelea, genderList.multiplayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/z3s8vB_hw6c",
         gameplay: "/images/products/SuperMarioBroUDeluxe-gameplay.jpg",
@@ -119,16 +119,16 @@ const product = [
     },
     {
         id: 7,
-        name:"Warcraft 3",
-        sub_name:"The Frozen Throne",
+        name: "Warcraft 3",
+        sub_name: "The Frozen Throne",
         description: ['Sumérgete en el mundo épico de Azeroth una vez más con "Warcraft III: The Frozen Throne". Esta expansión del famoso juego de estrategia en tiempo real te transportará a un reino lleno de magia, batallas y traiciones. Prepárate para una experiencia que expande los límites de la fantasía mientras luchas por el dominio y la supervivencia en un mundo al borde del colapso.', 'En "Warcraft III: The Frozen Throne", la historia continúa con nuevas y emocionantes aventuras que amplían aún más el rico universo de Warcraft. Viajarás a tierras desconocidas y enemigas, enfrentando desafíos mortales y descubriendo secretos oscuros que amenazan con desgarrar Azeroth. Con nuevas facciones, héroes y unidades, deberás dominar la estrategia y la magia para sobrevivir y prevalecer en este mundo cambiante.', 'El destino de héroes legendarios y villanos astutos descansa en tus manos mientras te sumerges en una campaña épica llena de giros inesperados y emocionantes batallas. Ya sea que elijas liderar a los nobles defensores de la Alianza o a los formidables miembros de la Horda, tus decisiones moldearán el destino de Azeroth y determinarán si la luz o las sombras prevalecen.', '¿Estás listo para enfrentarte a nuevos desafíos, forjar alianzas inquebrantables y descubrir los secretos del Trono Helado? "Warcraft III: The Frozen Throne" te invita a embarcarte en una aventura única que cautivará tu imaginación y pondrá a prueba tus habilidades estratégicas como nunca antes.'],
-        image:"/images/home/Warcraft.jpg",
+        image: "/images/home/Warcraft.jpg",
         price: 7199.99,
         plataform: [icon_plataform.PC],
-        releaseDate:"01 - 11 - 2020",
-        developer:"Blizzard Entertainment",
-        gender:[genderList.estrategia, genderList.multiplayer],
-        format:"Fisico",
+        releaseDate: "01 - 11 - 2020",
+        developer: "Blizzard Entertainment",
+        gender: [genderList.estrategia, genderList.multiplayer],
+        format: "Fisico",
         trailer: "https://www.youtube.com/embed/iqB3KeiBLuw",
         gameplay: "/images/products/W3TFT-gameplay.jpg",
         ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_T.svg']
@@ -137,15 +137,15 @@ const product = [
     {
         id: 8,
         name: "Legend of Zelda",
-        sub_name:"Breat of the wild",
+        sub_name: "Breat of the wild",
         description: ['Sumérgete en el mágico mundo de "The Legend of Zelda: Breath of the Wild". Explora un Hyrule expansivo y maravilloso mientras asumes el papel de Link en una épica odisea llena de misterios y aventuras.', '"The Legend of Zelda: Breath of the Wild" te transporta a un Hyrule expansivo y misterioso, donde la libertad es tu mayor aliada. Explora un mundo lleno de vida y secretos, desde exuberantes praderas hasta antiguas ruinas. Conviértete en Link, enfrenta desafíos ingeniosos y enemigos formidables, y descubre la historia detrás de la lucha contra el temible Calamity Ganon.', 'Este juego redefine la experiencia de "Zelda" al permitirte abordar mazmorras y desafíos de manera no lineal. Utiliza armas, habilidades y física realista para resolver puzles y superar obstáculos. Entra en contacto con personajes memorables y desentraña los misterios de un pasado legendario mientras te sumerges en una dirección artística impresionante y una banda sonora evocadora.', '"Breath of the Wild" es más que un juego: es una odisea emocional y una exploración íntima de un mundo diverso y cautivador. Embárcate en una aventura épica que combina la magia de "Zelda" con una nueva visión de la jugabilidad, la narrativa y la conexión con la naturaleza.'],
         image: "/images/home/Zelda.jpg",
         price: 5699.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate:"07 - 07 - 2017",
-        developer:"Nintendo",
-        gender:[genderList.accion,genderList.aventura, genderList.multiplayer],
-        format:"Fisico",
+        releaseDate: "07 - 07 - 2017",
+        developer: "Nintendo",
+        gender: [genderList.accion, genderList.aventura, genderList.multiplayer],
+        format: "Fisico",
         trailer: "https://www.youtube.com/embed/KzQRiYqt6LY",
         gameplay: "/images/products/LOZ-BOTW-gameplay.jpg",
         ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_T.svg']
@@ -159,10 +159,10 @@ const product = [
         image: "/images/home/FF.jpg",
         price: 17999.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate:"09 - 12 - 2022",
-        developer:"Square Enix",
-        gender:[genderList.accion,genderList.rpg, genderList.onePlayer],
-        format:"Fisico",
+        releaseDate: "09 - 12 - 2022",
+        developer: "Square Enix",
+        gender: [genderList.accion, genderList.rpg, genderList.onePlayer],
+        format: "Fisico",
         trailer: "https://www.youtube.com/embed/lMGrC58PHqs",
         gameplay: "/images/products/FFXII-gameplay.jpg",
         ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_E10plus.svg']
@@ -171,7 +171,7 @@ const product = [
     {
         id: 10,
         name: "Madden 24",
-        sub_name:"National Football League",
+        sub_name: "National Football League",
         description: ['Sumérgete en la emoción del fútbol americano virtual con "Madden NFL 24". En este título icónico de la franquicia Madden, podrás experimentar la intensidad de la liga de fútbol americano de una manera única. Desde tácticas estratégicas en el campo hasta emocionantes enfrentamientos entre equipos, "Madden NFL 24" te sumergirá en el mundo del deporte más popular de América.', '"Madden NFL 24" es la última entrega de la aclamada serie de videojuegos que simula la experiencia del fútbol americano. El juego te permite controlar y personalizar tu equipo favorito de la NFL, desde la selección de jugadores y estrategias hasta la coordinación en el campo durante cada partido. Puedes elegir jugar en el papel de entrenador o asumir el control directo de tus jugadores estrella para vivir la emoción del campo de juego.', 'El juego presenta una amplia gama de modos de juego, incluyendo la Liga Madden, donde puedes competir contra otros jugadores en línea y construir tu propio legado en la liga virtual. Además, el modo Franquicia te permite tomar el control total de un equipo y llevarlo a la gloria a lo largo de varias temporadas. También puedes participar en el Modo Carrera, donde creas y personalizas a tu propio jugador y lo guías desde la universidad hasta la NFL.', 'La jugabilidad combina acción en tiempo real con elementos estratégicos, permitiéndote llamar jugadas, hacer cambios en la línea de scrimmage y coordinar tácticas defensivas. Los controles intuitivos y realistas te sumergen en la experiencia del deporte, mientras que los gráficos detallados y los efectos de sonido auténticos te hacen sentir como si estuvieras en el estadio. Desde emocionantes partidos de temporada hasta enfrentamientos en los playoffs, "Madden NFL 24" te llevará a través de una emocionante temporada de fútbol americano, donde cada pase, carrera y tackle cuenta. Con cada touchdown y cada victoria, estarás un paso más cerca de convertirte en un campeón de la NFL.'],
         image: "/images/home/madden.jpg",
         price: 10499.99,
@@ -188,15 +188,15 @@ const product = [
     {
         id: 11,
         name: "Star Wars Battlefront",
-        sub_name:"Ultimate Edition",
-        description:['Sumérgete en el emocionante universo de Star Wars con "Star Wars Battlefront". En este juego de acción multijugador, podrás unirte a las filas de la Alianza Rebelde o el Imperio Galáctico y librar intensas batallas en icónicos mundos de la saga. Prepárate para vivir la experiencia de combate y la emoción de las películas como nunca antes.', '"Star Wars Battlefront" te permite participar en batallas épicas y dinámicas que recrean algunos de los momentos más memorables de la saga. Ya sea luchando en los campos de Hoth, defendiendo las selvas de Endor o enfrentándote en duelos de sables de luz, el juego te sumergirá en la acción de Star Wars con detalles impresionantes. El juego ofrece una variedad de modos multijugador que te permiten unirte a tus amigos en combates emocionantes. Desde enfrentamientos a gran escala con vehículos y tropas hasta duelos en equipo y modos de asalto, cada partida es una experiencia única y llena de emoción.', 'Los gráficos realistas y los efectos visuales te harán sentir como si estuvieras en el corazón de la galaxia. Los mapas detallados y las recreaciones precisas de los personajes y vehículos icónicos agregan un nivel de autenticidad que atraerá a los fanáticos de Star Wars y los entusiastas de los juegos de acción.', 'La música icónica de John Williams y los efectos de sonido auténticos te sumergen aún más en el mundo de Star Wars. Desde los rugidos de los TIE Fighters hasta el siseo de los sables de luz, cada detalle contribuye a la inmersión en la galaxia muy, muy lejana. "Star Wars Battlefront" te invita a tomar las armas, unirte a tus camaradas y vivir la experiencia de ser un soldado en medio de la lucha entre el bien y el mal en el universo de Star Wars. ¿Estás listo para unirte a la batalla?'],
+        sub_name: "Ultimate Edition",
+        description: ['Sumérgete en el emocionante universo de Star Wars con "Star Wars Battlefront". En este juego de acción multijugador, podrás unirte a las filas de la Alianza Rebelde o el Imperio Galáctico y librar intensas batallas en icónicos mundos de la saga. Prepárate para vivir la experiencia de combate y la emoción de las películas como nunca antes.', '"Star Wars Battlefront" te permite participar en batallas épicas y dinámicas que recrean algunos de los momentos más memorables de la saga. Ya sea luchando en los campos de Hoth, defendiendo las selvas de Endor o enfrentándote en duelos de sables de luz, el juego te sumergirá en la acción de Star Wars con detalles impresionantes. El juego ofrece una variedad de modos multijugador que te permiten unirte a tus amigos en combates emocionantes. Desde enfrentamientos a gran escala con vehículos y tropas hasta duelos en equipo y modos de asalto, cada partida es una experiencia única y llena de emoción.', 'Los gráficos realistas y los efectos visuales te harán sentir como si estuvieras en el corazón de la galaxia. Los mapas detallados y las recreaciones precisas de los personajes y vehículos icónicos agregan un nivel de autenticidad que atraerá a los fanáticos de Star Wars y los entusiastas de los juegos de acción.', 'La música icónica de John Williams y los efectos de sonido auténticos te sumergen aún más en el mundo de Star Wars. Desde los rugidos de los TIE Fighters hasta el siseo de los sables de luz, cada detalle contribuye a la inmersión en la galaxia muy, muy lejana. "Star Wars Battlefront" te invita a tomar las armas, unirte a tus camaradas y vivir la experiencia de ser un soldado en medio de la lucha entre el bien y el mal en el universo de Star Wars. ¿Estás listo para unirte a la batalla?'],
         image: "/images/home/StarWars.jpg",
         price: 14999.99,
         plataform: [icon_plataform.PC, icon_plataform.XBOX],
-        releaseDate:"04 - 11 - 2020",
-        developer:"DICE",
-        gender:[genderList.acciond, genderList.multiplayer],
-        format:"Digital",
+        releaseDate: "04 - 11 - 2020",
+        developer: "DICE",
+        gender: [genderList.acciond, genderList.multiplayer],
+        format: "Digital",
         trailer: "https://www.youtube.com/embed/d0De2LdZvsI",
         gameplay: "/images/products/StarWarsBattlefront-gameplay.jpg",
         ranking: ['/images/rankings/PEGI_16.png', '/images/rankings/ESRB_T.svg']
@@ -212,30 +212,30 @@ const product = [
         plataform: [icon_plataform.PC, icon_plataform.XBOX],
         releaseDate: "08 - 10 - 2023",
         developer: "Mojang",
-        gender: [genderList.accion,genderList.rpg,genderList.aventura,genderList.estrategia, genderList.multiplayer],
+        gender: [genderList.accion, genderList.rpg, genderList.aventura, genderList.estrategia, genderList.multiplayer],
         format: "Digital",
         trailer: "https://www.youtube.com/embed/CoZ2V7XsSYk",
         gameplay: "/images/products/MinecraftDungeons-gameplay.jpg",
         ranking: ['/images/rankings/PEGI_7.png', '/images/rankings/ESRB_E10plus.svg']
     },
 
- 
+
     {
         id: 13,
         name: "STARFIELD (Early Access) + PRE-ORDER BONUS PC",
-        sub_name:"PREMIUM EDITION",
+        sub_name: "PREMIUM EDITION",
         description: ['Prepárate para una aventura épica en las estrellas con "Starfield". En este próximo juego de rol de ciencia ficción de Bethesda Game Studios, te embarcarás en un viaje intergaláctico a mundos desconocidos, secretos ocultos y misterios inexplorados. Con la promesa de exploración, descubrimientos y una narrativa envolvente, "Starfield" te llevará a las profundidades del espacio como nunca antes.', '"Starfield" te sitúa en un futuro lejano donde la humanidad ha colonizado el espacio exterior. Como un intrépido explorador, tendrás la oportunidad de pilotar tu propia nave estelar y viajar a través de sistemas solares llenos de planetas únicos, estaciones espaciales y civilizaciones alienígenas. La libertad de elegir tu destino, desde ser un comerciante espacial hasta un cazador de tesoros, agrega una dimensión emocionante a la experiencia.', 'La narrativa será un elemento clave en "Starfield", con una historia intrigante y decisiones que afectarán el curso de tus aventuras. Los detalles sobre la trama aún son escasos, pero la promesa de un mundo lleno de personajes memorables y misterios por descubrir ha capturado la atención de los jugadores. Con la experiencia de mundo abierto característica de Bethesda, puedes esperar una exploración profunda, personalización de personajes y posibilidades de interactuar con el entorno y los NPC. Los gráficos y el diseño de los mundos estarán a la altura de las expectativas, creando un ambiente visualmente impresionante que te sumerge en un futuro espacial creíble.', 'La banda sonora y los efectos de sonido juegan un papel importante en la creación de la atmósfera del juego, llevándote desde la calma del espacio profundo hasta la tensión de los encuentros peligrosos. En resumen, "Starfield" promete ser una experiencia emocionante para los fanáticos de la ciencia ficción y los juegos de rol. Prepárate para explorar lo desconocido, enfrentar desafíos cósmicos y marcar tu propio camino en las estrellas.'],
         image: "/images/caratulas/Starfield.jpg",
         price: 21586.59,
-        plataform:[icon_plataform.PC, icon_plataform.XBOX],
-        releaseDate:"08 - 10 - 2023",
-        developer:"Bethesda Game Studios",
-        gender: [genderList.accion,genderList.multiplayer],
-        format:"Fisico",
+        plataform: [icon_plataform.PC, icon_plataform.XBOX],
+        releaseDate: "08 - 10 - 2023",
+        developer: "Bethesda Game Studios",
+        gender: [genderList.accion, genderList.multiplayer],
+        format: "Fisico",
         trailer: "https://www.youtube.com/embed/kfYEiTdsyas",
         gameplay: "/images/products/STARFIELD-gameplay.jpg",
         ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_T.svg']
-    }, 
+    },
 
 ]
 /* EXPORTS */
