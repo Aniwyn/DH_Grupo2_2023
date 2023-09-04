@@ -21,7 +21,7 @@
         "fa-solid fa-gamepad"
       ]
     ],
-    "releaseDate": "08 - 10 - 2023",
+    "releaseDate": "2023-10-08",
     "developer": "Sega, Compile",
     "gender": [
       "Acción",
@@ -32,8 +32,14 @@
     "trailer": "https://www.youtube.com/embed/CLLXiXh1onc",
     "gameplay": "/images/products/GHOSTBUSTERS-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_7.png",
-      "/images/rankings/ESRB_E.svg"
+      [
+        "PEGI_7",
+        "/images/rankings/PEGI_7.png"
+      ],
+      [
+        "ESRB_E",
+        "/images/rankings/ESRB_E.svg"
+      ]
     ]
   },
   {
@@ -58,7 +64,7 @@
         "fa-solid fa-gamepad"
       ]
     ],
-    "releaseDate": "05 - 07 - 2022",
+    "releaseDate": "2022-07-05",
     "developer": "Sega Technical Institute",
     "gender": [
       "Acción",
@@ -69,8 +75,14 @@
     "trailer": "https://www.youtube.com/embed/ytistojxzn4",
     "gameplay": "/images/products/Sonic2-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_7.png",
-      "/images/rankings/ESRB_E.svg"
+      [
+        "PEGI_7",
+        "/images/rankings/PEGI_7.png"
+      ],
+      [
+        "ESRB_E",
+        "/images/rankings/ESRB_E.svg"
+      ]
     ]
   },
   {
@@ -95,7 +107,7 @@
         "fa-brands fa-xbox"
       ]
     ],
-    "releaseDate": "08 - 03 - 1995",
+    "releaseDate": "1995-03-08",
     "developer": "Shiny Entertainment",
     "gender": [
       "Acción",
@@ -106,8 +118,14 @@
     "trailer": "https://www.youtube.com/embed/jYKHummrJDw",
     "gameplay": "/images/products/EarthwormJim-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_7.png",
-      "/images/rankings/ESRB_E.svg"
+      [
+        "PEGI_7",
+        "/images/rankings/PEGI_7.png"
+      ],
+      [
+        "ESRB_E",
+        "/images/rankings/ESRB_E.svg"
+      ]
     ]
   },
   {
@@ -132,7 +150,7 @@
         "fa-brands fa-xbox"
       ]
     ],
-    "releaseDate": "18 - 01 - 1990",
+    "releaseDate": "1990-01-18",
     "developer": "Konami",
     "gender": [
       "Aventura",
@@ -142,8 +160,14 @@
     "trailer": "https://www.youtube.com/embed/EFtL3Ojp8Uk",
     "gameplay": "/images/products/TinyToonAventures-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_7.png",
-      "/images/rankings/ESRB_E.svg"
+      [
+        "PEGI_7",
+        "/images/rankings/PEGI_7.png"
+      ],
+      [
+        "ESRB_E",
+        "/images/rankings/ESRB_E.svg"
+      ]
     ]
   },
   {
@@ -168,7 +192,7 @@
         "fa-solid fa-gamepad"
       ]
     ],
-    "releaseDate": "02 - 10 - 2017",
+    "releaseDate": "2017-10-02",
     "developer": "SNK Corporation",
     "gender": [
       "Aventura",
@@ -178,8 +202,14 @@
     "trailer": "https://www.youtube.com/embed/618yA_WYK4c",
     "gameplay": "/images/products/MetalSlug3-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_12.png",
-      "/images/rankings/ESRB_T.svg"
+      [
+        "PEGI_12",
+        "/images/rankings/PEGI_12.png"
+      ],
+      [
+        "ESRB_T",
+        "/images/rankings/ESRB_T.svg"
+      ]
     ]
   },
   {
@@ -204,7 +234,7 @@
         "fa-brands fa-xbox"
       ]
     ],
-    "releaseDate": "08 - 10 - 2018",
+    "releaseDate": "2018-07-03",
     "developer": "Nintendo",
     "gender": [
       "Acción",
@@ -215,8 +245,14 @@
     "trailer": "https://www.youtube.com/embed/z3s8vB_hw6c",
     "gameplay": "/images/products/SuperMarioBroUDeluxe-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_12.png",
-      "/images/rankings/ESRB_T.svg"
+      [
+        "PEGI_12",
+        "/images/rankings/PEGI_12.png"
+      ],
+      [
+        "ESRB_T",
+        "/images/rankings/ESRB_T.svg"
+      ]
     ]
   },
   {
@@ -237,18 +273,24 @@
         "fa-brands fa-windows"
       ]
     ],
-    "releaseDate": "01 - 11 - 2020",
+    "releaseDate": "2002-07-03",
     "developer": "Blizzard Entertainment",
     "gender": [
-      "Estrategia en tiempo real",
+      "Estrategia",
       "Multijugador"
     ],
     "format": "Fisico",
     "trailer": "https://www.youtube.com/embed/iqB3KeiBLuw",
     "gameplay": "/images/products/W3TFT-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_12.png",
-      "/images/rankings/ESRB_T.svg"
+      [
+        "PEGI_12",
+        "/images/rankings/PEGI_12.png"
+      ],
+      [
+        "ESRB_T",
+        "/images/rankings/ESRB_T.svg"
+      ]
     ]
   },
   {
@@ -273,7 +315,7 @@
         "fa-brands fa-xbox"
       ]
     ],
-    "releaseDate": "07 - 07 - 2017",
+    "releaseDate": "2017-07-07",
     "developer": "Nintendo",
     "gender": [
       "Acción",
@@ -284,8 +326,14 @@
     "trailer": "https://www.youtube.com/embed/KzQRiYqt6LY",
     "gameplay": "/images/products/LOZ-BOTW-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_12.png",
-      "/images/rankings/ESRB_T.svg"
+      [
+        "PEGI_12",
+        "/images/rankings/PEGI_12.png"
+      ],
+      [
+        "ESRB_T",
+        "/images/rankings/ESRB_T.svg"
+      ]
     ]
   },
   {
@@ -310,7 +358,7 @@
         "fa-brands fa-xbox"
       ]
     ],
-    "releaseDate": "09 - 12 - 2022",
+    "releaseDate": "2022-12-09",
     "developer": "Square Enix",
     "gender": [
       "Acción",
@@ -321,8 +369,14 @@
     "trailer": "https://www.youtube.com/embed/lMGrC58PHqs",
     "gameplay": "/images/products/FFXII-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_12.png",
-      "/images/rankings/ESRB_E10plus.svg"
+      [
+        "PEGI_12",
+        "/images/rankings/PEGI_12.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
     ]
   },
   {
@@ -347,7 +401,7 @@
         "fa-brands fa-xbox"
       ]
     ],
-    "releaseDate": "08 - 10 - 2023",
+    "releaseDate": "2023-10-08",
     "developer": "Electronic Arts",
     "gender": [
       "Deporte",
@@ -357,8 +411,14 @@
     "trailer": "https://www.youtube.com/embed/UVZ0IIeW2mw",
     "gameplay": "/images/products/MaddenNFL24-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_12.png",
-      "/images/rankings/ESRB_T.svg"
+      [
+        "PEGI_12",
+        "/images/rankings/PEGI_12.png"
+      ],
+      [
+        "ESRB_T",
+        "/images/rankings/ESRB_T.svg"
+      ]
     ]
   },
   {
@@ -383,7 +443,7 @@
         "fa-brands fa-xbox"
       ]
     ],
-    "releaseDate": "04 - 11 - 2020",
+    "releaseDate": "2020-11-04",
     "developer": "DICE",
     "gender": [
       null,
@@ -393,8 +453,14 @@
     "trailer": "https://www.youtube.com/embed/d0De2LdZvsI",
     "gameplay": "/images/products/StarWarsBattlefront-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_16.png",
-      "/images/rankings/ESRB_T.svg"
+      [
+        "PEGI_16",
+        "/images/rankings/PEGI_16.png"
+      ],
+      [
+        "ESRB_T",
+        "/images/rankings/ESRB_T.svg"
+      ]
     ]
   },
   {
@@ -419,21 +485,27 @@
         "fa-brands fa-xbox"
       ]
     ],
-    "releaseDate": "08 - 10 - 2023",
+    "releaseDate": "2023-10-08",
     "developer": "Mojang",
     "gender": [
       "Acción",
       "RPG",
       "Aventura",
-      "Estrategia en tiempo real",
+      "Estrategia",
       "Multijugador"
     ],
     "format": "Digital",
     "trailer": "https://www.youtube.com/embed/CoZ2V7XsSYk",
     "gameplay": "/images/products/MinecraftDungeons-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_7.png",
-      "/images/rankings/ESRB_E10plus.svg"
+      [
+        "PEGI_7",
+        "/images/rankings/PEGI_7.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
     ]
   },
   {
@@ -458,7 +530,7 @@
         "fa-brands fa-xbox"
       ]
     ],
-    "releaseDate": "08 - 10 - 2023",
+    "releaseDate": "2023-10-08",
     "developer": "Bethesda Game Studios",
     "gender": [
       "Acción",
@@ -468,41 +540,14 @@
     "trailer": "https://www.youtube.com/embed/kfYEiTdsyas",
     "gameplay": "/images/products/STARFIELD-gameplay.jpg",
     "ranking": [
-      "/images/rankings/PEGI_12.png",
-      "/images/rankings/ESRB_T.svg"
-    ]
-  },
-  {
-    "id": 14,
-    "name": "Monster Hunter",
-    "sub_name": "Rise",
-    "description": [
-      "",
-      "",
-      ""
-    ],
-    "image": "/images/caratulas/MH-rise-caratula.jpg",
-    "price": 22995.39,
-    "plataform": [
       [
-        "PC",
-        "fa-brands fa-windows"
+        "PEGI_12",
+        "/images/rankings/PEGI_12.png"
+      ],
+      [
+        "ESRB_T",
+        "/images/rankings/ESRB_T.svg"
       ]
-    ],
-    "releaseDate": "12 - 06 - 2022",
-    "developer": "CAPCOM Co., Ltd.",
-    "gender": [
-      "Acción",
-      "Multijugador",
-      "Un jugador",
-      "Tercera Persona"
-    ],
-    "format": "Digital",
-    "trailer": "https://www.youtube.com/embed/TdCec2GRg-w",
-    "gameplay": "/images/products/MH-rise-gameplay.jpg",
-    "ranking": [
-      "/images/rankings/PEGI_12.png",
-      "/images/rankings/ESRB_T.svg"
     ]
   }
 ]
