@@ -2,6 +2,8 @@
 const express = require('express');
 const router = express.Router();
 
+
+
 /* REQUIRES ROUTERS */
 const productRouter = require('./productRouter');
 const userRouter = require('./userRouter');

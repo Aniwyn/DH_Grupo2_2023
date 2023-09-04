@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = 5000;
+const methodOverride = require('method-override')
 
 /* REQUIRES */
 const router = require('./routes/mainRouter');
@@ -13,6 +14,7 @@ app.set('views', './views');
 
 /* PUBLIC SETTING */
 app.use(express.static("public"));
+app.use(methodOverride('_method'))
 
 /* ROUTE CONNECTION */
 app.use("/", router);
