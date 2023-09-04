@@ -17,9 +17,6 @@
 
     <main>
         <section class="details__dashboard">
-            <a  href="" class="edit_icon">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-            </a>
             <div class="dashboard__image-product">
                 <img src="<%= data_item.image %>" alt="imagen de mario">
             </div>
@@ -60,8 +57,8 @@
 
                         </div>
                         <div class="rankings">
-                            <img src="<%= data_item.ranking[0] %>" alt="clasificacion pegi">
-                            <img src="<%= data_item.ranking[1] %>" alt="clasificacion esbr">
+                            <img src="<%= data_item.ranking[0][1] %>" alt="clasificacion pegi">
+                            <img src="<%= data_item.ranking[1][1] %>" alt="clasificacion esbr">
                         </div>
                     </div>
                     <div class="description__shopping">
@@ -78,6 +75,9 @@
                     </div>
                 </div>
             </div>
+            <a href="/details/<%= data_item.id %>/edit" class="dashboard__edit">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </a>
         </section>
 
         <h2 class="section__tittle">Descripción general</h2>

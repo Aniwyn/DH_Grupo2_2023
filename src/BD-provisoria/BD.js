@@ -9,12 +9,25 @@ const icon_plataform = {
 const genderList = {
     accion: "Acción",
     aventura: "Aventura",
-    estrategia: "Estrategia en tiempo real",
+    estrategia: "Estrategia",
     pelea: "Peleas",
     rpg: "RPG",
     deporte: "Deporte",
     multiplayer: "Multijugador",
     onePlayer: "Un jugador",
+}
+
+const ranking = {
+    pegi3: ["PEGI_3", "/images/rankings/PEGI_3.png"],
+    pegi7: ["PEGI_7", "/images/rankings/PEGI_7.png"],
+    pegi12: ["PEGI_12", "/images/rankings/PEGI_12.png"],
+    pegi16: ["PEGI_16", "/images/rankings/PEGI_16.png"],
+    pegi18: ["PEGI_18", "/images/rankings/PEGI_18.png"],
+    esrbE: ["ESRB_E", "/images/rankings/ESRB_E.svg"],
+    esrbE10: ["ESRB_E10", "/images/rankings/ESRB_E10plus.svg"],
+    esrbT: ["ESRB_T", "/images/rankings/ESRB_T.svg"],
+    esrbM: ["ESRB_M", "/images/rankings/ESRB_M.svg"],
+    esrbAO: ["ESRB_AO", "/images/rankings/ESRB_AO.svg"]
 }
 
 const product = [
@@ -26,13 +39,13 @@ const product = [
         image: "/images/home/Ghostbuster.jpg",
         price: 2799.99,
         plataform: [icon_plataform.PS, icon_plataform.SEGA],
-        releaseDate: "08 - 10 - 2023",
+        releaseDate: "2023-10-08",
         developer: "Sega, Compile",
         gender: [genderList.accion, genderList.aventura, genderList.multiplayer],
         fomat: "Fisico",
         trailer: "https://www.youtube.com/embed/CLLXiXh1onc",
         gameplay: "/images/products/GHOSTBUSTERS-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_7.png', '/images/rankings/ESRB_E.svg']
+        ranking: [ranking.pegi7, ranking.esrbE]
     },
     {
         id: 2,
@@ -42,13 +55,13 @@ const product = [
         image: "/images/home/Sonic2.jpg",
         price: 3499.99,
         plataform: [icon_plataform.PS, icon_plataform.SEGA],
-        releaseDate: "05 - 07 - 2022",
+        releaseDate: "2022-07-05",
         developer: "Sega Technical Institute",
         gender: [genderList.accion, genderList.aventura, genderList.multiplayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/ytistojxzn4",
         gameplay: "/images/products/Sonic2-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_7.png', '/images/rankings/ESRB_E.svg']
+        ranking: [ranking.pegi7, ranking.esrbE]
     },
 
     {
@@ -59,13 +72,13 @@ const product = [
         image: "/images/home/Worm.jpg",
         price: 2999.99,
         plataform: [icon_plataform.SEGA, icon_plataform.XBOX],
-        releaseDate: "08 - 03 - 1995",
+        releaseDate: "1995-03-08",
         developer: "Shiny Entertainment",
         gender: [genderList.accion, genderList.aventura, genderList.onePlayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/jYKHummrJDw",
         gameplay: "/images/products/EarthwormJim-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_7.png', '/images/rankings/ESRB_E.svg']
+        ranking: [ranking.pegi7, ranking.esrbE]
     },
 
     {
@@ -76,13 +89,13 @@ const product = [
         image: "/images/home/TinyToon.jpg",
         price: 3799.99,
         plataform: [icon_plataform.SEGA, icon_plataform.XBOX],
-        releaseDate: "18 - 01 - 1990",
+        releaseDate: "1990-01-18",
         developer: "Konami",
         gender: [genderList.aventura, genderList.onePlayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/EFtL3Ojp8Uk",
         gameplay: "/images/products/TinyToonAventures-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_7.png', '/images/rankings/ESRB_E.svg']
+        ranking: [ranking.pegi7, ranking.esrbE]
     },
 
     {
@@ -93,13 +106,13 @@ const product = [
         image: "/images/home/MetalSlug.jpg",
         price: 3599.99,
         plataform: [icon_plataform.PS, icon_plataform.SEGA],
-        releaseDate: "02 - 10 - 2017",
+        releaseDate: "2017-10-02",
         developer: "SNK Corporation",
         gender: [genderList.aventura, genderList.multiplayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/618yA_WYK4c",
         gameplay: "/images/products/MetalSlug3-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_T.svg']
+        ranking: [ranking.pegi12, ranking.esrbT]
     },
     {
         id: 6,
@@ -109,13 +122,13 @@ const product = [
         image: "/images/home/SuperMario.jpg",
         price: 5099.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate: "08 - 10 - 2018",
+        releaseDate: "2018-07-03",
         developer: "Nintendo",
         gender: [genderList.accion, genderList.pelea, genderList.multiplayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/z3s8vB_hw6c",
         gameplay: "/images/products/SuperMarioBroUDeluxe-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_T.svg']
+        ranking: [ranking.pegi12, ranking.esrbT]
     },
     {
         id: 7,
@@ -125,13 +138,13 @@ const product = [
         image: "/images/home/Warcraft.jpg",
         price: 7199.99,
         plataform: [icon_plataform.PC],
-        releaseDate: "01 - 11 - 2020",
+        releaseDate: "2002-07-03",
         developer: "Blizzard Entertainment",
         gender: [genderList.estrategia, genderList.multiplayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/iqB3KeiBLuw",
         gameplay: "/images/products/W3TFT-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_T.svg']
+        ranking: [ranking.pegi12, ranking.esrbT]
     },
 
     {
@@ -142,13 +155,13 @@ const product = [
         image: "/images/home/Zelda.jpg",
         price: 5699.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate: "07 - 07 - 2017",
+        releaseDate: "2017-07-07",
         developer: "Nintendo",
         gender: [genderList.accion, genderList.aventura, genderList.multiplayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/KzQRiYqt6LY",
         gameplay: "/images/products/LOZ-BOTW-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_T.svg']
+        ranking: [ranking.pegi12, ranking.esrbT]
     },
 
     {
@@ -159,13 +172,13 @@ const product = [
         image: "/images/home/FF.jpg",
         price: 17999.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate: "09 - 12 - 2022",
+        releaseDate: "2022-12-09",
         developer: "Square Enix",
         gender: [genderList.accion, genderList.rpg, genderList.onePlayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/lMGrC58PHqs",
         gameplay: "/images/products/FFXII-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_E10plus.svg']
+        ranking: [ranking.pegi12, ranking.esrbE10]
     },
 
     {
@@ -176,13 +189,13 @@ const product = [
         image: "/images/home/madden.jpg",
         price: 10499.99,
         plataform: [icon_plataform.PS, icon_plataform.XBOX],
-        releaseDate: "08 - 10 - 2023",
+        releaseDate: "2023-10-08",
         developer: "Electronic Arts",
         gender: [genderList.deporte, genderList.multiplayer],
         format: "Digital",
         trailer: "https://www.youtube.com/embed/UVZ0IIeW2mw",
         gameplay: "/images/products/MaddenNFL24-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_T.svg']
+        ranking: [ranking.pegi12, ranking.esrbT]
     },
 
     {
@@ -193,13 +206,13 @@ const product = [
         image: "/images/home/StarWars.jpg",
         price: 14999.99,
         plataform: [icon_plataform.PC, icon_plataform.XBOX],
-        releaseDate: "04 - 11 - 2020",
+        releaseDate: "2020-11-04",
         developer: "DICE",
         gender: [genderList.acciond, genderList.multiplayer],
         format: "Digital",
         trailer: "https://www.youtube.com/embed/d0De2LdZvsI",
         gameplay: "/images/products/StarWarsBattlefront-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_16.png', '/images/rankings/ESRB_T.svg']
+        ranking: [ranking.pegi16, ranking.esrbT]
     },
 
     {
@@ -210,13 +223,13 @@ const product = [
         image: "/images/home/Minecraft.jpg",
         price: 9999.99,
         plataform: [icon_plataform.PC, icon_plataform.XBOX],
-        releaseDate: "08 - 10 - 2023",
+        releaseDate: "2023-10-08",
         developer: "Mojang",
         gender: [genderList.accion, genderList.rpg, genderList.aventura, genderList.estrategia, genderList.multiplayer],
         format: "Digital",
         trailer: "https://www.youtube.com/embed/CoZ2V7XsSYk",
         gameplay: "/images/products/MinecraftDungeons-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_7.png', '/images/rankings/ESRB_E10plus.svg']
+        ranking: [ranking.pegi7, ranking.esrbE10]
     },
 
 
@@ -228,13 +241,13 @@ const product = [
         image: "/images/caratulas/Starfield.jpg",
         price: 21586.59,
         plataform: [icon_plataform.PC, icon_plataform.XBOX],
-        releaseDate: "08 - 10 - 2023",
+        releaseDate: "2023-10-08",
         developer: "Bethesda Game Studios",
         gender: [genderList.accion, genderList.multiplayer],
         format: "Fisico",
         trailer: "https://www.youtube.com/embed/kfYEiTdsyas",
         gameplay: "/images/products/STARFIELD-gameplay.jpg",
-        ranking: ['/images/rankings/PEGI_12.png', '/images/rankings/ESRB_T.svg']
+        ranking: [ranking.pegi12, ranking.esrbT]
     },
 
 ]
