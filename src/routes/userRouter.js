@@ -10,5 +10,6 @@ router.get(['/','/home'], userController.home);
 router.get('/login', userController.login);
 router.get('/register', userController.register);
 
+
 /* EXPORTS */
 module.exports = router;

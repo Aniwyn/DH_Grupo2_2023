@@ -17,6 +17,10 @@ const productController = {
     editProduct : (req, res) => {
         let id = req.params.id;
         res.render(path.join(__dirname, "../views/products/edit_product.ejs"), {BD: BD_provisoria, prod: BD_provisoria[id - 1]})
+
+    },
+    products : (req, res) => {
+        res.render(path.join(__dirname, "../views/products/products.ejs"))
     }
 }
 
