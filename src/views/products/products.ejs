@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" type="text/css" href="/styles/home.css" />
+</head>
+
+<body>
+    
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+        <section>
+            <h2 class="section__tittle">Listado de Productos</h2>
+            <div class="section__products">
+                <% for(let i=0; i < BD.length; i++) { %>
+                    <%- include('../partials/card--main', {data_item: BD[i]}) %>
+                <% } %>
+            </div>
+        </section>
+        
+    </main>
+       
+  
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+
+</html>

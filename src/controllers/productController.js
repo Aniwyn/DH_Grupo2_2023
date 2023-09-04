@@ -20,7 +20,7 @@ const productController = {
 
     },
     products : (req, res) => {
-        res.render(path.join(__dirname, "../views/products/products.ejs"))
+        res.render(path.join(__dirname, "../views/products/products.ejs"), {BD: BD_provisoria});
     }
 }
 
