@@ -16,6 +16,9 @@ const productController = {
     },
     editProduct : (req, res) => {
         res.render(path.join(__dirname, "../views/products/edit_product.ejs"))
+    },
+    colecciones : (req, res) => {
+        res.render(path.join(__dirname, "../views/products/colecciones.ejs"))
     }
 }
 
