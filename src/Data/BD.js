@@ -5,5 +5,3 @@ product = require(path)
 
 module.exports = product;
 
-
-
