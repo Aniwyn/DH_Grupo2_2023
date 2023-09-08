@@ -3,7 +3,8 @@ const path = require("path");
 
 // borrar
 console.log(__dirname)
-const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD"));
+const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+const dato =require(path.join(__dirname, "../../src/Data/BD")).dato;
 
 /* GETS SET */
 const productController = {
@@ -21,6 +22,11 @@ const productController = {
     },
     products : (req, res) => {
         res.render(path.join(__dirname, "../views/products/products.ejs"), {BD: BD_provisoria});
+    },
+    create : (req, res) => {
+        console.log(dato)
+        res.render(path.join(__dirname, "../views/products/edit_product.ejs"), {BD: BD_provisoria, prod:dato})
+
     }
 }
 
