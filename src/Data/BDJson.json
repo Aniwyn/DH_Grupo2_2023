@@ -549,5 +549,173 @@
         "/images/rankings/ESRB_T.svg"
       ]
     ]
+  },
+  {
+    "id": 14,
+    "name": "Age of Empires",
+    "sub_name": "The Conqueror",
+    "description": [
+      "¡Sumérgete en la época de los grandes imperios y conquistas en Age of Empires: The Conqueror! En este emocionante juego de estrategia en tiempo real, liderarás civilizaciones antiguas hacia la gloria y la dominación del mundo. Construye imperios, reúne ejércitos poderosos, investiga tecnologías avanzadas y forja alianzas en un mundo lleno de desafíos y oportunidades.",
+      "Age of Empires: The Conqueror te permite elegir entre varias civilizaciones, cada una con sus propias ventajas y desafíos únicos. Explora mapas expansivos, comercia con otras civilizaciones y lucha en batallas épicas que abarcan diferentes eras históricas. La estrategia y la toma de decisiones inteligentes son clave para el éxito en este juego que te llevará a través de la historia.",
+      "Con gráficos impresionantes y una jugabilidad adictiva, Age of Empires: The Conqueror te sumergirá en una experiencia de juego emocionante y educativa. Aprende sobre la historia mientras forjas tu propio camino hacia la conquista en este título aclamado por la crítica.",
+      "¿Estás listo para liderar tu civilización hacia la grandeza y la conquista en Age of Empires: The Conqueror?"
+    ],
+    "image": "/images/home/aoe2.png",
+    "price": 2999.99,
+    "plataform": [
+      [
+        "PC",
+        "fa-brands fa-windows"
+      ]
+    ],
+    "releaseDate": "2000-08-24",
+    "developer": "Microsoft Studios",
+    "genre": [
+      "Estrategia",
+      "Historia",
+      "Simulación",
+      "Multijugador"
+    ],
+    "format": "Digital",
+    "trailer": "https://www.youtube.com/watch?v=QGAh6IwahqE",
+    "gameplay": "/images/products/aoe2-gameplay.jpg",
+    "ranking": [
+      [
+        "PEGI_12",
+        "/images/rankings/PEGI_12.png"
+      ],
+      [
+        "ESRB_T",
+        "/images/rankings/ESRB_T.svg"
+      ]
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Spore",
+    "sub_name": "Galactic adventures",
+    "description": [
+      "Spore es un juego revolucionario que te permite crear y evolucionar tu propia criatura desde un organismo unicelular hasta una civilización espacial. En este emocionante viaje a través de la evolución, tomarás decisiones que afectarán el destino de tu especie y explorarás un universo lleno de planetas, criaturas y desafíos.",
+      "El juego se divide en cinco etapas principales: célula, criatura, tribu, civilización y espacio. En cada etapa, tendrás la oportunidad de personalizar tu criatura y tomar decisiones que determinarán su desarrollo. ¿Serás pacífico o agresivo? ¿Te adaptarás a tu entorno o lo cambiarás a tu favor? Las elecciones son tuyas.",
+      "A medida que avanzas a través de las etapas, tu criatura evolucionará y ganará nuevas habilidades y características. También podrás establecer relaciones con otras especies, comerciar, formar alianzas o entrar en conflictos en tu búsqueda por la dominación o la cooperación.",
+      "Spore es una experiencia única que combina la creatividad con la evolución y la exploración. Diseña tus propias criaturas, vehículos y edificios, y compártelos con otros jugadores en línea. Explora un universo lleno de planetas generados aleatoriamente y descubre nuevas formas de vida mientras avanzas hacia la conquista del espacio.",
+      "¿Estás listo para embarcarte en un viaje épico a través de la evolución y la exploración en Spore?"
+    ],
+    "image": "/images/home/spore.png",
+    "price": 3499.99,
+    "plataform": [
+      [
+        "PC",
+        "fa-brands fa-windows"
+      ]
+    ],
+    "releaseDate": "2008-09-04",
+    "developer": "Maxis",
+    "genre": [
+      "Simulación",
+      "Estrategia",
+      "Exploración"
+    ],
+    "format": "Digital",
+    "trailer": "https://www.youtube.com/watch?v=zi2GvqboQfY",
+    "gameplay": "/images/products/spore-gameplay.jpg",
+    "ranking": [
+      [
+        "PEGI_12",
+        "/images/rankings/PEGI_12.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Mass Effect",
+    "sub_name": "Andromeda",
+    "description": [
+      "Embárcate en una emocionante odisea espacial en Mass Effect: Andromeda. En esta entrega de la icónica serie Mass Effect, explorarás la galaxia de Andrómeda en busca de un nuevo hogar para la humanidad. Eres un explorador de Pathfinder, líder de un equipo de élite que enfrentará peligros desconocidos y desafíos emocionantes mientras colonizas mundos y te enfrentas a nuevas amenazas.",
+      "El juego ofrece una historia épica llena de personajes memorables y decisiones que afectarán el destino de la galaxia. Personaliza a tu personaje, elige tu camino en el juego y forma relaciones con otros personajes mientras descubres los secretos de Andrómeda.",
+      "Mass Effect: Andromeda combina una jugabilidad de disparos intensa con elementos de rol, permitiéndote mejorar tus habilidades, desbloquear poderes y tomar decisiones estratégicas en el combate. Explora mundos abiertos, descubre tecnologías alienígenas y desvela los misterios de una nueva galaxia en constante evolución.",
+      "Con impresionantes gráficos y efectos visuales, Mass Effect: Andromeda te sumerge en un universo futurista lleno de maravillas y peligros. Viaja a través de vastos paisajes alienígenas, interactúa con diversas especies y lucha contra enemigos en emocionantes batallas espaciales.",
+      "¿Estás listo para liderar la exploración de Andrómeda y forjar el futuro de la humanidad en esta emocionante aventura de ciencia ficción?"
+    ],
+    "image": "/images/home/meandromeda.png",
+    "price": 17999.99,
+    "plataform": [
+      [
+        "PC",
+        "fa-brands fa-windows"
+      ],
+      [
+        "PlayStation",
+        "fa-brands fa-playstation"
+      ],
+      [
+        "Xbox",
+        "fa-brands fa-xbox"
+      ]
+    ],
+    "releaseDate": "2017-03-21",
+    "developer": "BioWare",
+    "genre": [
+      "Acción",
+      "RPG",
+      "Ciencia Ficción",
+      "Exploración"
+    ],
+    "format": "Digital",
+    "trailer": "https://www.youtube.com/watch?v=X6PJEmEHIaY",
+    "gameplay": "/images/products/meandromeda-gameplay.jpg",
+    "ranking": [
+      [
+        "PEGI_16",
+        "/images/rankings/PEGI_16.png"
+      ],
+      [
+        "ESRB_M",
+        "/images/rankings/ESRB_M.svg"
+      ]
+    ]
+  },{
+    "id": 17,
+    "name": "The Elder Scrolls V",
+    "sub_name": "Skyrim",
+    "description": [
+      "Sumérgete en un vasto mundo de fantasía en The Elder Scrolls V: Skyrim. Este juego de rol épico te lleva a la región de Skyrim, un lugar lleno de dragones, magia y peligros. Eres el Sangre de Dragón, un héroe destinado a enfrentar una antigua profecía y salvar Skyrim de la destrucción.",
+      "Explora un mundo abierto impresionante lleno de ciudades, aldeas, mazmorras y paisajes inexplorados. Toma decisiones que influirán en el destino de Skyrim y forja tu propio camino en este vasto reino lleno de secretos y aventuras.",
+      "The Elder Scrolls V: Skyrim ofrece una jugabilidad rica y variada, que te permite personalizar a tu personaje, aprender magia, mejorar tus habilidades y embarcarte en misiones épicas. Enfréntate a dragones poderosos, descubre artefactos legendarios y conviértete en un maestro en tu oficio.",
+      "Con gráficos impresionantes, música envolvente y una narrativa cautivadora, Skyrim te sumerge en una experiencia de juego inmersiva como ninguna otra. Explora antiguas tumbas, conoce a personajes memorables y elige tu propio camino en este mundo de fantasía.",
+      "¿Estás listo para convertirte en el legendario Sangre de Dragón y descubrir los secretos de Skyrim?"
+    ],
+    "image": "/images/home/skyrim.png",
+    "price": 7399.99,
+    "plataform": [
+      [
+        "PC",
+        "fa-brands fa-windows"
+      ]
+    ],
+    "releaseDate": "2011-11-11",
+    "developer": "Bethesda Game Studios",
+    "genre": [
+      "RPG",
+      "Fantasía",
+      "Mundo Abierto"
+    ],
+    "format": "Digital",
+    "trailer": "https://www.youtube.com/watch?v=JSRtYpNRoN0",
+    "gameplay": "/images/products/skyrim-gameplay.png",
+    "ranking": [
+      [
+        "PEGI_18",
+        "/images/rankings/PEGI_18.png"
+      ],
+      [
+        "ESRB_M",
+        "/images/rankings/ESRB_M.svg"
+      ]
+    ]
   }
 ]

@@ -275,6 +275,10 @@ const productController = {
     },
 
     products: (req, res) => {
+        for (let i = 0; i < BD_provisoria.length; i++) {
+            console.log(BD_provisoria[i].name)
+            console.log(BD_provisoria[i].plataform.length + "\n")
+        }
         res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: BD_provisoria });
     },
     delete: (req, res) => {

@@ -562,7 +562,7 @@
     ],
     "image": "/images/home/aoe2.png",
     "price": 2999.99,
-    "platform": [
+    "plataform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -603,7 +603,7 @@
     ],
     "image": "/images/home/spore.png",
     "price": 3499.99,
-    "platform": [
+    "plataform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -631,7 +631,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Mass Effect",
     "sub_name": "Andromeda",
     "description": [
@@ -641,9 +641,9 @@
       "Con impresionantes gráficos y efectos visuales, Mass Effect: Andromeda te sumerge en un universo futurista lleno de maravillas y peligros. Viaja a través de vastos paisajes alienígenas, interactúa con diversas especies y lucha contra enemigos en emocionantes batallas espaciales.",
       "¿Estás listo para liderar la exploración de Andrómeda y forjar el futuro de la humanidad en esta emocionante aventura de ciencia ficción?"
     ],
-    "image": "/images/home/MassEffectAndromeda.jpg",
+    "image": "/images/home/meandromeda.png",
     "price": 17999.99,
-    "platform": [
+    "plataform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -666,8 +666,8 @@
       "Exploración"
     ],
     "format": "Digital",
-    "trailer": "https://www.youtube.com/embed/YourTrailerLinkHere",
-    "gameplay": "/images/products/MassEffectAndromeda-gameplay.jpg",
+    "trailer": "https://www.youtube.com/watch?v=X6PJEmEHIaY",
+    "gameplay": "/images/products/meandromeda-gameplay.jpg",
     "ranking": [
       [
         "PEGI_16",
@@ -678,8 +678,44 @@
         "/images/rankings/ESRB_M.svg"
       ]
     ]
+  },{
+    "id": 17,
+    "name": "The Elder Scrolls V",
+    "sub_name": "Skyrim",
+    "description": [
+      "Sumérgete en un vasto mundo de fantasía en The Elder Scrolls V: Skyrim. Este juego de rol épico te lleva a la región de Skyrim, un lugar lleno de dragones, magia y peligros. Eres el Sangre de Dragón, un héroe destinado a enfrentar una antigua profecía y salvar Skyrim de la destrucción.",
+      "Explora un mundo abierto impresionante lleno de ciudades, aldeas, mazmorras y paisajes inexplorados. Toma decisiones que influirán en el destino de Skyrim y forja tu propio camino en este vasto reino lleno de secretos y aventuras.",
+      "The Elder Scrolls V: Skyrim ofrece una jugabilidad rica y variada, que te permite personalizar a tu personaje, aprender magia, mejorar tus habilidades y embarcarte en misiones épicas. Enfréntate a dragones poderosos, descubre artefactos legendarios y conviértete en un maestro en tu oficio.",
+      "Con gráficos impresionantes, música envolvente y una narrativa cautivadora, Skyrim te sumerge en una experiencia de juego inmersiva como ninguna otra. Explora antiguas tumbas, conoce a personajes memorables y elige tu propio camino en este mundo de fantasía.",
+      "¿Estás listo para convertirte en el legendario Sangre de Dragón y descubrir los secretos de Skyrim?"
+    ],
+    "image": "/images/home/skyrim.png",
+    "price": 7399.99,
+    "plataform": [
+      [
+        "PC",
+        "fa-brands fa-windows"
+      ]
+    ],
+    "releaseDate": "2011-11-11",
+    "developer": "Bethesda Game Studios",
+    "genre": [
+      "RPG",
+      "Fantasía",
+      "Mundo Abierto"
+    ],
+    "format": "Digital",
+    "trailer": "https://www.youtube.com/watch?v=JSRtYpNRoN0",
+    "gameplay": "/images/products/skyrim-gameplay.png",
+    "ranking": [
+      [
+        "PEGI_18",
+        "/images/rankings/PEGI_18.png"
+      ],
+      [
+        "ESRB_M",
+        "/images/rankings/ESRB_M.svg"
+      ]
+    ]
   }
-  
-  
-  
 ]

@@ -13,7 +13,7 @@
         <section>
             <h2 class="section__tittle">Listado de Productos</h2>
             <div class="section__products">
-                <% for(let i=0; i < BD.length; i++) { %>
+                <% for(let i = 0; i < BD.length; i++) { %>
                     <%- include('../partials/card--main', {data_item: BD[i]}) %>
                 <% } %>
             </div>
