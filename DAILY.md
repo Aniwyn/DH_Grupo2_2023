@@ -99,3 +99,99 @@ En este sprint (3) implementamos la ceremonia daily de una manera bisemanal, deb
 
  - ¿Que vas a hacer hasta la siguiente?: "Seguir ayudando a los que aun no terminaron y necesiten una mano".
 
+
+
+
+
+# SPRINT 4 #
+
+
+### Primer daily (03/9/23):
+
+ # Pablo Sales: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Agarre las tarjetas de JSON usuarios, genere los 20 json con usuarios e hice el backup en la carpeta data. Agarre la tarjeta de admnisitrar el daily".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mis impedimentos fueron el tiempo personal y algunas dudas sobre la herramienta con la que genere los json".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Separarme las tarjetas que pueda realizar y avanzar en alguna otra tarea ".
+
+
+  # Leonel Mamani: 
+
+ - No pudo asistir.
+
+  # Yamila Blas: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Agarre la tarjeta de product/(GET)".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Problemas con el html del listado algunos errores q me salian, pero mis compa;eros despejaron mis dudas".
+
+ - ¿Que vas a hacer hasta la siguiente?: "terminar mi tarjeta y empezar con /products/create/(GET)".
+
+
+  # Alexis Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Me separe las tarjetas de /products/:id/edit (GET) y repare el HEAD y los ejs asociados".
+
+ - ¿Impedimentos para lograr tus objetivos?: "El tiempo personal debido al comienzo de clases en la facultad".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Terminar /products/:id/edit (GET) y empezar con la tarea de /products/:id (DELETE)".
+
+
+  # Kevin Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Me separe las tarjetas JSON productos e instalar librerias. Genere el json con los productos y cree la carpeta DATA en el proyecto para hacer las backup de los JSON.".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Impedimentos no tuve, solo el tiempo personal".
+
+ - ¿Que vas a hacer hasta la siguiente?: "la tarea del FIXED y colaborar con los q esten atrasados".
+
+
+
+
+ ### Segundo daily (07/9/23):
+
+ # Pablo Sales: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Redacte los daily y actualice el RETRO.md junto con el tablero de trello correspondiente".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mis impedimentos fueron el tiempo personal de momento, cuando surgan otros los estare comunicando".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Reacomodar el css para q sigan la misma estructura que los ejs".
+
+
+  # Leonel Mamani:
+
+  - ¿Que hiciste desde nuestra ultima reunion?: "No mucho debido a que no pude estar presente en las reuniones".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mis impedimentos fueron el tiempo personal y la conexion a internet".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Agarrar las tarjetas de tareas q falten por realizar y ayudar en lo q haga falta". 
+
+
+  # Yamila Blas: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Termine la tarjeta del product/(GET) y avance con /products/create/(GET)".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Dudas con temas q aun no entiendo del todo y mi tiempo personal".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Terminar mi tarjeta /products/create/(GET)".
+
+
+  # Alexis Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Termine la tarjeta de products/id:/(DELETE) e hice la revision del products/id:/(GET)".
+
+ - ¿Impedimentos para lograr tus objetivos?: "El tiempo personal debido al comienzo de clases en la facultad".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Terminar la tarea del /products (POST)".
+
+
+  # Kevin Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Insale las librerias q no fue tarea facil, y el FIXED".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Impedimentos no tuve, solo el tiempo personal".
+
+ - ¿Que vas a hacer hasta la siguiente?: "La tarea de /products/id: (PUT)".
