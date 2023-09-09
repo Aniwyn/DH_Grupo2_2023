@@ -140,7 +140,7 @@ const productController = {
     },
     create: (req, res) => {
         console.log(dato)
-        res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: dato })
+        res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: dato , method: ''})
     }
 }
 
