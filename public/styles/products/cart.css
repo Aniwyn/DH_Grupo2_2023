@@ -40,9 +40,13 @@ tr {
 .mycart-tittle {
     display: flex;
     justify-content: center;
-    margin-top: 2vw;
+    margin-top: 20vw;
     margin-left: 25%;
     margin-right: 25%;
+
+    position: absolute;
+    filter: blur(3px);
+    scale: 2.6;
 }
 
 .mycart-tittle i {

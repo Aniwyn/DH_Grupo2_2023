@@ -36,26 +36,54 @@ const productController = {
                 prod.description = text_data.description;
                 prod.image = caratula != undefined ? caratula.path : prod.image;
                 prod.price = parseFloat(text_data.price);
-                switch (text_data.plataform) {
-                    case "PC":
-                        auxP.push(["PC", "fa-brands fa-windows"])
-                        break;
-                    case "PS":
-                        auxP.push(["PS", "fa-brands fa-playstation"])
-                        break;
-                    case "XBOX":
-                        auxP.push(["XBOX", "fa-brands fa-xbox"])
-                        break;
-                    case "SEGA":
-                        auxP.push(["SEGA", "fa-solid fa-gamepad"]
-                        )
-                        break;
-                    case "SWITCH":
-                        auxP.push(["SWITCH", "fa-solid fa-gamepad"])
-                        break;
-                    default:
-                        break;
+
+                if (typeof (text_data.plataform) == "string") {
+                    switch (text_data.plataform) {
+                        case "PC":
+                            auxP.push(["PC", "fa-brands fa-windows"])
+                            break;
+                        case "PS":
+                            auxP.push(["PS", "fa-brands fa-playstation"])
+                            break;
+                        case "XBOX":
+                            auxP.push(["XBOX", "fa-brands fa-xbox"])
+                            break;
+                        case "SEGA":
+                            auxP.push(["SEGA", "fa-solid fa-gamepad"]
+                            )
+                            break;
+                        case "SWITCH":
+                            auxP.push(["SWITCH", "fa-solid fa-gamepad"])
+                            break;
+                        default:
+                            break;
+                    }
                 }
+                else{  
+                    for (let i = 0; i < array.length; i++) {
+                        switch (text_data.plataform[i]) {
+                            case "PC":
+                                auxP.push(["PC", "fa-brands fa-windows"])
+                                break;
+                            case "PS":
+                                auxP.push(["PS", "fa-brands fa-playstation"])
+                                break;
+                            case "XBOX":
+                                auxP.push(["XBOX", "fa-brands fa-xbox"])
+                                break;
+                            case "SEGA":
+                                auxP.push(["SEGA", "fa-solid fa-gamepad"]
+                                )
+                                break;
+                            case "SWITCH":
+                                auxP.push(["SWITCH", "fa-solid fa-gamepad"])
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+
                 prod.plataform = auxP
                 prod.releaseDate = text_data.releaseDate;
                 prod.developer = text_data.developer;
@@ -120,12 +148,12 @@ const productController = {
     },
     editProduct_post: (req, res) => {
         const dataPost = req.body
-        const caratula = req.files['image-cover'] [0]
-        const gameplay = req.files['image-gameplay'] [0]
+        const caratula = req.files['image-cover'][0]
+        const gameplay = req.files['image-gameplay'][0]
         let aux1 = []
         let aux2 = []
 
-        if(typeof(dataPost.plataform) == "string"){
+        if (typeof (dataPost.plataform) == "string") {
             switch (dataPost.plataform) {
                 case "PC":
                     aux1.push(["PC", "fa-brands fa-windows"])
@@ -147,8 +175,8 @@ const productController = {
                     break;
             }
         }
-        else{
-            for (let index = 0; index < dataPost.plataform.length; index++){
+        else {
+            for (let index = 0; index < dataPost.plataform.length; index++) {
                 switch (dataPost.plataform[index]) {
                     case "PC":
                         aux1.push(["PC", "fa-brands fa-windows"])
@@ -226,8 +254,8 @@ const productController = {
             format: dataPost.format,
             trailer: dataPost.trailer,
             gameplay: gameplay.path,
-            ranking:aux2
-            
+            ranking: aux2
+
         }
 
         BD_provisoria.push(postData)
@@ -245,7 +273,7 @@ const productController = {
         console.log(postData)
         res.redirect(`/home`)
     },
-    
+
     products: (req, res) => {
         res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: BD_provisoria });
     },
@@ -266,7 +294,7 @@ const productController = {
     },
     create: (req, res) => {
         console.log(dato)
-        res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: dato , method: ''})
+        res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: dato, method: '' })
     }
 }
 
