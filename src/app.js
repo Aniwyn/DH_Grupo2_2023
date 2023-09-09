@@ -15,9 +15,14 @@ app.set('views', './views');
 /* PUBLIC SETTING */
 app.use(express.static("public"));
 app.use(methodOverride('_method'))
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
 
 /* ROUTE CONNECTION */
 app.use("/", router);
+// app.use((req,res,next) => {
+//     res.status(404).render('UN HTML')
+// })
 
 /* SERVER LISTEN */
 app.listen(port, () => {

@@ -1,4 +1,3 @@
-
 const path = "./BDJson.json"
 product = require(path)
 
@@ -43,6 +42,7 @@ const dato = {
 
 
 module.exports = { product, dato };
+
 
 
 

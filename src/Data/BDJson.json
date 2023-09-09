@@ -4,23 +4,13 @@
     "name": "GHOSTBUSTERS",
     "sub_name": "16-Bit Cartridge",
     "description": [
-      "Prepárate para enfrentar lo paranormal en \"Ghostbusters\" para Sega Genesis. Únete a un equipo de valientes cazafantasmas y adéntrate en una ciudad asediada por espíritus y entidades sobrenaturales en este clásico juego de acción y aventuras.",
-      "\"Ghostbusters\" te coloca en el papel de un miembro novato del equipo de cazafantasmas, armado con tu mochila de protones y un objetivo claro: ¡capturar a los fantasmas que infestan la ciudad! Explora los icónicos lugares de Nueva York mientras te enfrentas a una variedad de espectros, poltergeists y apariciones maliciosas. Tendrás que desplegar tus habilidades de estrategia y apuntar con precisión para atrapar a estas criaturas traviesas y contener la amenaza paranormal.",
-      "Conviértete en un héroe al enfrentar jefes espectrales en batallas emocionantes y resuelve acertijos espeluznantes en tu búsqueda por limpiar la ciudad de la actividad fantasmal. Con cada captura exitosa, ganarás fondos que puedes invertir en mejoras y equipo para tu equipo, permitiéndote enfrentar desafíos aún mayores.",
-      "El juego combina elementos de acción, aventura y estrategia en un paquete entretenido que captura la esencia de la franquicia \"Ghostbusters\". Los gráficos de estilo retro y la banda sonora memorable añaden al ambiente nostálgico mientras luchas para salvar la ciudad de la invasión espectral. ¿Estás listo para tomar tu mochila de protones y enfrentarte a lo desconocido? \"Ghostbusters\" en Sega Genesis te desafía a convertirte en el cazafantasmas definitivo."
+      "                            Prepárate para enfrentar lo paranormal en \"Ghostbusters\" para Sega Genesis. Únete a un equipo de valientes cazafantasmas y adéntrate en una ciudad asediada por espíritus y entidades sobrenaturales en este clásico juego de acción y aventuras.\r\n                        ",
+      "                            \"Ghostbusters\" te coloca en el papel de un miembro novato del equipo de cazafantasmas, armado con tu mochila de protones y un objetivo claro: ¡capturar a los fantasmas que infestan la ciudad! Explora los icónicos lugares de Nueva York mientras te enfrentas a una variedad de espectros, poltergeists y apariciones maliciosas. Tendrás que desplegar tus habilidades de estrategia y apuntar con precisión para atrapar a estas criaturas traviesas y contener la amenaza paranormal.\r\n                        ",
+      "                            Conviértete en un héroe al enfrentar jefes espectrales en batallas emocionantes y resuelve acertijos espeluznantes en tu búsqueda por limpiar la ciudad de la actividad fantasmal. Con cada captura exitosa, ganarás fondos que puedes invertir en mejoras y equipo para tu equipo, permitiéndote enfrentar desafíos aún mayores.\r\n                        "
     ],
     "image": "/images/home/Ghostbuster.jpg",
     "price": 2799.99,
-    "plataform": [
-      [
-        "PS",
-        "fa-brands fa-playstation"
-      ],
-      [
-        "SEGA",
-        "fa-solid fa-gamepad"
-      ]
-    ],
+    "plataform": [],
     "releaseDate": "2023-10-08",
     "developer": "Sega, Compile",
     "gender": [
@@ -28,7 +18,7 @@
       "Aventura",
       "Multijugador"
     ],
-    "fomat": "Fisico",
+    "format": "Fisico",
     "trailer": "https://www.youtube.com/embed/CLLXiXh1onc",
     "gameplay": "/images/products/GHOSTBUSTERS-gameplay.jpg",
     "ranking": [
@@ -547,6 +537,240 @@
       [
         "ESRB_T",
         "/images/rankings/ESRB_T.svg"
+      ]
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Hola",
+    "sub_name": "dads",
+    "description": [
+      "                            \r\n                        Hola",
+      "                            hola\r\n                        ",
+      "                            \r\n                        hola"
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 2515,
+    "plataform": [
+      [
+        "PS",
+        "fa-brands fa-playstation"
+      ]
+    ],
+    "releaseDate": "2000-01-08",
+    "developer": "dsa",
+    "gender": "Deporte",
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_7",
+        "/images/rankings/PEGI_7.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Por",
+    "sub_name": "fin",
+    "description": [
+      "                            \r\n                        holaa",
+      "                            \r\n                        hola",
+      "                            \r\n                       hllaaa "
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 1000,
+    "plataform": [],
+    "releaseDate": "1999-12-04",
+    "developer": "yo",
+    "gender": [
+      "Aventura",
+      "Multijugador"
+    ],
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_7",
+        "/images/rankings/PEGI_7.png"
+      ],
+      [
+        "ESRB_T",
+        "/images/rankings/ESRB_T.svg"
+      ]
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Leonel José Maria Mamani",
+    "sub_name": "ahhhh",
+    "description": [
+      "                            \r\n                        giugg",
+      "                            \r\n                        ugug",
+      "                            \r\n                        jguyguyg"
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 983,
+    "plataform": [],
+    "releaseDate": "2000-01-01",
+    "developer": "gygg",
+    "gender": [
+      "Acción",
+      "Multijugador"
+    ],
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
+  },
+  {
+    "id": 17,
+    "name": "fa",
+    "sub_name": "aas",
+    "description": [
+      "                            \r\n                    dasd    ",
+      "                            \r\n                    aaa    ",
+      "                            \r\n                  a      "
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 54,
+    "plataform": [
+      [
+        "PS",
+        "fa-brands fa-playstation"
+      ]
+    ],
+    "releaseDate": "2000-01-01",
+    "developer": "dsa",
+    "gender": [
+      "Aventura",
+      "Deporte"
+    ],
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_3",
+        "/images/rankings/PEGI_3.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
+  },
+  {
+    "id": 18,
+    "name": "fa",
+    "sub_name": "aas",
+    "description": [
+      "                            \r\n                    dasd    ",
+      "                            \r\n                    aaa    ",
+      "                            \r\n                  a      "
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 54,
+    "plataform": [],
+    "releaseDate": "2000-01-01",
+    "developer": "dsa",
+    "gender": [
+      "Aventura",
+      "Deporte"
+    ],
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_3",
+        "/images/rankings/PEGI_3.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
+  },
+  {
+    "id": 19,
+    "name": "dasddasd",
+    "sub_name": "ahhhh",
+    "description": [
+      "                            \r\n             dsf         ",
+      "                            \r\n                        fsd",
+      "                            \r\n                        fsd"
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 10,
+    "plataform": [],
+    "releaseDate": "2000-01-01",
+    "developer": "yo",
+    "gender": "Estrategia",
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_3",
+        "/images/rankings/PEGI_3.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
+  },
+  {
+    "id": 20,
+    "name": "dasddasd",
+    "sub_name": "ahhhh",
+    "description": [
+      "                            \r\n             dsf         ",
+      "                            \r\n                        fsd",
+      "                            \r\n                        fsd"
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 10,
+    "plataform": [
+      [
+        "PS",
+        "fa-brands fa-playstation"
+      ],
+      [
+        "XBOX",
+        "fa-brands fa-xbox"
+      ],
+      [
+        "SEGA",
+        "fa-solid fa-gamepad"
+      ]
+    ],
+    "releaseDate": "2000-01-01",
+    "developer": "yo",
+    "gender": "Estrategia",
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_3",
+        "/images/rankings/PEGI_3.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
       ]
     ]
   }

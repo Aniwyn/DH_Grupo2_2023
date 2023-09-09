@@ -67,8 +67,8 @@
                             <button>Comprar Ahora</button>
                         </div>
                         <div class="shopping__button button--cart">
-                            <button">Añadir al carrito</button>
-                        </div>
+                            <button>Añadir al carrito</button>
+                        </div> 
                         <div class="shopping__button button--fav">
                             <button><i class="fa-regular fa-star"></i>Añadir a la lista de deseos</button>
                         </div>
@@ -78,6 +78,11 @@
             <a href="/details/<%= data_item.id %>/edit" class="dashboard__edit">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
             </a>
+            <form action="<%= data_item.id %>/?_method=DELETE" method="POST">
+                <button type="submit" class="dashboard__delete">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </form>
         </section>
 
         <h2 class="section__tittle">Descripción general</h2>
