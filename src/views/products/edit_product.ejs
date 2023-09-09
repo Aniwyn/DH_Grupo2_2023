@@ -18,7 +18,7 @@
             <h2><i class="fa-solid fa-gear"></i> Crear producto</h2>
         </div>
         <form class="editProduct__editForm" 
-        action="edit<% if(method == 'PUT'){ %>?_method=PUT<% } %>" 
+        action="<% if(method == 'PUT'){ %>edit?_method=PUT<% } else {%> create <% } %>" 
         method="POST"
         enctype="multipart/form-data">
             <div class="editForm__inputText">
