@@ -1,0 +1,105 @@
+.main__login {
+    width: 90vw;
+    margin: 0 5vw;
+    display: flex;
+    justify-content: center;
+}
+
+.login__container {
+    margin: 4rem 0;
+    padding: 3rem;
+    background: var(--color-translucid-black50);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 0.2rem var(--color-translucid-pink),
+        0 0 0.2rem var(--color-translucid-pink),
+        0 0 0.8rem var(--color-translucid-pink),
+        0 0 2rem var(--color-translucid-pink),
+        inset 0 0 0.5rem var(--color-translucid-pink);
+}
+
+.login__container .container__inputText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+}
+
+.login__container .container__inputText label {
+    color: white;
+    position: absolute;
+    top: -30%;
+    left: 5%;
+    background: var(--color-translucid-black90);
+}
+
+.login__container .container__inputText input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: 5px;
+    outline: none;
+    background: none;
+}
+
+.login__container button {
+    width: 100%;
+    padding: .5rem 0;
+    margin: .5rem 0;
+    background: var(--color-black);
+    border: 1px solid var(--color-white);
+    border-radius: 1rem;
+    color: var(--color-white);
+    outline: none;
+    cursor: pointer;
+}
+
+.login__container button:hover {
+    box-shadow: 0 0 0.5rem var(--color-translucid-pink);
+    border: 1px solid var(--color-pink);
+}
+
+.login__container button:hover .icon--facebook {
+    color: #087bea;
+}
+
+.login__container button:hover .icon--google {
+    color: #eb493b;
+}
+
+.login__container button:active {
+    box-shadow: 0 0 0.2rem var(--color-translucid-pink),
+        0 0 0.2rem var(--color-translucid-pink),
+        0 0 0.8rem var(--color-translucid-pink),
+        0 0 2rem var(--color-translucid-pink),
+        inset 0 0 0.5rem var(--color-translucid-pink);
+}
+
+.login__container button i {
+    padding-right: 1rem;
+}
+
+.login__container .container__separator {
+    color: var(--color-white);
+    position: relative;
+    border-bottom: 1px white solid;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.login__container .container__separator span {
+    position: absolute;
+    background: var(--color-translucid-black90);
+    padding: 0 5px;
+    bottom: -7px;
+}
