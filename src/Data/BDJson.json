@@ -4,23 +4,13 @@
     "name": "GHOSTBUSTERS",
     "sub_name": "16-Bit Cartridge",
     "description": [
-      "Prepárate para enfrentar lo paranormal en \"Ghostbusters\" para Sega Genesis. Únete a un equipo de valientes cazafantasmas y adéntrate en una ciudad asediada por espíritus y entidades sobrenaturales en este clásico juego de acción y aventuras.",
-      "\"Ghostbusters\" te coloca en el papel de un miembro novato del equipo de cazafantasmas, armado con tu mochila de protones y un objetivo claro: ¡capturar a los fantasmas que infestan la ciudad! Explora los icónicos lugares de Nueva York mientras te enfrentas a una variedad de espectros, poltergeists y apariciones maliciosas. Tendrás que desplegar tus habilidades de estrategia y apuntar con precisión para atrapar a estas criaturas traviesas y contener la amenaza paranormal.",
-      "Conviértete en un héroe al enfrentar jefes espectrales en batallas emocionantes y resuelve acertijos espeluznantes en tu búsqueda por limpiar la ciudad de la actividad fantasmal. Con cada captura exitosa, ganarás fondos que puedes invertir en mejoras y equipo para tu equipo, permitiéndote enfrentar desafíos aún mayores.",
-      "El juego combina elementos de acción, aventura y estrategia en un paquete entretenido que captura la esencia de la franquicia \"Ghostbusters\". Los gráficos de estilo retro y la banda sonora memorable añaden al ambiente nostálgico mientras luchas para salvar la ciudad de la invasión espectral. ¿Estás listo para tomar tu mochila de protones y enfrentarte a lo desconocido? \"Ghostbusters\" en Sega Genesis te desafía a convertirte en el cazafantasmas definitivo."
+      "                            Prepárate para enfrentar lo paranormal en \"Ghostbusters\" para Sega Genesis. Únete a un equipo de valientes cazafantasmas y adéntrate en una ciudad asediada por espíritus y entidades sobrenaturales en este clásico juego de acción y aventuras.\r\n                        ",
+      "                            \"Ghostbusters\" te coloca en el papel de un miembro novato del equipo de cazafantasmas, armado con tu mochila de protones y un objetivo claro: ¡capturar a los fantasmas que infestan la ciudad! Explora los icónicos lugares de Nueva York mientras te enfrentas a una variedad de espectros, poltergeists y apariciones maliciosas. Tendrás que desplegar tus habilidades de estrategia y apuntar con precisión para atrapar a estas criaturas traviesas y contener la amenaza paranormal.\r\n                        ",
+      "                            Conviértete en un héroe al enfrentar jefes espectrales en batallas emocionantes y resuelve acertijos espeluznantes en tu búsqueda por limpiar la ciudad de la actividad fantasmal. Con cada captura exitosa, ganarás fondos que puedes invertir en mejoras y equipo para tu equipo, permitiéndote enfrentar desafíos aún mayores.\r\n                        "
     ],
     "image": "/images/home/Ghostbuster.jpg",
     "price": 2799.99,
-    "plataform": [
-      [
-        "PS",
-        "fa-brands fa-playstation"
-      ],
-      [
-        "SEGA",
-        "fa-solid fa-gamepad"
-      ]
-    ],
+    "plataform": [],
     "releaseDate": "2023-10-08",
     "developer": "Sega, Compile",
     "gender": [

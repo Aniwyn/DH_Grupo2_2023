@@ -17,7 +17,10 @@
         <div class="editproduct__title">
             <h2><i class="fa-solid fa-gear"></i> Editar producto</h2>
         </div>
-        <form class="editProduct__editForm" action="edit?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="editProduct__editForm" 
+        action="edit<% if(method == 'PUT'){ %>?_method=PUT<% } %>" 
+        method="POST"
+        enctype="multipart/form-data">
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input input--id">
@@ -48,14 +51,14 @@
                         <label class="label">Formato</label>
                         <div class="input__container">
                             <div class="option">
-                                <input class="input input--radio" type="radio" value="<%= prod.format %>" name="format" id="f_radio-physic" 
+                                <input class="input input--radio" type="radio" value="Fisico" name="format" id="f_radio-physic" 
                                     <% if(prod.format == 'Fisico') {  %>
                                         checked
                                     <% } %>>
                                 <label class="label--radio" for="f_radio-physic">Fisico</label>
                             </div>
                             <div class="option">
-                                <input class="input input--radio" type="radio" value="<%= prod.format %>" name="format" id="f_radio-digital"
+                                <input class="input input--radio" type="radio" value="Digital" name="format" id="f_radio-digital"
                                 <% if(prod.format == 'Digital') {  %>
                                     checked
                                 <% } %>>
