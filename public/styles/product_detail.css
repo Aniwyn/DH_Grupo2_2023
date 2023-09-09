@@ -212,7 +212,7 @@
 
 .details__dashboard .dashboard__edit {
     position: absolute;
-    right: 2rem;
+    right: 4rem;
     top: 2rem;
 }
 
@@ -220,15 +220,36 @@
     color: var(--color-translucid-black90);
     cursor: pointer;
     font-size: 20px;
-    text-shadow: 0 0 2px var(--color-translucid-lightblue),
+    text-shadow: 0 0 2px var(--color-lightblue),
     0 0 3px var(--color-translucid-lightblue),
     0 0 5px var(--color-violet),
     0 0 8px var(--color-violet);
     transition: 0.2s;
 }
 
-.details__dashboard .dashboard__edit i:hover {
+.details__dashboard .dashboard__edit i:hover,
+.details__dashboard .dashboard__delete i:hover {
     scale: 1.2;
+}
+
+.details__dashboard .dashboard__delete {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.details__dashboard .dashboard__delete i {
+    color: var(--color-translucid-black90);
+    cursor: pointer;
+    font-size: 20px;
+    text-shadow: 0 0 2px var(--color-pink),
+    0 0 3px var(--color-pink),
+    0 0 5px var(--color-red),
+    0 0 8px var(--color-red);
+    transition: 0.2s;
 }
 
 @media (max-width: 1023px) {
