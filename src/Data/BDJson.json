@@ -633,5 +633,145 @@
         "/images/rankings/ESRB_E10plus.svg"
       ]
     ]
+  },
+  {
+    "id": 17,
+    "name": "fa",
+    "sub_name": "aas",
+    "description": [
+      "                            \r\n                    dasd    ",
+      "                            \r\n                    aaa    ",
+      "                            \r\n                  a      "
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 54,
+    "plataform": [
+      [
+        "PS",
+        "fa-brands fa-playstation"
+      ]
+    ],
+    "releaseDate": "2000-01-01",
+    "developer": "dsa",
+    "gender": [
+      "Aventura",
+      "Deporte"
+    ],
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_3",
+        "/images/rankings/PEGI_3.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
+  },
+  {
+    "id": 18,
+    "name": "fa",
+    "sub_name": "aas",
+    "description": [
+      "                            \r\n                    dasd    ",
+      "                            \r\n                    aaa    ",
+      "                            \r\n                  a      "
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 54,
+    "plataform": [],
+    "releaseDate": "2000-01-01",
+    "developer": "dsa",
+    "gender": [
+      "Aventura",
+      "Deporte"
+    ],
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_3",
+        "/images/rankings/PEGI_3.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
+  },
+  {
+    "id": 19,
+    "name": "dasddasd",
+    "sub_name": "ahhhh",
+    "description": [
+      "                            \r\n             dsf         ",
+      "                            \r\n                        fsd",
+      "                            \r\n                        fsd"
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 10,
+    "plataform": [],
+    "releaseDate": "2000-01-01",
+    "developer": "yo",
+    "gender": "Estrategia",
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_3",
+        "/images/rankings/PEGI_3.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
+  },
+  {
+    "id": 20,
+    "name": "dasddasd",
+    "sub_name": "ahhhh",
+    "description": [
+      "                            \r\n             dsf         ",
+      "                            \r\n                        fsd",
+      "                            \r\n                        fsd"
+    ],
+    "image": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "price": 10,
+    "plataform": [
+      [
+        "PS",
+        "fa-brands fa-playstation"
+      ],
+      [
+        "XBOX",
+        "fa-brands fa-xbox"
+      ],
+      [
+        "SEGA",
+        "fa-solid fa-gamepad"
+      ]
+    ],
+    "releaseDate": "2000-01-01",
+    "developer": "yo",
+    "gender": "Estrategia",
+    "format": "Fisico",
+    "trailer": "https://trello.com/b/URxae6n4/dh-g2",
+    "gameplay": "public\\images\\2023-09-09-photomode_18102022_041044.png",
+    "ranking": [
+      [
+        "PEGI_3",
+        "/images/rankings/PEGI_3.png"
+      ],
+      [
+        "ESRB_E10",
+        "/images/rankings/ESRB_E10plus.svg"
+      ]
+    ]
   }
 ]

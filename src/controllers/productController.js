@@ -125,25 +125,51 @@ const productController = {
         let aux1 = []
         let aux2 = []
 
-        switch (dataPost.plataform) {
-            case "PC":
-                aux1.push(["PC", "fa-brands fa-windows"])
-                break;
-            case "PS":
-                aux1.push(["PS", "fa-brands fa-playstation"])
-                break;
-            case "XBOX":
-                aux1.push(["XBOX", "fa-brands fa-xbox"])
-                break;
-            case "SEGA":
-                aux1.push(["SEGA", "fa-solid fa-gamepad"]
-                )
-                break;
-            case "SWITCH":
-                aux1.push(["SWITCH", "fa-solid fa-gamepad"])
-                break;
-            default:
-                break;
+        if(typeof(dataPost.plataform) == "string"){
+            switch (dataPost.plataform) {
+                case "PC":
+                    aux1.push(["PC", "fa-brands fa-windows"])
+                    break;
+                case "PS":
+                    aux1.push(["PS", "fa-brands fa-playstation"])
+                    break;
+                case "XBOX":
+                    aux1.push(["XBOX", "fa-brands fa-xbox"])
+                    break;
+                case "SEGA":
+                    aux1.push(["SEGA", "fa-solid fa-gamepad"]
+                    )
+                    break;
+                case "SWITCH":
+                    aux1.push(["SWITCH", "fa-solid fa-gamepad"])
+                    break;
+                default:
+                    break;
+            }
+        }
+        else{
+            for (let index = 0; index < dataPost.plataform.length; index++){
+                switch (dataPost.plataform[index]) {
+                    case "PC":
+                        aux1.push(["PC", "fa-brands fa-windows"])
+                        break;
+                    case "PS":
+                        aux1.push(["PS", "fa-brands fa-playstation"])
+                        break;
+                    case "XBOX":
+                        aux1.push(["XBOX", "fa-brands fa-xbox"])
+                        break;
+                    case "SEGA":
+                        aux1.push(["SEGA", "fa-solid fa-gamepad"]
+                        )
+                        break;
+                    case "SWITCH":
+                        aux1.push(["SWITCH", "fa-solid fa-gamepad"])
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         switch (dataPost.ranking1) {
