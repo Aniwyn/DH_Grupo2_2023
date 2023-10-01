@@ -3,25 +3,32 @@ const path = require("path");
 const fs = require("fs");
 
 console.log(__dirname)
-const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+/*const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;*/
 const dato = require(path.join(__dirname, "../../src/Data/BD")).dato;
 
 /* GETS SET */
 const productController = {
     mycart: (req, res) => {
+        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
         res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: BD_provisoria });
     },
     details: (req, res) => {
+        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+
         let id = req.params.id;
         let prod = BD_provisoria.filter((product) => product.id == id);
         res.render(path.join(__dirname, "../views/products/details.ejs"), { BD: BD_provisoria, data_item: prod[0] });
     },
     editProduct: (req, res) => {
+        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+
         let id = req.params.id;
         let prod = BD_provisoria.filter((product) => product.id == id);
         res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: prod[0], method: 'PUT' })
     },
     editProduct_modify: (req, res) => {
+        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+
         let id = req.params.id;
         auxR = [];
         auxP = [];
@@ -147,6 +154,8 @@ const productController = {
         res.redirect(`/details/${id}`)
     },
     editProduct_post: (req, res) => {
+        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+
         const dataPost = req.body
         const caratula = req.files['image-cover'][0]
         const gameplay = req.files['image-gameplay'][0]
@@ -275,6 +284,8 @@ const productController = {
     },
 
     products: (req, res) => {
+        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+
         for (let i = 0; i < BD_provisoria.length; i++) {
             console.log(BD_provisoria[i].name)
             console.log(BD_provisoria[i].plataform.length + "\n")
@@ -282,6 +293,8 @@ const productController = {
         res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: BD_provisoria });
     },
     delete: (req, res) => {
+        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+
         let id = req.params.id;
         let newBD = BD_provisoria.filter((product) => product.id != id);
         console.log(newBD[1]);
@@ -297,6 +310,8 @@ const productController = {
         res.redirect('/')
     },
     create: (req, res) => {
+        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+
         console.log(dato)
         res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: dato, method: '' })
     }

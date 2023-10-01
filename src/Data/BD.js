@@ -1,4 +1,4 @@
-const path = "./BDJson.json"
+const path = "./product.json"
 product = require(path)
 
 const dato = {
