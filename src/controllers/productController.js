@@ -66,7 +66,7 @@ const productController = {
                             break;
                     }
                 }
-                else{  
+                else {
                     for (let i = 0; i < array.length; i++) {
                         switch (text_data.plataform[i]) {
                             case "PC":
@@ -296,10 +296,36 @@ const productController = {
         const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
 
         let id = req.params.id;
-        let newBD = BD_provisoria.filter((product) => product.id != id);
-        console.log(newBD[1]);
+
+        const fsPromises = require('fs').promises
+        let newBD = []
+        for (let i = 0; i < BD_provisoria.length; i++) {
+            /*Si es que el id no es el que queremos vamos reconstruyendo un nuevo array */
+            if (BD_provisoria[i].id != id) {
+                newBD.push(BD_provisoria[i])
+            }
+            else {
+                /*Si es que el id si es el que queremos eliminar borramos al foto */
+                fsPromises.unlink(path.join(`${__dirname}/../../public`,BD_provisoria[i].image))
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
+                fsPromises.unlink(path.join(`${__dirname}/../../public`,BD_provisoria[i].gameplay))
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
+            }
+        }
+
+        console.log(newBD);
         const newBDJSON = JSON.stringify(newBD, null, 2);
-        const jsonPath = path.join(__dirname, '../Data/BDJson.json')
+        const jsonPath = path.join(__dirname, '../Data/product.json')
+
+        const fs = require('fs')
         fs.writeFile(jsonPath, newBDJSON, "utf8", (err) => {
             if (err) {
                 console.log(err);

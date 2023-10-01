@@ -1,91 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "GHOSTBUSTERS",
-    "sub_name": "16-Bit Cartridge",
-    "description": [
-      "Prepárate para enfrentar lo paranormal en \"Ghostbusters\" para Sega Genesis. Únete a un equipo de valientes cazafantasmas y adéntrate en una ciudad asediada por espíritus y entidades sobrenaturales en este clásico juego de acción y aventuras.",
-      "\"Ghostbusters\" te coloca en el papel de un miembro novato del equipo de cazafantasmas, armado con tu mochila de protones y un objetivo claro: ¡capturar a los fantasmas que infestan la ciudad! Explora los icónicos lugares de Nueva York mientras te enfrentas a una variedad de espectros, poltergeists y apariciones maliciosas. Tendrás que desplegar tus habilidades de estrategia y apuntar con precisión para atrapar a estas criaturas traviesas y contener la amenaza paranormal.",
-      "Conviértete en un héroe al enfrentar jefes espectrales en batallas emocionantes y resuelve acertijos espeluznantes en tu búsqueda por limpiar la ciudad de la actividad fantasmal. Con cada captura exitosa, ganarás fondos que puedes invertir en mejoras y equipo para tu equipo, permitiéndote enfrentar desafíos aún mayores.",
-      "El juego combina elementos de acción, aventura y estrategia en un paquete entretenido que captura la esencia de la franquicia \"Ghostbusters\". Los gráficos de estilo retro y la banda sonora memorable añaden al ambiente nostálgico mientras luchas para salvar la ciudad de la invasión espectral. ¿Estás listo para tomar tu mochila de protones y enfrentarte a lo desconocido? \"Ghostbusters\" en Sega Genesis te desafía a convertirte en el cazafantasmas definitivo."
-    ],
-    "image": "/images/home/Ghostbuster.jpg",
-    "price": 2799.99,
-    "plataform": [
-      [
-        "PS",
-        "fa-brands fa-playstation"
-      ],
-      [
-        "SEGA",
-        "fa-solid fa-gamepad"
-      ]
-    ],
-    "releaseDate": "2023-10-08",
-    "developer": "Sega, Compile",
-    "gender": [
-      "Acción",
-      "Aventura",
-      "Multijugador"
-    ],
-    "format": "Fisico",
-    "trailer": "https://www.youtube.com/embed/CLLXiXh1onc",
-    "gameplay": "/images/products/GHOSTBUSTERS-gameplay.jpg",
-    "ranking": [
-      [
-        "PEGI_7",
-        "/images/rankings/PEGI_7.png"
-      ],
-      [
-        "ESRB_E",
-        "/images/rankings/ESRB_E.svg"
-      ]
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Sonic 2",
-    "sub_name": "The Hedgehog",
-    "description": [
-      "Acelera a través de emocionantes aventuras en \"Sonic the Hedgehog 2\". Únete al veloz erizo azul y a su inseparable compañero Tails en una misión para detener al malvado Dr. Robotnik y salvar la Isla Ángel de su maquinaria destructiva en este icónico juego de plataformas de Sega Genesis.",
-      "En \"Sonic the Hedgehog 2\", la velocidad y la diversión van de la mano mientras recorres entornos vibrantes y llenos de vida. Reúne anillos dorados para ganar vidas y velocidad mientras te deslizas a través de bucles, saltas sobre abismos y enfrentas enemigos en tu camino hacia la victoria. La incorporación de Tails como personaje jugable agrega un nuevo nivel de estrategia y posibilidades, ya que puedes elegir entre controlar a Sonic o aprovechar las habilidades de vuelo de Tails para explorar áreas ocultas.",
-      "Enfréntate al malvado Dr. Robotnik en su última hazaña diabólica y detén sus planes para conquistar la Isla Ángel. Con gráficos mejorados y nuevos obstáculos emocionantes, \"Sonic the Hedgehog 2\" te desafía a dominar cada nivel y a recolectar las preciadas Esmeraldas del Caos para desbloquear el verdadero poder de Sonic.",
-      "La música icónica y la jugabilidad rápida hacen de este juego una experiencia inolvidable para los fanáticos de Sonic y los amantes de los juegos de plataformas clásicos. Corre contra el tiempo, explora zonas secretas y demuestra que eres el erizo más rápido del planeta en \"Sonic the Hedgehog 2\". Listo para girar, saltar y correr a velocidades supersónicas, este juego te llevará en un viaje lleno de adrenalina mientras luchas por salvar la isla y derrotar al malvado Dr. Robotnik una vez más."
-    ],
-    "image": "/images/home/Sonic2.jpg",
-    "price": 3499.99,
-    "plataform": [
-      [
-        "PS",
-        "fa-brands fa-playstation"
-      ],
-      [
-        "SEGA",
-        "fa-solid fa-gamepad"
-      ]
-    ],
-    "releaseDate": "2022-07-05",
-    "developer": "Sega Technical Institute",
-    "gender": [
-      "Acción",
-      "Aventura",
-      "Multijugador"
-    ],
-    "format": "Fisico",
-    "trailer": "https://www.youtube.com/embed/ytistojxzn4",
-    "gameplay": "/images/products/Sonic2-gameplay.jpg",
-    "ranking": [
-      [
-        "PEGI_7",
-        "/images/rankings/PEGI_7.png"
-      ],
-      [
-        "ESRB_E",
-        "/images/rankings/ESRB_E.svg"
-      ]
-    ]
-  },
-  {
     "id": 3,
     "name": "Earthworm Jim",
     "sub_name": "Sega Genesis",
@@ -570,7 +484,7 @@
     ],
     "releaseDate": "2000-08-24",
     "developer": "Microsoft Studios",
-    "genre": [
+    "gender": [
       "Estrategia",
       "Historia",
       "Simulación",
@@ -611,7 +525,7 @@
     ],
     "releaseDate": "2008-09-04",
     "developer": "Maxis",
-    "genre": [
+    "gender": [
       "Simulación",
       "Estrategia",
       "Exploración"
@@ -659,7 +573,7 @@
     ],
     "releaseDate": "2017-03-21",
     "developer": "BioWare",
-    "genre": [
+    "gender": [
       "Acción",
       "RPG",
       "Ciencia Ficción",
@@ -678,7 +592,8 @@
         "/images/rankings/ESRB_M.svg"
       ]
     ]
-  },{
+  },
+  {
     "id": 17,
     "name": "The Elder Scrolls V",
     "sub_name": "Skyrim",
@@ -699,7 +614,7 @@
     ],
     "releaseDate": "2011-11-11",
     "developer": "Bethesda Game Studios",
-    "genre": [
+    "gender": [
       "RPG",
       "Fantasía",
       "Mundo Abierto"

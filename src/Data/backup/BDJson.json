@@ -570,7 +570,7 @@
     ],
     "releaseDate": "2000-08-24",
     "developer": "Microsoft Studios",
-    "genre": [
+    "gender": [
       "Estrategia",
       "Historia",
       "Simulación",
@@ -611,7 +611,7 @@
     ],
     "releaseDate": "2008-09-04",
     "developer": "Maxis",
-    "genre": [
+    "gender": [
       "Simulación",
       "Estrategia",
       "Exploración"
@@ -659,7 +659,7 @@
     ],
     "releaseDate": "2017-03-21",
     "developer": "BioWare",
-    "genre": [
+    "gender": [
       "Acción",
       "RPG",
       "Ciencia Ficción",
@@ -699,7 +699,7 @@
     ],
     "releaseDate": "2011-11-11",
     "developer": "Bethesda Game Studios",
-    "genre": [
+    "gender": [
       "RPG",
       "Fantasía",
       "Mundo Abierto"

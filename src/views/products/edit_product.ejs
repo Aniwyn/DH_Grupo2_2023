@@ -15,8 +15,9 @@
 
     <main class="main__editProduct">
         <div class="editproduct__title">
-            <h2><i class="fa-solid fa-gear"></i> Crear producto</h2>
+            <h2><i class="fa-solid fa-gear"></i> <% if(method == 'PUT'){ %>Editar producto<% } else {%> Crear producto <% } %></h2>
         </div>
+        <span class="editForm__spanTextTittle">Todos los valores con (*) son obligatorios</span>
         <form class="editProduct__editForm" 
         action="<% if(method == 'PUT'){ %>edit?_method=PUT<% } else {%> create <% } %>" 
         method="POST"
@@ -32,7 +33,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input">
-                        <label class="label" for="f_title">Titulo</label>
+                        <label class="label" for="f_title">Titulo<span class="editForm__spanText">*</span></label>
                         <input class="input" type="text" value="<%= prod.name %>" name="name" id="f_title" title="Ingrese el titulo de su Juego" required>
                     </div>
                 </div>
@@ -40,7 +41,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input">
-                        <label class="label" for="f_subTitle">Sub titulo</label>
+                        <label class="label" for="f_subTitle">Sub titulo<span class="editForm__spanText">*</span></label>
                         <input class="input" type="text" value="<%= prod.sub_name %>" name="sub_name" id="f_subTitle" title="Ingrese el Sub Titulo de su Juego" required>
                     </div>
                 </div>
@@ -48,7 +49,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input input--radio">
-                        <label class="label">Formato</label>
+                        <label class="label">Formato<span class="editForm__spanText">*</span></label>
                         <div class="input__container">
                             <div class="option">
                                 <input class="input input--radio" type="radio" value="Fisico" name="format" id="f_radio-physic" required
@@ -71,7 +72,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input input--radio">
-                        <label class="label">Plataforma</label>
+                        <label class="label">Plataforma<span class="editForm__spanText">*</span></label>
                         <div class="input__container">
                             <div class="option">
                                 <input class="input input--radio" type="checkbox" value="PC" name="plataform" id="f_chxbox-pc" required
@@ -120,7 +121,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input">
-                        <label class="label" for="f_date">Lanzamiento</label>
+                        <label class="label" for="f_date">Lanzamiento<span class="editForm__spanText">*</span></label>
                         <input class="input" type="date" value="<%= prod.releaseDate %>" name="releaseDate" id="f_date" required>
                     </div>
                 </div>
@@ -128,7 +129,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input">
-                        <label class="label" for="f_developer">Desarrollador</label>
+                        <label class="label" for="f_developer">Desarrollador<span class="editForm__spanText">*</span></label>
                         <input class="input" type="text" value="<%= prod.developer %>" name="developer" id="f_developer" required>
                     </div>
                 </div>
@@ -136,7 +137,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input input--radio">
-                        <label class="label">Genero</label>
+                        <label class="label">Genero<span class="editForm__spanText">*</span></label>
                         <div class="input__container">
                             <div class="option">
                                 <div class="option--classification">
@@ -213,7 +214,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input input--radio">
-                        <label class="label">Clasificacion</label>
+                        <label class="label">Clasificacion<span class="editForm__spanText">*</span></label>
                         <div class="input__container">
                             <div class="option">
                                 <span class="option__title">PEGI</span>
@@ -298,7 +299,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input">
-                        <label class="label" for="f_price">Precio</label>
+                        <label class="label" for="f_price">Precio<span class="editForm__spanText">*</span></label>
                         <input class="input" type="number" value="<%= prod.price %>" name="price" id="f_price"  min="1" required>
                     </div>
                 </div>
@@ -309,7 +310,7 @@
                 </div>
                 <div class="field preview--select">
                     <div class="field__input">
-                        <label class="label" for="f_cover">Imagen caratula</label>
+                        <label class="label" for="f_cover">Imagen caratula<span class="editForm__spanText">*</span></label>
                         <input class="input" type="file" value="" name="image-cover" accept="image/*" id="f_cover" required>
                     </div>
                 </div>
@@ -320,7 +321,7 @@
                 </div>
                 <div class="field preview--select">
                     <div class="field__input">
-                        <label class="label" for="f_gameplay">Imagen gameplay</label>
+                        <label class="label" for="f_gameplay">Imagen gameplay<span class="editForm__spanText">*</span></label>
                         <input class="input" type="file" value="" name="image-gameplay" accept="image/*" id="f_gameplay" required>
                     </div>
                 </div>
@@ -328,7 +329,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input">
-                        <label class="label" for="f_triller">Trailer</label>
+                        <label class="label" for="f_triller">Trailer<span class="editForm__spanText">*</span></label>
                         <input class="input" type="url" value="<%= prod.trailer %>" name="trailer" id="f_triller" required>
                     </div>
                 </div>
@@ -336,7 +337,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input">
-                        <label class="label" for="f_description-header">Introducción</label>
+                        <label class="label" for="f_description-header">Introducción<span class="editForm__spanText">*</span></label>
                         <textarea class="input" rows="10" name="description[0]" id="f_description-header">
                             <%= prod.description[0] %>
                         </textarea>
@@ -346,7 +347,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input">
-                        <label class="label" for="f_description-body">Descripción</label>
+                        <label class="label" for="f_description-body">Descripción<span class="editForm__spanText">*</span></label>
                         <textarea class="input" rows="10" name="description[1]" id="f_description-body">
                             <%= prod.description[1] %>
                         </textarea>
@@ -356,7 +357,7 @@
             <div class="editForm__inputText">
                 <div class="field">
                     <div class="field__input">
-                        <label class="label" for="f_description-footer">Desenlace</label>
+                        <label class="label" for="f_description-footer">Desenlace<span class="editForm__spanText">*</span></label>
                         <textarea class="input" rows="10" name="description[2]" id="f_description-footer">
                             <%= prod.description[2] %>
                         </textarea>

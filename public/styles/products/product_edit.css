@@ -25,6 +25,24 @@
     width: 100%;
 }
 
+.main__editProduct .editForm__spanTextTittle {
+
+    padding: 0.5rem 2rem;
+    width: 100%;
+
+    font-size: small;
+    color: rgb(255, 0, 0);
+}
+
+.main__editProduct .editForm__spanText {
+
+    padding: 0.5rem .4rem;
+    width: 100%;
+
+    font-size: medium;
+    color: rgb(201, 2, 2);
+}
+
 .editForm__inputText .field {
     width: 100%;
     padding: 0.5rem 0;
