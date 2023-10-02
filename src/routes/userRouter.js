@@ -12,7 +12,7 @@ let validateRegisterMiddleware = require('../../middleware/validateRegisterMiddl
 /* ROUTE-CONTROLLER CONNECTION */
 router.get(['/','/home'], userController.home);
 router.get('/login', guestMiddleware, userController.login);
-router.post('login', userController.processLogin)
+router.post('/login', userController.processLogin)
 router.get('/register', guestMiddleware, userController.register);
 router.post('/register', userController.processRegister)
 router.get('/logout', userController.logout)

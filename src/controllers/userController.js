@@ -15,9 +15,10 @@ const userController = {
     },
     processRegister: function (req, res) {
         //VALIDACIONES
-        console.log(req.body);
-        let userInDB = UserMethod.searchField('email', req.body.email)
 
+        
+        let userInDB = UserMethod.searchField('email', req.body.email)
+        
         if (userInDB) {
             return res.render('/register', {
                 errors: {
@@ -28,24 +29,13 @@ const userController = {
                 oldData: req.body
             })
         }
-        if (req.body.password != req.body.password_repeat){
-            return res.render(path.join(__dirname, "../views/users/register.ejs"), {
-                errors: {
-                    password: {
-                        msg: 'La contraseñas no coinciden'
-                    }
-                }
-            })
-        }
 
         delete req.body.password_repeat
+        
         let userToCreate = {
             ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.file.filename
+            password: bcryptjs.hashSync(req.body.password, 10)
         }
-
-        return res.send(userToCreate)
 
         let userCreated = UserMethod.create(userToCreate)
 
@@ -55,16 +45,17 @@ const userController = {
         res.render(path.join(__dirname, "../views/users/login.ejs"));
     },
     processLogin: (req, res) => {
-        let userToLogin = UserMethod.searchField('email', req.body.email)
+        let userToLogin = UserMethod.searchField('userName', req.body.userName)
 
         if(userToLogin) {
             if (bcryptjs.compareSync(req.body.password, userToLogin.password)) {
                 delete userToLogin.password
                 //guardarlo en session
                 req.session.userLogged = userToLogin
+                res.redirect("/")
                 //REDIRIGIRLO
             }
-            return res.render('/login', {
+            return res.render(path.join(__dirname, "../views/users/login.ejs"), {
                 errrors: {
                     password: {
                         msg: "Las credenciales son invalidas"
@@ -73,7 +64,7 @@ const userController = {
             })
         }
 
-        return res.render('/login', {
+        return res.render(path.join(__dirname, "../views/users/login.ejs"), {
             errrors: {
                 email: {
                     msg: "No se encuentra este email registrado"

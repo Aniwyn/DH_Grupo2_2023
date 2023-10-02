@@ -22,7 +22,7 @@ const userMethod = {
         return userFound
     },
     generateId: function () {
-        let lastUser = BD_provisoria.pop()
+        let lastUser = BD_provisoria[BD_provisoria.length-1]
         if(lastUser){
             return lastUser.id + 1
         }
