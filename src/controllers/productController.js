@@ -1,33 +1,34 @@
 /* VARIABLE DECLARATION */
 const path = require("path");
 const fs = require("fs");
+const fsPromises = require('fs').promises
 
-console.log(__dirname)
-/*const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;*/
+
+let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
 const dato = require(path.join(__dirname, "../../src/Data/BD")).dato;
 
 /* GETS SET */
 const productController = {
+    getData: function () {
+        return require(path.join(__dirname, "../../src/Data/BD")).product
+    },
+    getTemplate: function () {
+        return require(path.join(__dirname, "../../src/Data/BD")).dato
+    },
     mycart: (req, res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
         res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: BD_provisoria });
     },
     details: (req, res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
-
         let id = req.params.id;
         let prod = BD_provisoria.filter((product) => product.id == id);
         res.render(path.join(__dirname, "../views/products/details.ejs"), { BD: BD_provisoria, data_item: prod[0] });
     },
     editProduct: (req, res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
-
         let id = req.params.id;
         let prod = BD_provisoria.filter((product) => product.id == id);
         res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: prod[0], method: 'PUT' })
     },
     editProduct_modify: (req, res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
 
         let id = req.params.id;
         auxR = [];
@@ -41,7 +42,7 @@ const productController = {
                 prod.name = text_data.name;
                 prod.sub_name = text_data.sub_name;
                 prod.description = text_data.description;
-                prod.image = caratula != undefined ? caratula.path : prod.image;
+                prod.image = caratula != undefined ? caratula.path.replace("public", "") : prod.image;
                 prod.price = parseFloat(text_data.price);
 
                 if (typeof (text_data.plataform) == "string") {
@@ -97,7 +98,7 @@ const productController = {
                 prod.gender = text_data.gender;
                 prod.format = text_data.format;
                 prod.trailer = text_data.trailer;
-                prod.gameplay = gameplay != undefined ? gameplay.path : prod.gameplay;
+                prod.gameplay = gameplay != undefined ? gameplay.path.replace("public", "") : prod.gameplay;
                 switch (text_data.ranking1) {
                     case "PEGI_3":
                         auxR.push(["PEGI_3", "/images/rankings/PEGI_3.png"])
@@ -141,9 +142,9 @@ const productController = {
         })
 
         const productJSON = JSON.stringify(BD_provisoria, null, 2);
-        const rutaArchivo = './src/Data/BDJson.json';
+        const rutaArchivo = './src/Data/product.json';
 
-        fs.writeFile(rutaArchivo, productJSON, 'utf8', (err) => {
+        fs.writeFileSync(rutaArchivo, productJSON, 'utf8', (err) => {
             if (err) {
                 console.error(err);
                 return;
@@ -154,8 +155,6 @@ const productController = {
         res.redirect(`/details/${id}`)
     },
     editProduct_post: (req, res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
-
         const dataPost = req.body
         const caratula = req.files['image-cover'][0]
         const gameplay = req.files['image-gameplay'][0]
@@ -254,7 +253,7 @@ const productController = {
             name: dataPost.name,
             sub_name: dataPost.sub_name,
             description: dataPost.description,
-            image: caratula.path,
+            image: caratula.path.replace("public", ""),
             price: parseFloat(dataPost.price),
             plataform: aux1,
             releaseDate: dataPost.releaseDate,
@@ -262,14 +261,14 @@ const productController = {
             gender: dataPost.gender,
             format: dataPost.format,
             trailer: dataPost.trailer,
-            gameplay: gameplay.path,
+            gameplay: gameplay.path.replace("public", ""),
             ranking: aux2
 
         }
 
         BD_provisoria.push(postData)
         const productJSON = JSON.stringify(BD_provisoria, null, 2);
-        const rutaArchivo = './src/Data/BDJson.json';
+        const rutaArchivo = './src/Data/product.json';
 
         fs.writeFile(rutaArchivo, productJSON, 'utf8', (err) => {
             if (err) {
@@ -284,8 +283,6 @@ const productController = {
     },
 
     products: (req, res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
-
         for (let i = 0; i < BD_provisoria.length; i++) {
             console.log(BD_provisoria[i].name)
             console.log(BD_provisoria[i].plataform.length + "\n")
@@ -293,11 +290,8 @@ const productController = {
         res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: BD_provisoria });
     },
     delete: (req, res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
-
         let id = req.params.id;
 
-        const fsPromises = require('fs').promises
         let newBD = []
         for (let i = 0; i < BD_provisoria.length; i++) {
             /*Si es que el id no es el que queremos vamos reconstruyendo un nuevo array */
@@ -306,13 +300,13 @@ const productController = {
             }
             else {
                 /*Si es que el id si es el que queremos eliminar borramos al foto */
-                fsPromises.unlink(path.join(`${__dirname}/../../public`,BD_provisoria[i].image))
+                fsPromises.unlink(path.join(`${__dirname}/../..`, BD_provisoria[i].image))
                     .then(() => {
                         console.log('Foto eliminada con exito')
                     }).catch(err => {
                         console.error('Hubo algun error en eliminar la foto del producto', err)
                     })
-                fsPromises.unlink(path.join(`${__dirname}/../../public`,BD_provisoria[i].gameplay))
+                fsPromises.unlink(path.join(`${__dirname}/../..`, BD_provisoria[i].gameplay))
                     .then(() => {
                         console.log('Foto eliminada con exito')
                     }).catch(err => {
@@ -322,18 +316,18 @@ const productController = {
         }
 
         console.log(newBD);
-        const newBDJSON = JSON.stringify(newBD, null, 2);
+        BD_provisoria = newBD;
         const jsonPath = path.join(__dirname, '../Data/product.json')
 
         const fs = require('fs')
-        fs.writeFile(jsonPath, newBDJSON, "utf8", (err) => {
+        fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
             if (err) {
                 console.log(err);
                 return;
             }
-            console.log("correcto");
+            console.log("Se sobreescribio correctamente");
         })
-        res.redirect('/')
+        res.redirect('/home')
     },
     create: (req, res) => {
         const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;

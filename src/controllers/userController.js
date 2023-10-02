@@ -1,10 +1,11 @@
 /* VARIABLE DECLARATION */
 const path = require("path")
+let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product
 
 /* GETS SET */
 const userController = {
     home : (req,res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+        console.log("Enmtre en e lget");
         res.render(path.join(__dirname, "../views/users/home.ejs"), {BD: BD_provisoria});
     },
     register : (req,res) => {

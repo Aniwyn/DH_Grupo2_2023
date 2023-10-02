@@ -1,5 +1,8 @@
-const path = "./product.json"
-product = require(path)
+const path = require("path")
+const fs = require("fs")
+const filePath = path.join(__dirname, "/product.json")
+
+let product = JSON.parse(fs.readFileSync(filePath, "utf-8"))
 
 const dato = {
     id: product[product.length - 1].id + 1,
