@@ -8,6 +8,7 @@ const app = express();
 
 /* REQUIRES */
 const router = require('./routes/mainRouter');
+const userLoggedMiddleware = require('../middleware/userLoggedMiddleware')
 
 /* EJS SETTING */
 app.set('view engine', 'ejs');
@@ -23,6 +24,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+app.use(userLoggedMiddleware)
 
 /* ROUTE CONNECTION */
 app.use("/", router);

@@ -15,7 +15,7 @@ const userController = {
     },
     processRegister: function (req, res) {
         //VALIDACIONES
-
+        console.log(req.body);
         let userInDB = UserMethod.searchField('email', req.body.email)
 
         if (userInDB) {
@@ -28,12 +28,24 @@ const userController = {
                 oldData: req.body
             })
         }
+        if (req.body.password != req.body.password_repeat){
+            return res.render(path.join(__dirname, "../views/users/register.ejs"), {
+                errors: {
+                    password: {
+                        msg: 'La contraseñas no coinciden'
+                    }
+                }
+            })
+        }
 
+        delete req.body.password_repeat
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename
         }
+
+        return res.send(userToCreate)
 
         let userCreated = UserMethod.create(userToCreate)
 
@@ -68,6 +80,11 @@ const userController = {
                 }
             }
         })
+    },
+
+    logout: (req,res) => {
+        req.session.destroy()
+        return res.redirect('/')
     }
 
 }
