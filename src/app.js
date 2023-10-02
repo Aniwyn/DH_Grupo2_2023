@@ -1,9 +1,10 @@
 /* VARIABLE DECLARATION */
 const express = require("express");
-const app = express();
-const path = require("path");
 const port = 5000;
 const methodOverride = require('method-override')
+const session = require('express-session')
+
+const app = express();
 
 /* REQUIRES */
 const router = require('./routes/mainRouter');
@@ -17,6 +18,11 @@ app.use(express.static("public"));
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
+app.use(session({
+    secret: 'Nuestro secreto',
+    resave: false,
+    saveUninitialized: false
+}))
 
 /* ROUTE CONNECTION */
 app.use("/", router);

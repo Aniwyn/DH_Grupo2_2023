@@ -1,8 +1,10 @@
 const path = require("path")
 const fs = require("fs")
-const filePath = path.join(__dirname, "/product.json")
+const filePathProduct = path.join(__dirname, "/product.json")
+const filePathUsers = path.join(__dirname, "/users.json")
 
-let product = JSON.parse(fs.readFileSync(filePath, "utf-8"))
+let product = JSON.parse(fs.readFileSync(filePathProduct, "utf-8"))
+let users = JSON.parse(fs.readFileSync(filePathUsers, "utf-8"))
 
 const dato = {
     id: product[product.length - 1].id + 1,
@@ -44,7 +46,11 @@ const dato = {
 }
 
 
-module.exports = { product, dato };
+module.exports = { 
+    product,
+    dato,
+    users 
+    };
 
 
 

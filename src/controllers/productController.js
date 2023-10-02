@@ -2,6 +2,7 @@
 const path = require("path");
 const fs = require("fs");
 const fsPromises = require('fs').promises
+const jsonPath = path.join(__dirname, '../Data/product.json')
 
 
 let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
@@ -317,9 +318,8 @@ const productController = {
 
         console.log(newBD);
         BD_provisoria = newBD;
-        const jsonPath = path.join(__dirname, '../Data/product.json')
+        
 
-        const fs = require('fs')
         fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
             if (err) {
                 console.log(err);
