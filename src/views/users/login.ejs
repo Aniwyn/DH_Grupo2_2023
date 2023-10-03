@@ -20,11 +20,21 @@
             <div>
                 <div class="container__inputText">
                     <label for="nombre">Usuario </label>
-                    <input type="text" id="nombre" name="userName" placeholder="Ingresa tu usuario..." required>
+                    <input type="text" id="nombre" name="userName" placeholder="Ingresa tu usuario..." required
+                        value="<%= locals.old && old.userName ? old.userName : '' %>"
+                    >
+                    <% if (locals.errors) { %>
+                        <% const error = errors.find(error => error.path == 'userName') %>
+                        <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                    <% } %>
                 </div>
                 <div class="container__inputText">
                     <label for="contrasena">Contraseña</label>
                     <input type="password" id="contrasena" name="password" placeholder="Contraseña" required>
+                    <% if (locals.errors) { %>
+                        <% const error = errors.find(error => error.path == 'password') %>
+                        <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                    <% } %>
                 </div>
                 <button type="submit" class="btn-continue">Iniciar Sesión</button>
                 <div class="container__separator">

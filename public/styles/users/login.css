@@ -50,6 +50,16 @@
     background: none;
 }
 
+.login__container .container__inputText .errorMessage {
+    color: var(--color-red);
+    font-size: 0.8rem;
+    padding-top: 0.2rem;
+    text-shadow: 0 0 1px var(--color-red),
+        0 0 1px var(--color-red),
+        0 0 2px var(--color-red),
+        0 0 3px var(--color-red);
+}
+
 .login__container button {
     width: 100%;
     padding: .5rem 0;

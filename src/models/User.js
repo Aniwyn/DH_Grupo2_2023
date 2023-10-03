@@ -10,25 +10,25 @@ let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).users
 const jsonPath = path.join(__dirname, '../Data/users.json')
 
 const userMethod = {
-    getData: function () {
+    getData: function() {
         return require(path.join(__dirname, "../../src/Data/BD")).users
     },
-    searchId: function (id){
+    searchId: function(id){
         let userFound = BD_provisoria.find(oneUser => oneUser.id === id)
         return userFound
     },
-    searchField: function (field,text){
+    searchField: function (field, text) {
         let userFound = BD_provisoria.find(oneUser => oneUser[field] === text)
         return userFound
     },
-    generateId: function () {
-        let lastUser = BD_provisoria[BD_provisoria.length-1]
-        if(lastUser){
+    generateId: function() {
+        let lastUser = BD_provisoria[BD_provisoria.length - 1]
+        if (lastUser) {
             return lastUser.id + 1
         }
         return 0
     },
-    create: function (userData) {
+    create: function(userData) {
         let newUser = {
             id: this.generateId(),
             ...userData
