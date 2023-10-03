@@ -103,3 +103,14 @@
     padding: 0 5px;
     bottom: -7px;
 }
+
+.login__container .container__check{
+    display: flex;
+    align-content: start;
+    padding-bottom: 5px;
+}
+
+.login__container .container__check label{
+    color: whitesmoke;
+    padding-right: 5px;
+}

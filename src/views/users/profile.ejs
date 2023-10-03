@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!---------------------------- Head ---------------------------->
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" type="text/css" href="/styles/users/profile.css" />
+</head>
+
+
+
+<body>
+    <!---------------------------- Header ---------------------------->
+
+    <%-include('../partials/header.ejs')%>
+
+        <main>
+            <div class="profile__container">
+                <div class="central__container">
+                    <div class="tittle_center">
+                        INFORMACIÓN DE LA CUENTA
+                    </div>
+                    <form action="" class="data_container">
+                        <img class="img__logo" src="/images/avatars/monster.png" alt="">
+
+                        <label for="user">Nombre de Usuario</label>
+                        <input type="text", name="user", value="<%= locals.userLogged.userName %>" disabled>
+
+                        <label for="email">Email</label>
+                        <input type="text", name="email", value="<%= locals.userLogged.email %>" disabled>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <!---------------------------- Footer ---------------------------->
+
+        <%- include('../partials/footer.ejs') %>
+</body>

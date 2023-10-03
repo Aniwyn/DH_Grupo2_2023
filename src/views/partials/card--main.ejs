@@ -1,19 +1,22 @@
 <article>
-    <img src="<%= data_item.image %>" alt="" />
-    <div class="products__info">
-        <div class="info__name">
-            <a href="/details/<%= data_item.id %>" class="name__link">
-                <h4><%= data_item.name %></h4>
-            </a>
-            <% for(let i = 0; i < data_item.plataform.length; i++) { %>
-                <span class="products__tag"><%= data_item.plataform[i][0] %></span>
-            <% } %>
-        </div>
-        <div class="info__price">
-            <span>$<%= Math.floor(data_item.price) %><sup><%= (data_item.price - Math.floor(data_item.price)).toFixed(2) * 100 %></sup></span>
-            <div class="products__cart">
-                <i class="fa-solid fa-cart-shopping"></i>
+    <a href="/details/<%= data_item.id %>">
+        <img src="<%= data_item.image %>" alt="" />
+        <div class="products__info">
+            <div class="info__name">
+                <p class="name__link">
+                    <h4><%= data_item.name %></h4>
+                </p>
+                <% for(let i = 0; i < data_item.plataform.length; i++) { %>
+                    <span class="products__tag"><%= data_item.plataform[i][0] %></span>
+                <% } %>
+            </div>
+            <div class="info__price">
+                <span>$<%= Math.floor(data_item.price) %><sup><%= (data_item.price - Math.floor(data_item.price)).toFixed(2) * 100 %></sup></span>
+                <div class="products__cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
             </div>
         </div>
-    </div>
+    </a>
+
 </article>

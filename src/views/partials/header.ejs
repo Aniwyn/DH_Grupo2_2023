@@ -12,19 +12,24 @@
         <div class="nav__loginBar">
             <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
             <i class="fa-regular fa-message nav__link loginBar__btnMessage"></i>
-            <a class="nav__link loginBar__btnExtend" href="/register">Registrarse</a>
-            <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>
-            <a href="#"><i class="fa-regular fa-user nav__link loginBar__btnUser"></i></a>
-            <div class="loginBar__dropdownLog">
-                <a href="#"><i class="fa-regular fa-user nav__link dropdownLog__btnUser"></i></a>
-                <div class="dropdownLog__menu">
-                    <a href="#" class="menu__user">@Aniwyn</a>
-                    <a href="#" class="menu__closeSession">Cerrar sesión</a>
-                    <span style="display: block;">hola</span>
-                    <span style="display: block;">hola</span>
-                    <span style="display: block;">hola</span>
+            <% if (!locals.isLogged) { %>
+                <a class="nav__link loginBar__btnExtend" href="/register">Registrarse</a>
+                <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>
+            <% } else {%>
+                <div class="loginBar__dropdownLog">
+                    <a href="#"><i class="fa-regular fa-user nav__link dropdownLog__btnUser"></i></a>
+                    <div class="dropdownLog__menu">
+                        <a href="#" class="menu__user"><%= locals.userLogged.userName %></a>
+                        <a href="/logout" class="menu__closeSession">Cerrar sesión</a>
+                        <span style="display: block;">hola</span>
+                        <span style="display: block;">hola</span>
+                        <span style="display: block;">hola</span>
+                    </div>
                 </div>
-            </div>
+            <% } %>
+
+            <a href="#"><i class="fa-regular fa-user nav__link loginBar__btnUser"></i></a>
+           
         </div>
     </nav>
 </header>

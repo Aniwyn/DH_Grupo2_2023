@@ -1,0 +1,63 @@
+/* ----------------- Main ----------------- */
+
+.profile__container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    position: relative;
+}
+
+.profile__container .central__container {
+    background-color: var(--color-translucid-black50);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+}
+
+.central__container .tittle_center {
+    position: absolute;
+    color: rgb(174, 236, 255);
+    top: -13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow:
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px var(--color-translucid-lightblue),
+    0 0 80px var(--color-translucid-lightblue),
+    0 0 90px var(--color-translucid-lightblue);
+    background-color: var(--color-translucid-lightblue50);
+    padding: 4px 10px;
+    border-radius: 5px;
+    box-shadow:
+    0 0 1px #fff,
+    0 0 4px #fff,
+    0 0 6px var(--color-translucid-lightblue),
+    0 0 8px var(--color-translucid-lightblue),
+    0 0 10px var(--color-translucid-lightblue);
+}
+
+.data_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.data_container label{
+    padding: 5px 0px;
+    
+}
+
+.data_container input{
+    background: var(--color-translucid-black50);
+    border: none;
+}
+
+.data_container input:disabled{
+    color: rgb(209, 209, 209);
+}
+
+.central__container .img__logo {
+    width: 20%;
+    align-self: center;
+}

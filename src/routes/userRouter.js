@@ -16,8 +16,7 @@ router.post('/login', userController.processLogin)
 router.get('/register', guestMiddleware, userController.register);
 router.post('/register', userController.processRegister)
 router.get('/logout', userController.logout)
-
-//router.get('/profile', authMiddleware, userController.profile)
+router.get('/profile', authMiddleware, userController.profile)
 
 
 /* EXPORTS */

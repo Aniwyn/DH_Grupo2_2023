@@ -49,11 +49,16 @@ const userController = {
 
         if(userToLogin) {
             if (bcryptjs.compareSync(req.body.password, userToLogin.password)) {
-                delete userToLogin.password
+                let userLogged = structuredClone(userToLogin)
+                delete userLogged.password
                 //guardarlo en session
-                req.session.userLogged = userToLogin
-                res.redirect("/")
-                //REDIRIGIRLO
+                req.session.userLogged = userLogged
+
+                if (req.body.remember) {
+                    res.cookie('userName', req.body.userName, {maxAge: (1000 * 60) * 2 })
+                }
+
+                return res.redirect("/")
             }
             return res.render(path.join(__dirname, "../views/users/login.ejs"), {
                 errrors: {
@@ -74,10 +79,14 @@ const userController = {
     },
 
     logout: (req,res) => {
+        res.clearCookie('userName')
         req.session.destroy()
         return res.redirect('/')
+    },
+    profile: (req,res) => {
+        console.log(req.cookies.userName);
+        res.render(path.join(__dirname, "../views/users/profile.ejs"))
     }
-
 }
 
 /* EXPORTS */
