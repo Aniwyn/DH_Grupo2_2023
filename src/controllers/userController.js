@@ -16,14 +16,15 @@ const userController = {
         res.render(path.join(__dirname, "../views/users/register.ejs"));
     },
     processRegister: function (req, res) {
-        let userInDB = UserMethod.searchField('email', req.body.email)
         let errors = validationResult(req)
 
-        if (errors) {
+
+        if (!errors.isEmpty()) {
             res.render(path.join(__dirname, "../views/users/register.ejs"), { errors: errors.mapped(), old: req.body });
         } else {
+            let userInDB = UserMethod.searchField('email', req.body.email)
             if (userInDB) {
-                return res.render('/register', {
+                return res.render(path.join(__dirname, "../views/users/register.ejs"), {
                     errors: {
                         email: {
                             msg: 'Este email ya esta registrado'
@@ -33,8 +34,19 @@ const userController = {
                 })
             }
 
+            userInDB = UserMethod.searchField('userName', req.body.userName)
+            if (userInDB) {
+                return res.render(path.join(__dirname, "../views/users/register.ejs"), {
+                    errors: {
+                        userName: {
+                            msg: 'Este usuario ya esta registrado'
+                        }
+                    },
+                    oldData: req.body
+                })
+            }
+
             delete req.body.password_repeat
-            
             let userToCreate = {
                 ...req.body,
                 password: bcryptjs.hashSync(req.body.password, 10)
