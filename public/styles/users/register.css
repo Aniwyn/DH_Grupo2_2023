@@ -44,6 +44,16 @@
     color: white;
 }
 
+.register__container .container__form .container__input .errorMessage {
+    color: var(--color-red);
+    font-size: 0.9rem;
+    padding-top: 0.2rem;
+    text-shadow: 0 0 1px var(--color-red),
+        0 0 1px var(--color-red),
+        0 0 2px var(--color-red),
+        0 0 3px var(--color-red);
+}
+
 .register__container .container__form button {
     margin-top: 10px;
     padding: 10px 20px;

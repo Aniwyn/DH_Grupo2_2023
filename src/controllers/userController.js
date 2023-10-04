@@ -9,7 +9,6 @@ const { validationResult } = require('express-validator')
 /* GETS SET */
 const userController = {
     home: (req, res) => {
-        console.log("Enmtre en e lget");
         res.render(path.join(__dirname, "../views/users/home.ejs"), { BD: BD_provisoria });
     },
     register: (req, res) => {
@@ -18,9 +17,8 @@ const userController = {
     processRegister: function (req, res) {
         let errors = validationResult(req)
 
-
         if (!errors.isEmpty()) {
-            res.render(path.join(__dirname, "../views/users/register.ejs"), { errors: errors.mapped(), old: req.body });
+            res.render(path.join(__dirname, "../views/users/register.ejs"), { errors: errors.array(), old: req.body });
         } else {
             let userInDB = UserMethod.searchField('email', req.body.email)
             if (userInDB) {
@@ -65,21 +63,18 @@ const userController = {
         let errors = validationResult(req)
 
         if (!errors.isEmpty()) {
-            console.log(errors.array())
             res.render(path.join(__dirname, "../views/users/login.ejs"), { errors: errors.array(), old: req.body });
         } else {
             if(userToLogin) {
-                console.log('usertologin')
                 if (bcryptjs.compareSync(req.body.password, userToLogin.password)) {
                     let userLogged = structuredClone(userToLogin)
                     delete userLogged.password
-                    //guardarlo en session
+                    // Guardarlo en session
                     req.session.userLogged = userLogged
     
                     if (req.body.remember) {
                         res.cookie('userName', req.body.userName, {maxAge: (1000 * 60) * 2 })
                     }
-    
                     return res.redirect("/")
                 }
                 return res.render(path.join(__dirname, "../views/users/login.ejs"), {
@@ -91,8 +86,6 @@ const userController = {
                 })
             }
     
-            console.log('error password')
-            console.log()
             return res.render(path.join(__dirname, "../views/users/login.ejs"), {
                 errors: [{
                     msg: "No se encuentra este nombre de usuario registrado.",
@@ -108,7 +101,6 @@ const userController = {
         return res.redirect('/')
     },
     profile: (req,res) => {
-        console.log(req.cookies.userName);
         res.render(path.join(__dirname, "../views/users/profile.ejs"))
     }
 }

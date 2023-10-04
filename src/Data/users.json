@@ -5,5 +5,12 @@
     "userName": "tiano",
     "email": "kanashiiguree@gmail.com",
     "password": "$2a$10$2A8fz2G6RYJNlVAEYNV7JOgUa2xiwhi2k8rRevqcxo.Bgi78tWoae"
+  },
+  {
+    "id": 1,
+    "name": "asd",
+    "userName": "asd",
+    "email": "asd@a.aas",
+    "password": "$2a$10$bMsVDdcxgotyniIatbS9VuDp1EQFQwGAnyss/jJJsgPA4YZmu2nuS"
   }
 ]

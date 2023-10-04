@@ -21,27 +21,53 @@
                         En los confines digitales de la realidad, un código ancestral se manifiesta como una red
                         interconectada de posibilidades. En este vasto cosmos cibernético, una figura misteriosa emerge de las sombras,
                         destinada a moldear su propia leyenda. Un ser virtual conocido como <input type="text"
-                            id="nombre" name="name" placeholder="Ingresa tu nombre..." required>
+                            id="nombre" name="name" placeholder="Ingresa tu nombre..." required
+                            value="<%= locals.old && old.userName ? old.name : '' %>"
+                            >
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'name') %>
+                            <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                     <div class="container__input">
                         Pero un héroe sin un alias es solo un fragmento del código. ¿Cómo te llamarás jugador? <input
-                            type="text" id="apodo" name="userName" placeholder="Ingresa tu apodo..." required>
+                            type="text" id="apodo" name="userName" placeholder="Ingresa tu apodo..." required
+                            value="<%= locals.old && old.userName ? old.userName : '' %>"
+                            >
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'userName') %>
+                            <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                     <div class="container__input">
                         En este reino de bytes y circuitos, la comunicación fluye a través de canales insondables. El
                         canal que te unirá a otros exploradores de la matriz es <input type="email" id="email"
-                            name="email" placeholder="Ingresa tu Email..." required>
+                            name="email" placeholder="Ingresa tu Email..." required
+                            value="<%= locals.old && old.email ? old.email : '' %>"
+                            >
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'email') %>
+                            <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                     <div class="container__input">
                         Y así, [ingresa nombre], forjaste tu contraseña, un patrón de seguridad único entre la corriente
                         de datos. Como un algoritmo inscrito en los cimientos de la realidad virtual el cual era <input
                             type="password" id="contrasena" name="password" placeholder="Contraseña" required>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'password') %>
+                            <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                     <div class="container__input">
                         Pero incluso en este laberinto de información, la simetría es clave. La confirmación de tu
                         contraseña sella la conexión entre tu esencia y la marea de información que te rodea <input type="password"
                             id="repetir-contrasena" name="password_repeat" placeholder="Repetir contraseña"
-                            required>.
+                            required>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'password_repeat') %>
+                            <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
                 <button type="submit">Registrarse</button>
