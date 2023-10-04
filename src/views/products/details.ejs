@@ -75,14 +75,16 @@
                     </div>
                 </div>
             </div>
-            <a href="/details/<%= data_item.id %>/edit" class="dashboard__edit">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-            </a>
-            <form action="<%= data_item.id %>/?_method=DELETE" method="POST">
-                <button type="submit" class="dashboard__delete">
-                    <i class="fa-regular fa-trash-can"></i>
-                </button>
-            </form>
+            <% if (locals.isLogged) { %>
+                <a href="/details/<%= data_item.id %>/edit" class="dashboard__edit">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </a>
+                <form action="<%= data_item.id %>/?_method=DELETE" method="POST">
+                    <button type="submit" class="dashboard__delete">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </form>
+            <% } %>
         </section>
 
         <h2 class="section__tittle">Descripción general</h2>

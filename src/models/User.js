@@ -28,10 +28,17 @@ const userMethod = {
         }
         return 0
     },
+    generateAvatar: function() {
+        let monsterDir = ['monster0.png','monster1.png','monster2.png','monster3.png']
+
+        return monsterDir[Math.floor(Math.random() * monsterDir.length)]
+    },
     create: function(userData) {
         let newUser = {
             id: this.generateId(),
-            ...userData
+            ...userData,
+            category: 'user',
+            avatar: this.generateAvatar()
         }
         BD_provisoria.push(newUser) 
 
