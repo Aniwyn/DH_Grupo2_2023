@@ -18,6 +18,8 @@ router.get('/register', guestMiddleware, userController.register);
 router.post('/register', validateRegisterMiddleware, userController.processRegister)
 router.get('/logout', userController.logout)
 router.get('/profile', authMiddleware, userController.profile)
+router.get('/profile/edit', authMiddleware, userController.edit_profile)
+router.put('/profile/edit',upload.single('avatar') , userController.put)
 
 
 /* EXPORTS */

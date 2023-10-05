@@ -14,7 +14,7 @@ const userMethod = {
         return require(path.join(__dirname, "../../src/Data/BD")).users
     },
     searchId: function(id){
-        let userFound = BD_provisoria.find(oneUser => oneUser.id === id)
+        let userFound = BD_provisoria.find(oneUser => oneUser.id == id)
         return userFound
     },
     searchField: function (field, text) {
@@ -63,7 +63,20 @@ const userMethod = {
         return true
     },
     edit: function (userData) {
+        for (let i = 0; i < BD_provisoria.length; i++) {
+            if (BD_provisoria[i].id === userData.id) {
+                BD_provisoria[i] = userData
+            }
+        }
 
+        fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            console.log("Se sobreescribio correctamente el Usuario");
+        })
+        return true
     }
 }
 

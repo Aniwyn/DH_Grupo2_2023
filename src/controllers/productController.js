@@ -301,13 +301,13 @@ const productController = {
             }
             else {
                 /*Si es que el id si es el que queremos eliminar borramos al foto */
-                fsPromises.unlink(path.join(`${__dirname}/../..`, BD_provisoria[i].image))
+                fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[i].image))
                     .then(() => {
                         console.log('Foto eliminada con exito')
                     }).catch(err => {
                         console.error('Hubo algun error en eliminar la foto del producto', err)
                     })
-                fsPromises.unlink(path.join(`${__dirname}/../..`, BD_provisoria[i].gameplay))
+                fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[i].gameplay))
                     .then(() => {
                         console.log('Foto eliminada con exito')
                     }).catch(err => {

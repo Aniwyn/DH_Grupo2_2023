@@ -6,6 +6,26 @@
 <head>
     <%- include('../partials/head.ejs') %>
         <link rel="stylesheet" type="text/css" href="/styles/users/profile.css" />
+
+
+        <script>
+            const profilePictureInput = document.getElementById('avatar');
+            const profilePicturePreview = document.getElementById('avatar_preview');
+    
+            profilePictureInput.addEventListener('change', function() {
+                const file = profilePictureInput.files[0]
+    
+                if(file) {
+                    const imgURL = URL.createObjectURL(file)
+    
+                    profilePicturePreview.src = imgURL
+    
+                    profilePicturePreview.onload = function() {
+                        URL.revokeObjectURL(imgURL)
+                    }
+                }
+            })
+        </script>
 </head>
 
 
@@ -15,25 +35,51 @@
 
     <%-include('../partials/header.ejs')%>
 
-        <main>
-            <div class="profile__container">
-                <div class="central__container">
-                    <div class="tittle_center">
-                        INFORMACIÓN DE LA CUENTA
-                    </div>
-                    <form action="" class="data_container">
-                        <img class="img__logo" src="/images/avatars/monster.png" alt="">
-
-                        <label for="user">Nombre de Usuario</label>
-                        <input type="text", name="user", value="<%= locals.userLogged.userName %>" disabled>
-
-                        <label for="email">Email</label>
-                        <input type="text", name="email", value="<%= locals.userLogged.email %>" disabled>
-                    </form>
+    <main>
+        <div class="profile__container">
+            <div class="central__container">
+                <div class="tittle_center">
+                    INFORMACIÓN DE LA CUENTA
                 </div>
-            </div>
-        </main>
-        <!---------------------------- Footer ---------------------------->
+                <form class="data_container" action="edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="img_avatar">
+                        <img src="/images/upload/<%= locals.userLogged.avatar %>" alt="" id="avatar_preview">
+                    </div>
 
-        <%- include('../partials/footer.ejs') %>
+                    <% if (isEdit) { %>
+                        <label class="label__avatar" for="avatar">
+                            <i class="fa-solid fa-pen"></i>
+                        </label>
+                        <input class="input__avatar" type="file" name="avatar" id="avatar" accept="image/*">
+                    <% } %>
+
+                    <input class="hidden_input" type="text", name="id", value="<%= locals.userLogged.id %>">
+
+                    <label for="user">Nombre de Usuario</label>
+                    <input type="text", name="userName", value="<%= locals.userLogged.userName %>" <% if (!isEdit) { %>
+                     disabled
+                    <% } %>>
+
+                    <label for="email">Email</label>
+                    <input type="text", name="email", value="<%= locals.userLogged.email %>" <% if (!isEdit) { %>
+                     disabled
+                    <% } %>>
+                    
+                    <% if (isEdit) { %>
+                        <button type="submit" class="submit_btn">
+                            Guardar cambios
+                        </button>
+                    <% } %>
+                    <% if (!isEdit) { %>
+                        <a class="enter_edit" href="/profile/edit"><i class="fa-solid fa-screwdriver-wrench"> </i></a>
+                    <% } %>
+                </form>
+
+            </div>
+        </div>
+    </main>
+    <!---------------------------- Footer ---------------------------->
+
+    <%- include('../partials/footer.ejs') %>
+
 </body>

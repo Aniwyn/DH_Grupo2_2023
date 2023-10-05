@@ -23,24 +23,22 @@ const userController = {
             let userInDB = UserMethod.searchField('email', req.body.email)
             if (userInDB) {
                 return res.render(path.join(__dirname, "../views/users/register.ejs"), {
-                    errors: {
-                        email: {
-                            msg: 'Este email ya esta registrado'
-                        }
-                    },
-                    oldData: req.body
+                    errors: [{
+                        msg: 'Este email ya esta registrado',
+                        path: 'email'
+                    }],
+                    old: req.body
                 })
             }
 
             userInDB = UserMethod.searchField('userName', req.body.userName)
             if (userInDB) {
                 return res.render(path.join(__dirname, "../views/users/register.ejs"), {
-                    errors: {
-                        userName: {
-                            msg: 'Este usuario ya esta registrado'
-                        }
-                    },
-                    oldData: req.body
+                    errors: [{
+                        msg: 'Este usuario ya esta registrado',
+                        path: 'userName'
+                    }],
+                    old: req.body
                 })
             }
 
@@ -65,15 +63,15 @@ const userController = {
         if (!errors.isEmpty()) {
             res.render(path.join(__dirname, "../views/users/login.ejs"), { errors: errors.array(), old: req.body });
         } else {
-            if(userToLogin) {
+            if (userToLogin) {
                 if (bcryptjs.compareSync(req.body.password, userToLogin.password)) {
                     let userLogged = structuredClone(userToLogin)
                     delete userLogged.password
                     // Guardarlo en session
                     req.session.userLogged = userLogged
-    
+
                     if (req.body.remember) {
-                        res.cookie('userName', req.body.userName, {maxAge: (1000 * 60) * 2 })
+                        res.cookie('userName', req.body.userName, { maxAge: (1000 * 60) * 2 })
                     }
                     return res.redirect("/")
                 }
@@ -85,7 +83,7 @@ const userController = {
                     old: req.body
                 })
             }
-    
+
             return res.render(path.join(__dirname, "../views/users/login.ejs"), {
                 errors: [{
                     msg: "No se encuentra este nombre de usuario registrado.",
@@ -95,13 +93,41 @@ const userController = {
             })
         }
     },
-    logout: (req,res) => {
+    logout: (req, res) => {
         res.clearCookie('userName')
         req.session.destroy()
         return res.redirect('/')
     },
-    profile: (req,res) => {
-        res.render(path.join(__dirname, "../views/users/profile.ejs"))
+    profile: (req, res) => {
+        res.render(path.join(__dirname, "../views/users/profile.ejs"), { isEdit: false })
+    },
+    edit_profile: (req, res) => {
+        res.render(path.join(__dirname, "../views/users/profile.ejs"), { isEdit: true })
+    },
+    put: (req, res) => {
+        let avatar_image = req.file
+        let userData = req.body
+        let userInBD = UserMethod.searchId(userData.id)
+        // return res.send(userInBD)
+        let editedUser = {}
+        if (userData) {
+            editedUser = {
+                ...userInBD,
+                userName: userData.userName,
+                email: userData.email,
+                avatar: avatar_image ? avatar_image.filename : userInBD.avatar
+            }
+        }
+
+        let editReady = UserMethod.edit(editedUser)
+        
+        req.session.destroy()
+        let userToSession = structuredClone(editedUser)
+        delete userToSession.password
+        req.session.userLogged = userToSession
+        res.clearCookie('userName')
+
+        res.redirect('/profile')
     }
 }
 

@@ -1,16 +1,29 @@
 [
   {
     "id": 0,
-    "name": "Jona",
+    "name": "tiano",
     "userName": "tiano",
     "email": "kanashiiguree@gmail.com",
-    "password": "$2a$10$2A8fz2G6RYJNlVAEYNV7JOgUa2xiwhi2k8rRevqcxo.Bgi78tWoae"
+    "password": "$2a$10$qUMuwqhXHLbGFH5pdHE2YO3kDfXkcvdqAKC0Ti3ulm.edHsyn4Ot.",
+    "category": "user",
+    "avatar": "monster0.png"
   },
   {
     "id": 1,
-    "name": "asd",
-    "userName": "asd",
-    "email": "asd@a.aas",
-    "password": "$2a$10$bMsVDdcxgotyniIatbS9VuDp1EQFQwGAnyss/jJJsgPA4YZmu2nuS"
+    "name": "mario",
+    "userName": "mario",
+    "email": "533kevin335@live.com.ar",
+    "password": "$2a$10$nnCnGHnf0FRTrRLGcI8BbOo8fxWAi0BGUO8rXIhbKbNX2T2Cybqb.",
+    "category": "user",
+    "avatar": "2023-10-04-Sin tÃ­tulo.png"
+  },
+  {
+    "id": 2,
+    "name": "Jona",
+    "userName": "Mirta",
+    "email": "barriobajo@gmail.com",
+    "password": "$2a$10$VMg6OazfvVVbUmmgFBkniOiqGM3zUiZCVNigJ7Tbgs.5YwA1Rm6CW",
+    "category": "user",
+    "avatar": "monster2.png"
   }
 ]
