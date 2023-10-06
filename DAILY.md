@@ -195,3 +195,84 @@ En este sprint (3) implementamos la ceremonia daily de una manera bisemanal, deb
  - ¿Impedimentos para lograr tus objetivos?: "Impedimentos no tuve, solo el tiempo personal".
 
  - ¿Que vas a hacer hasta la siguiente?: "La tarea de /products/id: (PUT)".
+
+
+
+# SPRINT 5 #
+
+
+### Primer daily (25/09/23):
+
+ # Pablo Sales: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "No pude avanzar en este sprint, pero estoy poniendome al dia con las clases".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Por el momento mi impedimento es el tiempo personal, cuando me surjan otros inconvenientes no dudaré en comunicarlos".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Y por ultimo, pienso tratar de realizar alguna tarjeta".
+
+
+
+  # Yamila Blas: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Desde la ultima reunión no pude realizar nada más que tratar de ponerme al dia ".
+
+ - ¿Impedimentos para lograr tus objetivos?: "En este momento mi impedimento es la conección ya que estppy de viaje y no pude traer conmigo mi herramienta de trabajo(computadora)".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Para la proxima voy a tratar de realizar alguna actividad pendiente  y grabar los Dailys".
+
+
+  # Alexis Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Lo que pude realizar fue  la implementación de ruta de Huéspedes y revisar algunos detalles anteriores ".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Un pequeño inconveniente que tuve fue que no entendia algunos detalles pero al fianla si pude avanzar".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Y voy a seguir con la tarjeta de rutas para terminar de implementar la de Usuarios".
+
+
+  # Kevin Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Bueno, pude y terminé de implementar la entidad de usuario".
+
+ - ¿Impedimentos para lograr tus objetivos?: "De momento el impedimento que tuve fue el tiempo personal,solo eso".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Voy  a terminar de implementar el registro de usuario y el login para usuario".
+
+### Segundo daily (01/10/23):
+
+ # Pablo Sales: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Para esta reunión logré hacer avances en la tarjeta que agarré que fue el RETRO.md".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mi impedimento fue mi tiempo personal más que nada".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Para la proxima voy a terminar de realizar la RETRO.md".
+
+
+
+  # Yamila Blas: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Me puse al dia con las clases y el contenido, grabé los Dailys y ya realicé su estructura".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mi mayor impedimento fue el tiempo personal ya que estaba en tiempo de examen en mi escuela".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Voy a estar al dia con el contenido y voy a terminar de realizar el Daily".
+
+
+  # Alexis Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Desde la ultima reunión terminé de implementar las rutas de usuarios ".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mi unico impedimento fue mi tiempo personal, debido a mis horarios de la facultad".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Tengo pensado revisar los campos de JSON de usuarios".
+
+
+  # Kevin Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Terminé de realizar las tarjetas que agarre, las cuales fueron la Implementación del regisro de usuario y el login para usuario".
+
+ - ¿Impedimentos para lograr tus objetivos?: "PPara este print no tuve impedimentos, más el de siempre, mi tiempo personal".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Para finalizar, pienso agarrar las últimas targetas por realizar que son la Página de Pefil y controlar algunas Funciones".
