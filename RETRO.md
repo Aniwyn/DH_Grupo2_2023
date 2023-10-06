@@ -50,9 +50,10 @@
 
 
 
-## 4️⃣ Retrospectiva Sprint 4
+## 5️⃣ Retrospectiva Sprint 5
 
 ### Empezar a hacer: 
+    - Juntarnos a programar en simultaneo
     
 ### Hacer más:
     - Aumentar la comunicacion entre integrantes del equipo
@@ -71,4 +72,4 @@
     - Retrasar las tareas hasta ultimo momento
 
 ### Resumen
-    En este 4to sprint hubo mas participacion de parte de todos los integrantes, respecto a las reuniones y tareas pero faltan aspectos por pulir. Tambien buena predisposicion por parte de los q estan mas avanzados para ayudar a los q mas impedimentos tienen con sus tareas. Debido a que todos son estudiantes (de universidad/secundario) el tiempo paso a ser un recurso escaso para todos pero estamos en proceso de administrarlo mejor y que a la larga deje de ser un problema. El entusiasmo por aprender y desenvolvernos de la mejor manera posible es algo que no le falta al equipo.
+    En este sprint hemos perdido a un integrante del equipo por lo que se dificulto la realizacion del mismo. Varios de nosotros tuvimos como impedimento el tiempo personal debido a que todos somos estudiantes de diferentes niveles pero con sus respectivas responsabilidades cada uno. Se agradece la paciencia y el tiempo de prorroga para la entrega del sprint, ya que somos capaces pero el tiempo es un recurso que escasea.
