@@ -5,7 +5,7 @@
 
 Somos una tienda apasionada por el universo gaming, ofreciendo una gran selección de consolas y videojuegos retro, así como los títulos más actuales y todo lo que necesitas para vivir una experiencia única en el mundo de los videojuegos.
 
-En (nombre >.<), revivimos la magia de los clásicos con consolas y juegos que marcaron una era dorada en la industria del entretenimiento digital, pero tambien estamos firmemente arraigados en el presente, manteniendonos actualizados con los últimos lanzamientos para las consolas más modernas.
+En Gamebook, revivimos la magia de los clásicos con consolas y juegos que marcaron una era dorada en la industria del entretenimiento digital, pero tambien estamos firmemente arraigados en el presente, manteniendonos actualizados con los últimos lanzamientos para las consolas más modernas.
 
 El amor por los videojuegos va más allá de jugarlos, por eso nuestra sección de merchandising te ofrece una amplia gama de productos inspirados en tus franquicias favoritas, desde camisetas y sudaderas con diseños únicos hasta tazas, llaveros y posters. Aquí encontrarás la manera perfecta de mostrar tu pasión por los videojuegos al mundo.
 
