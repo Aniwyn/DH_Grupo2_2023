@@ -65,3 +65,7 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 ### login
 
 ![Login](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/wireframes/Login.png)
+
+### Datebase design
+
+![Datebase design](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/database_design.png)
