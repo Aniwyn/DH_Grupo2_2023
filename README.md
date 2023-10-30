@@ -68,4 +68,4 @@ Tambien estamos comprometidos con entusiastas de los videojuegos actuales, perso
 
 ### Datebase design
 
-![Datebase design](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/database_design.png)
+![Datebase design](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/database_design.jpg)
