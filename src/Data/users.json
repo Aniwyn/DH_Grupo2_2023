@@ -25,5 +25,14 @@
     "password": "$2a$10$VMg6OazfvVVbUmmgFBkniOiqGM3zUiZCVNigJ7Tbgs.5YwA1Rm6CW",
     "category": "user",
     "avatar": "monster2.png"
+  },
+  {
+    "id": 3,
+    "name": "root",
+    "userName": "root",
+    "email": "javier@root.com",
+    "password": "$2a$10$B9ydnT.71VWCIxagot68J.MKycUowh7y5U/aujqPB1tbUOEMb4jV.",
+    "category": "user",
+    "avatar": "monster0.png"
   }
 ]
