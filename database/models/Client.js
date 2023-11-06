@@ -29,22 +29,23 @@ function client(sequelize, DataTypes) {
 			timestamps: false
         }
     )
-    return Client
 
     Client.associate = (models) => {
-        Client.belongsTo(models.Client_category, {
+        Client.hasMany(models.Category, {
             as: 'client_category',
-            foreign_key: 'id_category'
+            foreignKey: 'id_category'
         })
 
         Client.belongsToMany(models.Cart, {
             as: 'cart',
             through: 'cart',
-            foreign_key: 'id_client',
+            foreignKey: 'id_client',
             otherKey: 'id_product',
             timestamps: false
         })
     }
+
+    return Client
 }
 
 module.exports = client
