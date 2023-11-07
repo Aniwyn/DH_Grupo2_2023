@@ -3,7 +3,8 @@ function category(sequelize, DataTypes) {
         'Category',
         {
             id: {
-                type: DataTypes.INTEGER
+                type: DataTypes.INTEGER,
+                primaryKey: true
             },
             name: {
                 type: DataTypes.STRING(40)

@@ -13,7 +13,8 @@
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.6.2",
     "render": "^0.1.4",
-    "sequelize": "5.21"
+    "sequelize": "5.21",
+    "sequelize-cli": "^6.6.2"
   },
   "name": "dh_grupo2_2023",
   "description": "![icono](https://github.com/Aniwyn/DH_Grupo2_2023/blob/main/extra/icono.png)",

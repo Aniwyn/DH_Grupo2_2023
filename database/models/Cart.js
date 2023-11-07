@@ -3,7 +3,8 @@ function cart(sequelize, DataTypes) {
         'Cart',
         {
             id: {
-                type: DataTypes.INTEGER
+                type: DataTypes.INTEGER,
+                primaryKey: true
             },
             quantity: {
                 type: DataTypes.INTEGER

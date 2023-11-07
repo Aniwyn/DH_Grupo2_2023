@@ -3,7 +3,8 @@ function client(sequelize, DataTypes) {
         'Client',
         {
             id: {
-                type: DataTypes.INTEGER
+                type: DataTypes.INTEGER,
+                primaryKey: true
             },
             name: {
                 type: DataTypes.STRING(50)
