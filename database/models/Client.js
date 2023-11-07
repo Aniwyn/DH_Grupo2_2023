@@ -4,25 +4,33 @@ function client(sequelize, DataTypes) {
         {
             id: {
                 type: DataTypes.INTEGER,
-                primaryKey: true
+                primaryKey: true,
+                allowNull: false,
+                autoIncrement: true
             },
             name: {
-                type: DataTypes.STRING(50)
+                type: DataTypes.STRING(50),
+                allowNull: false
             },
             user_name: {
-                type: DataTypes.STRING(20)
+                type: DataTypes.STRING(20),
+                allowNull: false
             },
             email: {
-                type: DataTypes.STRING(80)
+                type: DataTypes.STRING(80),
+                allowNull: false
             },
             password_hash: {
-                type: DataTypes.STRING(100)
+                type: DataTypes.STRING(100),
+                allowNull: false
             },
             avatar: {
-                type: DataTypes.STRING(50)
+                type: DataTypes.STRING(50),
+                allowNull: false
             },
             id_category: {
-                type: DataTypes.INTEGER
+                type: DataTypes.INTEGER,
+                allowNull: false
             }
         },
         {

@@ -4,16 +4,21 @@ function cart(sequelize, DataTypes) {
         {
             id: {
                 type: DataTypes.INTEGER,
-                primaryKey: true
+                primaryKey: true,
+                allowNull: false,
+                autoIncrement: true
             },
             quantity: {
-                type: DataTypes.INTEGER
+                type: DataTypes.INTEGER,
+                allowNull: false
             },
             id_product: {
-                type: DataTypes.INTEGER
+                type: DataTypes.INTEGER,
+                allowNull: false
             },
             id_client: {
-                type: DataTypes.INTEGER
+                type: DataTypes.INTEGER,
+                allowNull: false
             }
         },
         {

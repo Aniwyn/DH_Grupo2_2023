@@ -4,13 +4,17 @@ function rating_pegi(sequelize, DataTypes) {
         {
             id: {
                 type: DataTypes.INTEGER,
-                primaryKey: true
+                primaryKey: true,
+                autoIncrement: true,
+                allowNull: false
             },
             name: {
-                type: DataTypes.STRING(40)
+                type: DataTypes.STRING(40),
+                allowNull: false
             },
             image: {
-                type: DataTypes.STRING(40)
+                type: DataTypes.STRING(40),
+                allowNull: false
             }
         },
         {

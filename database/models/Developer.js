@@ -4,10 +4,13 @@ function developer(sequelize, DataTypes) {
         {
             id: {
                 type: DataTypes.INTEGER,
-                primaryKey: true
+                primaryKey: true,
+                allowNull: false,
+                autoIncrement: true
             },
             name: {
-                type: DataTypes.STRING(50)
+                type: DataTypes.STRING(50),
+                allowNull: false
             }
         },
         {

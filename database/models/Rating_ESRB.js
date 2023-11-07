@@ -4,13 +4,17 @@ function rating_esrb(sequelize, DataTypes) {
         {
             id: {
                 type: DataTypes.INTEGER,
-                primaryKey: true
+                primaryKey: true,
+                allowNull: false,
+                autoIncrement: true
             },
             name: {
-                type: DataTypes.STRING(40)
+                type: DataTypes.STRING(40),
+                allowNull: false
             },
             image: {
-                type: DataTypes.STRING(40)
+                type: DataTypes.STRING(40),
+                allowNull: false
             }
         },
         {
