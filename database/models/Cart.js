@@ -29,7 +29,23 @@ function cart(sequelize, DataTypes) {
     
 
     Cart.associate = (models) => {
-        
+        Cart.belongsTo(models.Client, {
+            as: 'client',
+            foreignKey: 'id_client'
+        })
+
+        // Cart.hasMany(models.Product, {
+        //     as: 'products',
+        //     foreignKey: 'id_product'
+        // })
+
+        Cart.belongsToMany(models.Product, {
+            as: 'cart_product',
+            through: 'product_cart',
+            foreignKey: 'id_cart',
+            otherKey: 'id_product',
+            timestamps: false
+        })
     }
 
     return Cart

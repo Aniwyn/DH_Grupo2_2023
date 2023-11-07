@@ -19,6 +19,13 @@ function format(sequelize, DataTypes) {
         }
     )
 
+    Format.associate = (models) => {
+        Format.hasMany(models.Products, {
+            as: 'products',
+            foreignKey: 'id_format'
+        })
+    }
+
     return Format
 }
 

@@ -23,6 +23,13 @@ function rating_pegi(sequelize, DataTypes) {
         }
     )
 
+    Rating_PEGI.associate = (models) => {
+        Rating_PEGI.hasMany(models.Products, {
+            as: 'products',
+            foreignKey: 'id_rating_pegi'
+        })
+    }
+
     return Rating_PEGI
 }
 

@@ -19,6 +19,13 @@ function developer(sequelize, DataTypes) {
         }
     )
 
+    Developer.associate = (models) => {
+        Developer.hasMany(models.Products, {
+            as: 'products',
+            foreignKey: 'id_developer'
+        })
+    }
+
     return Developer
 }
 

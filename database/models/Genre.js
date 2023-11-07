@@ -19,6 +19,16 @@ function genre(sequelize, DataTypes) {
         }
     )
 
+    Genre.associate = (models) => {
+        Genre.belongsToMany(models.Product, {
+            as: 'genre_product',
+            through: 'product_genre',
+            foreignKey: 'id_genre',
+            otherKey: 'id_product',
+            timestamps: false
+        })
+    }
+ 
     return Genre
 }
 

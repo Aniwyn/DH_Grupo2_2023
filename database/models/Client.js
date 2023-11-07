@@ -40,17 +40,14 @@ function client(sequelize, DataTypes) {
     )
 
     Client.associate = (models) => {
-        Client.hasMany(models.Category, {
+        Client.belongsTo(models.Category, {
             as: 'client_category',
             foreignKey: 'id_category'
         })
 
-        Client.belongsToMany(models.Cart, {
-            as: 'cart',
-            through: 'cart',
-            foreignKey: 'id_client',
-            otherKey: 'id_product',
-            timestamps: false
+        Client.hasMany(models.Cart, {
+            as: 'carts',
+            foreignKey: 'id_client'
         })
     }
 

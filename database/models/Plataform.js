@@ -19,6 +19,16 @@ function platform(sequelize, DataTypes) {
         }
     )
 
+    Platform.associate = (models) => {
+        Platform.belongsToMany(models.Product, {
+            as: 'platform_product',
+            through: 'product_platform',
+            foreignKey: 'id_platform',
+            otherKey: 'id_product',
+            timestamps: false
+        })
+    }
+
     return Platform
 }
 
