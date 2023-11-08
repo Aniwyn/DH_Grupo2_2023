@@ -196,6 +196,8 @@ En este sprint (3) implementamos la ceremonia daily de una manera bisemanal, deb
 
  - ¿Que vas a hacer hasta la siguiente?: "La tarea de /products/id: (PUT)".
 
+
+
  # SPRINT 5 #
 
 
