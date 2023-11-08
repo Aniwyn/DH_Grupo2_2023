@@ -1,6 +1,6 @@
 function format(sequelize, DataTypes) {
     const Format = sequelize.define(
-        'Developer',
+        'Format',
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -20,8 +20,8 @@ function format(sequelize, DataTypes) {
     )
 
     Format.associate = (models) => {
-        Format.hasMany(models.Products, {
-            as: 'products',
+        Format.hasMany(models.Product, {
+            as: 'productsasd',
             foreignKey: 'id_format'
         })
     }

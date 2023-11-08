@@ -24,8 +24,8 @@ function rating_esrb(sequelize, DataTypes) {
     )
 
     Rating_ESRB.associate = (models) => {
-        Rating_ESRB.hasMany(models.Products, {
-            as: 'products',
+        Rating_ESRB.hasMany(models.Product, {
+            as: 'productsasdsa',
             foreignKey: 'id_rating_esrb'
         })
     }

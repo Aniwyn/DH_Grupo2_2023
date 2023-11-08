@@ -21,8 +21,8 @@ function category(sequelize, DataTypes) {
     
 
     Category.associate = (models) => {
-        Category.hasMany(models.Client_category, {
-            as: 'client_category',
+        Category.hasMany(models.User, {
+            as: 'user_category',
             foreign_key: 'id_category'
         })
     }

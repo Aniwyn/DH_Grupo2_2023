@@ -2,6 +2,7 @@
 const path = require("path")
 const bcryptjs = require('bcryptjs')
 let BD_provisoria = require(path.join(__dirname, "../Data/BD")).product
+let db = require('../../database/models')
 let UserMethod = require(path.join(__dirname, "../models/User"))
 const { validationResult } = require('express-validator')
 
@@ -9,6 +10,10 @@ const { validationResult } = require('express-validator')
 /* GETS SET */
 const userController = {
     home: (req, res) => {
+        // db.Products.findAll()
+        //     .then(products => {
+                
+        //     })
         res.render(path.join(__dirname, "../views/users/home.ejs"), { BD: BD_provisoria });
     },
     register: (req, res) => {
