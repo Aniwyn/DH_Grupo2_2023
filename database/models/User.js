@@ -1,6 +1,6 @@
 function client(sequelize, DataTypes) {
     const Client = sequelize.define(
-        'Client',
+        'User',
         {
             id: {
                 type: DataTypes.INTEGER,

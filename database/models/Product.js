@@ -94,12 +94,12 @@ function product(sequelize, DataTypes) {
         })
     
         Product.belongsTo(models.Format, {
-            as: 'developer',
+            as: 'format',
             foreignKey: 'id_format'
         })
 
         Product.belongsToMany(models.Cart, {
-            as: 'product_cart',
+            as: 'cart_product',
             through: 'product_cart',
             foreignKey: 'id_product',
             otherKey: 'id_cart',
@@ -107,7 +107,7 @@ function product(sequelize, DataTypes) {
         })
 
         Product.belongsToMany(models.Genre, {
-            as: 'product_genre',
+            as: 'product_genres',
             through: 'product_genre',
             foreignKey: 'id_product',
             otherKey: 'id_genre',
@@ -115,7 +115,7 @@ function product(sequelize, DataTypes) {
         })
 
         Product.belongsToMany(models.Platform, {
-            as: 'product_platform',
+            as: 'product_platforms',
             through: 'product_platform',
             foreignKey: 'id_product',
             otherKey: 'id_platform',

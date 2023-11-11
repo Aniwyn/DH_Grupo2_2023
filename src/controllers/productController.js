@@ -16,6 +16,7 @@ const productController = {
     },
     details: (req, res) => {
         let id = req.params.id;
+        
         let prod = BD_provisoria.filter((product) => product.id == id);
         res.render(path.join(__dirname, "../views/products/details.ejs"), { BD: BD_provisoria, data_item: prod[0] });
     },
