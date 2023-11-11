@@ -1,5 +1,90 @@
 [
   {
+    "id": 1,
+    "name": "b",
+    "sub_name": "16-Bit Cartridge",
+    "description": [
+      "                            Prepárate para enfrentar lo paranormal en \"Ghostbusters\" para Sega Genesis. Únete a un equipo de valientes cazafantasmas y adéntrate en una ciudad asediada por espíritus y entidades sobrenaturales en este clásico juego de acción y aventuras.\r\n                        ",
+      "                            \"Ghostbusters\" te coloca en el papel de un miembro novato del equipo de cazafantasmas, armado con tu mochila de protones y un objetivo claro: ¡capturar a los fantasmas que infestan la ciudad! Explora los icónicos lugares de Nueva York mientras te enfrentas a una variedad de espectros, poltergeists y apariciones maliciosas. Tendrás que desplegar tus habilidades de estrategia y apuntar con precisión para atrapar a estas criaturas traviesas y contener la amenaza paranormal.\r\n                        ",
+      "                            Conviértete en un héroe al enfrentar jefes espectrales en batallas emocionantes y resuelve acertijos espeluznantes en tu búsqueda por limpiar la ciudad de la actividad fantasmal. Con cada captura exitosa, ganarás fondos que puedes invertir en mejoras y equipo para tu equipo, permitiéndote enfrentar desafíos aún mayores.\r\n                        "
+    ],
+    "image": "/images/home/Ghostbuster.jpg",
+    "price": 2800,
+    "platform": [
+      [
+        "PS",
+        "fa-brands fa-playstation"
+      ],
+      [
+        "SEGA",
+        "fa-solid fa-gamepad"
+      ]
+    ],
+    "releaseDate": "2023-10-08",
+    "developer": "Sega, Compile",
+    "genre": [
+      "Acción",
+      "Aventura",
+      "Multijugador"
+    ],
+    "format": "Fisico",
+    "trailer": "https://www.youtube.com/embed/CLLXiXh1onc",
+    "gameplay": "/images/products/GHOSTBUSTERS-gameplay.jpg",
+    "ranking": [
+      [
+        "PEGI_7",
+        "/images/rankings/PEGI_7.png"
+      ],
+      [
+        "ESRB_E",
+        "/images/rankings/ESRB_E.svg"
+      ]
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sonic 2",
+    "sub_name": "The Hedgehog",
+    "description": [
+      "Acelera a través de emocionantes aventuras en \"Sonic the Hedgehog 2\". Únete al veloz erizo azul y a su inseparable compañero Tails en una misión para detener al malvado Dr. Robotnik y salvar la Isla Ángel de su maquinaria destructiva en este icónico juego de plataformas de Sega Genesis.",
+      "En \"Sonic the Hedgehog 2\", la velocidad y la diversión van de la mano mientras recorres entornos vibrantes y llenos de vida. Reúne anillos dorados para ganar vidas y velocidad mientras te deslizas a través de bucles, saltas sobre abismos y enfrentas enemigos en tu camino hacia la victoria. La incorporación de Tails como personaje jugable agrega un nuevo nivel de estrategia y posibilidades, ya que puedes elegir entre controlar a Sonic o aprovechar las habilidades de vuelo de Tails para explorar áreas ocultas.",
+      "Enfréntate al malvado Dr. Robotnik en su última hazaña diabólica y detén sus planes para conquistar la Isla Ángel. Con gráficos mejorados y nuevos obstáculos emocionantes, \"Sonic the Hedgehog 2\" te desafía a dominar cada nivel y a recolectar las preciadas Esmeraldas del Caos para desbloquear el verdadero poder de Sonic.",
+      "La música icónica y la jugabilidad rápida hacen de este juego una experiencia inolvidable para los fanáticos de Sonic y los amantes de los juegos de plataformas clásicos. Corre contra el tiempo, explora zonas secretas y demuestra que eres el erizo más rápido del planeta en \"Sonic the Hedgehog 2\". Listo para girar, saltar y correr a velocidades supersónicas, este juego te llevará en un viaje lleno de adrenalina mientras luchas por salvar la isla y derrotar al malvado Dr. Robotnik una vez más."
+    ],
+    "image": "/images/home/Sonic2.jpg",
+    "price": 3499.99,
+    "platform": [
+      [
+        "PS",
+        "fa-brands fa-playstation"
+      ],
+      [
+        "SEGA",
+        "fa-solid fa-gamepad"
+      ]
+    ],
+    "releaseDate": "2022-07-05",
+    "developer": "Sega Technical Institute",
+    "genre": [
+      "Acción",
+      "Aventura",
+      "Multijugador"
+    ],
+    "format": "Fisico",
+    "trailer": "https://www.youtube.com/embed/ytistojxzn4",
+    "gameplay": "/images/products/Sonic2-gameplay.jpg",
+    "ranking": [
+      [
+        "PEGI_7",
+        "/images/rankings/PEGI_7.png"
+      ],
+      [
+        "ESRB_E",
+        "/images/rankings/ESRB_E.svg"
+      ]
+    ]
+  },
+  {
     "id": 3,
     "name": "Earthworm Jim",
     "sub_name": "Sega Genesis",
@@ -11,7 +96,7 @@
     ],
     "image": "/images/home/Worm.jpg",
     "price": 2999.99,
-    "plataform": [
+    "platform": [
       [
         "SEGA",
         "fa-solid fa-gamepad"
@@ -23,7 +108,7 @@
     ],
     "releaseDate": "1995-03-08",
     "developer": "Shiny Entertainment",
-    "gender": [
+    "genre": [
       "Acción",
       "Aventura",
       "Un jugador"
@@ -54,7 +139,7 @@
     ],
     "image": "/images/home/TinyToon.jpg",
     "price": 3799.99,
-    "plataform": [
+    "platform": [
       [
         "SEGA",
         "fa-solid fa-gamepad"
@@ -66,7 +151,7 @@
     ],
     "releaseDate": "1990-01-18",
     "developer": "Konami",
-    "gender": [
+    "genre": [
       "Aventura",
       "Un jugador"
     ],
@@ -96,7 +181,7 @@
     ],
     "image": "/images/home/MetalSlug.jpg",
     "price": 3599.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -108,7 +193,7 @@
     ],
     "releaseDate": "2017-10-02",
     "developer": "SNK Corporation",
-    "gender": [
+    "genre": [
       "Aventura",
       "Multijugador"
     ],
@@ -138,7 +223,7 @@
     ],
     "image": "/images/home/SuperMario.jpg",
     "price": 5099.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -150,7 +235,7 @@
     ],
     "releaseDate": "2018-07-03",
     "developer": "Nintendo",
-    "gender": [
+    "genre": [
       "Acción",
       "Peleas",
       "Multijugador"
@@ -181,7 +266,7 @@
     ],
     "image": "/images/home/Warcraft.jpg",
     "price": 7199.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -189,7 +274,7 @@
     ],
     "releaseDate": "2002-07-03",
     "developer": "Blizzard Entertainment",
-    "gender": [
+    "genre": [
       "Estrategia",
       "Multijugador"
     ],
@@ -219,7 +304,7 @@
     ],
     "image": "/images/home/Zelda.jpg",
     "price": 5699.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -231,7 +316,7 @@
     ],
     "releaseDate": "2017-07-07",
     "developer": "Nintendo",
-    "gender": [
+    "genre": [
       "Acción",
       "Aventura",
       "Multijugador"
@@ -262,7 +347,7 @@
     ],
     "image": "/images/home/FF.jpg",
     "price": 17999.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -274,7 +359,7 @@
     ],
     "releaseDate": "2022-12-09",
     "developer": "Square Enix",
-    "gender": [
+    "genre": [
       "Acción",
       "RPG",
       "Un jugador"
@@ -305,7 +390,7 @@
     ],
     "image": "/images/home/madden.jpg",
     "price": 10499.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -317,7 +402,7 @@
     ],
     "releaseDate": "2023-10-08",
     "developer": "Electronic Arts",
-    "gender": [
+    "genre": [
       "Deporte",
       "Multijugador"
     ],
@@ -347,7 +432,7 @@
     ],
     "image": "/images/home/StarWars.jpg",
     "price": 14999.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -359,7 +444,7 @@
     ],
     "releaseDate": "2020-11-04",
     "developer": "DICE",
-    "gender": [
+    "genre": [
       null,
       "Multijugador"
     ],
@@ -389,7 +474,7 @@
     ],
     "image": "/images/home/Minecraft.jpg",
     "price": 9999.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -401,7 +486,7 @@
     ],
     "releaseDate": "2023-10-08",
     "developer": "Mojang",
-    "gender": [
+    "genre": [
       "Acción",
       "RPG",
       "Aventura",
@@ -424,7 +509,7 @@
   },
   {
     "id": 13,
-    "name": "Starfield",
+    "name": "STARFIELD (Early Access) + PRE-ORDER BONUS PC",
     "sub_name": "PREMIUM EDITION",
     "description": [
       "Prepárate para una aventura épica en las estrellas con \"Starfield\". En este próximo juego de rol de ciencia ficción de Bethesda Game Studios, te embarcarás en un viaje intergaláctico a mundos desconocidos, secretos ocultos y misterios inexplorados. Con la promesa de exploración, descubrimientos y una narrativa envolvente, \"Starfield\" te llevará a las profundidades del espacio como nunca antes.",
@@ -434,7 +519,7 @@
     ],
     "image": "/images/caratulas/Starfield.jpg",
     "price": 21586.59,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -446,7 +531,7 @@
     ],
     "releaseDate": "2023-10-08",
     "developer": "Bethesda Game Studios",
-    "gender": [
+    "genre": [
       "Acción",
       "Multijugador"
     ],
@@ -476,7 +561,7 @@
     ],
     "image": "/images/home/aoe2.png",
     "price": 2999.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -484,7 +569,7 @@
     ],
     "releaseDate": "2000-08-24",
     "developer": "Microsoft Studios",
-    "gender": [
+    "genre": [
       "Estrategia",
       "Historia",
       "Simulación",
@@ -517,7 +602,7 @@
     ],
     "image": "/images/home/spore.png",
     "price": 3499.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -525,7 +610,7 @@
     ],
     "releaseDate": "2008-09-04",
     "developer": "Maxis",
-    "gender": [
+    "genre": [
       "Simulación",
       "Estrategia",
       "Exploración"
@@ -557,7 +642,7 @@
     ],
     "image": "/images/home/meandromeda.png",
     "price": 17999.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -573,7 +658,7 @@
     ],
     "releaseDate": "2017-03-21",
     "developer": "BioWare",
-    "gender": [
+    "genre": [
       "Acción",
       "RPG",
       "Ciencia Ficción",
@@ -606,7 +691,7 @@
     ],
     "image": "/images/home/skyrim.png",
     "price": 7399.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -614,7 +699,7 @@
     ],
     "releaseDate": "2011-11-11",
     "developer": "Bethesda Game Studios",
-    "gender": [
+    "genre": [
       "RPG",
       "Fantasía",
       "Mundo Abierto"

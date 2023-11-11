@@ -11,7 +11,7 @@
     ],
     "image": "/images/home/Ghostbuster.jpg",
     "price": 2799.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -23,7 +23,7 @@
     ],
     "releaseDate": "2023-10-08",
     "developer": "Sega, Compile",
-    "gender": [
+    "genre": [
       "Acción",
       "Aventura",
       "Multijugador"
@@ -47,14 +47,14 @@
     "name": "Sonic 2",
     "sub_name": "The Hedgehog",
     "description": [
-      "Acelera a través de emocionantes aventuras en \"Sonic the Hedgehog 2\". Únete al veloz erizo azul y a su inseparable compañero Tails en una misión para detener al malvado Dr. Robotnik y salvar la Isla Ángel de su maquinaria destructiva en este icónico juego de plataformas de Sega Genesis.",
+      "Acelera a través de emocionantes aventuras en \"Sonic the Hedgehog 2\". Únete al veloz erizo azul y a su inseparable compañero Tails en una misión para detener al malvado Dr. Robotnik y salvar la Isla Ángel de su maquinaria destructiva en este icónico juego de platformas de Sega Genesis.",
       "En \"Sonic the Hedgehog 2\", la velocidad y la diversión van de la mano mientras recorres entornos vibrantes y llenos de vida. Reúne anillos dorados para ganar vidas y velocidad mientras te deslizas a través de bucles, saltas sobre abismos y enfrentas enemigos en tu camino hacia la victoria. La incorporación de Tails como personaje jugable agrega un nuevo nivel de estrategia y posibilidades, ya que puedes elegir entre controlar a Sonic o aprovechar las habilidades de vuelo de Tails para explorar áreas ocultas.",
       "Enfréntate al malvado Dr. Robotnik en su última hazaña diabólica y detén sus planes para conquistar la Isla Ángel. Con gráficos mejorados y nuevos obstáculos emocionantes, \"Sonic the Hedgehog 2\" te desafía a dominar cada nivel y a recolectar las preciadas Esmeraldas del Caos para desbloquear el verdadero poder de Sonic.",
-      "La música icónica y la jugabilidad rápida hacen de este juego una experiencia inolvidable para los fanáticos de Sonic y los amantes de los juegos de plataformas clásicos. Corre contra el tiempo, explora zonas secretas y demuestra que eres el erizo más rápido del planeta en \"Sonic the Hedgehog 2\". Listo para girar, saltar y correr a velocidades supersónicas, este juego te llevará en un viaje lleno de adrenalina mientras luchas por salvar la isla y derrotar al malvado Dr. Robotnik una vez más."
+      "La música icónica y la jugabilidad rápida hacen de este juego una experiencia inolvidable para los fanáticos de Sonic y los amantes de los juegos de platformas clásicos. Corre contra el tiempo, explora zonas secretas y demuestra que eres el erizo más rápido del planeta en \"Sonic the Hedgehog 2\". Listo para girar, saltar y correr a velocidades supersónicas, este juego te llevará en un viaje lleno de adrenalina mientras luchas por salvar la isla y derrotar al malvado Dr. Robotnik una vez más."
     ],
     "image": "/images/home/Sonic2.jpg",
     "price": 3499.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -66,7 +66,7 @@
     ],
     "releaseDate": "2022-07-05",
     "developer": "Sega Technical Institute",
-    "gender": [
+    "genre": [
       "Acción",
       "Aventura",
       "Multijugador"
@@ -91,13 +91,13 @@
     "sub_name": "Sega Genesis",
     "description": [
       "Sumérgete en una loca y extravagante aventura con \"Earthworm Jim\". Conviértete en Jim, un gusano común que ha sido equipado con un traje espacial de alta tecnología, y embárcate en una misión intergaláctica para salvar a la hermosa princesa What's-Her-Name de las garras del malvado Queen Pulsating, Bloated, Festering, Sweaty, Pus-filled, Malformed, Slug-for-a-Butt.",
-      "\"Earthworm Jim\" es una mezcla única de acción, plataformas y humor surrealista que te llevará a través de niveles extravagantes y desafiantes. Con el traje espacial especial, Jim puede realizar acrobacias increíbles, usar su cabeza como látigo y enfrentar enemigos extravagantes mientras navega por mundos coloridos y excéntricos.",
+      "\"Earthworm Jim\" es una mezcla única de acción, platformas y humor surrealista que te llevará a través de niveles extravagantes y desafiantes. Con el traje espacial especial, Jim puede realizar acrobacias increíbles, usar su cabeza como látigo y enfrentar enemigos extravagantes mientras navega por mundos coloridos y excéntricos.",
       "La trama se desarrolla en una serie de episodios, cada uno con su propio estilo visual y desafíos únicos. Desde luchar contra vacas alienígenas en un rodeo espacial hasta navegar por laberintos cerebrales en el interior de una ballena, cada momento es una experiencia inolvidable y llena de humor absurdo.",
       "La música memorable y los efectos de sonido complementan la extravagancia del juego, sumergiéndote aún más en el universo cómico de \"Earthworm Jim\". Prepárate para enfrentar jefes inusuales, resolver puzles extravagantes y reírte mientras te enfrentas a la locura intergaláctica en una de las aventuras más únicas en la historia de los videojuegos. ¿Estás listo para unirte a Jim en su búsqueda para rescatar a la princesa y salvar el universo? \"Earthworm Jim\" te desafía a abrazar la locura y la diversión en una experiencia que te mantendrá entretenido y sorprendido en cada paso del camino."
     ],
     "image": "/images/home/Worm.jpg",
     "price": 2999.99,
-    "plataform": [
+    "platform": [
       [
         "SEGA",
         "fa-solid fa-gamepad"
@@ -109,7 +109,7 @@
     ],
     "releaseDate": "1995-03-08",
     "developer": "Shiny Entertainment",
-    "gender": [
+    "genre": [
       "Acción",
       "Aventura",
       "Un jugador"
@@ -134,13 +134,13 @@
     "sub_name": "Buster's Hidden Treasure",
     "description": [
       "Prepárate para una emocionante búsqueda llena de diversión y aventuras en \"Tiny Toon Adventures: Buster's Hidden Treasure\". Únete al valiente Buster Bunny y a sus amigos de la Universidad Acme mientras se embarcan en una misión para encontrar tesoros ocultos y detener los malvados planes del malvado Dr. Gene Splicer.",
-      "En \"Tiny Toon Adventures: Buster's Hidden Treasure\", el mundo colorido y animado de los personajes de Tiny Toons cobra vida en forma de un emocionante juego de plataformas. Acompaña a Buster Bunny mientras recorre niveles llenos de desafíos, saltos y enemigos traviesos. Usa la agilidad de Buster para superar obstáculos, recolecta zanahorias y reúne pistas para descubrir la ubicación de los tesoros escondidos.",
+      "En \"Tiny Toon Adventures: Buster's Hidden Treasure\", el mundo colorido y animado de los personajes de Tiny Toons cobra vida en forma de un emocionante juego de platformas. Acompaña a Buster Bunny mientras recorre niveles llenos de desafíos, saltos y enemigos traviesos. Usa la agilidad de Buster para superar obstáculos, recolecta zanahorias y reúne pistas para descubrir la ubicación de los tesoros escondidos.",
       "Cada nivel presenta su propio conjunto de desafíos únicos, desde enfrentamientos contra jefes hasta travesías a través de mundos temáticos, cada uno inspirado en los episodios del exitoso programa de televisión. Los controles fluidos y la jugabilidad adictiva te mantendrán entretenido mientras exploras cada rincón en busca de secretos y recompensas.",
-      "Con gráficos vibrantes y una banda sonora alegre, el juego captura la esencia de la serie de dibujos animados mientras te sumerge en una experiencia llena de nostalgia y alegría. A medida que avanzas a través de la historia, te enfrentarás al malvado Dr. Gene Splicer y sus secuaces, desafiando tus habilidades de plataformas y resolución de acertijos. ¿Estás listo para unirte a Buster Bunny en esta emocionante aventura? \"Tiny Toon Adventures: Buster's Hidden Treasure\" te invita a explorar un mundo animado, enfrentar desafíos y disfrutar de una experiencia de juego clásica que seguramente te hará sonreír."
+      "Con gráficos vibrantes y una banda sonora alegre, el juego captura la esencia de la serie de dibujos animados mientras te sumerge en una experiencia llena de nostalgia y alegría. A medida que avanzas a través de la historia, te enfrentarás al malvado Dr. Gene Splicer y sus secuaces, desafiando tus habilidades de platformas y resolución de acertijos. ¿Estás listo para unirte a Buster Bunny en esta emocionante aventura? \"Tiny Toon Adventures: Buster's Hidden Treasure\" te invita a explorar un mundo animado, enfrentar desafíos y disfrutar de una experiencia de juego clásica que seguramente te hará sonreír."
     ],
     "image": "/images/home/TinyToon.jpg",
     "price": 3799.99,
-    "plataform": [
+    "platform": [
       [
         "SEGA",
         "fa-solid fa-gamepad"
@@ -152,7 +152,7 @@
     ],
     "releaseDate": "1990-01-18",
     "developer": "Konami",
-    "gender": [
+    "genre": [
       "Aventura",
       "Un jugador"
     ],
@@ -182,7 +182,7 @@
     ],
     "image": "/images/home/MetalSlug.jpg",
     "price": 3599.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -194,7 +194,7 @@
     ],
     "releaseDate": "2017-10-02",
     "developer": "SNK Corporation",
-    "gender": [
+    "genre": [
       "Aventura",
       "Multijugador"
     ],
@@ -218,13 +218,13 @@
     "sub_name": "Mario Saga",
     "description": [
       "¡Prepárate para un viaje lleno de diversión y aventuras con \"Super Mario Bros. U Deluxe\"! Únete a Mario y sus amigos en una emocionante odisea a través del Reino Champiñón mientras luchan contra Bowser y su ejército de secuaces. Con saltos espectaculares, desafíos creativos y una jugabilidad clásica que ha cautivado a generaciones, este juego te llevará a un mundo lleno de color y sorpresas.",
-      "En \"Super Mario Bros. U Deluxe\", la diversión y la nostalgia se fusionan en un juego de plataformas clásico. Viaja a través de niveles ingeniosamente diseñados, recolecta monedas brillantes y power-ups icónicos, y descubre secretos ocultos en cada rincón. Con personajes como Mario, Luigi, Toad y Toadette, cada uno con habilidades únicas, tendrás la libertad de elegir un estilo de juego que se adapte a ti.",
-      "Explora una variedad de mundos temáticos, desde exuberantes praderas hasta desafiantes castillos, mientras te enfrentas a jefes épicos en tu búsqueda por salvar a la princesa. Además de la emocionante campaña principal, el desafiante modo \"New Super Luigi U\" pondrá a prueba tus habilidades de plataformas en niveles renovados para una experiencia fresca y emocionante.",
+      "En \"Super Mario Bros. U Deluxe\", la diversión y la nostalgia se fusionan en un juego de platformas clásico. Viaja a través de niveles ingeniosamente diseñados, recolecta monedas brillantes y power-ups icónicos, y descubre secretos ocultos en cada rincón. Con personajes como Mario, Luigi, Toad y Toadette, cada uno con habilidades únicas, tendrás la libertad de elegir un estilo de juego que se adapte a ti.",
+      "Explora una variedad de mundos temáticos, desde exuberantes praderas hasta desafiantes castillos, mientras te enfrentas a jefes épicos en tu búsqueda por salvar a la princesa. Además de la emocionante campaña principal, el desafiante modo \"New Super Luigi U\" pondrá a prueba tus habilidades de platformas en niveles renovados para una experiencia fresca y emocionante.",
       "Reúne a tus amigos en el modo multijugador cooperativo o competitivo y disfruten juntos de la diversión caótica. Con gráficos vibrantes, controles precisos y una jugabilidad atemporal, \"Super Mario Bros. U Deluxe\" te invita a sumergirte en un mundo lleno de aventuras y sonrisas."
     ],
     "image": "/images/home/SuperMario.jpg",
     "price": 5099.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -236,7 +236,7 @@
     ],
     "releaseDate": "2018-07-03",
     "developer": "Nintendo",
-    "gender": [
+    "genre": [
       "Acción",
       "Peleas",
       "Multijugador"
@@ -267,7 +267,7 @@
     ],
     "image": "/images/home/Warcraft.jpg",
     "price": 7199.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -275,7 +275,7 @@
     ],
     "releaseDate": "2002-07-03",
     "developer": "Blizzard Entertainment",
-    "gender": [
+    "genre": [
       "Estrategia",
       "Multijugador"
     ],
@@ -305,7 +305,7 @@
     ],
     "image": "/images/home/Zelda.jpg",
     "price": 5699.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -317,7 +317,7 @@
     ],
     "releaseDate": "2017-07-07",
     "developer": "Nintendo",
-    "gender": [
+    "genre": [
       "Acción",
       "Aventura",
       "Multijugador"
@@ -348,7 +348,7 @@
     ],
     "image": "/images/home/FF.jpg",
     "price": 17999.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -360,7 +360,7 @@
     ],
     "releaseDate": "2022-12-09",
     "developer": "Square Enix",
-    "gender": [
+    "genre": [
       "Acción",
       "RPG",
       "Un jugador"
@@ -391,7 +391,7 @@
     ],
     "image": "/images/home/madden.jpg",
     "price": 10499.99,
-    "plataform": [
+    "platform": [
       [
         "PS",
         "fa-brands fa-playstation"
@@ -403,7 +403,7 @@
     ],
     "releaseDate": "2023-10-08",
     "developer": "Electronic Arts",
-    "gender": [
+    "genre": [
       "Deporte",
       "Multijugador"
     ],
@@ -433,7 +433,7 @@
     ],
     "image": "/images/home/StarWars.jpg",
     "price": 14999.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -445,7 +445,7 @@
     ],
     "releaseDate": "2020-11-04",
     "developer": "DICE",
-    "gender": [
+    "genre": [
       null,
       "Multijugador"
     ],
@@ -475,7 +475,7 @@
     ],
     "image": "/images/home/Minecraft.jpg",
     "price": 9999.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -487,7 +487,7 @@
     ],
     "releaseDate": "2023-10-08",
     "developer": "Mojang",
-    "gender": [
+    "genre": [
       "Acción",
       "RPG",
       "Aventura",
@@ -520,7 +520,7 @@
     ],
     "image": "/images/caratulas/Starfield.jpg",
     "price": 21586.59,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -532,7 +532,7 @@
     ],
     "releaseDate": "2023-10-08",
     "developer": "Bethesda Game Studios",
-    "gender": [
+    "genre": [
       "Acción",
       "Multijugador"
     ],
@@ -562,7 +562,7 @@
     ],
     "image": "/images/home/aoe2.png",
     "price": 2999.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -570,7 +570,7 @@
     ],
     "releaseDate": "2000-08-24",
     "developer": "Microsoft Studios",
-    "gender": [
+    "genre": [
       "Estrategia",
       "Historia",
       "Simulación",
@@ -603,7 +603,7 @@
     ],
     "image": "/images/home/spore.png",
     "price": 3499.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -611,7 +611,7 @@
     ],
     "releaseDate": "2008-09-04",
     "developer": "Maxis",
-    "gender": [
+    "genre": [
       "Simulación",
       "Estrategia",
       "Exploración"
@@ -643,7 +643,7 @@
     ],
     "image": "/images/home/meandromeda.png",
     "price": 17999.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -659,7 +659,7 @@
     ],
     "releaseDate": "2017-03-21",
     "developer": "BioWare",
-    "gender": [
+    "genre": [
       "Acción",
       "RPG",
       "Ciencia Ficción",
@@ -691,7 +691,7 @@
     ],
     "image": "/images/home/skyrim.png",
     "price": 7399.99,
-    "plataform": [
+    "platform": [
       [
         "PC",
         "fa-brands fa-windows"
@@ -699,7 +699,7 @@
     ],
     "releaseDate": "2011-11-11",
     "developer": "Bethesda Game Studios",
-    "gender": [
+    "genre": [
       "RPG",
       "Fantasía",
       "Mundo Abierto"

@@ -1,9 +1,3 @@
-//1. Guardar un usuario en al DB
-//2. Buscar a un usuario que se quiera loguear por su email
-//3. Buscar a un usuario por su ID 
-//4. Editar la Info de un Usuario
-//5. Eliminar a un usuario de la DB
-
 const fs = require('fs')
 const path = require('path')
 let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).users
