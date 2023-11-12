@@ -166,13 +166,13 @@ const productController = {
         //BD_provisoria = newBD;
         
 
-        fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
+    /*    fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
             if (err) {
                 console.log(err);
                 return;
             }
             console.log("Se sobreescribio correctamente");
-        })
+        }) */
         res.redirect('/home')
     }
 }
