@@ -18,7 +18,7 @@ function rating_esrb(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'rating_esrb',
+            tableName: 'rating_esrb',
 			timestamps: false
         }
     )

@@ -22,7 +22,7 @@ function cart(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'cart',
+            tableName: 'cart',
 			timestamps: false
         }
     )

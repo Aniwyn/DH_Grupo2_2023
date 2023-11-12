@@ -14,7 +14,7 @@ function genre(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'genre',
+            tableName: 'genre',
 			timestamps: false
         }
     )

@@ -14,7 +14,7 @@ function platform(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'plataform',
+            tableName: 'platform',
 			timestamps: false
         }
     )

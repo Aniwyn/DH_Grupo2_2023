@@ -34,7 +34,7 @@ function client(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'client',
+            tableName: 'user',
 			timestamps: false
         }
     )

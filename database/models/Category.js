@@ -14,7 +14,7 @@ function category(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'category',
+            tableName: 'category',
 			timestamps: false
         }
     )

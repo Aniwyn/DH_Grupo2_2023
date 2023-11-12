@@ -5,6 +5,7 @@ const fsPromises = require('fs').promises
 const jsonPath = path.join(__dirname, '../Data/product.json')
 
 let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
+let db = require('../../database/models');
 const dato = require(path.join(__dirname, "../../src/Data/BD")).dato;
 let ProductMethod = require(path.join(__dirname, "../models/Product"))
 
@@ -12,6 +13,10 @@ let ProductMethod = require(path.join(__dirname, "../models/Product"))
 const productController = {
     //GETS
     mycart: (req, res) => {
+        db.Product.findAll()
+            .then(function(p){
+                console.log(p[1]);
+            })
         res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: BD_provisoria });
     },
     details: (req, res) => {

@@ -14,7 +14,7 @@ function developer(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'developer',
+            tableName: 'developer',
 			timestamps: false
         }
     )

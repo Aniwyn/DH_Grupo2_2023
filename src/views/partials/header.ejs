@@ -12,8 +12,10 @@
             <% } %>
         </div>
         <div class="nav__loginBar">
-            <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
-            <i class="fa-regular fa-message nav__link loginBar__btnMessage"></i>
+            <% if (locals.isLogged) { %>
+                <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
+                <i class="fa-regular fa-message nav__link loginBar__btnMessage"></i>
+            <% } %>
             <% if (!locals.isLogged) { %>
                 <a class="nav__link loginBar__btnExtend" href="/register">Registrarse</a>
                 <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>

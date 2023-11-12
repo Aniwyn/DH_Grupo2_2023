@@ -14,7 +14,7 @@ function format(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'format',
+            tableName: 'format',
 			timestamps: false
         }
     )

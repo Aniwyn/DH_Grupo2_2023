@@ -12,7 +12,7 @@ function product(sequelize, DataTypes) {
                 type: DataTypes.STRING(50),
                 allowNull: false
             },
-            secund_name: {
+            second_name: {
                 type: DataTypes.STRING(30),
                 allowNull: false
             },
@@ -72,7 +72,7 @@ function product(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'format',
+            tableName: 'product',
 			timestamps: false
         }
     )

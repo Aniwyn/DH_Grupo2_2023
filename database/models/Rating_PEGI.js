@@ -18,7 +18,7 @@ function rating_pegi(sequelize, DataTypes) {
             }
         },
         {
-            tablename: 'rating_pegi',
+            tableName: 'rating_pegi',
 			timestamps: false
         }
     )
