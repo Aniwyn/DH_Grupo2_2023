@@ -121,17 +121,32 @@ const productController = {
     },
     // DELETE
     delete: (req, res) => {
-        let id = req.params.id;
+        let idToDelete = req.params.id;
 
-        let newBD = []
-        for (let i = 0; i < BD_provisoria.length; i++) {
+        //let newBD = []
+        db.Product.detroy({
+            where: {id: idToDelete}
+        })
+        fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].image))
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
+                fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].gameplay))
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
+      /*  for (let i = 0; i < BD_provisoria.length; i++) {
             /*Si es que el id no es el que queremos vamos reconstruyendo un nuevo array */
-            if (BD_provisoria[i].id != id) {
+      /*      if (BD_provisoria[i].id != id) {
                 newBD.push(BD_provisoria[i])
             }
             else {
                 /*Si es que el id si es el que queremos eliminar borramos al foto */
-                fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[i].image))
+      /*          fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[i].image))
                     .then(() => {
                         console.log('Foto eliminada con exito')
                     }).catch(err => {
@@ -144,10 +159,11 @@ const productController = {
                         console.error('Hubo algun error en eliminar la foto del producto', err)
                     })
             }
-        }
+        } 
+        */
 
-        console.log(newBD);
-        BD_provisoria = newBD;
+        //console.log(newBD);
+        //BD_provisoria = newBD;
         
 
         fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
