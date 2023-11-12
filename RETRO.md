@@ -56,7 +56,7 @@
     - Juntarnos a programar en simultaneo
     
 ### Hacer más:
-    - Aumentar la comunicacion entre integrantes del equipo
+    - Hacer reunion de control de avances
     - Organizar Trello
 ### Seguir haciendo:
     - Hacer reunion de control de avances
@@ -64,6 +64,7 @@
     - Aplicar Scrums
     - Hacer una lista de tareas para que cada uno tome la que quiera
     - Reasignacion/ayuda con tareas retrasadas
+    - Aumentar la comunicacion entre integrantes del equipo
 ### Hacer menos:
     - Llegar tarde a las reuniones
 ### Dejar de hacer: 
@@ -72,4 +73,4 @@
     - Retrasar las tareas hasta ultimo momento
 
 ### Resumen
-    En este sprint hemos perdido a un integrante del equipo por lo que se dificulto la realizacion del mismo. Varios de nosotros tuvimos como impedimento el tiempo personal debido a que todos somos estudiantes de diferentes niveles pero con sus respectivas responsabilidades cada uno. Se agradece la paciencia y el tiempo de prorroga para la entrega del sprint, ya que somos capaces pero el tiempo es un recurso que escasea.
+    En este sprint nos hemos adaptado a ser un integrante menos de lo que fuimos inicialmente, sigue habiendo compromiso de parte de todos. En esta epoca de examenes y fin de cursada se vuelve algo mas dificil llevar el curso al dia pero sin descuidarlo. Es una meta q todos tenemos en frente y entre todos nos sacamos adelante para agarrarle la mano al codigo y llegar lo mejor posible a la entrega. Particularmente en este sprint se agradece la prorroga de tiempo para entregarlo ya que estabamos con el tiempo justo y haciamos lo que podiamos.
