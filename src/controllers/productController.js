@@ -124,21 +124,31 @@ const productController = {
         let idToDelete = req.params.id;
 
         //let newBD = []
-        db.Product.detroy({
-            where: {id: idToDelete}
+        db.Product.findByPk(idToDelete).then((product)=>{
+            dir_image = product.cover_image
+            dir_gameplay = product.gameplay_image
+            return [dir_image, dir_gameplay]
+        }).then(res =>{
+            db.Product.detroy({
+                where: {id: idToDelete}
+            })
+            return res
+        }).then(res =>{
+            fsPromises.unlink(path.join(`${__dirname}/../../public`, res[0]))
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
+                fsPromises.unlink(path.join(`${__dirname}/../../public`, res[1]))
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
         })
-        fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].image))
-                    .then(() => {
-                        console.log('Foto eliminada con exito')
-                    }).catch(err => {
-                        console.error('Hubo algun error en eliminar la foto del producto', err)
-                    })
-                fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].gameplay))
-                    .then(() => {
-                        console.log('Foto eliminada con exito')
-                    }).catch(err => {
-                        console.error('Hubo algun error en eliminar la foto del producto', err)
-                    })
+        
+        
       /*  for (let i = 0; i < BD_provisoria.length; i++) {
             /*Si es que el id no es el que queremos vamos reconstruyendo un nuevo array */
       /*      if (BD_provisoria[i].id != id) {
