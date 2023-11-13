@@ -276,3 +276,83 @@ En este sprint (3) implementamos la ceremonia daily de una manera bisemanal, deb
  - ¿Impedimentos para lograr tus objetivos?: "PPara este print no tuve impedimentos, más el de siempre, mi tiempo personal".
 
  - ¿Que vas a hacer hasta la siguiente?: "Para finalizar, pienso agarrar las últimas targetas por realizar que son la Página de Pefil y controlar algunas Funciones".
+
+
+  # SPRINT 6 #
+
+
+### Primer daily (01/11/23):
+
+ # Pablo Sales: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Ponerme al dia con las clases del mod5 y entender mas la estructura del proyecto".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mi impedimento es el tiempo personal y algunas dudas sobre temas vistos en clase ".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Pienso tratar de realizar alguna tarjeta de CRUD".
+
+
+
+  # Yamila Blas: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Desde la ultima reunión me puse al dia con las clases q faltaban y termine de ver bases de datos".
+
+ - ¿Impedimentos para lograr tus objetivos?: "En este momento mi impedimento es la conección ya que estppy de viaje y mi tiempo personal por examenes en la escuela".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Para la proxima voy a tratar de realizar la implementacion de recordar al usuario".
+
+
+  # Alexis Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Realice la base de datos y tablas en ingles, ademas cree la carpeta de sequelize y archivos de modelos ".
+
+ - ¿Impedimentos para lograr tus objetivos?: "El tiempo personal".
+
+ - ¿Que vas a hacer hasta la siguiente?: "voy a hacer los CRUD de listar, y de crear editar y ver perfil".
+
+
+  # Kevin Tiano: 
+
+  - ¿Que hiciste desde nuestra ultima reunion?: "Lo que pude realizar fue  la implementación login, entidad y registro de usuarios ".
+
+ - ¿Impedimentos para lograr tus objetivos?: "El tiempo personal y algunas dudas que fui resolviendo mientras practicaba".
+
+ - ¿Que vas a hacer hasta la siguiente?: "voy a agarrar alguna tarjeta de CRUD carrito de compra y CRUD productos crear y editar".
+
+### Segundo daily (07/11/23):
+
+ # Pablo Sales: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Grabe y redacte el primer daily, avance un poco en la tarjeta de CRUD delete que agarre y avance en las clases de playground ya q estoy algo atrasado".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mi impedimento fue mi tiempo personal y las dudas en algunos temas en playgruond".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Para la proxima voy a terminar de realizar la RETRO.md, el segundo daily y lo que pueda terminar de la tarjeta de CRUD delete".
+
+
+
+  # Yamila Blas: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Termine la implementacion de recordar al usuario y el diagrama de la base de datos".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mi mayor impedimento fue el tiempo personal por actividades en la escuela".
+
+ - ¿Que vas a hacer hasta la siguiente?: "voy a agarrarme la tarea de implementar buscar".
+
+
+  # Alexis Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Desde la ultima reunión avance en los CRUD de listar, y de crear editar y ver perfil".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Mi unico impedimento fue mi tiempo personal, debido a mis horarios de la facultad".
+
+ - ¿Que vas a hacer hasta la siguiente?: "Tengo pensado terminar mis tareas y ayudar a mis compa;eros con sus dudas y a terminar lo q les falte".
+
+
+  # Kevin Tiano: 
+
+ - ¿Que hiciste desde nuestra ultima reunion?: "Estuve avanzando en las tarjetas q me agarre de CRUD carrito de compra y CRUD productos crear y editar".
+
+ - ¿Impedimentos para lograr tus objetivos?: "Como casi en todos los sprints, mi tiempo personal".
+
+ - ¿Que vas a hacer hasta la siguiente?: "terminar mis tarjetas y ayudar en lo que haga falta".
