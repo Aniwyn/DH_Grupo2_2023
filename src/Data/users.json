@@ -2,20 +2,20 @@
   {
     "id": 0,
     "name": "tiano",
-    "userName": "tiano",
-    "email": "kanashiiguree@gmail.com",
+    "userName": "",
+    "email": "root@root.com",
     "password": "$2a$10$qUMuwqhXHLbGFH5pdHE2YO3kDfXkcvdqAKC0Ti3ulm.edHsyn4Ot.",
     "category": "user",
     "avatar": "monster0.png"
   },
   {
     "id": 1,
-    "name": "mario",
-    "userName": "mario",
-    "email": "533kevin335@live.com.ar",
-    "password": "$2a$10$nnCnGHnf0FRTrRLGcI8BbOo8fxWAi0BGUO8rXIhbKbNX2T2Cybqb.",
-    "category": "user",
-    "avatar": "2023-10-04-Sin tÃ­tulo.png"
+    "name": "root",
+    "user_name": "",
+    "email": "root@root.com.ar",
+    "password_hash": "$2a$10$/BMYfncxDWKujIpU9uL97.JHW3lDhuiDzZWabyX1xAFwMojtpw8f6",
+    "avatar": "monster1.png",
+    "id_category": 1
   },
   {
     "id": 2,
