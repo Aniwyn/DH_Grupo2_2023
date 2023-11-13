@@ -42,10 +42,6 @@ function product(sequelize, DataTypes) {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
-            password_hash: {
-                type: DataTypes.STRING(100),
-                allowNull: false
-            },
             release_date: {
                 type: DataTypes.DATEONLY,
                 allowNull: false

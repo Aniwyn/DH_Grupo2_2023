@@ -26,11 +26,12 @@ function client(sequelize, DataTypes) {
             },
             avatar: {
                 type: DataTypes.STRING(50),
+                defaultValue: 'monster0.png',
                 allowNull: false
             },
             id_category: {
                 type: DataTypes.INTEGER,
-                allowNull: false
+                allowNull: false,
             }
         },
         {

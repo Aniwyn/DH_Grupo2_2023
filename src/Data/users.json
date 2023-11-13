@@ -34,5 +34,14 @@
     "password": "$2a$10$B9ydnT.71VWCIxagot68J.MKycUowh7y5U/aujqPB1tbUOEMb4jV.",
     "category": "user",
     "avatar": "monster0.png"
+  },
+  {
+    "id": 4,
+    "name": "adqwedasdwae",
+    "userName": "root123123",
+    "email": "12312312312@wwerwerwe.asedas",
+    "password": "$2a$10$Q1fkey/IiEeUuTK9Ibkxc.fmphqomu5GFj1wdSAb1RlZefMP8PQyK",
+    "category": "user",
+    "avatar": "monster3.png"
   }
 ]
