@@ -10,11 +10,13 @@ const { validationResult } = require('express-validator')
 /* GETS SET */
 const userController = {
     home: (req, res) => {
-        // db.Products.findAll()
-        //     .then(products => {
-                
-        //     })
-        res.render(path.join(__dirname, "../views/users/home.ejs"), { BD: BD_provisoria });
+        db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+            .then(products => {
+                console.log(products[0]);
+                res.render(path.join(__dirname, "../views/users/home.ejs"), { BD: products });
+            })
     },
     register: (req, res) => {
         res.render(path.join(__dirname, "../views/users/register.ejs"));

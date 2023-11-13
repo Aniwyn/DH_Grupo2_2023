@@ -9,9 +9,10 @@ let upload = require('../../middleware/multerMiddleware')
 
 /* REQUIRES CONTROLLERS */
 const productController = require('../controllers/productController');
+let authMiddleware = require('../../middleware/authMiddleware');
 
 /* ROUTE-CONTROLLER CONNECTION */
-router.get('/mycart', productController.mycart);
+router.get('/mycart', authMiddleware, productController.mycart);
 router.get('/details/:id', productController.details);
 router.get('/products', productController.products);
 router.get('/create', productController.create);

@@ -13,29 +13,50 @@ let ProductMethod = require(path.join(__dirname, "../models/Product"))
 const productController = {
     //GETS
     mycart: (req, res) => {
-        db.Product.findAll()
-            .then(function(p){
-                console.log(p[1]);
+        db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: products });
             })
-        res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: BD_provisoria });
     },
     details: (req, res) => {
         let id = req.params.id;
-        
-        let prod = BD_provisoria.filter((product) => product.id == id);
-        res.render(path.join(__dirname, "../views/products/details.ejs"), { BD: BD_provisoria, data_item: prod[0] });
+        let requestProduct = db.Product.findByPk(id, {
+            include: [
+                {association: 'product_platforms'}, 
+                {association: 'product_genres'},
+                {association: 'rating_pegi'},
+                {association: 'rating_esrb'},
+                {association: 'format'},
+                {association: 'developer'}
+            ]
+        })
+        let requestAllProducts = db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+
+        Promise.all([requestProduct, requestAllProducts])
+            .then(([product_detail, products]) => {
+                console.log(product_detail);
+                res.render(path.join(__dirname, "../views/products/details.ejs"), { data_item: product_detail, BD: products});
+            })
     },
     products: (req, res) => {
-        for (let i = 0; i < BD_provisoria.length; i++) {
-            console.log(BD_provisoria[i].name)
-            console.log(BD_provisoria[i].platform.length + "\n")
-        }
-        res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: BD_provisoria });
+        db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: products });
+            })
     },
     create: (req, res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
-        console.log(dato)
-        res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: dato, method: '' })
+        db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: products, prod: dato, method: '' })
+            })
     },
     editProduct: (req, res) => {
         let id = req.params.id;

@@ -17,8 +17,7 @@ const dato = {
     ],
     image: "",
     price: 0,
-    plataform: [
-
+    platform: [
         [
             "",
             ""
@@ -26,7 +25,7 @@ const dato = {
     ],
     releaseDate: "2000-01-01",
     developer: "",
-    gender: [
+    genre: [
         "",
         ""
     ],

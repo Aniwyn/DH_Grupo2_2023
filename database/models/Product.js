@@ -30,6 +30,10 @@ function product(sequelize, DataTypes) {
                 type: DataTypes.TEXT,
                 allowNull: false
             },
+            description_4: {
+                type: DataTypes.TEXT,
+                allowNull: false
+            },
             cover_image: {
                 type: DataTypes.STRING(80),
                 allowNull: false

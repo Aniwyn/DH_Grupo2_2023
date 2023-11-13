@@ -1,13 +1,13 @@
 <article>
     <a href="/details/<%= data_item.id %>">
-        <img src="<%= data_item.image %>" alt="" />
+        <img src="<%= data_item.cover_image %>" alt="" />
         <div class="products__info">
             <div class="info__name">
                 <p class="name__link">
                     <h4><%= data_item.name %></h4>
                 </p>
-                <% for(let i = 0; i < data_item.platform.length; i++) { %>
-                    <span class="products__tag"><%= data_item.platform[i][0] %></span>
+                <% for(let i = 0; i < data_item.product_platforms.length; i++) { %>
+                    <span class="products__tag"><%= data_item.product_platforms[i].name %></span>
                 <% } %>
             </div>
             <div class="info__price">
