@@ -60,8 +60,19 @@ const productController = {
     },
     editProduct: (req, res) => {
         let id = req.params.id;
-        let product = ProductMethod.searchId(id)
-        res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: product, method: 'PUT' })
+        db.Product.findByPk(id, {
+            include: [
+                {association: 'product_platforms'}, 
+                {association: 'product_genres'},
+                {association: 'rating_pegi'},
+                {association: 'rating_esrb'},
+                {association: 'format'},
+                {association: 'developer'}
+            ]
+        })
+            .then(product => {
+                res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { prod: product, method: 'PUT' })
+            })
     },
     // POST PUT 
     editProduct_modify: (req, res) => {
@@ -75,17 +86,20 @@ const productController = {
         let platform = ProductMethod.searchPlatform(text_data);
         const putData = {
             name: text_data.name,
-            sub_name: text_data.sub_name,
-            description: text_data.description,
-            image: caratula != undefined ? caratula.path.replace("public", "") : old_product.image,
+            second_name: text_data.sub_name,
+            description_1: text_data.description[0],
+            description_2: text_data.description[1],
+            description_3: text_data.description[2],
+            description_4: text_data.description[3],
+            cover_image: caratula != undefined ? caratula.path.replace("public", "") : old_product.image,
             price: parseFloat(text_data.price),
             platform: platform,
-            releaseDate: text_data.releaseDate,
+            release_date: text_data.releaseDate,
             developer: text_data.developer,
-            genre: text_data.genre,
+            product_genres: text_data.genre,
             format: text_data.format,
             trailer: text_data.trailer,
-            gameplay: gameplay != undefined ? gameplay.path.replace("public", "") : old_product.gameplay,
+            gameplay_image: gameplay != undefined ? gameplay.path.replace("public", "") : old_product.gameplay,
             rating_pegi: ratings[0],
             rating_esrb: ratings[1]
         }
@@ -125,17 +139,20 @@ const productController = {
             rating_esrb: ratings[1]
         }
 
-        BD_provisoria.push(postData)
-        const productJSON = JSON.stringify(BD_provisoria, null, 2);
-        const rutaArchivo = './src/Data/product.json';
 
-        fs.writeFile(rutaArchivo, productJSON, 'utf8', (err) => {
-            if (err) {
-                console.error(err);
-                return;
-            }
-            console.log('El archivo JSON ha sido guardado correctamente.');
-        });
+        
+
+        //BD_provisoria.push(postData)
+        //const productJSON = JSON.stringify(BD_provisoria, null, 2);
+        //const rutaArchivo = './src/Data/product.json';
+//
+        //fs.writeFile(rutaArchivo, productJSON, 'utf8', (err) => {
+        //    if (err) {
+        //        console.error(err);
+        //        return;
+        //    }
+        //    console.log('El archivo JSON ha sido guardado correctamente.');
+        //});
 
         console.log('estoy en editProduct_post: ',postData)
         res.redirect(`/home`)

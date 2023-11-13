@@ -152,19 +152,21 @@ const productMethod = {
         return true
     },
     edit: function (productData) {
-        for (let i = 0; i < BD_provisoria.length; i++) {
-            if (BD_provisoria[i].id === productData.id) {
-                BD_provisoria[i] = productData
-            }
-        }
-        fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
-            if (err) {
-                console.log(err);
-                return;
-            }
-            console.log("Se sobreescribio correctamente el Usuario");
-        })
-        return true
+        console.log('ESTOY EN EDITTT ',productData);
+
+        //for (let i = 0; i < BD_provisoria.length; i++) {
+        //    if (BD_provisoria[i].id === productData.id) {
+        //        BD_provisoria[i] = productData
+        //    }
+        //}
+        //fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
+        //    if (err) {
+        //        console.log(err);
+        //        return;
+        //    }
+        //    console.log("Se sobreescribio correctamente el Usuario");
+        //})
+        //return true
     }
 }
 

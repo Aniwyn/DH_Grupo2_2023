@@ -1,43 +1,40 @@
 [
   {
     "id": 1,
-    "name": "b",
-    "sub_name": "16-Bit Cartridge",
+    "name": "Warcraft 3",
+    "sub_name": "The Frozen Throne",
     "description": [
-      "                            Prepárate para enfrentar lo paranormal en \"Ghostbusters\" para Sega Genesis. Únete a un equipo de valientes cazafantasmas y adéntrate en una ciudad asediada por espíritus y entidades sobrenaturales en este clásico juego de acción y aventuras.\r\n                        ",
-      "                            \"Ghostbusters\" te coloca en el papel de un miembro novato del equipo de cazafantasmas, armado con tu mochila de protones y un objetivo claro: ¡capturar a los fantasmas que infestan la ciudad! Explora los icónicos lugares de Nueva York mientras te enfrentas a una variedad de espectros, poltergeists y apariciones maliciosas. Tendrás que desplegar tus habilidades de estrategia y apuntar con precisión para atrapar a estas criaturas traviesas y contener la amenaza paranormal.\r\n                        ",
-      "                            Conviértete en un héroe al enfrentar jefes espectrales en batallas emocionantes y resuelve acertijos espeluznantes en tu búsqueda por limpiar la ciudad de la actividad fantasmal. Con cada captura exitosa, ganarás fondos que puedes invertir en mejoras y equipo para tu equipo, permitiéndote enfrentar desafíos aún mayores.\r\n                        "
+      "Sumérgete en el mundo épico de Azeroth una vez más con \"Warcraft III: The Frozen Throne\". Esta expansión del famoso juego de estrategia en tiempo real te transportará a un reino lleno de magia, batallas y traiciones. Prepárate para una experiencia que expande los límites de la fantasía mientras luchas por el dominio y la supervivencia en un mundo al borde del colapso.",
+      "En \"Warcraft III: The Frozen Throne\", la historia continúa con nuevas y emocionantes aventuras que amplían aún más el rico universo de Warcraft. Viajarás a tierras desconocidas y enemigas, enfrentando desafíos mortales y descubriendo secretos oscuros que amenazan con desgarrar Azeroth. Con nuevas facciones, héroes y unidades, deberás dominar la estrategia y la magia para sobrevivir y prevalecer en este mundo cambiante.",
+      "El destino de héroes legendarios y villanos astutos descansa en tus manos mientras te sumerges en una campaña épica llena de giros inesperados y emocionantes batallas. Ya sea que elijas liderar a los nobles defensores de la Alianza o a los formidables miembros de la Horda, tus decisiones moldearán el destino de Azeroth y determinarán si la luz o las sombras prevalecen."
     ],
     "image": "/images/home/Ghostbuster.jpg",
-    "price": 2800,
+    "price": 7200,
     "platform": [
       [
-        "PS",
-        "fa-brands fa-playstation"
-      ],
-      [
-        "SEGA",
-        "fa-solid fa-gamepad"
+        "PC",
+        "fa-brands fa-windows"
       ]
     ],
-    "releaseDate": "2023-10-08",
-    "developer": "Sega, Compile",
+    "releaseDate": "2002-07-03",
+    "developer": "Blizzard Entertainment",
     "genre": [
-      "Acción",
-      "Aventura",
+      "Estrategia",
       "Multijugador"
     ],
     "format": "Fisico",
-    "trailer": "https://www.youtube.com/embed/CLLXiXh1onc",
+    "trailer": "https://www.youtube.com/embed/iqB3KeiBLuw",
     "gameplay": "/images/products/GHOSTBUSTERS-gameplay.jpg",
-    "ranking": [
+    "rating_pegi": [
       [
-        "PEGI_7",
-        "/images/rankings/PEGI_7.png"
-      ],
+        "PEGI_12",
+        "PEGI_12.png"
+      ]
+    ],
+    "rating_esrb": [
       [
-        "ESRB_E",
-        "/images/rankings/ESRB_E.svg"
+        "ESRB_T",
+        "ESRB_T.svg"
       ]
     ]
   },
