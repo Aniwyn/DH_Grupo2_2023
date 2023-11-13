@@ -114,6 +114,7 @@ const productController = {
 
         let ratings = ProductMethod.searchRatings(text_data);
         let platform = ProductMethod.searchPlatform(text_data);
+        let format = ProductMethod.searchFormat(text_data);
 
         const postData = {
             name: text_data.name,
@@ -128,7 +129,7 @@ const productController = {
             release_date: text_data.releaseDate,
             developer: text_data.developer,
             product_genres: text_data.genre,
-            format: text_data.format,
+            format: format,
             trailer: text_data.trailer,
             gameplay_image: gameplay.path.replace("public", ""),
             rating_pegi: ratings[0],

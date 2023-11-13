@@ -80,19 +80,19 @@ const productMethod = {
         let rating = []
         switch (productData.ranking1) {
             case "PEGI_3":
-                rating.push(["PEGI_3", "PEGI_3.png"])
+                rating.push(1)
                 break;
             case "PEGI_7":
-                rating.push(["PEGI_7", "PEGI_7.png"])
+                rating.push(2)
                 break;
             case "PEGI_12":
-                rating.push(["PEGI_12", "PEGI_12.png"])
+                rating.push(3)
                 break;
             case "PEGI_16":
-                rating.push(["PEGI_16", "PEGI_16.png"])
+                rating.push(4)
                 break;
             case "PEGI_18":
-                rating.push(["PEGI_18", "PEGI_18.png"])
+                rating.push(5)
                 break;
             default:
                 break;
@@ -102,19 +102,19 @@ const productMethod = {
         rating = []
         switch (productData.ranking2) {
             case "ESRB_E":
-                rating.push(["ESRB_E", "ESRB_E.svg"])
+                rating.push(1)
                 break;
             case "ESRB_E10":
-                rating.push(["ESRB_E10", "ESRB_E10plus.svg"])
+                rating.push(2)
                 break;
             case "ESRB_T":
-                rating.push(["ESRB_T", "ESRB_T.svg"])
+                rating.push(3)
                 break;
             case "ESRB_M":
-                rating.push(["ESRB_M", "ESRB_M.svg"])
+                rating.push(4)
                 break;
             case "ESRB_AO":
-                rating.push(["ESRB_A0", "ESRB_A0.svg"])
+                rating.push(5)
                 break;
             default:
                 break;
@@ -123,9 +123,32 @@ const productMethod = {
 
         return ratings
     },
-    create: function(productData) {
-        console.log('ESTOY EN CREATEEEEEEEEE',productData);
-        db.Product.create({
+    searchFormat(productData) {
+        return productData.format == 'Fisico' ? 1 : 2
+    },
+    create: async function(productData) {
+        let developer = await db.Developer.findOne({
+            where: {
+                name: productData.name
+            }
+        })
+        if (!developer) {{
+            developer = await db.Developer.create({
+                name: productData.name
+            })
+        }}
+
+        let rating_esrb = await db.Rating_ESRB.findByPk(parseInt(productData.rating_esrb))
+        let rating_pegi = await db.Rating_PEGI.findByPk(parseInt(productData.rating_pegi))
+        console.log('Desarrollador:', developer.name);
+        console.log('pegi:', rating_pegi.name);
+        console.log('esbrf:', rating_esrb.name);
+        console.log('format:', productData.format);
+        console.log('format:', productData.product_genres);
+
+
+
+        const new_product = await db.Product.create({
             name: productData.name,
             second_name: productData.second_name,
             description_1: productData.description_1,
@@ -137,13 +160,25 @@ const productMethod = {
             release_date: productData.release_date,
             trailer: productData.trailer,
             gameplay_image: productData.gameplay_image,
-            rating_esrb: productData.rating_esrb,
-            rating_pegi: productData.rating_pegi,
-            developer: productData.developer,
-            format: productData.format
+            id_rating_esrb: rating_esrb.id,
+            id_rating_pegi: rating_pegi.id,
+            id_developer: developer.id,
+            id_format: productData.format,
+            product_genres: [
+                { name: 'Aventura' },
+                { name: 'Accion' }
+                // Otros géneros asociados al producto
+              ],
+              product_platforms: [
+                { name: 'PC' },
+                { name: 'SEGA' }
+                // Otros géneros asociados al producto
+              ]
+        }, {
+            include: 'product_genres',
+            include: 'product_platforms'
         })
 
-        return productData
     },
     delete: function (id) {
         BD_provisoria = BD_provisoria.filter(product => product.id !== id)

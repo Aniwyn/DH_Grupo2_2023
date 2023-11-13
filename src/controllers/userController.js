@@ -14,7 +14,6 @@ const userController = {
             include: [{association: 'product_platforms'}]
         })
             .then(products => {
-                console.log(products[0]);
                 res.render(path.join(__dirname, "../views/users/home.ejs"), { BD: products });
             })
     },
