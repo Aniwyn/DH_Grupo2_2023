@@ -27,8 +27,8 @@ const userController = {
         if (!errors.isEmpty()) {
             res.render(path.join(__dirname, "../views/users/register.ejs"), { errors: errors.array(), old: req.body });
         } else {
-            let userInDB = UserMethod.searchField('email', req.body.email)
-            if (userInDB) {
+            let emailInDB = UserMethod.searchField('email', req.body.email)
+            if (emailInDB) {
                 return res.render(path.join(__dirname, "../views/users/register.ejs"), {
                     errors: [{
                         msg: 'Este email ya esta registrado',
@@ -49,13 +49,15 @@ const userController = {
                 })
             }
 
-            delete req.body.password_repeat
-            let userToCreate = {
-                ...req.body,
-                password: bcryptjs.hashSync(req.body.password, 10)
+            let userToCreate  = {
+                name: req.body.name,
+                user_name: req.body.userName,
+                email: req.body.email,
+                password_hash: bcryptjs.hashSync(req.body.password, 10),
+                id_category: 1
             }
 
-            let userCreated = UserMethod.create(userToCreate)
+            UserMethod.create(userToCreate)
 
             res.redirect('/login')
         }

@@ -38,7 +38,6 @@ const productController = {
 
         Promise.all([requestProduct, requestAllProducts])
             .then(([product_detail, products]) => {
-                console.log(product_detail);
                 res.render(path.join(__dirname, "../views/products/details.ejs"), { data_item: product_detail, BD: products});
             })
     },
@@ -74,7 +73,7 @@ const productController = {
                 res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { prod: product, method: 'PUT' })
             })
     },
-    // POST PUT 
+    // POST PUT
     editProduct_modify: (req, res) => {
         let id = req.params.id;
         let caratula = req.files.dtype != undefined ? req.files['image-cover'][0] : undefined;
@@ -154,29 +153,29 @@ const productController = {
         //    console.log('El archivo JSON ha sido guardado correctamente.');
         //});
 
-        console.log('estoy en editProduct_post: ',postData)
         res.redirect(`/home`)
     },
     // DELETE
     delete: (req, res) => {
-        let idToDelete = req.params.id;
+        let id_to_delete = req.params.id;
 
-        //let newBD = []
         db.Product.detroy({
             where: {id: idToDelete}
         })
+
         fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].image))
-                    .then(() => {
-                        console.log('Foto eliminada con exito')
-                    }).catch(err => {
-                        console.error('Hubo algun error en eliminar la foto del producto', err)
-                    })
-                fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].gameplay))
-                    .then(() => {
-                        console.log('Foto eliminada con exito')
-                    }).catch(err => {
-                        console.error('Hubo algun error en eliminar la foto del producto', err)
-                    })
+            .then(() => {
+                console.log('Foto eliminada con exito')
+            }).catch(err => {
+                console.error('Hubo algun error en eliminar la foto del producto', err)
+            })
+        fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].gameplay))
+            .then(() => {
+                console.log('Foto eliminada con exito')
+            }).catch(err => {
+                console.error('Hubo algun error en eliminar la foto del producto', err)
+            })
+            
       /*  for (let i = 0; i < BD_provisoria.length; i++) {
             /*Si es que el id no es el que queremos vamos reconstruyendo un nuevo array */
       /*      if (BD_provisoria[i].id != id) {
