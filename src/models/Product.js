@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product
+let db = require('../../database/models');
 const jsonPath = path.join(__dirname, '../Data/product.json')
 
 const productMethod = {
@@ -8,7 +9,7 @@ const productMethod = {
         return require(path.join(__dirname, "../../src/Data/BD")).users
     },
     searchId: function(id){
-        let productFound = BD_provisoria.find(oneProduct => oneProduct.id == id)
+        let productFound = db.Product.findByPk(id)
         return productFound
     },
     searchField: function (field, text) {
@@ -123,22 +124,26 @@ const productMethod = {
         return ratings
     },
     create: function(productData) {
-        
-
-        let newProduct = {
-            id: this.generateId(),
-            ...productData,
-        }
-        BD_provisoria.push(newProduct) 
-
-        fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
-            if (err) {
-                console.log(err);
-                return;
-            }
-            console.log("Se sobreescribio correctamente el Usuario");
+        console.log('ESTOY EN CREATEEEEEEEEE',productData);
+        db.Product.create({
+            name: productData.name,
+            second_name: productData.second_name,
+            description_1: productData.description_1,
+            description_2: productData.description_2,
+            description_3: productData.description_3,
+            description_4: productData.description_4,
+            cover_image: productData.cover_image,
+            price: productData.price,
+            release_date: productData.release_date,
+            trailer: productData.trailer,
+            gameplay_image: productData.gameplay_image,
+            rating_esrb: productData.rating_esrb,
+            rating_pegi: productData.rating_pegi,
+            developer: productData.developer,
+            format: productData.format
         })
-        return newProduct
+
+        return productData
     },
     delete: function (id) {
         BD_provisoria = BD_provisoria.filter(product => product.id !== id)
@@ -151,22 +156,28 @@ const productMethod = {
         })
         return true
     },
-    edit: function (productData) {
-        console.log('ESTOY EN EDITTT ',productData);
-
-        //for (let i = 0; i < BD_provisoria.length; i++) {
-        //    if (BD_provisoria[i].id === productData.id) {
-        //        BD_provisoria[i] = productData
-        //    }
-        //}
-        //fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
-        //    if (err) {
-        //        console.log(err);
-        //        return;
-        //    }
-        //    console.log("Se sobreescribio correctamente el Usuario");
-        //})
-        //return true
+    edit: function (productData, product_id) {
+        db.Product.update({
+            name: productData.name,
+            second_name: productData.second_name,
+            description_1: productData.description_1,
+            description_2: productData.description_2,
+            description_3: productData.description_3,
+            description_4: productData.description_4,
+            cover_image: productData.cover_image,
+            price: productData.price,
+            release_date: productData.release_date,
+            trailer: productData.trailer,
+            gameplay_image: productData.gameplay_image,
+            rating_esrb: productData.rating_esrb,
+            rating_pegi: productData.rating_pegi,
+            developer: productData.developer,
+            format: productData.format
+        }, {
+            where: {
+                id: product_id
+            }
+        })
     }
 }
 

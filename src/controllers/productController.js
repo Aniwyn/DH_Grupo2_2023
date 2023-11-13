@@ -104,57 +104,39 @@ const productController = {
             rating_esrb: ratings[1]
         }
 
-        let productEdit = ProductMethod.searchId(id)
-        productEdit = {
-            id: productEdit.id,
-            ...putData
-        }
-        ProductMethod.edit(productEdit)
+        ProductMethod.edit(putData, id)
 
         res.redirect(`/details/${id}`)
     },
     editProduct_post: (req, res) => {
-        const dataPost = req.body
+        const text_data = req.body
         const caratula = req.files['image-cover'][0]
         const gameplay = req.files['image-gameplay'][0]
 
-        let ratings = ProductMethod.searchRatings(dataPost);
-        let plataform = ProductMethod.searchPlatform(dataPost);
+        let ratings = ProductMethod.searchRatings(text_data);
+        let platform = ProductMethod.searchPlatform(text_data);
 
         const postData = {
-            id: dato.id,
-            name: dataPost.name,
-            sub_name: dataPost.sub_name,
-            description: dataPost.description,
-            image: caratula.path.replace("public", ""),
-            price: parseFloat(dataPost.price),
-            plataform: plataform,
-            releaseDate: dataPost.releaseDate,
-            developer: dataPost.developer,
-            gender: dataPost.gender,
-            format: dataPost.format,
-            trailer: dataPost.trailer,
-            gameplay: gameplay.path.replace("public", ""),
+            name: text_data.name,
+            second_name: text_data.sub_name,
+            description_1: text_data.description[0],
+            description_2: text_data.description[1],
+            description_3: text_data.description[2],
+            description_4: text_data.description[3],
+            cover_image: caratula.path.replace("public", ""),
+            price: parseFloat(text_data.price),
+            platform: platform,
+            release_date: text_data.releaseDate,
+            developer: text_data.developer,
+            product_genres: text_data.genre,
+            format: text_data.format,
+            trailer: text_data.trailer,
+            gameplay_image: gameplay.path.replace("public", ""),
             rating_pegi: ratings[0],
             rating_esrb: ratings[1]
         }
 
-
-        
-
-        //BD_provisoria.push(postData)
-        //const productJSON = JSON.stringify(BD_provisoria, null, 2);
-        //const rutaArchivo = './src/Data/product.json';
-//
-        //fs.writeFile(rutaArchivo, productJSON, 'utf8', (err) => {
-        //    if (err) {
-        //        console.error(err);
-        //        return;
-        //    }
-        //    console.log('El archivo JSON ha sido guardado correctamente.');
-        //});
-
-        console.log('estoy en editProduct_post: ',postData)
+        ProductMethod.create(postData);
         res.redirect(`/home`)
     },
     // DELETE
