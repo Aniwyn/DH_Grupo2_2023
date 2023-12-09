@@ -42,7 +42,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_subTitle">Sub titulo<span class="editForm__spanText">*</span></label>
-                        <input class="input" type="text" value="<%= prod.sub_name %>" name="sub_name" id="f_subTitle" title="Ingrese el Sub Titulo de su Juego" required>
+                        <input class="input" type="text" value="<%= prod.second_name %>" name="sub_name" id="f_subTitle" title="Ingrese el Sub Titulo de su Juego" required>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                         <div class="input__container">
                             <div class="option">
                                 <input class="input input--radio" type="radio" value="Fisico" name="format" id="f_radio-physic" required
-                                    <% if(prod.format == 'Fisico') {  %>
+                                    <% if(prod.format.name == 'Fisico') {  %>
                                         checked
                                     <% } %>>
                                 <label class="label--radio" for="f_radio-physic">Fisico</label>
@@ -76,40 +76,40 @@
                         <div class="input__container">
                             <div class="option">
                                 <input class="input input--radio" type="checkbox" value="PC" name="platform" id="f_chxbox-pc"
-                                <% for(let i = 0; i < prod.platform.length; i++) { %>
-                                    <% if(prod.platform[i][0] == 'PC') {  %>
+                                <% for(let i = 0; i < prod.product_platforms.length; i++) { %>
+                                    <% if(prod.product_platforms[i].name == 'PC') {  %>
                                         checked
                                 <% }} %>>
                                 <label class="label--radio" for="f_chxbox-pc">PC</label>
                             </div>
                             <div class="option">
                                 <input class="input input--radio" type="checkbox" value="PS" name="platform" id="f_chxbox-ps"
-                                <% for(let i = 0; i < prod.platform.length; i++) { %>
-                                    <% if(prod.platform[i][0] == 'PS') {  %>
+                                <% for(let i = 0; i < prod.product_platforms.length; i++) { %>
+                                    <% if(prod.product_platforms[i].name == 'PS') {  %>
                                         checked
                                 <% }} %>>
                                 <label class="label--radio" for="f_chxbox-ps">Play Station</label>
                             </div>
                             <div class="option">
                                 <input class="input input--radio" type="checkbox" value="XBOX" name="platform" id="f_chxbox-xbox"
-                                <% for(let i = 0; i < prod.platform.length; i++) { %>
-                                    <% if(prod.platform[i][0] == 'XBOX') {  %>
+                                <% for(let i = 0; i < prod.product_platforms.length; i++) { %>
+                                    <% if(prod.product_platforms[i].name == 'XBOX') {  %>
                                         checked
                                 <% }} %>>
                                 <label class="label--radio" for="f_chxbox-xbox">XBox</label>
                             </div>
                             <div class="option">
                                 <input class="input input--radio" type="checkbox" value="SEGA" name="platform" id="f_chxbox-sega"
-                                <% for(let i = 0; i < prod.platform.length; i++) { %>
-                                    <% if(prod.platform[i][0] == 'SEGA') {  %>
+                                <% for(let i = 0; i < prod.product_platforms.length; i++) { %>
+                                    <% if(prod.product_platforms[i].name == 'SEGA') {  %>
                                         checked
                                 <% }} %>>
                                 <label class="label--radio" for="f_chxbox-sega">Sega</label>
                             </div>
                             <div class="option">
                                 <input class="input input--radio" type="checkbox" value="SWITCH" name="platform" id="f_chxbox-switch"
-                                <% for(let i = 0; i < prod.platform.length; i++) { %>
-                                    <% if(prod.platform[i][0] == 'SWITCH') {  %>
+                                <% for(let i = 0; i < prod.product_platforms.length; i++) { %>
+                                    <% if(prod.product_platforms[i].name == 'SWITCH') {  %>
                                         checked
                                 <% }} %>>
                                 <label class="label--radio" for="f_chxbox-switch">Switch</label>
@@ -122,7 +122,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_date">Lanzamiento<span class="editForm__spanText">*</span></label>
-                        <input class="input" type="date" value="<%= prod.releaseDate %>" name="releaseDate" id="f_date" required>
+                        <input class="input" type="date" value="<%= prod.release_date %>" name="releaseDate" id="f_date" required>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_developer">Desarrollador<span class="editForm__spanText">*</span></label>
-                        <input class="input" type="text" value="<%= prod.developer %>" name="developer" id="f_developer" required>
+                        <input class="input" type="text" value="<%= prod.developer.name %>" name="developer" id="f_developer" required>
                     </div>
                 </div>
             </div>
@@ -142,32 +142,32 @@
                             <div class="option">
                                 <div class="option--classification">
                                     <input class="input input--radio" type="checkbox" value="Acción" name="genre" id="f_chkbox-action" 
-                                    <% for(let i = 0; i < prod.genre.length; i++) { %>
-                                        <% if(prod.genre[i] == 'Acción') {  %>
+                                    <% for(let i = 0; i < prod.product_genres.length; i++) { %>
+                                        <% if(prod.product_genres[i].name == 'Acción') {  %>
                                             checked
                                     <% }} %>>
                                     <label class="label--radio-classification" for="f_chkbox-action">Acción</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="checkbox" value="Aventura" name="genre" id="f_chkbox-adventure" 
-                                    <% for(let i = 0; i < prod.genre.length; i++) { %>
-                                        <% if(prod.genre[i] == 'Aventura') {  %>
+                                    <% for(let i = 0; i < prod.product_genres.length; i++) { %>
+                                        <% if(prod.product_genres[i].name == 'Aventura') {  %>
                                             checked
                                     <% }} %>>
                                     <label class="label--radio-classification" for="f_chkbox-adventure">Aventura</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="checkbox" value="Estrategia" name="genre" id="f_chkbox-strategy" 
-                                    <% for(let i = 0; i < prod.genre.length; i++) { %>
-                                        <% if(prod.genre[i] == 'Estrategia') {  %>
+                                    <% for(let i = 0; i < prod.product_genres.length; i++) { %>
+                                        <% if(prod.product_genres[i].name == 'Estrategia') {  %>
                                             checked
                                     <% }} %>>
                                     <label class="label--radio-classification" for="f_chkbox-strategy">Estrategia</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="checkbox" value="Peleas" name="genre" id="f_chkbox-fight" 
-                                    <% for(let i = 0; i < prod.genre.length; i++) { %>
-                                        <% if(prod.genre[i] == 'Peleas') {  %>
+                                    <% for(let i = 0; i < prod.product_genres.length; i++) { %>
+                                        <% if(prod.product_genres[i].name == 'Peleas') {  %>
                                             checked
                                     <% }} %>>
                                     <label class="label--radio-classification" for="f_chkbox-fight">Peleas</label>
@@ -176,32 +176,32 @@
                             <div class="option">
                                 <div class="option--classification">
                                     <input class="input input--radio" type="checkbox" value="RPG" name="genre" id="f_chkbox-rpg" 
-                                    <% for(let i = 0; i < prod.genre.length; i++) { %>
-                                        <% if(prod.genre[i] == 'RPG') {  %>
+                                    <% for(let i = 0; i < prod.product_genres.length; i++) { %>
+                                        <% if(prod.product_genres[i].name == 'RPG') {  %>
                                             checked
                                     <% }} %>>
                                     <label class="label--radio-classification" for="f_chkbox-rpg">RPG</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="checkbox" value="Deporte" name="genre" id="f_chkbox-sport" 
-                                    <% for(let i = 0; i < prod.genre.length; i++) { %>
-                                        <% if(prod.genre[i] == 'Deporte') {  %>
+                                    <% for(let i = 0; i < prod.product_genres.length; i++) { %>
+                                        <% if(prod.product_genres[i].name == 'Deporte') {  %>
                                             checked
                                     <% }} %>>
                                     <label class="label--radio-classification" for="f_chkbox-sport">Deporte</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="checkbox" value="Multijugador" name="genre" id="f_chkbox-multiplayer" 
-                                    <% for(let i = 0; i < prod.genre.length; i++) { %>
-                                        <% if(prod.genre[i] == 'Multijugador') {  %>
+                                    <% for(let i = 0; i < prod.product_genres.length; i++) { %>
+                                        <% if(prod.product_genres[i].name == 'Multijugador') {  %>
                                             checked
                                     <% }} %>>
                                     <label class="label--radio-classification" for="f_chkbox-multiplayer">Multijugador</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="checkbox" value="Un jugador" name="genre" id="f_chkbox-singleplayer" 
-                                    <% for(let i = 0; i < prod.genre.length; i++) { %>
-                                        <% if(prod.genre[i] == 'Un jugador') {  %>
+                                    <% for(let i = 0; i < prod.product_genres.length; i++) { %>
+                                        <% if(prod.product_genres[i].name == 'Un jugador') {  %>
                                             checked
                                     <% }} %>>
                                     <label class="label--radio-classification" for="f_chkbox-singleplayer">Un jugador</label>
@@ -220,35 +220,35 @@
                                 <span class="option__title">PEGI</span>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="PEGI_3" name="ranking1" id="f_radio-pegi3" required
-                                    <% if(prod.ranking[0][0] == 'PEGI_3') {  %>
+                                    <% if(prod.rating_pegi.name == 'PEGI_3') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-pegi3">PEGI 3</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="PEGI_7" name="ranking1" id="f_radio-pegi7" required
-                                    <% if(prod.ranking[0][0] == 'PEGI_7') {  %>
+                                    <% if(prod.rating_pegi.name == 'PEGI_7') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-pegi7">PEGI 7</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="PEGI_12" name="ranking1" id="f_radio-pegi12" required
-                                    <% if(prod.ranking[0][0] == 'PEGI_12') {  %>
+                                    <% if(prod.rating_pegi.name == 'PEGI_12') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-pegi12">PEGI 12</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="PEGI_16" name="ranking1" id="f_radio-pegi16" required
-                                    <% if(prod.ranking[0][0] == 'PEGI_16') {  %>
+                                    <% if(prod.rating_pegi.name == 'PEGI_16') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-pegi16">PEGI 16</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="PEGI_18" name="ranking1" id="f_radio-pegi18" required
-                                    <% if(prod.ranking[0][0] == 'PEGI_18') {  %>
+                                    <% if(prod.rating_pegi.name == 'PEGI_18') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-pegi18">PEGI 18</label>
@@ -258,35 +258,35 @@
                                 <span class="option__title">ESRB</span>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="ESRB_E" name="ranking2" id="f_radio-esrbe" required
-                                    <% if(prod.ranking[1][0] == 'ESRB_E') {  %>
+                                    <% if(prod.rating_esrb.name == 'ESRB_E') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-esrbe">ESRB E</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="ESRB_E10" name="ranking2" id="f_radio-esrbe+" required
-                                    <% if(prod.ranking[1][0] == 'ESRB_E10') {  %>
+                                    <% if(prod.rating_esrb.name == 'ESRB_E10') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-esrbe+">ESRB E10+</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="ESRB_T" name="ranking2" id="f_radio-esrbt" required
-                                    <% if(prod.ranking[1][0] == 'ESRB_T') {  %>
+                                    <% if(prod.rating_esrb.name == 'ESRB_T') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-esrbt">ESRB T</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="ESRB_M" name="ranking2" id="f_radio-esrbm" required
-                                    <% if(prod.ranking[1][0] == 'ESRB_M') {  %>
+                                    <% if(prod.rating_esrb.name == 'ESRB_M') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-esrbm">ESRB M</label>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="ESRB_AO" name="ranking2" id="f_radio-esrba" required
-                                    <% if(prod.ranking[1][0] == 'ESRB_AO') {  %>
+                                    <% if(prod.rating_esrb.name == 'ESRB_AO') {  %>
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-esrba">ESRB AO</label>
@@ -306,7 +306,7 @@
             </div>
             <div class="editForm__inputText editForm__preview">
                 <div class="preview--image">
-                    <img src="<%= prod.image %>" alt="">
+                    <img src="<%= prod.cover_image %>" alt="">
                 </div>
                 <div class="field preview--select">
                     <div class="field__input">
@@ -319,7 +319,7 @@
             </div>
             <div class="editForm__inputText editForm__preview">
                 <div class="preview--image">
-                    <img src="<%= prod.gameplay %>" alt="">
+                    <img src="<%= prod.gameplay_image %>" alt="">
                 </div>
                 <div class="field preview--select">
                     <div class="field__input">
@@ -342,9 +342,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_description-header">Introducción<span class="editForm__spanText">*</span></label>
-                        <textarea class="input" rows="10" name="description[0]" id="f_description-header">
-                            <%= prod.description[0] %>
-                        </textarea>
+                        <textarea class="input" rows="10" name="description[0]" id="f_description-header"><%= prod.description_1 %></textarea>
                     </div>
                 </div>
             </div>
@@ -352,9 +350,15 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_description-body">Descripción<span class="editForm__spanText">*</span></label>
-                        <textarea class="input" rows="10" name="description[1]" id="f_description-body">
-                            <%= prod.description[1] %>
-                        </textarea>
+                        <textarea class="input" rows="10" name="description[1]" id="f_description-body"><%= prod.description_2 %></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="editForm__inputText">
+                <div class="field">
+                    <div class="field__input">
+                        <label class="label" for="f_description-body">Descripción<span class="editForm__spanText">*</span></label>
+                        <textarea class="input" rows="10" name="description[2]" id="f_description-body"><%= prod.description_3 %></textarea>
                     </div>
                 </div>
             </div>
@@ -362,9 +366,7 @@
                 <div class="field">
                     <div class="field__input">
                         <label class="label" for="f_description-footer">Desenlace<span class="editForm__spanText">*</span></label>
-                        <textarea class="input" rows="10" name="description[2]" id="f_description-footer">
-                            <%= prod.description[2] %>
-                        </textarea>
+                        <textarea class="input" rows="10" name="description[3]" id="f_description-footer"><%= prod.description_4 %></textarea>
                     </div>
                 </div>
             </div>

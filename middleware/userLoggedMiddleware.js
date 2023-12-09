@@ -1,10 +1,10 @@
 const UserMethod = require('../src/models/User')
 
-function userLoggedMiddleware(req,res,next) {
+async function userLoggedMiddleware(req,res,next) {
     res.locals.isLogged = false
 
-    let userNameInCookie = req.cookies.userName;
-    let userFromCookie = UserMethod.searchField('userName', userNameInCookie)
+    let userNameInCookie = req.cookies.user_name;
+    let userFromCookie = await UserMethod.searchField(userNameInCookie)
 
     if (userFromCookie) {
         req.session.userLogged = userFromCookie

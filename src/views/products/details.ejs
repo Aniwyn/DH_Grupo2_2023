@@ -18,47 +18,47 @@
     <main>
         <section class="details__dashboard">
             <div class="dashboard__image-product">
-                <img src="<%= data_item.image %>" alt="imagen de mario">
+                <img src="<%= data_item.cover_image %>" alt="">
             </div>
             <div class="dashboard__description">
                 <div class="description__title">
                     <h2 class="description__title-main" ><%= data_item.name %></h2>
-                    <span class="description__title-subTitle" >- <%= data_item.sub_name %> -</span>
+                    <span class="description__title-subTitle" >- <%= data_item.second_name %> -</span>
                 </div>
                 <div class="descripcion__info">
                     <div class="description__characteristics">
                         <div class="characteristic">
                             <span class="characteristic__name">Formato:</span>
-                            <span class="characteristic__value"><%= data_item.format %></Span>
+                            <span class="characteristic__value"><%= data_item.format.name %></Span>
                         </div>
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Plataforma:</span>
-                            <% for(let i=0; i < data_item.platform.length; i++) { %>
-                                <span class="characteristic__value"><%= data_item.platform[i][0] %>&nbsp;</Span>
+                            <% for(let i=0; i < data_item.product_platforms.length; i++) { %>
+                                <span class="characteristic__value"><%= data_item.product_platforms[i].name %>&nbsp;</Span>
                             <% } %>
                         </div>
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Lanzamiento:</span>
-                            <span class="characteristic__value"><%= data_item.releaseDate %></Span>
+                            <span class="characteristic__value"><%= data_item.release_date %></Span>
                         </div>
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Desarrollador:</span>
-                            <span class="characteristic__value"><%= data_item.developer %></Span>
+                            <span class="characteristic__value"><%= data_item.developer.name %></Span>
                         </div>
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Genero:</span>
-                            <% for(let i=0; i < data_item.genre.length; i++) { %>
-                                <span class="characteristic__value"><%= data_item.genre[i] %>&nbsp;</Span>
+                            <% for(let i=0; i < data_item.product_genres.length; i++) { %>
+                                <span class="characteristic__value"><%= data_item.product_genres[i].name %>&nbsp;</Span>
                             <% } %>
 
                         </div>
                         <div class="rankings">
-                            <img src="<%= data_item.ranking[0][1] %>" alt="clasificacion pegi">
-                            <img src="<%= data_item.ranking[1][1] %>" alt="clasificacion esbr">
+                            <img src="<%= data_item.rating_pegi.image %>" alt="clasificacion pegi">
+                            <img src="<%= data_item.rating_esrb.image %>" alt="clasificacion esbr">
                         </div>
                     </div>
                     <div class="description__shopping">
@@ -91,7 +91,7 @@
 
         <section class="details__description">
             <div class="description__body">
-                <p class="description__text"><%= data_item.description[0] %></p>
+                <p class="description__text"><%= data_item.description_1 %></p>
 
                 <div class="description__video">
                     <iframe 
@@ -106,19 +106,19 @@
                     </iframe>
                 </div>
 
-                <p class="description__text"><%= data_item.description[1] %></p>
-                <p class="description__text"><%= data_item.description[2] %></p>
+                <p class="description__text"><%= data_item.description_2 %></p>
+                <p class="description__text"><%= data_item.description_3 %></p>
             
-                <img class="description__image" src=<%= data_item.gameplay %> alt="gameplay del juego">
+                <img class="description__image" src=<%= data_item.gameplay_image %> alt="gameplay del juego">
 
-                <p class="description__text"><%= data_item.description[3] %></p>
+                <p class="description__text"><%= data_item.description_4 %></p>
             </div>
         </section>
 
         <section>
             <h2 class="section__tittle">Quizas tambien te interese</h2>
             <div class="section__products">
-                <% for(let i=5; i < 9; i++) { %>
+                <% for(let i=0; i < BD.length; i++) { %>
                     <%- include('../partials/card--main', {data_item: BD[i]}) %>
                 <% } %>
             </div>

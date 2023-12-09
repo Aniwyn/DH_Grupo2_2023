@@ -30,16 +30,16 @@ function product(sequelize, DataTypes) {
                 type: DataTypes.TEXT,
                 allowNull: false
             },
+            description_4: {
+                type: DataTypes.TEXT,
+                allowNull: false
+            },
             cover_image: {
                 type: DataTypes.STRING(80),
                 allowNull: false
             },
             price: {
                 type: DataTypes.INTEGER,
-                allowNull: false
-            },
-            password_hash: {
-                type: DataTypes.STRING(100),
                 allowNull: false
             },
             release_date: {

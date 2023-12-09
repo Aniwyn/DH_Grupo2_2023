@@ -1,5 +1,5 @@
-function client(sequelize, DataTypes) {
-    const Client = sequelize.define(
+function user(sequelize, DataTypes) {
+    const User = sequelize.define(
         'User',
         {
             id: {
@@ -26,11 +26,12 @@ function client(sequelize, DataTypes) {
             },
             avatar: {
                 type: DataTypes.STRING(50),
+                defaultValue: 'monster0.png',
                 allowNull: false
             },
             id_category: {
                 type: DataTypes.INTEGER,
-                allowNull: false
+                allowNull: false,
             }
         },
         {
@@ -39,19 +40,19 @@ function client(sequelize, DataTypes) {
         }
     )
 
-    Client.associate = (models) => {
-        Client.belongsTo(models.Category, {
+    User.associate = (models) => {
+        User.belongsTo(models.Category, {
             as: 'client_category',
             foreignKey: 'id_category'
         })
 
-        Client.hasMany(models.Cart, {
+        User.hasMany(models.Cart, {
             as: 'carts',
             foreignKey: 'id_client'
         })
     }
 
-    return Client
+    return User
 }
 
-module.exports = client
+module.exports = user

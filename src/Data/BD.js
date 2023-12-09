@@ -9,16 +9,14 @@ let users = JSON.parse(fs.readFileSync(filePathUsers, "utf-8"))
 const dato = {
     id: product[product.length - 1].id + 1,
     name: "",
-    sub_name: "",
-    description: [
-        "",
-        "",
-        ""
-    ],
-    image: "",
+    second_name: "",
+    description_1: "",
+    description_2: "",
+    description_3: "",
+    description_4: "",
+    cover_image: "",
     price: 0,
-    plataform: [
-
+    product_platforms: [
         [
             "",
             ""
@@ -26,23 +24,15 @@ const dato = {
     ],
     releaseDate: "2000-01-01",
     developer: "",
-    gender: [
+    product_genres: [
         "",
         ""
     ],
     format: "",
     trailer: "",
-    gameplay: "",
-    ranking: [
-        [
-            "",
-            ""
-        ],
-        [
-            "",
-            ""
-        ]
-    ]
+    gameplay_image: "",
+    rating_esrb: ['',''],
+    rating_pegi: ['','']
 }
 
 

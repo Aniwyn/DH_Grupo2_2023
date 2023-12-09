@@ -10,11 +10,12 @@ const { validationResult } = require('express-validator')
 /* GETS SET */
 const userController = {
     home: (req, res) => {
-        // db.Products.findAll()
-        //     .then(products => {
-                
-        //     })
-        res.render(path.join(__dirname, "../views/users/home.ejs"), { BD: BD_provisoria });
+        db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/users/home.ejs"), { BD: products });
+            })
     },
     register: (req, res) => {
         res.render(path.join(__dirname, "../views/users/register.ejs"));
@@ -25,8 +26,8 @@ const userController = {
         if (!errors.isEmpty()) {
             res.render(path.join(__dirname, "../views/users/register.ejs"), { errors: errors.array(), old: req.body });
         } else {
-            let userInDB = UserMethod.searchField('email', req.body.email)
-            if (userInDB) {
+            let emailInDB = UserMethod.searchField('email', req.body.email)
+            if (emailInDB) {
                 return res.render(path.join(__dirname, "../views/users/register.ejs"), {
                     errors: [{
                         msg: 'Este email ya esta registrado',
@@ -47,13 +48,15 @@ const userController = {
                 })
             }
 
-            delete req.body.password_repeat
-            let userToCreate = {
-                ...req.body,
-                password: bcryptjs.hashSync(req.body.password, 10)
+            let userToCreate  = {
+                name: req.body.name,
+                user_name: req.body.userName,
+                email: req.body.email,
+                password_hash: bcryptjs.hashSync(req.body.password, 10),
+                id_category: 1
             }
 
-            let userCreated = UserMethod.create(userToCreate)
+            UserMethod.create(userToCreate)
 
             res.redirect('/login')
         }
@@ -62,44 +65,48 @@ const userController = {
         res.render(path.join(__dirname, "../views/users/login.ejs"));
     },
     processLogin: (req, res) => {
-        let userToLogin = UserMethod.searchField('userName', req.body.userName)
-        let errors = validationResult(req)
+        db.User.findOne({
+            where: {
+                user_name: req.body.userName
+            }
+        }).then(userToLogin => {
+            let errors = validationResult(req)
 
-        if (!errors.isEmpty()) {
-            res.render(path.join(__dirname, "../views/users/login.ejs"), { errors: errors.array(), old: req.body });
-        } else {
-            if (userToLogin) {
-                if (bcryptjs.compareSync(req.body.password, userToLogin.password)) {
-                    let userLogged = structuredClone(userToLogin)
-                    delete userLogged.password
-                    // Guardarlo en session
-                    req.session.userLogged = userLogged
-
-                    if (req.body.remember) {
-                        res.cookie('userName', req.body.userName, { maxAge: (1000 * 60) * 2 })
+            if (!errors.isEmpty()) {
+                res.render(path.join(__dirname, "../views/users/login.ejs"), { errors: errors.array(), old: req.body });
+            } else {
+                if (userToLogin) {
+                    if (bcryptjs.compareSync(req.body.password, userToLogin.password_hash)) {
+                        let userLogged = structuredClone(userToLogin.dataValues)
+                        delete userLogged.password_hash
+                        // Guardarlo en session
+                        req.session.userLogged = userLogged
+                        if (req.body.remember) {
+                            res.cookie('user_name', req.body.userName, { maxAge: (1000 * 60) * 2 })
+                        }
+                        return res.redirect("/")
                     }
-                    return res.redirect("/")
+                    return res.render(path.join(__dirname, "../views/users/login.ejs"), {
+                        errors: [{
+                            msg: "Las credenciales son invalidas.",
+                            path: 'password'
+                        }],
+                        old: req.body
+                    })
                 }
+
                 return res.render(path.join(__dirname, "../views/users/login.ejs"), {
                     errors: [{
-                        msg: "Las credenciales son invalidas.",
-                        path: 'password'
+                        msg: "No se encuentra este nombre de usuario registrado.",
+                        path: 'userName'
                     }],
                     old: req.body
                 })
             }
-
-            return res.render(path.join(__dirname, "../views/users/login.ejs"), {
-                errors: [{
-                    msg: "No se encuentra este nombre de usuario registrado.",
-                    path: 'userName'
-                }],
-                old: req.body
-            })
-        }
+        })    
     },
     logout: (req, res) => {
-        res.clearCookie('userName')
+        res.clearCookie('user_name')
         req.session.destroy()
         return res.redirect('/')
     },
@@ -112,27 +119,27 @@ const userController = {
     put: (req, res) => {
         let avatar_image = req.file
         let userData = req.body
-        let userInBD = UserMethod.searchId(userData.id)
-        // return res.send(userInBD)
-        let editedUser = {}
-        if (userData) {
-            editedUser = {
-                ...userInBD,
-                userName: userData.userName,
-                email: userData.email,
-                avatar: avatar_image ? avatar_image.filename : userInBD.avatar
+        db.User.findByPk(userData.id).then(userInBD => {
+            let editedUser = {}
+            if (userData) {
+                editedUser = {
+                    ...userInBD.dataValues,
+                    user_name: userData.userName,
+                    email: userData.email,
+                    avatar: avatar_image ? avatar_image.filename : userInBD.avatar
+                }
             }
-        }
-
-        let editReady = UserMethod.edit(editedUser)
+            UserMethod.edit(editedUser)
         
-        req.session.destroy()
-        let userToSession = structuredClone(editedUser)
-        delete userToSession.password
-        req.session.userLogged = userToSession
-        res.clearCookie('userName')
+            req.session.destroy()
+            let userToSession = structuredClone(editedUser)
+            delete userToSession.password_hash
 
-        res.redirect('/profile')
+            // req.session.userLogged = userToSession
+            res.clearCookie('userName')
+
+            res.redirect('/profile')
+        })
     }
 }
 

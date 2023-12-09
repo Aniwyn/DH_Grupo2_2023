@@ -13,36 +13,67 @@ let ProductMethod = require(path.join(__dirname, "../models/Product"))
 const productController = {
     //GETS
     mycart: (req, res) => {
-        db.Product.findAll()
-            .then(function(p){
-                console.log(p[1]);
+        db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: products });
             })
-        res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: BD_provisoria });
     },
     details: (req, res) => {
         let id = req.params.id;
-        
-        let prod = BD_provisoria.filter((product) => product.id == id);
-        res.render(path.join(__dirname, "../views/products/details.ejs"), { BD: BD_provisoria, data_item: prod[0] });
+        let requestProduct = db.Product.findByPk(id, {
+            include: [
+                {association: 'product_platforms'}, 
+                {association: 'product_genres'},
+                {association: 'rating_pegi'},
+                {association: 'rating_esrb'},
+                {association: 'format'},
+                {association: 'developer'}
+            ]
+        })
+        let requestAllProducts = db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+
+        Promise.all([requestProduct, requestAllProducts])
+            .then(([product_detail, products]) => {
+                res.render(path.join(__dirname, "../views/products/details.ejs"), { data_item: product_detail, BD: products});
+            })
     },
     products: (req, res) => {
-        for (let i = 0; i < BD_provisoria.length; i++) {
-            console.log(BD_provisoria[i].name)
-            console.log(BD_provisoria[i].platform.length + "\n")
-        }
-        res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: BD_provisoria });
+        db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: products });
+            })
     },
     create: (req, res) => {
-        const BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
-        console.log(dato)
-        res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: dato, method: '' })
+        db.Product.findAll({
+            include: [{association: 'product_platforms'}]
+        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: products, prod: dato, method: '' })
+            })
     },
     editProduct: (req, res) => {
         let id = req.params.id;
-        let product = ProductMethod.searchId(id)
-        res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: BD_provisoria, prod: product, method: 'PUT' })
+        db.Product.findByPk(id, {
+            include: [
+                {association: 'product_platforms'}, 
+                {association: 'product_genres'},
+                {association: 'rating_pegi'},
+                {association: 'rating_esrb'},
+                {association: 'format'},
+                {association: 'developer'}
+            ]
+        })
+            .then(product => {
+                res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { prod: product, method: 'PUT' })
+            })
     },
-    // POST PUT 
+    // POST PUT
     editProduct_modify: (req, res) => {
         let id = req.params.id;
         let caratula = req.files.dtype != undefined ? req.files['image-cover'][0] : undefined;
@@ -54,101 +85,79 @@ const productController = {
         let platform = ProductMethod.searchPlatform(text_data);
         const putData = {
             name: text_data.name,
-            sub_name: text_data.sub_name,
-            description: text_data.description,
-            image: caratula != undefined ? caratula.path.replace("public", "") : old_product.image,
+            second_name: text_data.sub_name,
+            description_1: text_data.description[0],
+            description_2: text_data.description[1],
+            description_3: text_data.description[2],
+            description_4: text_data.description[3],
+            cover_image: caratula != undefined ? caratula.path.replace("public", "") : old_product.image,
             price: parseFloat(text_data.price),
             platform: platform,
-            releaseDate: text_data.releaseDate,
+            release_date: text_data.releaseDate,
             developer: text_data.developer,
-            genre: text_data.genre,
+            product_genres: text_data.genre,
             format: text_data.format,
             trailer: text_data.trailer,
-            gameplay: gameplay != undefined ? gameplay.path.replace("public", "") : old_product.gameplay,
+            gameplay_image: gameplay != undefined ? gameplay.path.replace("public", "") : old_product.gameplay,
             rating_pegi: ratings[0],
             rating_esrb: ratings[1]
         }
 
-        let productEdit = ProductMethod.searchId(id)
-        productEdit = {
-            id: productEdit.id,
-            ...putData
-        }
-        ProductMethod.edit(productEdit)
+        ProductMethod.edit(putData, id)
 
         res.redirect(`/details/${id}`)
     },
     editProduct_post: (req, res) => {
-        const dataPost = req.body
+        const text_data = req.body
         const caratula = req.files['image-cover'][0]
         const gameplay = req.files['image-gameplay'][0]
 
-        let ratings = ProductMethod.searchRatings(dataPost);
-        let plataform = ProductMethod.searchPlatform(dataPost);
+        let ratings = ProductMethod.searchRatings(text_data);
+        let platform = ProductMethod.searchPlatform(text_data);
+        let format = ProductMethod.searchFormat(text_data);
 
         const postData = {
-            id: dato.id,
-            name: dataPost.name,
-            sub_name: dataPost.sub_name,
-            description: dataPost.description,
-            image: caratula.path.replace("public", ""),
-            price: parseFloat(dataPost.price),
-            plataform: plataform,
-            releaseDate: dataPost.releaseDate,
-            developer: dataPost.developer,
-            gender: dataPost.gender,
-            format: dataPost.format,
-            trailer: dataPost.trailer,
-            gameplay: gameplay.path.replace("public", ""),
+            name: text_data.name,
+            second_name: text_data.sub_name,
+            description_1: text_data.description[0],
+            description_2: text_data.description[1],
+            description_3: text_data.description[2],
+            description_4: text_data.description[3],
+            cover_image: caratula.path.replace("public", ""),
+            price: parseFloat(text_data.price),
+            platform: platform,
+            release_date: text_data.releaseDate,
+            developer: text_data.developer,
+            product_genres: text_data.genre,
+            format: format,
+            trailer: text_data.trailer,
+            gameplay_image: gameplay.path.replace("public", ""),
             rating_pegi: ratings[0],
             rating_esrb: ratings[1]
         }
-
-        BD_provisoria.push(postData)
-        const productJSON = JSON.stringify(BD_provisoria, null, 2);
-        const rutaArchivo = './src/Data/product.json';
-
-        fs.writeFile(rutaArchivo, productJSON, 'utf8', (err) => {
-            if (err) {
-                console.error(err);
-                return;
-            }
-            console.log('El archivo JSON ha sido guardado correctamente.');
-        });
-
-        console.log('estoy en editProduct_post: ',postData)
+        ProductMethod.create(postData);
         res.redirect(`/home`)
     },
     // DELETE
     delete: (req, res) => {
-        let idToDelete = req.params.id;
+        let id_to_delete = req.params.id;
 
         //let newBD = []
-        db.Product.findByPk(idToDelete).then((product)=>{
-            dir_image = product.cover_image
-            dir_gameplay = product.gameplay_image
-            return [dir_image, dir_gameplay]
-        }).then(res =>{
-            db.Product.detroy({
-                where: {id: idToDelete}
-            })
-            return res
-        }).then(res =>{
-            fsPromises.unlink(path.join(`${__dirname}/../../public`, res[0]))
-                    .then(() => {
-                        console.log('Foto eliminada con exito')
-                    }).catch(err => {
-                        console.error('Hubo algun error en eliminar la foto del producto', err)
-                    })
-                fsPromises.unlink(path.join(`${__dirname}/../../public`, res[1]))
-                    .then(() => {
-                        console.log('Foto eliminada con exito')
-                    }).catch(err => {
-                        console.error('Hubo algun error en eliminar la foto del producto', err)
-                    })
+        db.Product.detroy({
+            where: {id: idToDelete}
         })
-        
-        
+        fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].image))
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
+                fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].gameplay))
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
       /*  for (let i = 0; i < BD_provisoria.length; i++) {
             /*Si es que el id no es el que queremos vamos reconstruyendo un nuevo array */
       /*      if (BD_provisoria[i].id != id) {
