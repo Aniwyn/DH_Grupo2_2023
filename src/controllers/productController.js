@@ -3,7 +3,6 @@ const path = require("path");
 const fs = require("fs");
 const fsPromises = require('fs').promises
 const jsonPath = path.join(__dirname, '../Data/product.json')
-const { validationResult } = require('express-validator')
 
 let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
 let db = require('../../database/models');
@@ -46,17 +45,17 @@ const productController = {
         db.Product.findAll({
             include: [{association: 'product_platforms'}]
         })
-        .then(products => {
-            res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: products });
-        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: products });
+            })
     },
     create: (req, res) => {
         db.Product.findAll({
             include: [{association: 'product_platforms'}]
         })
-        .then(products => {
-            res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: products, prod: dato, method: '' })
-        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: products, prod: dato, method: '' })
+            })
     },
     editProduct: (req, res) => {
         let id = req.params.id;
@@ -109,45 +108,35 @@ const productController = {
         res.redirect(`/details/${id}`)
     },
     editProduct_post: (req, res) => {
-        let errors = validationResult(req)
-        console.log("QEASDQWERASFQW$QW       " + req.body.name);
-        if (!errors.isEmpty()) {
-            res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { errors: errors.array(), method: '', prod: dato, old: req.body });
-        } else {
-            console.log("entre a la DB 11111111111111111111111111111111111");
-            const text_data = req.body
-            const caratula = req.files['image-cover'][0]
-            const gameplay = req.files['image-gameplay'][0]
+        const text_data = req.body
+        const caratula = req.files['image-cover'][0]
+        const gameplay = req.files['image-gameplay'][0]
 
-            let ratings = ProductMethod.searchRatings(text_data);
-            let platform = ProductMethod.searchPlatform(text_data);
-            let format = ProductMethod.searchFormat(text_data);
+        let ratings = ProductMethod.searchRatings(text_data);
+        let platform = ProductMethod.searchPlatform(text_data);
+        let format = ProductMethod.searchFormat(text_data);
 
-            const postData = {
-                name: text_data.name,
-                second_name: text_data.sub_name,
-                description_1: text_data.description[0],
-                description_2: text_data.description[1],
-                description_3: text_data.description[2],
-                description_4: text_data.description[3],
-                cover_image: caratula.path.replace("public", ""),
-                price: parseFloat(text_data.price),
-                platform: platform,
-                release_date: text_data.releaseDate,
-                developer: text_data.developer,
-                product_genres: text_data.genre,
-                format: format,
-                trailer: text_data.trailer,
-                gameplay_image: gameplay.path.replace("public", ""),
-                rating_pegi: ratings[0],
-                rating_esrb: ratings[1]
-            }
-
-            console.log(postData);
-
-            ProductMethod.create(postData);
-            res.redirect(`/home`)
+        const postData = {
+            name: text_data.name,
+            second_name: text_data.sub_name,
+            description_1: text_data.description[0],
+            description_2: text_data.description[1],
+            description_3: text_data.description[2],
+            description_4: text_data.description[3],
+            cover_image: caratula.path.replace("public", ""),
+            price: parseFloat(text_data.price),
+            platform: platform,
+            release_date: text_data.releaseDate,
+            developer: text_data.developer,
+            product_genres: text_data.genre,
+            format: format,
+            trailer: text_data.trailer,
+            gameplay_image: gameplay.path.replace("public", ""),
+            rating_pegi: ratings[0],
+            rating_esrb: ratings[1]
         }
+        ProductMethod.create(postData);
+        res.redirect(`/home`)
     },
     // DELETE
     delete: (req, res) => {

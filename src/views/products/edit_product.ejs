@@ -12,7 +12,7 @@
     <!---------------------------- Header ---------------------------->
 
     <%- include('../partials/header.ejs') %>
-    
+
     <main class="main__editProduct">
         <div class="editproduct__title">
             <h2><i class="fa-solid fa-gear"></i> <% if(method == 'PUT'){ %>Editar producto<% } else {%> Crear producto <% } %></h2>
@@ -35,10 +35,6 @@
                     <div class="field__input">
                         <label class="label" for="f_title">Titulo<span class="editForm__spanText">*</span></label>
                         <input class="input" type="text" value="<%= prod.name %>" name="name" id="f_title" title="Ingrese el titulo de su Juego" required>
-                        <% if (locals.errors) { %>
-                            <% const error = errors.find(error => error.path == 'name') %>
-                            <span class="errorMessage"><%= error ? error.msg : '' %></span>
-                        <% } %>
                     </div>
                 </div>
             </div>
@@ -127,10 +123,6 @@
                     <div class="field__input">
                         <label class="label" for="f_date">Lanzamiento<span class="editForm__spanText">*</span></label>
                         <input class="input" type="date" value="<%= prod.release_date %>" name="releaseDate" id="f_date" required>
-                        <% if (locals.errors) { %>
-                            <% const error = errors.find(error => error.path == 'releaseDate') %>
-                            <span class="errorMessage"><%= error ? error.msg : '' %></span>
-                        <% } %>
                     </div>
                 </div>
             </div>
