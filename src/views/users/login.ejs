@@ -14,13 +14,14 @@
     <%-include('../partials/header.ejs')%>
 
     <main class="main__login">
-        <form class="login__container" action="/login" method="POST" >
+        <form class="login__container" id="login__form" action="/login" method="POST" >
             <div>
-                <div class="container__inputText">
+                <div class="container__inputText" >
                     <label for="nombre">Usuario </label>
                     <input type="text" id="nombre" name="userName" placeholder="Ingresa tu usuario..." required
                         value="<%= locals.old && old.userName ? old.userName : '' %>"
                     >
+                    <div id="container__inputUserName"></div>
                     <% if (locals.errors) { %>
                         <% const error = errors.find(error => error.path == 'userName') %>
                         <span class="errorMessage"><%= error ? error.msg : '' %></span>
@@ -29,6 +30,7 @@
                 <div class="container__inputText">
                     <label for="contrasena">Contraseña</label>
                     <input type="password" id="contrasena" name="password" placeholder="Contraseña" required>
+                    <div id="container__inputPassword"></div>
                     <% if (locals.errors) { %>
                         <% const error = errors.find(error => error.path == 'password') %>
                         <span class="errorMessage"><%= error ? error.msg : '' %></span>
@@ -52,4 +54,6 @@
     <!---------------------------- Footer ---------------------------->
 
     <%- include('../partials/footer.ejs') %>
+
+    <script src="/scripts/validations/validateLogin.js"></script>
 </body>

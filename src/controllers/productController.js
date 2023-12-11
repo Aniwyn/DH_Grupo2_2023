@@ -156,23 +156,22 @@ const productController = {
     delete: (req, res) => {
         let id_to_delete = req.params.id;
 
+        //let newBD = []
         db.Product.detroy({
             where: {id: idToDelete}
         })
-
         fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].image))
-            .then(() => {
-                console.log('Foto eliminada con exito')
-            }).catch(err => {
-                console.error('Hubo algun error en eliminar la foto del producto', err)
-            })
-        fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].gameplay))
-            .then(() => {
-                console.log('Foto eliminada con exito')
-            }).catch(err => {
-                console.error('Hubo algun error en eliminar la foto del producto', err)
-            })
-            
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
+                fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].gameplay))
+                    .then(() => {
+                        console.log('Foto eliminada con exito')
+                    }).catch(err => {
+                        console.error('Hubo algun error en eliminar la foto del producto', err)
+                    })
       /*  for (let i = 0; i < BD_provisoria.length; i++) {
             /*Si es que el id no es el que queremos vamos reconstruyendo un nuevo array */
       /*      if (BD_provisoria[i].id != id) {
