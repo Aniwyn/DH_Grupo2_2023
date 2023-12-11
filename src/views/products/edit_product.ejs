@@ -35,6 +35,10 @@
                     <div class="field__input">
                         <label class="label" for="f_title">Titulo<span class="editForm__spanText">*</span></label>
                         <input class="input" type="text" value="<%= prod.name %>" name="name" id="f_title" title="Ingrese el titulo de su Juego" required>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'name') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -43,6 +47,10 @@
                     <div class="field__input">
                         <label class="label" for="f_subTitle">Sub titulo<span class="editForm__spanText">*</span></label>
                         <input class="input" type="text" value="<%= prod.second_name %>" name="sub_name" id="f_subTitle" title="Ingrese el Sub Titulo de su Juego" required>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'sub_name') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -50,6 +58,10 @@
                 <div class="field">
                     <div class="field__input input--radio">
                         <label class="label">Formato<span class="editForm__spanText">*</span></label>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'format') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                         <div class="input__container">
                             <div class="option">
                                 <input class="input input--radio" type="radio" value="Fisico" name="format" id="f_radio-physic" required
@@ -63,7 +75,7 @@
                                 <% if(prod.format == 'Digital') {  %>
                                     checked
                                 <% } %>>
-                                <label class="label--radio" for="f_radio-digital">Digital</label>
+                                <label class="label--radio" for="f_radio-digital">Digital</label>                        
                             </div>
                         </div>
                     </div>
@@ -73,6 +85,10 @@
                 <div class="field">
                     <div class="field__input input--radio">
                         <label class="label">Plataforma<span class="editForm__spanText">*</span></label>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'platform') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                         <div class="input__container">
                             <div class="option">
                                 <input class="input input--radio" type="checkbox" value="PC" name="platform" id="f_chxbox-pc"
@@ -123,6 +139,10 @@
                     <div class="field__input">
                         <label class="label" for="f_date">Lanzamiento<span class="editForm__spanText">*</span></label>
                         <input class="input" type="date" value="<%= prod.release_date %>" name="releaseDate" id="f_date" required>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'releaseDate') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -131,6 +151,10 @@
                     <div class="field__input">
                         <label class="label" for="f_developer">Desarrollador<span class="editForm__spanText">*</span></label>
                         <input class="input" type="text" value="<%= prod.developer.name %>" name="developer" id="f_developer" required>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'developer') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -138,6 +162,10 @@
                 <div class="field">
                     <div class="field__input input--radio">
                         <label class="label">Genero<span class="editForm__spanText">*</span></label>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'genre') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                         <div class="input__container">
                             <div class="option">
                                 <div class="option--classification">
@@ -224,6 +252,10 @@
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-pegi3">PEGI 3</label>
+                                    <% if (locals.errors) { %>
+                                        <% const error = errors.find(error => error.path == 'ranking1') %>
+                                         <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                                    <% } %>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="PEGI_7" name="ranking1" id="f_radio-pegi7" required
@@ -262,6 +294,10 @@
                                         checked
                                     <% } %>>
                                     <label class="label--radio-classification" for="f_radio-esrbe">ESRB E</label>
+                                    <% if (locals.errors) { %>
+                                        <% const error = errors.find(error => error.path == 'ranking2') %>
+                                         <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                                    <% } %>
                                 </div>
                                 <div class="option--classification">
                                     <input class="input input--radio" type="radio" value="ESRB_E10" name="ranking2" id="f_radio-esrbe+" required
@@ -301,6 +337,10 @@
                     <div class="field__input">
                         <label class="label" for="f_price">Precio<span class="editForm__spanText">*</span></label>
                         <input class="input" type="number" value="<%= prod.price %>" name="price" id="f_price"  min="1" required>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'price') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -314,6 +354,10 @@
                         <input class="input" type="file" value="" name="image-cover" accept="image/*" id="f_cover" <% if (method != 'PUT') { %>
                             required
                         <% } %>>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'image-cover') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -327,6 +371,10 @@
                         <input class="input" type="file" value="" name="image-gameplay" accept="image/*" id="f_gameplay" <% if (method != 'PUT') { %>
                             required
                         <% } %>>>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'image-gameplay') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -335,6 +383,10 @@
                     <div class="field__input">
                         <label class="label" for="f_triller">Trailer<span class="editForm__spanText">*</span></label>
                         <input class="input" type="url" value="<%= prod.trailer %>" name="trailer" id="f_triller" required>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'trailer') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -343,6 +395,10 @@
                     <div class="field__input">
                         <label class="label" for="f_description-header">Introducción<span class="editForm__spanText">*</span></label>
                         <textarea class="input" rows="10" name="description[0]" id="f_description-header"><%= prod.description_1 %></textarea>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'description[0]') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -351,6 +407,10 @@
                     <div class="field__input">
                         <label class="label" for="f_description-body">Descripción<span class="editForm__spanText">*</span></label>
                         <textarea class="input" rows="10" name="description[1]" id="f_description-body"><%= prod.description_2 %></textarea>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'description[1]') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -359,6 +419,10 @@
                     <div class="field__input">
                         <label class="label" for="f_description-body">Descripción<span class="editForm__spanText">*</span></label>
                         <textarea class="input" rows="10" name="description[2]" id="f_description-body"><%= prod.description_3 %></textarea>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'description[2]') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -367,6 +431,10 @@
                     <div class="field__input">
                         <label class="label" for="f_description-footer">Desenlace<span class="editForm__spanText">*</span></label>
                         <textarea class="input" rows="10" name="description[3]" id="f_description-footer"><%= prod.description_4 %></textarea>
+                        <% if (locals.errors) { %>
+                            <% const error = errors.find(error => error.path == 'description[3]') %>
+                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
+                        <% } %>
                     </div>
                 </div>
             </div>

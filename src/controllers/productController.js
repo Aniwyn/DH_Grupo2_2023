@@ -3,6 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const fsPromises = require('fs').promises
 const jsonPath = path.join(__dirname, '../Data/product.json')
+const { validationResult } = require('express-validator')
 
 let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
 let db = require('../../database/models');
@@ -108,7 +109,16 @@ const productController = {
         res.redirect(`/details/${id}`)
     },
     editProduct_post: (req, res) => {
-        const text_data = req.body
+        let errors = validationResult(req)
+        console.log("error" + req.body.format);
+        /*console.log("error" + req.body.ranking1);
+        console.log("error" + req.body.ranking2);*/
+         if (!errors.isEmpty()) {
+            res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { errors: errors.array(), method: '', prod: dato, old: req.body });
+        
+        }
+        else{
+            const text_data = req.body
         const caratula = req.files['image-cover'][0]
         const gameplay = req.files['image-gameplay'][0]
 
@@ -137,6 +147,10 @@ const productController = {
         }
         ProductMethod.create(postData);
         res.redirect(`/home`)
+        }
+
+
+        
     },
     // DELETE
     delete: (req, res) => {
