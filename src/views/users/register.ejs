@@ -15,7 +15,7 @@
 
     <main>
         <div class="register__container">
-            <form class="container__form" action="/register" method="POST">
+            <form class="container__form" id="register__form" action="/register" method="POST">
                 <div>
                     <div class="container__input">
                         En los confines digitales de la realidad, un código ancestral se manifiesta como una red
@@ -24,6 +24,7 @@
                             id="nombre" name="name" placeholder="Ingresa tu nombre..." required
                             value="<%= locals.old && old.userName ? old.name : '' %>"
                             >
+                        <div id="container__inputName"></div>
                         <% if (locals.errors) { %>
                             <% const error = errors.find(error => error.path == 'name') %>
                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
@@ -34,6 +35,7 @@
                             type="text" id="apodo" name="userName" placeholder="Ingresa tu apodo..." required
                             value="<%= locals.old && old.userName ? old.userName : '' %>"
                             >
+                        <div id="container__inputUserName"></div>
                         <% if (locals.errors) { %>
                             <% const error = errors.find(error => error.path == 'userName') %>
                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
@@ -41,7 +43,7 @@
                     </div>
                     <div class="container__input">
                         En este reino de bytes y circuitos, la comunicación fluye a través de canales insondables. El
-                        canal que te unirá a otros exploradores de la matriz es <input type="email" id="email"
+                        canal que te unirá a otros exploradores de la matriz es <input type="email" id="emailInput"
                             name="email" placeholder="Ingresa tu Email..." required
                             value="<%= locals.old && old.email ? old.email : '' %>"
                             >
@@ -54,6 +56,7 @@
                         Y así, [ingresa nombre], forjaste tu contraseña, un patrón de seguridad único entre la corriente
                         de datos. Como un algoritmo inscrito en los cimientos de la realidad virtual el cual era <input
                             type="password" id="contrasena" name="password" placeholder="Contraseña" required>
+                            <div id="container__inputPassword"></div>
                         <% if (locals.errors) { %>
                             <% const error = errors.find(error => error.path == 'password') %>
                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
@@ -64,6 +67,7 @@
                         contraseña sella la conexión entre tu esencia y la marea de información que te rodea <input type="password"
                             id="repetir-contrasena" name="password_repeat" placeholder="Repetir contraseña"
                             required>
+                            <div id="container__inputPasswordRepeat"></div>
                         <% if (locals.errors) { %>
                             <% const error = errors.find(error => error.path == 'password_repeat') %>
                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
@@ -78,6 +82,8 @@
     <!---------------------------- Footer ---------------------------->
 
     <%- include('../partials/footer.ejs') %>
+
+    <script src="/scripts/validations/validateRegister.js"></script>
     
 </body>
 
