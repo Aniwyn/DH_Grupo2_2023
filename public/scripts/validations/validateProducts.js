@@ -184,6 +184,7 @@ function validatePrecio() {
     let precio = document.querySelector('#f_price')
 
     if (typeof precio.value !== 'number') {
+        precio.style.color = "red"
         let inputPrecio = document.querySelector('#input__priceContainer')
         inputPrecio.innerHTML = "<span class=errorMessage>Debe ingresar un valor numerico.</span>"
         return 1
@@ -200,6 +201,7 @@ function validateTriller() {
     let triller = document.querySelector('#f_triller')
 
     if (!triller.value.isUrl()) {
+        triller.style.color = "red"
         let inputTriller = document.querySelector('#input__triller')
         inputTriller.innerHTML = "<span class=errorMessage>URL invalida.</span>"
         return 1
