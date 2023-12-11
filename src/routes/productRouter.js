@@ -21,7 +21,7 @@ router.get('/details/:id/edit', productController.editProduct);
 router.put('/details/:id/edit',upload.fields([
     {name: 'image-cover', maxCount: 1},
     {name: 'image-gameplay', maxCount: 1}
-]), productController.editProduct_modify);
+]), validateCreateProductMiddleware,productController.editProduct_modify);
 router.post('/create',
     upload.fields([
         {name: 'image-cover', maxCount: 1},
