@@ -5,10 +5,10 @@ let db = require('../../database/models');
 const jsonPath = path.join(__dirname, '../Data/product.json')
 
 const productMethod = {
-    getData: function() {
+    getData: function () {
         return require(path.join(__dirname, "../../src/Data/BD")).users
     },
-    searchId: function(id){
+    searchId: function (id) {
         let productFound = db.Product.findByPk(id)
         return productFound
     },
@@ -16,7 +16,7 @@ const productMethod = {
         let productFound = BD_provisoria.find(oneProduct => oneProduct[field] === text)
         return productFound
     },
-    generateId: function() {
+    generateId: function () {
         let lastProduct = BD_provisoria[BD_provisoria.length - 1]
         if (lastProduct) {
             return lastProduct.id + 1
@@ -25,7 +25,7 @@ const productMethod = {
     },
     searchPlatform(productData) {
         let platform = []
-        if(typeof(productData.platform) == 'string'){
+        if (typeof (productData.platform) == 'string') {
             switch (productData.platform) {
                 case "PC":
                     platform.push(["PC", "fa-brands fa-windows"])
@@ -126,27 +126,32 @@ const productMethod = {
     searchFormat(productData) {
         return productData.format == 'Fisico' ? 1 : 2
     },
-    create: async function(productData) {
+    create: async function (productData) {
         let developer = await db.Developer.findOne({
             where: {
                 name: productData.name
             }
         })
-        if (!developer) {{
-            developer = await db.Developer.create({
-                name: productData.name
-            })
-        }}
+        if (!developer) {
+            {
+                developer = await db.Developer.create({
+                    name: productData.name
+                })
+            }
+        }
 
         let rating_esrb = await db.Rating_ESRB.findByPk(parseInt(productData.rating_esrb))
         let rating_pegi = await db.Rating_PEGI.findByPk(parseInt(productData.rating_pegi))
+        let genreFind = await db.Genre.findOne({
+            where: {
+                name: productData.product_genres[0]
+            }
+        })
         console.log('Desarrollador:', developer.name);
         console.log('pegi:', rating_pegi.name);
         console.log('esbrf:', rating_esrb.name);
         console.log('format:', productData.format);
         console.log('format:', productData.product_genres);
-
-
 
         const new_product = await db.Product.create({
             name: productData.name,
@@ -164,20 +169,16 @@ const productMethod = {
             id_rating_pegi: rating_pegi.id,
             id_developer: developer.id,
             id_format: productData.format,
-            product_genres: [
-                { name: 'Aventura' },
-                { name: 'Accion' }
-                // Otros géneros asociados al producto
-              ],
-              product_platforms: [
+            product_platforms: [
                 { name: 'PC' },
                 { name: 'SEGA' }
-                // Otros géneros asociados al producto
-              ]
+            ]
         }, {
             include: 'product_genres',
             include: 'product_platforms'
         })
+
+        await new_product.addGenre(genreFind)
 
     },
     delete: function (id) {
