@@ -5,10 +5,10 @@ let db = require('../../database/models');
 const jsonPath = path.join(__dirname, '../Data/product.json')
 
 const productMethod = {
-    getData: function() {
+    getData: function () {
         return require(path.join(__dirname, "../../src/Data/BD")).users
     },
-    searchId: function(id){
+    searchId: function (id) {
         let productFound = db.Product.findByPk(id)
         return productFound
     },
@@ -16,7 +16,7 @@ const productMethod = {
         let productFound = BD_provisoria.find(oneProduct => oneProduct[field] === text)
         return productFound
     },
-    generateId: function() {
+    generateId: function () {
         let lastProduct = BD_provisoria[BD_provisoria.length - 1]
         if (lastProduct) {
             return lastProduct.id + 1
@@ -25,7 +25,7 @@ const productMethod = {
     },
     searchPlatform(productData) {
         let platform = []
-        if(typeof(productData.platform) == 'string'){
+        if (typeof (productData.platform) == 'string') {
             switch (productData.platform) {
                 case "PC":
                     platform.push(["PC", "fa-brands fa-windows"])
