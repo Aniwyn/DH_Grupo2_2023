@@ -37,8 +37,7 @@ const productMethod = {
                     platform.push(["XBOX", "fa-brands fa-xbox"])
                     break;
                 case "SEGA":
-                    platform.push(["SEGA", "fa-solid fa-gamepad"]
-                    )
+                    platform.push(["SEGA", "fa-solid fa-gamepad"])
                     break;
                 case "SWITCH":
                     platform.push(["SWITCH", "fa-solid fa-gamepad"])
@@ -60,8 +59,7 @@ const productMethod = {
                         platform.push(["XBOX", "fa-brands fa-xbox"])
                         break;
                     case productData.platform[i] = "SEGA":
-                        platform.push(["SEGA", "fa-solid fa-gamepad"]
-                        )
+                        platform.push(["SEGA", "fa-solid fa-gamepad"])
                         break;
                     case productData.platform[i] = "SWITCH":
                         platform.push(["SWITCH", "fa-solid fa-gamepad"])
@@ -127,28 +125,19 @@ const productMethod = {
         return productData.format == 'Fisico' ? 1 : 2
     },
     create: async function(productData) {
-        let developer = await db.Developer.findOne({
-            where: {
-                name: productData.name
-            }
-        })
-        if (!developer) {{
-            developer = await db.Developer.create({
-                name: productData.name
-            })
-        }}
-
         let rating_esrb = await db.Rating_ESRB.findByPk(parseInt(productData.rating_esrb))
         let rating_pegi = await db.Rating_PEGI.findByPk(parseInt(productData.rating_pegi))
-        console.log('Desarrollador:', developer.name);
-        console.log('pegi:', rating_pegi.name);
-        console.log('esbrf:', rating_esrb.name);
-        console.log('format:', productData.format);
-        console.log('format:', productData.product_genres);
 
+        let [developer, createdDeveloper] = await db.Developer.findOrCreate({
+            where: {
+                name: productData.developer
+            },
+            defaults: {
+                name: productData.developer
+            }
+        })
 
-
-        const new_product = await db.Product.create({
+        const product =  await db.Product.create({
             name: productData.name,
             second_name: productData.second_name,
             description_1: productData.description_1,
@@ -164,21 +153,29 @@ const productMethod = {
             id_rating_pegi: rating_pegi.id,
             id_developer: developer.id,
             id_format: productData.format,
-            product_genres: [
-                { name: 'Aventura' },
-                { name: 'Accion' }
-                // Otros géneros asociados al producto
-              ],
-              product_platforms: [
-                { name: 'PC' },
-                { name: 'SEGA' }
-                // Otros géneros asociados al producto
-              ]
-        }, {
-            include: 'product_genres',
-            include: 'product_platforms'
         })
 
+        if (!Array.isArray(productData.genre)) productData.genre = [productData.genre]
+        for (let i = 0; i < productData.genre.length; i++) {
+            const genre = await db.Genre.findOne({
+                where: {
+                    name: productData.genre[i]
+                }
+            })
+            product.addGenre(genre)
+        }
+
+        if (!Array.isArray(productData.platform)) productData.platform = [productData.platform]
+        for (let i = 0; i < productData.platform.length; i++) {
+            const platform = await db.Platform.findOne({
+                where: {
+                    name: productData.platform[i]
+                }
+            })
+            product.addPlatform(platform)
+        }
+
+        return product
     },
     delete: function (id) {
         BD_provisoria = BD_provisoria.filter(product => product.id !== id)

@@ -10,7 +10,7 @@ let upload = require('../../middleware/multerMiddleware')
 /* REQUIRES CONTROLLERS */
 const productController = require('../controllers/productController');
 let authMiddleware = require('../../middleware/authMiddleware');
-let validateCreateProductMiddleware = require('../../middleware/validateCreateProductMiddleware.js');
+let validateCreateProductMiddleware = require('../../middleware/validateProductMiddleware.js');
 
 /* ROUTE-CONTROLLER CONNECTION */
 router.get('/mycart', authMiddleware, productController.mycart);

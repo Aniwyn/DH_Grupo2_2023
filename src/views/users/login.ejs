@@ -16,7 +16,7 @@
     <main class="main__login">
         <form class="login__container" id="login__form" action="/login" method="POST" >
             <div>
-                <div class="container__inputText" >
+                <div class="container__inputText">
                     <label for="nombre">Usuario </label>
                     <input type="text" id="nombre" name="userName" placeholder="Ingresa tu usuario..." required
                         value="<%= locals.old && old.userName ? old.userName : '' %>"

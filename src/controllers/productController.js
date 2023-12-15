@@ -15,7 +15,7 @@ const productController = {
     //GETS
     mycart: (req, res) => {
         db.Product.findAll({
-            include: [{association: 'product_platforms'}]
+            include: [{association: 'platforms'}]
         })
             .then(products => {
                 res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: products });
@@ -25,7 +25,7 @@ const productController = {
         let id = req.params.id;
         let requestProduct = db.Product.findByPk(id, {
             include: [
-                {association: 'product_platforms'}, 
+                {association: 'platforms'}, 
                 {association: 'product_genres'},
                 {association: 'rating_pegi'},
                 {association: 'rating_esrb'},
@@ -34,7 +34,7 @@ const productController = {
             ]
         })
         let requestAllProducts = db.Product.findAll({
-            include: [{association: 'product_platforms'}]
+            include: [{association: 'platforms'}]
         })
 
         Promise.all([requestProduct, requestAllProducts])
@@ -44,7 +44,7 @@ const productController = {
     },
     products: (req, res) => {
         db.Product.findAll({
-            include: [{association: 'product_platforms'}]
+            include: [{association: 'platforms'}]
         })
             .then(products => {
                 res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: products });
@@ -52,17 +52,17 @@ const productController = {
     },
     create: (req, res) => {
         db.Product.findAll({
-            include: [{association: 'product_platforms'}]
+            include: [{association: 'platforms'}]
         })
-            .then(products => {
-                res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: products, prod: dato, method: '' })
-            })
+        .then(products => {
+            res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { BD: products, prod: dato, method: '' })
+        })
     },
     editProduct: (req, res) => {
         let id = req.params.id;
         db.Product.findByPk(id, {
             include: [
-                {association: 'product_platforms'}, 
+                {association: 'platforms'}, 
                 {association: 'product_genres'},
                 {association: 'rating_pegi'},
                 {association: 'rating_esrb'},
@@ -80,10 +80,10 @@ const productController = {
         let caratula = req.files.dtype != undefined ? req.files['image-cover'][0] : undefined;
         let gameplay = req.files.dtype != undefined ? req.files['image-gameplay'][0] : undefined;
         let text_data = req.body
-        let old_product = ProductMethod.searchId(id)
+        let old_product = db.Product.searchId(id)
 
-        let ratings = ProductMethod.searchRatings(text_data);
-        let platform = ProductMethod.searchPlatform(text_data);
+        let ratings = db.Product.searchRatings(text_data);
+        let platform = db.Product.searchPlatform(text_data);
         const putData = {
             name: text_data.name,
             second_name: text_data.sub_name,
@@ -104,28 +104,25 @@ const productController = {
             rating_esrb: ratings[1]
         }
 
-        ProductMethod.edit(putData, id)
+        db.Product.edit(putData, id)
 
         res.redirect(`/details/${id}`)
     },
     editProduct_post: (req, res) => {
         let errors = validationResult(req)
-        console.log("error" + req.body.format);
-        /*console.log("error" + req.body.ranking1);
-        console.log("error" + req.body.ranking2);*/
-         if (!errors.isEmpty()) {
-            res.render(path.join(__dirname, "../views/products/edit_product.ejs"), { errors: errors.array(), method: '', prod: dato, old: req.body });
-        
+        if (!errors.isEmpty()) {
+            return res.render(
+                path.join(__dirname, "../views/products/edit_product.ejs"),
+                { errors: errors.array(), method: '', prod: dato, old: req.body }
+            )
         }
-        else{
-            const text_data = req.body
+
+        const text_data = req.body
         const caratula = req.files['image-cover'][0]
         const gameplay = req.files['image-gameplay'][0]
-
         let ratings = ProductMethod.searchRatings(text_data);
         let platform = ProductMethod.searchPlatform(text_data);
         let format = ProductMethod.searchFormat(text_data);
-
         const postData = {
             name: text_data.name,
             second_name: text_data.sub_name,
@@ -138,19 +135,17 @@ const productController = {
             platform: platform,
             release_date: text_data.releaseDate,
             developer: text_data.developer,
-            product_genres: text_data.genre,
+            product_genres: 1,
             format: format,
             trailer: text_data.trailer,
             gameplay_image: gameplay.path.replace("public", ""),
             rating_pegi: ratings[0],
-            rating_esrb: ratings[1]
+            rating_esrb: ratings[1],
+            genre: text_data.genre
         }
-        ProductMethod.create(postData);
-        res.redirect(`/home`)
-        }
-
-
         
+        ProductMethod.create(postData)
+        return res.redirect(`/home`)
     },
     // DELETE
     delete: (req, res) => {
