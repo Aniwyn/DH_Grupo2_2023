@@ -3,9 +3,8 @@ const path = require("path");
 const fsPromises = require('fs').promises
 const { validationResult } = require('express-validator')
 
-let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product;
 let db = require('../../database/models');
-const { log } = require("console");
+const productMethod = require("../models/Product");
 const dato = require(path.join(__dirname, "../../src/Data/BD")).dato;
 let ProductMethod = require(path.join(__dirname, "../models/Product"))
 
@@ -126,7 +125,6 @@ const productController = {
         const gameplay = req.files['image-gameplay'][0]
 
         let ratings = await ProductMethod.searchRatings(text_data)
-        let platform = ProductMethod.searchPlatform(text_data)
         let format = ProductMethod.searchFormat(text_data.format)
 
         const postData = {
@@ -138,7 +136,7 @@ const productController = {
             description_4: text_data.description[3],
             cover_image: caratula.path.replace("public", ""),
             price: parseInt(text_data.price),
-            platform: platform,
+            platform: text_data.platform,
             release_date: text_data.releaseDate,
             developer: text_data.developer,
             product_genres: 1,
@@ -150,30 +148,14 @@ const productController = {
             genre: text_data.genre
         }
         
-        ProductMethod.create(postData)
+        await ProductMethod.create(postData)
         return res.redirect(`/home`)
     },
     // DELETE
-    delete: (req, res) => {
-        let idToDelete = req.params.id;
+    delete: async (req, res) => {
+        let idToDelete = req.params.id
 
-        db.Product.detroy({
-            where: { id: idToDelete }
-        })
-
-        fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].image))
-        .then(() => {
-            console.log('Foto eliminada con exito')
-        }).catch(err => {
-            console.error('Hubo algun error en eliminar la foto del producto', err)
-        })
-
-        fsPromises.unlink(path.join(`${__dirname}/../../public`, BD_provisoria[idToDelete].gameplay))
-        .then(() => {
-             console.log('Foto eliminada con exito')
-        }).catch(err => {
-            console.error('Hubo algun error en eliminar la foto del producto', err)
-        })
+        await productMethod.delete(idToDelete)
 
         res.redirect('/home')
     }

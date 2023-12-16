@@ -1,77 +1,10 @@
-const fs = require('fs')
+const fsPromises = require('fs').promises
 const path = require('path')
-let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product
-let db = require('../../database/models');
-const { log } = require('console');
-const jsonPath = path.join(__dirname, '../Data/product.json')
+let db = require('../../database/models')
 
 const productMethod = {
-    getData: function () {
-        return require(path.join(__dirname, "../../src/Data/BD")).users
-    },
     searchId: async function (id) {
         return db.Product.findByPk(id)
-    },
-    //borrar (?)
-    searchField: function (field, text) {
-        return BD_provisoria.find(oneProduct => oneProduct[field] === text)
-    },
-    //borrar (?)
-    generateId: function () {
-        let lastProduct = BD_provisoria[BD_provisoria.length - 1]
-        if (lastProduct) {
-            return lastProduct.id + 1
-        }
-        return 0
-    },
-    searchPlatform(productData) {
-        let platform = []
-        if (typeof (productData.platform) == 'string') {
-            switch (productData.platform) {
-                case "PC":
-                    platform.push(["PC", "fa-brands fa-windows"])
-                    break;
-                case "PS":
-                    platform.push(["PS", "fa-brands fa-playstation"])
-                    break;
-                case "XBOX":
-                    platform.push(["XBOX", "fa-brands fa-xbox"])
-                    break;
-                case "SEGA":
-                    platform.push(["SEGA", "fa-solid fa-gamepad"])
-                    break;
-                case "SWITCH":
-                    platform.push(["SWITCH", "fa-solid fa-gamepad"])
-                    break;
-                default:
-                    break;
-            }
-        }
-        else {
-            for (let i = 0; i < productData.platform.length; i++) {
-                switch (productData.platform[i]) {
-                    case productData.platform[i] = "PC":
-                        platform.push(["PC", "fa-brands fa-windows"])
-                        break;
-                    case productData.platform[i] = "PS":
-                        platform.push(["PS", "fa-brands fa-playstation"])
-                        break;
-                    case productData.platform[i] = "XBOX":
-                        platform.push(["XBOX", "fa-brands fa-xbox"])
-                        break;
-                    case productData.platform[i] = "SEGA":
-                        platform.push(["SEGA", "fa-solid fa-gamepad"])
-                        break;
-                    case productData.platform[i] = "SWITCH":
-                        platform.push(["SWITCH", "fa-solid fa-gamepad"])
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
-        return platform
     },
     searchRatings: async function(productData) {
         let ratings = []
@@ -110,7 +43,7 @@ const productMethod = {
             product.addGenre(genre)
         }
     },
-    addPlatform: async function(product, platforms, gameplay_image) {
+    addPlatform: async function(product, platforms) {
         if (!Array.isArray(platforms)) platforms = [platforms]
         for (let i = 0; i < platforms.length; i++) {
             const platform = await db.Platform.findOne({
@@ -219,17 +152,6 @@ const productMethod = {
 
         return product
     },
-    delete: function (id) {
-        BD_provisoria = BD_provisoria.filter(product => product.id !== id)
-        fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
-            if (err) {
-                console.log(err);
-                return;
-            }
-            console.log("Se sobreescribio correctamente el Usuario");
-        })
-        return true
-    },
     edit: async function (productData, product_id) {
         let developer = await this.findOrCreateDeveloper(productData.developer)
         let format = this.searchFormat(productData.format)
@@ -258,6 +180,35 @@ const productMethod = {
         await this.updateImage(product_id, productData.cover_image, productData.gameplay_image)
         await this.updateGenres(product, productData.genres)
         await this.updatePlatforms(product, productData.platform)
+    },
+    delete: async function(idToDelete) {
+        const product = await db.Product.findByPk(idToDelete, {
+            include: [
+                {association: 'platforms'},
+                {association: 'genres'},
+            ],
+        })
+    
+        await product.removeGenres(product.genres)
+        await product.removePlatforms(product.platforms)
+        
+        db.Product.destroy({
+            where: { id: idToDelete }
+        })
+
+        fsPromises.unlink(path.join(`${__dirname}/../../public`, product.cover_image))
+        .then(() => {
+            console.log('cover_image eliminada con exito')
+        }).catch(err => {
+            console.error('Hubo algun error en eliminar la foto del producto', err)
+        })
+
+        fsPromises.unlink(path.join(`${__dirname}/../../public`, product.gameplay_image))
+        .then(() => {
+             console.log('gameplay_image eliminada con exito')
+        }).catch(err => {
+            console.error('Hubo algun error en eliminar la foto del producto', err)
+        })
     }
 }
 
