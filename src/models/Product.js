@@ -1,159 +1,135 @@
-const fs = require('fs')
+const fsPromises = require('fs').promises
 const path = require('path')
-let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product
-let db = require('../../database/models');
-const jsonPath = path.join(__dirname, '../Data/product.json')
+let db = require('../../database/models')
 
 const productMethod = {
-    getData: function () {
-        return require(path.join(__dirname, "../../src/Data/BD")).users
+    searchId: async function (id) {
+        return db.Product.findByPk(id)
     },
-    searchId: function (id) {
-        let productFound = db.Product.findByPk(id)
-        return productFound
-    },
-    searchField: function (field, text) {
-        let productFound = BD_provisoria.find(oneProduct => oneProduct[field] === text)
-        return productFound
-    },
-    generateId: function () {
-        let lastProduct = BD_provisoria[BD_provisoria.length - 1]
-        if (lastProduct) {
-            return lastProduct.id + 1
-        }
-        return 0
-    },
-    searchPlatform(productData) {
-        let platform = []
-        if (typeof (productData.platform) == 'string') {
-            switch (productData.platform) {
-                case "PC":
-                    platform.push(["PC", "fa-brands fa-windows"])
-                    break;
-                case "PS":
-                    platform.push(["PS", "fa-brands fa-playstation"])
-                    break;
-                case "XBOX":
-                    platform.push(["XBOX", "fa-brands fa-xbox"])
-                    break;
-                case "SEGA":
-                    platform.push(["SEGA", "fa-solid fa-gamepad"]
-                    )
-                    break;
-                case "SWITCH":
-                    platform.push(["SWITCH", "fa-solid fa-gamepad"])
-                    break;
-                default:
-                    break;
-            }
-        }
-        else {
-            for (let i = 0; i < productData.platform.length; i++) {
-                switch (productData.platform[i]) {
-                    case productData.platform[i] = "PC":
-                        platform.push(["PC", "fa-brands fa-windows"])
-                        break;
-                    case productData.platform[i] = "PS":
-                        platform.push(["PS", "fa-brands fa-playstation"])
-                        break;
-                    case productData.platform[i] = "XBOX":
-                        platform.push(["XBOX", "fa-brands fa-xbox"])
-                        break;
-                    case productData.platform[i] = "SEGA":
-                        platform.push(["SEGA", "fa-solid fa-gamepad"]
-                        )
-                        break;
-                    case productData.platform[i] = "SWITCH":
-                        platform.push(["SWITCH", "fa-solid fa-gamepad"])
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
-        return platform
-    },
-    searchRatings(productData) {
+    searchRatings: async function(productData) {
         let ratings = []
 
-        let rating = []
-        switch (productData.ranking1) {
-            case "PEGI_3":
-                rating.push(1)
-                break;
-            case "PEGI_7":
-                rating.push(2)
-                break;
-            case "PEGI_12":
-                rating.push(3)
-                break;
-            case "PEGI_16":
-                rating.push(4)
-                break;
-            case "PEGI_18":
-                rating.push(5)
-                break;
-            default:
-                break;
-        }
-        ratings.push(rating)
+        let ratingPEGI = db.Rating_PEGI.findOne({
+            where: {
+                name: productData.ranking1
+            }
+        })
+        let ratingESRB = db.Rating_ESRB.findOne({
+            where: {
+                name: productData.ranking2
+            }
+        })
 
-        rating = []
-        switch (productData.ranking2) {
-            case "ESRB_E":
-                rating.push(1)
-                break;
-            case "ESRB_E10":
-                rating.push(2)
-                break;
-            case "ESRB_T":
-                rating.push(3)
-                break;
-            case "ESRB_M":
-                rating.push(4)
-                break;
-            case "ESRB_AO":
-                rating.push(5)
-                break;
-            default:
-                break;
-        }
-        ratings.push(rating)
+        await Promise.all([ratingPEGI, ratingESRB])
+        .then(([pegi, esrb]) => {
+            ratings.push(pegi.id)
+            ratings.push(esrb.id)
+        })
 
         return ratings
     },
     searchFormat(productData) {
-        return productData.format == 'Fisico' ? 1 : 2
+        return productData == 'Fisico' ? 1 : 2
     },
-    create: async function (productData) {
-        let developer = await db.Developer.findOne({
-            where: {
-                name: productData.name
-            }
-        })
-        if (!developer) {
-            {
-                developer = await db.Developer.create({
-                    name: productData.name
-                })
-            }
+    addGenre: async function(product, genres) {
+        if (!Array.isArray(genres)) genres = [genres]
+
+        for (let i = 0; i < genres.length; i++) {
+            const genre = await db.Genre.findOne({
+                where: {
+                    name: genres[i]
+                }
+            })
+            product.addGenre(genre)
+        }
+    },
+    addPlatform: async function(product, platforms) {
+        if (!Array.isArray(platforms)) platforms = [platforms]
+        for (let i = 0; i < platforms.length; i++) {
+            const platform = await db.Platform.findOne({
+                where: {
+                    name: platforms[i]
+                }
+            })
+            product.addPlatform(platform)
+        }
+    },
+    updateImage: async function(product_id, cover_image, gameplay_image) {
+        if (cover_image) {
+            await db.Product.update({
+                cover_image: cover_image,
+            }, {
+                where: {
+                    id: product_id
+                }
+            })
         }
 
-        let rating_esrb = await db.Rating_ESRB.findByPk(parseInt(productData.rating_esrb))
-        let rating_pegi = await db.Rating_PEGI.findByPk(parseInt(productData.rating_pegi))
-        let genreFind = await db.Genre.findOne({
+        if (gameplay_image) {
+            await db.Product.update({
+                gameplay_image: gameplay_image,
+            }, {
+                where: {
+                    id: product_id
+                }
+            })
+        }
+    },
+    updateGenres: async function(product, genre) {
+        let genresInDB = await product.getGenres()
+        let genres = Array.isArray(genre) ? genre : [genre]
+
+        const genresToAdd = genres.filter(genreName => !genresInDB.some(genre => genre.name === genreName));
+        const genresToRemove = genresInDB.filter(genre => !genres.includes(genre.name.toString()));
+
+        for (let i = 0; i < genresToAdd.length; i++) {
+            const genre = await db.Genre.findOne({
+                where: {
+                    name: genresToAdd[i]
+                }
+            })
+            product.addGenre(genre)
+        }
+
+        for (let i = 0; i < genresToRemove.length; i++) {
+            product.removeGenre(genresToRemove[i])
+        }
+    },
+    updatePlatforms: async function(product, platform) {
+        let platformInDB = await product.getPlatforms()
+        let platforms = Array.isArray(platform) ? platform : [platform]
+
+        const platformsToAdd = platforms.filter(platformName => !platformInDB.some(platform => platform.name === platformName));
+        const platformsToRemove = platformInDB.filter(platform => !platforms.includes(platform.name.toString()));
+
+        for (let i = 0; i < platformsToAdd.length; i++) {
+            const platform = await db.Platform.findOne({
+                where: {
+                    name: platformsToAdd[i]
+                }
+            })
+            product.addPlatform(platform)
+        }
+
+        for (let i = 0; i < platformsToRemove.length; i++) {
+            product.removePlatform(platformsToRemove[i])
+        }
+    },
+    findOrCreateDeveloper: async function(developerName) {
+        let [developer, createdDeveloper] = await db.Developer.findOrCreate({
             where: {
-                name: productData.product_genres[0]
+                name: developerName
+            },
+            defaults: {
+                name: developerName
             }
         })
-        console.log('Desarrollador:', developer.name);
-        console.log('pegi:', rating_pegi.name);
-        console.log('esbrf:', rating_esrb.name);
-        console.log('format:', productData.format);
-        console.log('format:', productData.product_genres);
+        return developer
+    },
+    create: async function(productData) {
+        let developer = await this.findOrCreateDeveloper(productData.developer)
 
-        const new_product = await db.Product.create({
+        const product =  await db.Product.create({
             name: productData.name,
             second_name: productData.second_name,
             description_1: productData.description_1,
@@ -163,56 +139,75 @@ const productMethod = {
             cover_image: productData.cover_image,
             price: productData.price,
             release_date: productData.release_date,
-            trailer: productData.trailer,
+            trailer: productData.trailer.replace("watch?v=", "embed/"),
             gameplay_image: productData.gameplay_image,
-            id_rating_esrb: rating_esrb.id,
-            id_rating_pegi: rating_pegi.id,
+            id_rating_esrb: productData.rating_esrb,
+            id_rating_pegi: productData.rating_pegi,
             id_developer: developer.id,
             id_format: productData.format,
-            product_platforms: [
-                { name: 'PC' },
-                { name: 'SEGA' }
-            ]
-        }, {
-            include: 'product_genres',
-            include: 'product_platforms'
         })
 
-        await new_product.addGenre(genreFind)
+        await this.addGenre(product, productData.genre)
+        await this.addPlatform(product, productData.platform)
 
+        return product
     },
-    delete: function (id) {
-        BD_provisoria = BD_provisoria.filter(product => product.id !== id)
-        fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
-            if (err) {
-                console.log(err);
-                return;
-            }
-            console.log("Se sobreescribio correctamente el Usuario");
-        })
-        return true
-    },
-    edit: function (productData, product_id) {
-        db.Product.update({
+    edit: async function (productData, product_id) {
+        let developer = await this.findOrCreateDeveloper(productData.developer)
+        let format = this.searchFormat(productData.format)
+        let product = await this.searchId(product_id)
+
+        await db.Product.update({
             name: productData.name,
             second_name: productData.second_name,
             description_1: productData.description_1,
             description_2: productData.description_2,
             description_3: productData.description_3,
             description_4: productData.description_4,
-            cover_image: productData.cover_image,
             price: productData.price,
             release_date: productData.release_date,
-            trailer: productData.trailer,
-            gameplay_image: productData.gameplay_image,
-            rating_esrb: productData.rating_esrb,
-            rating_pegi: productData.rating_pegi,
-            developer: productData.developer,
-            format: productData.format
+            trailer: productData.trailer.replace("watch?v=", "embed/"),
+            id_rating_esrb: productData.rating_esrb,
+            id_rating_pegi: productData.rating_pegi,
+            id_developer: developer.id,
+            id_format: format
         }, {
             where: {
                 id: product_id
             }
+        })
+
+        await this.updateImage(product_id, productData.cover_image, productData.gameplay_image)
+        await this.updateGenres(product, productData.genres)
+        await this.updatePlatforms(product, productData.platform)
+    },
+    delete: async function(idToDelete) {
+        const product = await db.Product.findByPk(idToDelete, {
+            include: [
+                {association: 'platforms'},
+                {association: 'genres'},
+            ],
+        })
+    
+        await product.removeGenres(product.genres)
+        await product.removePlatforms(product.platforms)
+        
+        db.Product.destroy({
+            where: { id: idToDelete }
+        })
+
+        fsPromises.unlink(path.join(`${__dirname}/../../public`, product.cover_image))
+        .then(() => {
+            console.log('cover_image eliminada con exito')
+        }).catch(err => {
+            console.error('Hubo algun error en eliminar la foto del producto', err)
+        })
+
+        fsPromises.unlink(path.join(`${__dirname}/../../public`, product.gameplay_image))
+        .then(() => {
+             console.log('gameplay_image eliminada con exito')
+        }).catch(err => {
+            console.error('Hubo algun error en eliminar la foto del producto', err)
         })
     }
 }

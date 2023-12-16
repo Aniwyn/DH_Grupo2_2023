@@ -107,7 +107,7 @@ function product(sequelize, DataTypes) {
         })
 
         Product.belongsToMany(models.Genre, {
-            as: 'product_genres',
+            as: 'genres',
             through: 'product_genre',
             foreignKey: 'id_product',
             otherKey: 'id_genre',
@@ -115,7 +115,7 @@ function product(sequelize, DataTypes) {
         })
 
         Product.belongsToMany(models.Platform, {
-            as: 'product_platforms',
+            as: 'platforms',
             through: 'product_platform',
             foreignKey: 'id_product',
             otherKey: 'id_platform',

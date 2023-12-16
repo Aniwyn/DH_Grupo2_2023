@@ -16,7 +16,7 @@ const dato = {
     description_4: "",
     cover_image: "",
     price: 0,
-    product_platforms: [
+    platforms: [
         [
             "",
             ""
@@ -24,7 +24,7 @@ const dato = {
     ],
     releaseDate: "2000-01-01",
     developer: "",
-    product_genres: [
+    genres: [
         "",
         ""
     ],

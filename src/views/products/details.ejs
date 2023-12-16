@@ -10,11 +10,10 @@
 </head>
 
 <body>
-    
     <!---------------------------- Header ---------------------------->
-
     <%- include('../partials/header.ejs') %>
 
+    <!----------------------------- Main ----------------------------->
     <main>
         <section class="details__dashboard">
             <div class="dashboard__image-product">
@@ -34,8 +33,8 @@
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Plataforma:</span>
-                            <% for(let i=0; i < data_item.product_platforms.length; i++) { %>
-                                <span class="characteristic__value"><%= data_item.product_platforms[i].name %>&nbsp;</Span>
+                            <% for(let i=0; i < data_item.platforms.length; i++) { %>
+                                <span class="characteristic__value"><%= data_item.platforms[i].name %>&nbsp;</Span>
                             <% } %>
                         </div>
                         <hr class="divider">
@@ -51,8 +50,8 @@
                         <hr class="divider">
                         <div class="characteristic">
                             <span class="characteristic__name">Genero:</span>
-                            <% for(let i=0; i < data_item.product_genres.length; i++) { %>
-                                <span class="characteristic__value"><%= data_item.product_genres[i].name %>&nbsp;</Span>
+                            <% for(let i=0; i < data_item.genres.length; i++) { %>
+                                <span class="characteristic__value"><%= data_item.genres[i].name %>&nbsp;</Span>
                             <% } %>
 
                         </div>
