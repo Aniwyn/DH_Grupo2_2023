@@ -2,20 +2,21 @@ const fs = require('fs')
 const path = require('path')
 let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).product
 let db = require('../../database/models');
+const { log } = require('console');
 const jsonPath = path.join(__dirname, '../Data/product.json')
 
 const productMethod = {
     getData: function () {
         return require(path.join(__dirname, "../../src/Data/BD")).users
     },
-    searchId: function (id) {
-        let productFound = db.Product.findByPk(id)
-        return productFound
+    searchId: async function (id) {
+        return db.Product.findByPk(id)
     },
+    //borrar (?)
     searchField: function (field, text) {
-        let productFound = BD_provisoria.find(oneProduct => oneProduct[field] === text)
-        return productFound
+        return BD_provisoria.find(oneProduct => oneProduct[field] === text)
     },
+    //borrar (?)
     generateId: function () {
         let lastProduct = BD_provisoria[BD_provisoria.length - 1]
         if (lastProduct) {
@@ -72,70 +73,128 @@ const productMethod = {
 
         return platform
     },
-    searchRatings(productData) {
+    searchRatings: async function(productData) {
         let ratings = []
 
-        let rating = []
-        switch (productData.ranking1) {
-            case "PEGI_3":
-                rating.push(1)
-                break;
-            case "PEGI_7":
-                rating.push(2)
-                break;
-            case "PEGI_12":
-                rating.push(3)
-                break;
-            case "PEGI_16":
-                rating.push(4)
-                break;
-            case "PEGI_18":
-                rating.push(5)
-                break;
-            default:
-                break;
-        }
-        ratings.push(rating)
+        let ratingPEGI = db.Rating_PEGI.findOne({
+            where: {
+                name: productData.ranking1
+            }
+        })
+        let ratingESRB = db.Rating_ESRB.findOne({
+            where: {
+                name: productData.ranking2
+            }
+        })
 
-        rating = []
-        switch (productData.ranking2) {
-            case "ESRB_E":
-                rating.push(1)
-                break;
-            case "ESRB_E10":
-                rating.push(2)
-                break;
-            case "ESRB_T":
-                rating.push(3)
-                break;
-            case "ESRB_M":
-                rating.push(4)
-                break;
-            case "ESRB_AO":
-                rating.push(5)
-                break;
-            default:
-                break;
-        }
-        ratings.push(rating)
+        await Promise.all([ratingPEGI, ratingESRB])
+        .then(([pegi, esrb]) => {
+            ratings.push(pegi.id)
+            ratings.push(esrb.id)
+        })
 
         return ratings
     },
     searchFormat(productData) {
-        return productData.format == 'Fisico' ? 1 : 2
+        return productData == 'Fisico' ? 1 : 2
     },
-    create: async function(productData) {
-        let rating_esrb = await db.Rating_ESRB.findByPk(parseInt(productData.rating_esrb))
-        let rating_pegi = await db.Rating_PEGI.findByPk(parseInt(productData.rating_pegi))
+    addGenre: async function(product, genres) {
+        if (!Array.isArray(genres)) genres = [genres]
 
+        for (let i = 0; i < genres.length; i++) {
+            const genre = await db.Genre.findOne({
+                where: {
+                    name: genres[i]
+                }
+            })
+            product.addGenre(genre)
+        }
+    },
+    addPlatform: async function(product, platforms, gameplay_image) {
+        if (!Array.isArray(platforms)) platforms = [platforms]
+        for (let i = 0; i < platforms.length; i++) {
+            const platform = await db.Platform.findOne({
+                where: {
+                    name: platforms[i]
+                }
+            })
+            product.addPlatform(platform)
+        }
+    },
+    updateImage: async function(product_id, cover_image, gameplay_image) {
+        if (cover_image) {
+            await db.Product.update({
+                cover_image: cover_image,
+            }, {
+                where: {
+                    id: product_id
+                }
+            })
+        }
+
+        if (gameplay_image) {
+            await db.Product.update({
+                gameplay_image: gameplay_image,
+            }, {
+                where: {
+                    id: product_id
+                }
+            })
+        }
+    },
+    updateGenres: async function(product, genre) {
+        let genresInDB = await product.getGenres()
+        let genres = Array.isArray(genre) ? genre : [genre]
+
+        const genresToAdd = genres.filter(genreName => !genresInDB.some(genre => genre.name === genreName));
+        const genresToRemove = genresInDB.filter(genre => !genres.includes(genre.name.toString()));
+
+        for (let i = 0; i < genresToAdd.length; i++) {
+            const genre = await db.Genre.findOne({
+                where: {
+                    name: genresToAdd[i]
+                }
+            })
+            product.addGenre(genre)
+        }
+
+        for (let i = 0; i < genresToRemove.length; i++) {
+            product.removeGenre(genresToRemove[i])
+        }
+    },
+    updatePlatforms: async function(product, platform) {
+        let platformInDB = await product.getPlatforms()
+        let platforms = Array.isArray(platform) ? platform : [platform]
+
+        const platformsToAdd = platforms.filter(platformName => !platformInDB.some(platform => platform.name === platformName));
+        const platformsToRemove = platformInDB.filter(platform => !platforms.includes(platform.name.toString()));
+
+        for (let i = 0; i < platformsToAdd.length; i++) {
+            const platform = await db.Platform.findOne({
+                where: {
+                    name: platformsToAdd[i]
+                }
+            })
+            product.addPlatform(platform)
+        }
+
+        for (let i = 0; i < platformsToRemove.length; i++) {
+            product.removePlatform(platformsToRemove[i])
+        }
+    },
+    findOrCreateDeveloper: async function(developerName) {
         let [developer, createdDeveloper] = await db.Developer.findOrCreate({
             where: {
-                name: productData.developer
+                name: developerName
             },
             defaults: {
-                name: productData.developer
+                name: developerName
             }
         })
+        return developer
+    },
+    create: async function(productData) {
+        let developer = await this.findOrCreateDeveloper(productData.developer)
 
         const product =  await db.Product.create({
             name: productData.name,
@@ -147,33 +206,16 @@ const productMethod = {
             cover_image: productData.cover_image,
             price: productData.price,
             release_date: productData.release_date,
-            trailer: productData.trailer,
+            trailer: productData.trailer.replace("watch?v=", "embed/"),
             gameplay_image: productData.gameplay_image,
-            id_rating_esrb: rating_esrb.id,
-            id_rating_pegi: rating_pegi.id,
+            id_rating_esrb: productData.rating_esrb,
+            id_rating_pegi: productData.rating_pegi,
             id_developer: developer.id,
             id_format: productData.format,
         })
 
-        if (!Array.isArray(productData.genre)) productData.genre = [productData.genre]
-        for (let i = 0; i < productData.genre.length; i++) {
-            const genre = await db.Genre.findOne({
-                where: {
-                    name: productData.genre[i]
-                }
-            })
-            product.addGenre(genre)
-        }
-
-        if (!Array.isArray(productData.platform)) productData.platform = [productData.platform]
-        for (let i = 0; i < productData.platform.length; i++) {
-            const platform = await db.Platform.findOne({
-                where: {
-                    name: productData.platform[i]
-                }
-            })
-            product.addPlatform(platform)
-        }
+        await this.addGenre(product, productData.genre)
+        await this.addPlatform(product, productData.platform)
 
         return product
     },
@@ -188,28 +230,34 @@ const productMethod = {
         })
         return true
     },
-    edit: function (productData, product_id) {
-        db.Product.update({
+    edit: async function (productData, product_id) {
+        let developer = await this.findOrCreateDeveloper(productData.developer)
+        let format = this.searchFormat(productData.format)
+        let product = await this.searchId(product_id)
+
+        await db.Product.update({
             name: productData.name,
             second_name: productData.second_name,
             description_1: productData.description_1,
             description_2: productData.description_2,
             description_3: productData.description_3,
             description_4: productData.description_4,
-            cover_image: productData.cover_image,
             price: productData.price,
             release_date: productData.release_date,
-            trailer: productData.trailer,
-            gameplay_image: productData.gameplay_image,
-            rating_esrb: productData.rating_esrb,
-            rating_pegi: productData.rating_pegi,
-            developer: productData.developer,
-            format: productData.format
+            trailer: productData.trailer.replace("watch?v=", "embed/"),
+            id_rating_esrb: productData.rating_esrb,
+            id_rating_pegi: productData.rating_pegi,
+            id_developer: developer.id,
+            id_format: format
         }, {
             where: {
                 id: product_id
             }
         })
+
+        await this.updateImage(product_id, productData.cover_image, productData.gameplay_image)
+        await this.updateGenres(product, productData.genres)
+        await this.updatePlatforms(product, productData.platform)
     }
 }
 
