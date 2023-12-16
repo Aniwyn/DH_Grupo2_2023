@@ -11,9 +11,10 @@ let upload = require('../../middleware/multerMiddleware')
 const productController = require('../controllers/productController');
 let authMiddleware = require('../../middleware/authMiddleware');
 let validateCreateProductMiddleware = require('../../middleware/validateCreateProductMiddleware.js');
+const apiProvisoria = require('../controllers/api/apiProvisoria');
 
 /* ROUTE-CONTROLLER CONNECTION */
-router.get('/mycart', authMiddleware, productController.mycart);
+router.get(art', a'/mycuthMiddleware, productController.mycart);
 router.get('/details/:id', productController.details);
 router.get('/products', productController.products);
 router.get('/create', productController.create);
@@ -32,5 +33,7 @@ validateCreateProductMiddleware,
 
 router.delete('/details/:id', productController.delete);
 
+router.get('/api/apiProvisoria', apiPovisoria.list);
+router.get('/api/apiProvisoria/:id', apiProvisoria.show);
 /* EXPORTS */
 module.exports = router;
