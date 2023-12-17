@@ -4,6 +4,7 @@ const port = 5000;
 const methodOverride = require('method-override')
 const session = require('express-session')
 const cookies = require('cookie-parser')
+const cors = require('cors');
 
 const app = express();
 
@@ -29,7 +30,9 @@ app.use(session({
 }))
 app.use(cookies())
 app.use(userLoggedMiddleware)
-
+app.use(cors({
+    origin: 'http://localhost:3000'
+}));
 
 /* ROUTE CONNECTION */
 app.use("/", router);
