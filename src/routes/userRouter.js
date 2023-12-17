@@ -21,8 +21,8 @@ router.get('/logout', userController.logout)
 router.get('/profile', authMiddleware, userController.profile)
 router.get('/profile/edit', authMiddleware, userController.edit_profile)
 router.put('/profile/edit',upload.single('avatar') , userController.put)
-router.get('/api/apiUsers', apiUsers.list);
-router.get('/api/apiUsers/:id', apiUsers.show);
+router.get('/api/apiUsers', apiUsers.list)
+router.get('/api/apiUsers/:id', apiUsers.show)
 
 
 

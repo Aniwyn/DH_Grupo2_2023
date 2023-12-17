@@ -31,7 +31,6 @@ module.exports ={
                     status: 200
                 })
             })
-            .Builders<User>.Projection.Exclude(u => u.password);
     }
 
 }
