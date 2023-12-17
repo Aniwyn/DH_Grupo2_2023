@@ -35,7 +35,7 @@ function product(sequelize, DataTypes) {
                 allowNull: false
             },
             cover_image: {
-                type: DataTypes.STRING(80),
+                type: DataTypes.STRING(150),
                 allowNull: false
             },
             price: {
@@ -47,11 +47,11 @@ function product(sequelize, DataTypes) {
                 allowNull: false
             },
             trailer: {
-                type: DataTypes.STRING(50),
+                type: DataTypes.STRING(100),
                 allowNull: false
             },
             gameplay_image: {
-                type: DataTypes.STRING(50),
+                type: DataTypes.STRING(150),
                 allowNull: false
             },
             id_rating_esrb: {
@@ -98,11 +98,11 @@ function product(sequelize, DataTypes) {
             foreignKey: 'id_format'
         })
 
-        Product.belongsToMany(models.Cart, {
-            as: 'cart_product',
-            through: 'product_cart',
+        Product.belongsToMany(models.User, {
+            as: 'users',
+            through: 'cart',
             foreignKey: 'id_product',
-            otherKey: 'id_cart',
+            otherKey: 'id_user',
             timestamps: false
         })
 
