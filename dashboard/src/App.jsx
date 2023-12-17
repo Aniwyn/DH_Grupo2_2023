@@ -17,14 +17,26 @@ import { useState, useEffect } from 'react'
 function App() {
 
   const [products, setProducts] = useState(Object)
+  const [users, setUsers] = useState(Object)
+  const [genres, setGenres] = useState(Object)
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/apiProvisoria')
+    fetch('http://localhost:5000/api/products')
     .then(response => response.json())
     .then(data => setProducts(data))
   }, [])
 
+  useEffect(() => {
+    fetch('http://localhost:5000/api/users')
+    .then(response => response.json())
+    .then(data => setUsers(data))
+  }, [])
 
+  useEffect(() => {
+    fetch('http://localhost:5000/api/genres')
+    .then(response => response.json())
+    .then(data => setGenres(data))
+  }, [])
 
   return (
     <main className='App'>
@@ -32,20 +44,21 @@ function App() {
           <div className='left__panel'>
             <div className='total__items'>
               {console.log("PRODUCTOS",products)}
-              <Card 
-                name="Productos"
-                value={ (Object.keys(products).length === 0) ? (
-                  "Cargando"
-                ) : (
-                  products.meta.total
-                )}
-                key="1"
-              ></Card>
-              <Card name="Usuarios" value="13" key="2"></Card>
-              <Card name="Categorias" value="9" key="3"></Card>
+              {(Object.keys(products).length === 0) ? ("Cargando") : (
+                <Card name="Productos" value={ products.meta.total } key="1"></Card>
+              )}
+              {(Object.keys(users).length === 0) ? ("Cargando") : (
+                <Card name="Usuarios" value={ users.meta.total } key="2"></Card>
+              )}
+              {(Object.keys(genres).length === 0) ? ("Cargando") : (
+                <Card name="Generos" value={ genres.meta.total } key="3"></Card>
+              )}
             </div>
             <div className='left__bottom'>
-              <GenreDashboard></GenreDashboard>
+              
+              {(Object.keys(genres).length === 0) ? ("Cargando") : (
+                <GenreDashboard genres={ genres.data }></GenreDashboard>
+              )}
             </div>
             <div className='left__bottom'>
               {(Object.keys(products).length === 0) ? ("Cargando") : (
@@ -57,7 +70,10 @@ function App() {
             {(Object.keys(products).length === 0) ? ("Cargando") : (
                 <ProductCard product={ products.data[products.data.length - 1] }></ProductCard>
             )}
-            <UserCard></UserCard>
+            {(Object.keys(users).length === 0) ? ("Cargando") : (
+                <UserCard user={ users.data[users.data.length - 1]}></UserCard>
+            )}
+            
           </div>
         </div>
     </main>

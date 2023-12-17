@@ -2,15 +2,6 @@ import React from "react";
 import '../../assets/css/Card.css';
 
 function ProductCard(props) {
-    const product = {
-        id: 1,
-        name: "nombre",
-        second_name: "debajo del nombre",
-        cover_image: "http://localhost:5000/images/home/Warcraft.jpg",
-        price: 5000,
-        rating_ESRB: "T"
-    }
-
     const url = 'http://localhost:5000' + props.product.cover_image;
 
     return(

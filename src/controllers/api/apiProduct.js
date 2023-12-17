@@ -1,7 +1,8 @@
-const db =require('../../../database/models');
+const db = require('../../../database/models');
 
-module.exports ={
+module.exports = {
     list: (req, res) => {
+        console.log("QQQQq")
         db.Product.findAll({
             include: [
                 {association: 'platforms'}, 
@@ -32,7 +33,18 @@ module.exports ={
                 status: 200
             })
         })
-
+    },
+    genres: (req, res) => {
+        db.Genre.findAll()
+        .then(genres => {
+            return res.status(200).json({
+                meta: {
+                    url: req.protocol + '://' + req.get('host') + req.url,
+                    status: 200,
+                    total: genres.length,
+                },
+                data: genres
+            })
+        })
     }
-
 }

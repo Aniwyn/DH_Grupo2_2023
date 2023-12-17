@@ -38,7 +38,7 @@
     padding-left: 1rem;
 }
 
-.card__product .card__image {
+.card__product .card__image, .card__user .card__image {
     max-width: 60%;
 }
 

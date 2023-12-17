@@ -1,6 +1,6 @@
 import React from "react";
 import '../../assets/css/GenreDashboard.css';
-// import Badge from "./Badge";
+import Badge from "./Badge";
 
 function GenreDashboard(props) {
     // const genres = ["Accion","Aventira","Peleas","Aventira","Peleas","Aventira","Peleas","Aventira","Peleas","Aventira","Peleas"]
@@ -10,9 +10,9 @@ function GenreDashboard(props) {
             <h1>Generos</h1>
             <div className="genre__content">
                 {
-                    // genres.map(genre =>
-                    //     <Badge key={ genre.id } genre={ genre }></Badge>
-                    // )
+                    props.genres.map(genre =>
+                        <Badge key={ genre.id } genre={ genre.name }></Badge>
+                    )
                 }
             </div>
 
