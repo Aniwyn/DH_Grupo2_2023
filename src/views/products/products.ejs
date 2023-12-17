@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" type="text/css" href="/styles/users/home.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/users/home.css" />
 </head>
 
 <body>
-    
+
     <%- include('../partials/header.ejs') %>
 
-    <main>
-        <section>
-            <h2 class="section__tittle">Listado de Productos</h2>
-            <div class="section__products">
-                <% for(let i = 0; i < BD.length; i++) { %>
-                    <%- include('../partials/card--main', {data_item: BD[i]}) %>
-                <% } %>
+        <main>
+            <div class="section_products_container">
+                <section>
+                    <h2 class="section__tittle">Listado de Productos</h2>
+                    <div class="section__products" id="card-container">
+                        <% if (BD.length > 0) { %>
+                            <% for(let i=0; i < BD.length; i++) { %>
+                                <%- include('../partials/card--main', {data_item: BD[i]}) %>
+                                    <% } %>
+                        <% } else {%>
+                            <h2>No se encontraron resultados</h2>
+                        <% } %>
+                         
+                    </div>
+                    <div>
+                        <% if (BD.length > 0) { %>
+                            <button id="prevPage">Anterior</button>
+                            <div>
+                                <% for( let i=0; i < TotalPages; i++ ) { %>
+                                    <a href="/products?page=<%=i + 1%>">
+                                        <%= (i + 1).toString() %>
+                                    </a>
+                                    <% } %>
+                            </div>
+                            <button id="nextPage">Siguiente</button>
+                        <% } %>
+                    </div>
+                </section>
+                <section>
+                    <label for="search"></label>
+                    <input type="text" name="search" id="search">
+                    <h3>Categorias</h3>
+                    <% for(let i=0; i < Genres.length; i++) { %>
+                        <div id="genreContainer">
+                            <a href="/products/<%= Genres[i].dataValues.name %>"><%= Genres[i].dataValues.name %></a>
+                        </div>
+                    <% } %>
+                        <button id="button-search">Filtrar</button>
+                </section>
             </div>
-        </section>
-    </main>
-       
-  
-    <%- include('../partials/footer.ejs') %>
+        </main>
 
+        <%- include('../partials/footer.ejs') %>
+
+        <script>
+            const totalPages = <%- TotalPages %>;
+            const baseProducts = <%- JSON.stringify(BD) %>;
+        </script>
+
+        <script src="/scripts/ProductsHandler.js"></script>
 </body>
 
 </html>
+
+
+<!-- <section>
+    <h2 class="section__tittle">Listado de Productos</h2>
+    <div class="section__products">
+        <% for(let i = 0; i < BD.length; i++) { %>
+            <%- include('../partials/card--main', {data_item: BD[i]}) %>
+        <% } %>
+    </div>
+</section> -->

@@ -121,6 +121,10 @@
     border-left: 5px solid var(--color-pink);
 }
 
+.section_products_container {
+    display: flex;
+}
+
 .section__products {
     display: flex;
     flex-wrap: wrap;

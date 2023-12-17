@@ -1,6 +1,7 @@
 const fsPromises = require('fs').promises
 const path = require('path')
 let db = require('../../database/models')
+const Op = db.Sequelize.Op
 
 const productMethod = {
     searchId: async function (id) {
@@ -208,6 +209,60 @@ const productMethod = {
              console.log('gameplay_image eliminada con exito')
         }).catch(err => {
             console.error('Hubo algun error en eliminar la foto del producto', err)
+        })
+    },
+    getPageGenre: async function(page) {
+        const pageSize = 5;
+        const offset = (page - 1) * pageSize;
+
+        const [products, genres, totalProduct] = await Promise.all([
+            db.Product.findAll({
+                include: [{ association: 'platforms' }, { association: 'genres' }],
+                offset,
+                limit: pageSize
+            }),
+            db.Genre.findAll(),
+            db.Product.count()
+        ]);
+
+        let divPage = totalProduct / pageSize;
+        divPage = (totalProduct % pageSize) !== 0 ? Math.trunc(divPage) + 1 : divPage;
+
+        return { products, genres, divPage };
+    },
+    search: async function(term) {
+        const products = await db.Product.findAll({
+            where: {
+                [Op.or]: [
+                    db.sequelize.where(
+                        db.sequelize.fn('LOWER', db.sequelize.col('Product.name')),
+                        'LIKE',
+                        `%${term.toLowerCase()}%`
+                    ),
+                    db.sequelize.where(
+                        db.sequelize.fn('LOWER', db.sequelize.col('Product.second_name')),
+                        'LIKE',
+                        `%${term.toLowerCase()}%`
+                    ),
+                ]
+            },
+            include: [{ association: 'platforms' }, { association: 'genres' }]
+           
+        })
+        return products
+    },
+    getProductsByGenre: async function(genre) {
+        return db.Product.findAll({
+            include: [
+                {
+                    model: db.Genre,
+                    as: 'genres',
+                    where: {
+                        name: genre
+                    }
+                },
+                { association: 'platforms' }
+            ]
         })
     }
 }

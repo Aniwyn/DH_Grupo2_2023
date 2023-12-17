@@ -15,6 +15,7 @@ let validateCreateProductMiddleware = require('../../middleware/validateProductM
 router.get('/mycart', authMiddleware, productController.mycart);
 router.get('/details/:id', productController.details);
 router.get('/products', productController.products);
+router.get('/products/:genre', productController.products_genre)
 router.get('/create', productController.create);
 router.get('/details/:id/edit', productController.editProduct);
 router.put('/details/:id/edit',

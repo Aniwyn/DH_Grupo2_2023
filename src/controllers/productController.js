@@ -44,13 +44,28 @@ const productController = {
             res.render(path.join(__dirname, "../views/products/details.ejs"), { data_item: product_detail, BD: products });
         })
     },
-    products: (req, res) => {
-        db.Product.findAll({
-            include: [{association: 'platforms'}]
-        })
-        .then(products => {
-            res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: products });
-        })
+    products: async (req, res) => {
+        const page = parseInt(req.query.page) || 1;
+
+        const { products, genres, divPage } = await productMethod.getPageGenre(page);
+
+        const searchTerm = req.query.term
+        if (searchTerm) {
+            const searchResult = await productMethod.search(searchTerm)
+            res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: searchResult, Genres: genres, TotalPages: divPage })
+        } else {
+            res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: products, Genres: genres, TotalPages: divPage })
+        }
+    },
+    products_genre: async (req,res) => {
+        const genreParam = req.params.genre
+        const page = parseInt(req.query.page) || 1;
+
+        const { products, genres, divPage } = await productMethod.getPageGenre(page);
+
+        let productsGenre = await productMethod.getProductsByGenre(genreParam)
+
+        res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: productsGenre, Genres: genres, TotalPages: divPage })
     },
     create: (req, res) => {
         db.Product.findAll({
