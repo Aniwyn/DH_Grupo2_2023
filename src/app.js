@@ -11,6 +11,7 @@ const app = express();
 const router = require('./routes/mainRouter');
 const userLoggedMiddleware = require('../middleware/userLoggedMiddleware');
 const productApiProvisoria = require('./routes/api/productRouter');
+const userApiUsers = require('./routes/api/userRouter');
 
 /* EJS SETTING */
 app.set('view engine', 'ejs');
@@ -33,6 +34,7 @@ app.use(userLoggedMiddleware)
 /* ROUTE CONNECTION */
 app.use("/", router);
 app.use(productApiProvisoria);
+app.use(userApiUsers);
 // app.use((req,res,next) => {
 //     res.status(404).render('UN HTML')
 // })

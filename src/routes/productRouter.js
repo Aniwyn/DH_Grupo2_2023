@@ -37,6 +37,8 @@ router.post('/create',
 router.delete('/details/:id', productController.delete);
 
 router.get('/api/apiProvisoria', apiProvisoria.list);
+/*router.get('/api/apiProvisoria/details', apiProvisoria.details);*/
 router.get('/api/apiProvisoria/:id', apiProvisoria.show);
+
 /* EXPORTS */
 module.exports = router;
