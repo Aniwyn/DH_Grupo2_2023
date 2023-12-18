@@ -11,56 +11,53 @@
     <%-include('../partials/header.ejs')%>
 
     <main>
-        <div class="mycart-tittle">
-            <i class="fa-solid fa-cart-shopping fa-2xl"> MYC<span id="offset">A</span>RT</i>
+        <h2 class="title-cart">Mi carrito</h2>
+
+        <div class="main-container">
+            <div class="card-container">
+                <div class="image-platform">
+                    <img src="/images/caratulas/MH-rise-caratula.jpg" alt="">
+                    <p>PC</p>
+                </div>
+                <div class="middle-container">
+                    <p class="title-game">NOmbre del juego</p>
+                    <div class="ranking-container">
+                        <img src="/images/rankings/ESRB_M.svg" alt="">
+                        <img src="/images/rankings/PEGI_3.png" alt="">
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <span>Consigue un 10% de descuentos por navidad en GameBooks. La oferta termina el 10 de enero.</span>
+                    </div>
+                </div>
+                <span class="price-game">20$$</span>
+                <div class="button-cards">
+                    <a href=""><i class="fa-solid fa-plus"></i>Mover a la lista de deseos</a>
+                    <a href="">Eliminar</a>
+                </div>
+            </div>
+            <div class="resume-container">
+                <h2 class="tittle-resume-container">Resumen de Compra</h2>
+                <div class="resume-line">
+                    <h2>Precio</h2>
+                    <h2>numero</h2>
+                </div>
+                <div class="resume-line">
+                    <h2>Descuentos</h2>
+                    <h2>numero</h2>
+                </div>
+                <div class="resume-line">
+                    <h2>Impuestos</h2>
+                    <h2>numero</h2>
+                </div>
+                <div class="separador"></div>
+                <div class="resume-line">
+                    <h2>Total</h2>
+                    <h2>numero</h2>
+                </div>
+                <button class="resume-button">Finalizar Compra</button>
+            </div>
         </div>
-
-        <ul class="hexagon-container">
-            <% for(let i=0; i < BD.length; i++) { %>
-                <%- include('../partials/card--hexagon', {data_item: BD[i]}) %>
-            <% } %>
-        </ul>
-
-        <div class="resume-container">
-            <div class="resume-container-tittle">
-                RESUME
-            </div>
-            <div class="resume-container-body">
-                <table>
-                    <tbody>
-                        <% for(let i=0; i < BD.length; i++) { %>
-                            <tr>
-                                <td><%= BD[i].name %></td>
-                                <td><%= BD[i].price %></td>
-                            </tr>
-                        <% } %>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>TOTAL</td>
-                            <td><%= BD.reduce((accumulator, currentPrice) => accumulator + currentPrice.price, 0).toFixed(2) %></td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-            <div class="resume-container-buttons">
-                <button class="payment-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="fa-solid fa-lock"></i>
-                    Secure checkout
-                </button>
-            </div>
-            <div class="discount-container">
-                <input type="text" name="discount" id="discount">
-                <label for="discount">Discount code </label>
-            </div>
-        </div>
-
-        </div>
-
     </main>
 
     <!---------------------------- Footer ---------------------------->
