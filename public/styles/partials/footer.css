@@ -2,10 +2,10 @@
 
 footer {
     margin-top: 2rem;
-    background: rgb(63, 94, 251);
-    background: linear-gradient(45deg, rgb(1, 0, 93) 0%, rgb(68, 0, 113) 80%);
+    /* background: rgba(60, 23, 68, 0.904); */
+    background: linear-gradient(45deg, rgb(91, 21, 170) 0%, rgba(47, 2, 77, 0.938) 80%);
     color: white;
-    border-top: 6px solid #000;
+    border-top: 1px solid #00000049;
 }
 
 footer .container {
@@ -15,6 +15,7 @@ footer .container {
     justify-content: center;
     align-items: stretch;
     width: 90vw;
+    height: 20vh;
     margin: 0 5vw;
 }
 
@@ -112,63 +113,87 @@ footer .container {
 
 .section__socialMedia {
     display: flex;
-    justify-content: space-around;
+    position: relative;
+    justify-content: center;
+    gap: 10px;
 }
 
-.footer__section .icon__social {
-    font-size: 2rem;
-    color: aquamarine;
+.members_container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer__section .icon__facebook:hover {
-    color: #395693;
+.members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
 }
 
-.footer__section .icon__twitter:hover {
-    color: rgb(255, 255, 255);
+.members a {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
 }
 
-.footer__section .icon__instagram:hover {
-    color: rgb(192, 24, 170);
+.members a img{
+    width: 45px;   
+    border-radius: 0.25rem;
 }
 
-.footer__section .icon__youtube:hover {
-    color: red;
+.text_members{
+    font-size: 0.8rem;
 }
 
-.footer__section ul {
-    margin: 0;
-    padding-left: 2rem;
+.contact_container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
-.footer__section ul li {
-    list-style: none;
-    padding: 0.25rem 0;
-}
-
-.footer__section ul li a {
-    color: white;
+.icon_container {
+    background-color: rgba(68, 51, 90, 0.438);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
     text-decoration: none;
+    border: 1px solid black;
+    transition: 700ms;
+    color: rgb(190, 190, 190);
 }
 
-.footer__section ul li a:hover {
-    text-shadow: 0 0 4px var(--color-white);
+.section__socialMedia .icon__social {
+    font-size: 1.5rem;
 }
 
-.footer__section .icon__contact {
-    padding-right: 0.8rem;
+.icon_container:hover {
+    background-color: rgba(35, 30, 36, 0.815);
+    color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 27px 4px rgba(255,168,255,1);
 }
 
-.footer__section .i--phone {
-    color: var(--color-lightblue);
+.footer_data {
+    width: 80%;
+    padding-right: 2px;
 }
-
-.footer__section .i--whatsapp {
-    color: var(--color-green);
+.text1 {
+    color: aliceblue;
+    font-size: 1rem;
+    margin-top: 0;
+    padding-top: 0;
 }
-
-.footer__section .i--mail {
-    color: var(--color-pink);
+.text2 {
+    color: rgb(160, 160, 160);
+    font-size: 0.85rem;
+    padding: 0;
+    margin: 0;
 }
 
 @media (max-width: 1180px) {

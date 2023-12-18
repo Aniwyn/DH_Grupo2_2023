@@ -73,6 +73,17 @@
                             <span class="errorMessage"><%= error ? error.msg : '' %></span>
                         <% } %>
                     </div>
+                    <div class="container__input">
+                        Eres un administrador o un usuario? 
+                        <label>
+                            <input type="radio" id="tipoUsuario" name="categoryUser" value="1">
+                            Usuario
+                        </label>
+                        <label>
+                            <input type="radio" id="tipoAdministrador" name="categoryUser" value="2">
+                            Administrador
+                        </label>
+                    </div>
                 </div>
                 <button type="submit">Registrarse</button>
             </form>

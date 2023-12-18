@@ -74,7 +74,8 @@
                     </div>
                 </div>
             </div>
-            <% if (locals.isLogged) { %>
+            <% console.log('SOYT LOCAAALASSSSS   ',locals) %>
+            <% if (locals.isLogged && locals.userLogged.id_category == 2) { %>
                 <a href="/details/<%= data_item.id %>/edit" class="dashboard__edit">
                     <i class="fa-solid fa-screwdriver-wrench"></i>
                 </a>

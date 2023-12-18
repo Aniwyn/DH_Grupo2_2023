@@ -3,7 +3,6 @@ let registerForm = document.querySelector('#register__form')
 
 registerForm.addEventListener('submit', function (event) {
     let errors = 0
-    event.preventDefault()
 
     errors += validateName()
     errors += validateUserName()

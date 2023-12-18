@@ -7,7 +7,7 @@
             <a href="#"><i class="fa-solid fa-bars bar__burguerMenu nav__link"></i></a>
             <a class="nav__link bar__desktopMenu" href="/">Categorias</a>
             <a class="nav__link bar__desktopMenu" href="/products">Productos</a>
-            <% if (locals.isLogged) { %>
+            <% if (locals.isLogged && locals.userLogged.id_category == 2) { %>
                 <a class="nav__link bar__desktopMenu" href="/create">Agregar producto</a>
             <% } %>
         </div>

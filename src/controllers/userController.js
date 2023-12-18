@@ -5,6 +5,7 @@ let BD_provisoria = require(path.join(__dirname, "../Data/BD")).product
 let db = require('../../database/models')
 let UserMethod = require(path.join(__dirname, "../models/User"))
 const { validationResult } = require('express-validator')
+const { exit } = require("process")
 
 
 /* GETS SET */
@@ -20,13 +21,13 @@ const userController = {
     register: (req, res) => {
         res.render(path.join(__dirname, "../views/users/register.ejs"));
     },
-    processRegister: function (req, res) {
+    processRegister: async function (req, res) {
         let errors = validationResult(req)
 
         if (!errors.isEmpty()) {
             res.render(path.join(__dirname, "../views/users/register.ejs"), { errors: errors.array(), old: req.body });
         } else {
-            let emailInDB = UserMethod.searchField('email', req.body.email)
+            let emailInDB = await UserMethod.searchField('email', req.body.email)
             if (emailInDB) {
                 return res.render(path.join(__dirname, "../views/users/register.ejs"), {
                     errors: [{
@@ -37,7 +38,7 @@ const userController = {
                 })
             }
 
-            userInDB = UserMethod.searchField('userName', req.body.userName)
+            userInDB = await UserMethod.searchField('user_name', req.body.userName)
             if (userInDB) {
                 return res.render(path.join(__dirname, "../views/users/register.ejs"), {
                     errors: [{
@@ -53,9 +54,10 @@ const userController = {
                 user_name: req.body.userName,
                 email: req.body.email,
                 password_hash: bcryptjs.hashSync(req.body.password, 10),
-                id_category: 1
-            }
+                id_category: req.body.categoryUser
 
+            }
+            console.log('USER DATA: ',userToCreate);
             UserMethod.create(userToCreate)
 
             res.redirect('/login')
@@ -79,9 +81,10 @@ const userController = {
                     if (bcryptjs.compareSync(req.body.password, userToLogin.password_hash)) {
                         let userLogged = structuredClone(userToLogin.dataValues)
                         delete userLogged.password_hash
+                        delete userLogged.id
                         // Guardarlo en session
                         req.session.userLogged = userLogged
-                        if (req.body.remember) {
+                        if (req.body.remember) { //Si esta checked el checkbox de Recordar
                             res.cookie('user_name', req.body.userName, { maxAge: (1000 * 60) * 2 })
                         }
                         return res.redirect("/")
