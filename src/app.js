@@ -4,14 +4,13 @@ const port = 5000;
 const methodOverride = require('method-override')
 const session = require('express-session')
 const cookies = require('cookie-parser')
+const cors = require('cors');
 
 const app = express();
 
 /* REQUIRES */
 const router = require('./routes/mainRouter');
 const userLoggedMiddleware = require('../middleware/userLoggedMiddleware');
-const productApiProvisoria = require('./routes/api/productRouter');
-const userApiUsers = require('./routes/api/userRouter');
 
 /* EJS SETTING */
 app.set('view engine', 'ejs');
@@ -29,12 +28,13 @@ app.use(session({
 }))
 app.use(cookies())
 app.use(userLoggedMiddleware)
-
+app.use(cors({
+    origin: 'http://localhost:3000'
+}));
 
 /* ROUTE CONNECTION */
 app.use("/", router);
-app.use(productApiProvisoria);
-app.use(userApiUsers);
+
 // app.use((req,res,next) => {
 //     res.status(404).render('UN HTML')
 // })

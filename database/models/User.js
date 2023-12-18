@@ -25,7 +25,7 @@ function user(sequelize, DataTypes) {
                 allowNull: false
             },
             avatar: {
-                type: DataTypes.STRING(50),
+                type: DataTypes.STRING(150),
                 defaultValue: 'monster0.png',
                 allowNull: false
             },
@@ -46,9 +46,12 @@ function user(sequelize, DataTypes) {
             foreignKey: 'id_category'
         })
 
-        User.hasMany(models.Cart, {
-            as: 'carts',
-            foreignKey: 'id_client'
+        User.belongsToMany(models.Product, {
+            as: 'products',
+            through: 'cart',
+            foreignKey: 'id_user',
+            otherKey: 'id_product',
+            timestamps: false
         })
     }
 

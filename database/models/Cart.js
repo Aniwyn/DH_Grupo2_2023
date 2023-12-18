@@ -8,7 +8,7 @@ function cart(sequelize, DataTypes) {
                 allowNull: false,
                 autoIncrement: true
             },
-            quantity: {
+            id_product: {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
@@ -16,7 +16,7 @@ function cart(sequelize, DataTypes) {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
-            id_client: {
+            quantity: {
                 type: DataTypes.INTEGER,
                 allowNull: false
             }
@@ -26,22 +26,6 @@ function cart(sequelize, DataTypes) {
 			timestamps: false
         }
     )
-    
-
-    Cart.associate = (models) => {
-        Cart.belongsTo(models.User, {
-            as: 'user',
-            foreignKey: 'id_user'
-        })
-
-        Cart.belongsToMany(models.Product, {
-            as: 'cart_product',
-            through: 'product_cart',
-            foreignKey: 'id_cart',
-            otherKey: 'id_product',
-            timestamps: false
-        })
-    }
 
     return Cart
 }

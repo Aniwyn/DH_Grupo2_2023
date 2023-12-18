@@ -1,0 +1,49 @@
+.table {
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px 0px rgba(123,128,154,1);
+}
+
+.table__header {
+    display: flex;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #7b809a;
+}
+
+.cell__header {
+    color: #7b809a;
+    font-weight: 600;
+}
+
+.cell__id {
+    width: 5%;
+}
+
+.cell__name {
+    width: 30%;
+}
+
+.cell__title {
+    width: 30%;
+}
+
+.cell__developer {
+    width: 25%;
+}
+
+.cell__price {
+    width: 10%;
+}
+
+.table__row {
+    display: flex;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-bottom: 1px solid #c3c5cf;
+}
+
+.cell {
+    color: #7b809a;
+}
