@@ -2,20 +2,19 @@
     <div class="offers__wrapper">
         <div class="wrapper__content">
             <a href="/details/<%= data_item.id %>" class="name__link">
-                <img src="<%= data_item.cover_image %>" alt="" />
-                <div class="offers__discountTag">
-                    <div class="discount_box">
-                        <span>-33%</span>
+                <div class="link__content">
+                    <img src="<%= data_item.cover_image %>" alt="" />
+                    <div class="offers__discountTag">
+                        <div class="discount_box">
+                            <span>-33%</span>
+                        </div>
+                    </div>
+                    <div class="products__info">
+                        <div class="info__price">
+                            <span>$<%= data_item.price %></sup></span>
+                        </div>
                     </div>
                 </div>
-                <div class="products__info">
-                    <div class="info__name">
-                        <h4><%= data_item.name %></h4>
-                    </div>
-                    <div class="info__price">
-                        <span>$<%= data_item.price %></sup></span>
-                    </div>
-                </div>  
             </a>
         </div>
     </div>

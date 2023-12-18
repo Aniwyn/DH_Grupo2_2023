@@ -1,17 +1,15 @@
 <article>
-    <a href="/details/<%= data_item.id %>" style="text-decoration: none;">
+    <a href="/details/<%= data_item.id %>" class="name__link">
         <img src="<%= data_item.cover_image %>" alt="" />
         <div class="products__info">
             <div class="info__name">
-                <p class="name__link">
-                    <h4><%= data_item.name %></h4>
-                </p>
+                <h4 class="name__main"><%= data_item.name %></h4>
                 <% for(let i = 0; i < data_item.platforms.length; i++) { %>
                     <span class="products__tag"><%= data_item.platforms[i].name %></span>
                 <% } %>
             </div>
             <div class="info__price">
-                <span>$<%= Math.floor(data_item.price) %><sup><%= (data_item.price - Math.floor(data_item.price)).toFixed(2) * 100 %></sup></span>
+                <span>$<%= data_item.price %></span>
                 <div class="products__cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
@@ -19,4 +17,5 @@
         </div>
     </a>
 
+    <script src="/scripts/card.js"></script>
 </article>
