@@ -1,8 +1,15 @@
 /* ----------------- Main ----------------- */
 
+main {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .dashboard {
     display: flex;
     height: 500px;
+    border-radius: 1rem;
 }
 
 .dashboard__carousel {
@@ -49,16 +56,38 @@
 }
 
 .dashboard__offers article {
+    position: relative;
     box-sizing: border-box;
-    width: 45%;
+    width: 35%;
     max-width: 236px;
-    padding: 1rem;
+    margin: 1rem;
+}
+
+.dashboard__offers .offers__wrapper {
+    width: 100%;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 200% 200%;
+    animation: rainbow 15s ease infinite;
+    border-radius: 1rem;
+} 
+
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.dashboard__offers .offers__wrapper .wrapper__content {
+    margin: auto;
+    padding: 0.2rem;
+    border-radius: 1rem;
 }
 
 .dashboard__offers article img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 1rem;
 }
 
 .dashboard__offers article .products__info {

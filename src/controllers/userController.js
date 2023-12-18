@@ -1,11 +1,9 @@
 /* VARIABLE DECLARATION */
 const path = require("path")
 const bcryptjs = require('bcryptjs')
-let BD_provisoria = require(path.join(__dirname, "../Data/BD")).product
 let db = require('../../database/models')
 let UserMethod = require(path.join(__dirname, "../models/User"))
 const { validationResult } = require('express-validator')
-const { exit } = require("process")
 
 
 /* GETS SET */

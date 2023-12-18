@@ -33,7 +33,8 @@ router.post('/create',
         {name: 'image-cover', maxCount: 1},
         {name: 'image-gameplay', maxCount: 1}
     ]),
-    authMiddleware,
+    authMiddleware, 
+    adminMiddleware,
     validateCreateProductMiddleware,
     productController.editProduct_post
 );

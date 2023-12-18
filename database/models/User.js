@@ -53,6 +53,11 @@ function user(sequelize, DataTypes) {
             otherKey: 'id_product',
             timestamps: false
         })
+
+        User.hasMany(models.Cart, {
+            as: 'carts',
+            foreign: 'id_user'
+        })
     }
 
     return User

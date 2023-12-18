@@ -26,6 +26,18 @@ function cart(sequelize, DataTypes) {
 			timestamps: false
         }
     )
+    
+    Cart.associate = (models) => {
+        Cart.belongsTo(models.User, {
+            as: 'users',
+            foreignKey: 'id_user'
+        })
+
+        Cart.belongsTo(models.Product, {
+            as: 'products',
+            foreignKey: 'id_product'
+        })
+    }
 
     return Cart
 }

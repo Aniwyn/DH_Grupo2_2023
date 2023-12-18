@@ -43,7 +43,6 @@ function App() {
         <div className='content__main'>
           <div className='left__panel'>
             <div className='total__items'>
-              {console.log("PRODUCTOS",products)}
               {(Object.keys(products).length === 0) ? ("Cargando") : (
                 <Card name="Productos" value={ products.meta.total } key="1"></Card>
               )}

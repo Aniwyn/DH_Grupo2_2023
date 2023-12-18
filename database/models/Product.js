@@ -121,6 +121,11 @@ function product(sequelize, DataTypes) {
             otherKey: 'id_platform',
             timestamps: false
         })
+
+        Product.hasMany(models.Cart, {
+            as: 'carts',
+            foreign: 'id_product'
+        })
     }
 
     return Product

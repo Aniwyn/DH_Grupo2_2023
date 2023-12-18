@@ -2,7 +2,6 @@ const db = require('../../../database/models');
 
 module.exports = {
     list: (req, res) => {
-        console.log("QQQQq")
         db.Product.findAll({
             include: [
                 {association: 'platforms'}, 

@@ -19,22 +19,23 @@
             <div class="dashboard__carousel">
                 <div class="carousel__card">
                     <h3>Fin de semana Sega</h3>
-                    <p>
-                        Viví la experiencia de la era dorada de los videojuegos con
-                        precios inigualables en nuestra tienda online!
-                    </p>
+                    <p>Viví la experiencia de la era dorada de los videojuegos con precios inigualables en nuestra tienda online!</p>
                 </div>
             </div>
             <div class="dashboard__offers">
-                <% for(let i=0; i < BD.length; i++) { %>
-                    <%- include('../partials/card--carrusel', {data_item: BD[i]}) %>
+                <% for(let i = 0; i < BD.length; i++) { %>
+                    <% for(let j = 0; j < BD[i].platforms.length; j++) { %>
+                        <% if(BD[i].platforms[j].name == "SEGA") {%>
+                            <%- include('../partials/card--carrusel', {data_item: BD[i]}) %>
+                        <% } %>
+                    <% } %>
                 <% } %>
             </div>
         </section>
         <section>
             <h2 class="section__tittle">Mas vendidos</h2>
             <div class="section__products">
-                <% for(let i=0; i < BD.length; i++) { %>
+                <% for(let i = 0; i < 4; i++) { %>
                     <%- include('../partials/card--main', {data_item: BD[i]}) %>
                 <% } %>
             </div>
@@ -42,7 +43,7 @@
         <section>
             <h2 class="section__tittle">Ultimas Novedades</h2>
             <div class="section__products">
-                <% for(let i=0; i < BD.length; i++) { %>
+                <% for(let i = BD.length - 1; i > BD.length - 5; i--) { %>
                     <%- include('../partials/card--main', {data_item: BD[i]}) %>
                 <% } %>
             </div>
