@@ -212,4 +212,43 @@ footer .container {
     .footer__section {
         width: 100%;
     }
+
+    footer .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        width: 90vw;
+        height: 35vh;
+    }
+
+    .section__socialMedia {
+        flex-direction: column;
+        scale: 0.7;
+    }
+
+    .members {
+        scale: 0.7;
+        flex-direction: column;
+    }
+
+    .team-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .members_container {
+        width: 60%;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .contact_container {
+        width: 40%;
+        display: flex;
+        align-items: start;
+        justify-content: end;
+    }
+
 }
