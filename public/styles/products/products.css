@@ -119,3 +119,20 @@
     color: var(--color-white);
     font-weight: bold;
 }
+
+.products__results--notfound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.products__results--notfound h2 {
+    color: var(--color-white);
+}
+
+.products__results--notfound i {
+    color: var(--color-white);
+    font-size: 5rem;
+}

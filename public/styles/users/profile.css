@@ -1,11 +1,19 @@
 /* ----------------- Main ----------------- */
 
 .profile__container {
+    padding-top: 3rem;
     padding-left: 5vw;
     padding-right: 5vw;
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    text-decoration: none;
+    margin: auto;
+}
+
+.central__container {
+    display: flex;
+    flex-direction: column;
 }
 
 .profile__container .central__container {
@@ -20,7 +28,7 @@
 .central__container .tittle_center {
     position: absolute;
     color: rgb(174, 236, 255);
-    top: -13px;
+    top: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-shadow:
     0 0 11px #fff,
@@ -139,4 +147,35 @@
 
 .hidden_input {
     display: none;
+}
+
+.central__closed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.central__closed a {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-red);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid red;
+}
+
+.central__closed a:hover {
+    text-shadow:
+        0 0 1px var(--color-white),
+        0 0 1px var(--color-white),
+        0 0 2px var(--color-white),
+        0 0 3px var(--color-white);
+    box-shadow:
+        inset 0 0 1px var(--color-red),
+        inset 0 0 2px var(--color-red),
+        inset 0 0 3px var(--color-red),
+        inset 0 0 5px var(--color-red);
 }

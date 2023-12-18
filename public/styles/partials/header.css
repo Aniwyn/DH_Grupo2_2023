@@ -8,7 +8,7 @@ nav {
     border-radius: 2rem;
     margin: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-        url("../images/header/header_texture.jpg");
+        url(../../images/header/header_texture.jpg);
     background-size: 100%;
     background-color: var(--color-black);
     opacity: 0.9;
@@ -108,8 +108,7 @@ nav .bar__burguerMenu {
 
 .nav__loginBar .loginBar__dropdownLog {
     position: relative;
-    display: inline;
-}
+    display: inline;}
 
 .loginBar__dropdownLog .dropdownLog__button {
     padding-left: 0.5rem;
@@ -141,7 +140,7 @@ nav .bar__burguerMenu {
     padding: 1rem;
     right: 0;
     top: 2.6rem;
-    
+    z-index: 1000;
 }
 
 .loginBar__dropdownLog:hover .dropdownLog__content {

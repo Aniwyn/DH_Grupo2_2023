@@ -62,11 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const url = new URL(window.location.href);
     const genre = url.pathname.split("/").pop().replace("%20", " ");
-
-    console.log("AAA", url)
-    console.log("BBB", genre)
-    console.log("CCC", genres)
-
+    
     for (let i = 0; i < pages.length; i++) {
         if (pages[i].innerHTML == page ) {
             pages[i].style.color = "var(--color-yellow)"

@@ -29,16 +29,16 @@
                 <a class="nav__link loginBar__btnLogin loginBar__btnExtend" href="/login">Iniciar sesión</a>
             <% } else {%>
                 <div class="loginBar__dropdownLog">
-                    <button class="dropdownLog__button"><i class="fa-regular fa-user nav__link"></i></button>
-                    <div class="dropdownLog__content">
-                        <a href="/profile" class="menu__user"><%= locals.userLogged.user_name %></a>
-                        <a href="/logout" class="menu__closeSession">Cerrar sesión</a>
-                    </div>
+                    <a class="dropdownLog__button nav__link" href="/profile"><i class="fa-regular fa-user nav__link"></i></a>
+                    
                 </div>
             <% } %>
-
             <a href="#"><i class="fa-regular fa-user nav__link loginBar__btnUser"></i></a>
-           
         </div>
     </nav>
 </header>
+
+<!-- <div class="dropdownLog__content">
+    <a href="/profile" class="menu__user"><%= //locals.userLogged.user_name %></a>
+    <a href="/logout" class="menu__closeSession">Cerrar sesión</a>
+</div> -->

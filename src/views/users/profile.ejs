@@ -7,7 +7,6 @@
     <%- include('../partials/head.ejs') %>
         <link rel="stylesheet" type="text/css" href="/styles/users/profile.css" />
 
-
         <script>
             const profilePictureInput = document.getElementById('avatar');
             const profilePicturePreview = document.getElementById('avatar_preview');
@@ -74,7 +73,9 @@
                         <a class="enter_edit" href="/profile/edit"><i class="fa-solid fa-screwdriver-wrench"> </i></a>
                     <% } %>
                 </form>
-
+                <div class="central__closed">
+                    <a href="/logout">Cerrar sesion</a>
+                </div>
             </div>
         </div>
     </main>
