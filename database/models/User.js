@@ -56,7 +56,7 @@ function user(sequelize, DataTypes) {
 
         User.hasMany(models.Cart, {
             as: 'carts',
-            foreign: 'id_user'
+            foreignKey: 'id_user'
         })
     }
 

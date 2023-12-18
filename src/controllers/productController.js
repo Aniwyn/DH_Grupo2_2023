@@ -1,6 +1,5 @@
 /* VARIABLE DECLARATION */
 const path = require("path");
-const fsPromises = require('fs').promises
 const { validationResult } = require('express-validator')
 
 let db = require('../../database/models');
@@ -11,13 +10,21 @@ let ProductMethod = require(path.join(__dirname, "../models/Product"))
 /* GETS SET */
 const productController = {
     //GETS
-    mycart: (req, res) => {
-        db.Product.findAll({
-            include: [{association: 'platforms'}]
-        })
-        .then(products => {
-            res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: products });
-        })
+    mycart: async (req, res) => {
+        let userId = req.session.userLogged.id
+        let cart = await ProductMethod.getCart(userId)
+
+        if(cart.length > 0) {
+            let subtotal = cart.reduce((accumulator, cart) => accumulator + cart.products.price, 0);
+            let discount = subtotal * 0.05;
+            let imposition = subtotal * 1.6;
+    
+            res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: cart, subtotal: subtotal, discount: discount, imposition: imposition});
+        }
+        else {
+            res.render(path.join(__dirname, "../views/products/shopping_cart.ejs"), { BD: cart });
+        }
+
     },
     details: (req, res) => {
         let id = req.params.id;
@@ -166,6 +173,14 @@ const productController = {
         await ProductMethod.create(postData)
         return res.redirect(`/home`)
     },
+    postCart: async (req, res) => {
+        let idPage = req.params.id;
+        let userId = req.session.userLogged.id
+
+        await ProductMethod.addItemCart(userId, idPage)
+
+        res.redirect(`/details/${idPage}`)
+    },
     // DELETE
     delete: async (req, res) => {
         let idToDelete = req.params.id
@@ -173,6 +188,12 @@ const productController = {
         await productMethod.delete(idToDelete)
 
         res.redirect('/home')
+    },
+    deleteCart: async (req, res) => {
+        const idCart = req.query.idCart;
+        await ProductMethod.deleteItemCart(idCart);
+
+        res.redirect('/mycart');
     }
 }
 

@@ -13,7 +13,15 @@
         </div>
         <div class="nav__loginBar">
             <% if (locals.isLogged) { %>
-                <a href="/mycart"><i class="fa-solid fa-cart-shopping nav__link"></i></a>
+                <a href="/mycart">
+                    <i class="fa-solid fa-cart-shopping nav__link">
+                        <span>
+                        <% if(locals.userLogged) { %>
+                            <%= locals.userLogged.carts.length %>
+                        <% } %>
+                        </span>
+                    </i>
+                </a>
                 <i class="fa-regular fa-message nav__link loginBar__btnMessage"></i>
             <% } %>
             <% if (!locals.isLogged) { %>

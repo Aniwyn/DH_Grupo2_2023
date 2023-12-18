@@ -1,20 +1,16 @@
-const fs = require('fs')
-const path = require('path')
 let db = require('../../database/models')
-const { exit } = require('process')
-let BD_provisoria = require(path.join(__dirname, "../../src/Data/BD")).users
-const jsonPath = path.join(__dirname, '../Data/users.json')
 
 const userMethod = {
     searchField: async function (column, value) {
 
         if(column && value) {
             let user = await db.User.findOne({
+                include: [{ model: db.Cart, as: 'carts'}],
                 where: {[column]: value}
             })
 
             if(user) { 
-                let userLogged = user.dataValue
+                let userLogged = user.dataValues
                 delete userLogged.password_hash
                 return userLogged
             }
@@ -37,17 +33,6 @@ const userMethod = {
             id_category: userData.id_category
         })
     },
-    // delete: function (id) {
-    //     BD_provisoria = BD_provisoria.filter(user => user.id !== id)
-    //     fs.writeFileSync(jsonPath, JSON.stringify(BD_provisoria, null, 2), "utf8", (err) => {
-    //         if (err) {
-    //             console.log(err);
-    //             return;
-    //         }
-    //         console.log("Se sobreescribio correctamente el Usuario");
-    //     })
-    //     return true
-    // },
     edit: function (userData) {
         console.log(userData);
         db.User.update({

@@ -31,8 +31,15 @@ main {
     flex-wrap: wrap;
 }
 
+.mycart-container {
+    display: flex;
+    justify-content: center;
+}
+
 .title-cart {
     color: whitesmoke;
+    margin-left: 6vw;
+    padding-bottom: 40px;
 }
 
 .main-container {
@@ -41,14 +48,14 @@ main {
     justify-content: space-between;
     margin-left: 6vw;
     margin-right: 6vw;
-
+    height: auto;
 }
 
 .resume-container{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    color: antiquewhite;
+    color: white;
     border-radius: 10px;
     padding: 1vw;
     gap: 12px;
@@ -83,16 +90,30 @@ main {
 }
 
 .card-container {
-    background-color: red;
-    width: 65%;
+    background-color: rgba(18, 0, 59, 0.822);
+    border-radius: 10px;
+    width: 100%;
+    height: 320px;
     display: flex;
     justify-content: start;
     position: relative;
 }
 
+.all-card-container {
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .image-platform {
     width: 12vw;
-    padding: 10px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .image-platform img{
@@ -101,13 +122,14 @@ main {
 }
 
 .title-game {
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 .price-game {
     position: absolute;
-    top: 16px;
+    top: 25px;
     right: 16px;
+    color: white;
 }
 
 .ranking-container {
@@ -115,7 +137,7 @@ main {
     justify-content: center;
     width: 10vw;
     gap: 3px;
-    border: 1px solid black;
+    border: 1px solid rgba(143, 143, 143, 0.788);
     padding: 5px 0;
 }
 
@@ -127,9 +149,156 @@ main {
     position: absolute;
     bottom: 16px;
     right: 16px;
+    display: flex;
+    gap: 20px;
 }
 
 .button-cards a{
     color: rgb(136, 136, 136);
     outline: none;
+}
+
+.button-cards form button {
+    color: rgb(136, 136, 136);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.middle-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.icon-round {
+    color: whitesmoke;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.text-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.platform-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.platform-container p{
+    border: 1px solid rgba(255, 255, 255, 0.582);
+    border-radius: 5px;
+    padding: 2px 4px;
+}
+
+.minus {
+    font-size: 0.92rem;
+}
+
+.count-box {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    background: rgba(0, 92, 57, 0);
+    color: white;
+    border: 1px solid rgba(36, 36, 36, 0.74);
+    border-radius: 10px;
+    padding: 0.3rem;
+    width: 50px;
+    -moz-appearance: textfield; 
+
+    transition: ease-in-out, width .35s ease-in-out;
+}
+
+.mycart-tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vw;
+    margin-bottom: 30vw;
+    filter: blur(1px);
+    width: 50rem;
+
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+
+
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+.mycart-tittle span {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.mycart-tittle i {
+    padding: 4vw 10px;
+    font-size: 4vw;
+    color: white;
+
+    animation: pulsate 3s infinite alternate;
+
+
+
+    
+}
+
+#offset {
+    animation: letter-flicker 2s linear infinite;
+}
+
+@keyframes letter-flicker {
+
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #bc13fe,
+            0 0 80px #bc13fe,
+            0 0 90px #bc13fe,
+            0 0 100px #bc13fe,
+            0 0 150px #bc13fe;
+
+    }
+
+    2%,
+    10%,
+    88%,
+    90% {
+        text-shadow: none;
+        box-shadow: none;
+    }
+
+    0% {
+
+        text-shadow:
+            0 0 2px #fff,
+            0 0 4px #fff,
+            0 0 6px #fff,
+            0 0 10px #bc13fe,
+            0 0 45px #bc13fe,
+            0 0 55px #bc13fe,
+            0 0 70px #bc13fe,
+            0 0 80px #bc13fe;
+
+    }
 }

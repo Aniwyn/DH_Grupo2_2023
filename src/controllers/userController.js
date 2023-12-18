@@ -12,9 +12,9 @@ const userController = {
         db.Product.findAll({
             include: [{ association: 'platforms' }]
         })
-        .then(products => {
-            res.render(path.join(__dirname, "../views/users/home.ejs"), { BD: products });
-        })
+            .then(products => {
+                res.render(path.join(__dirname, "../views/users/home.ejs"), { BD: products });
+            })
     },
     register: (req, res) => {
         res.render(path.join(__dirname, "../views/users/register.ejs"));
@@ -47,7 +47,7 @@ const userController = {
                 })
             }
 
-            let userToCreate  = {
+            let userToCreate = {
                 name: req.body.name,
                 user_name: req.body.userName,
                 email: req.body.email,
@@ -55,7 +55,6 @@ const userController = {
                 id_category: req.body.categoryUser
 
             }
-            console.log('USER DATA: ',userToCreate);
             UserMethod.create(userToCreate)
 
             res.redirect('/login')
@@ -66,6 +65,7 @@ const userController = {
     },
     processLogin: (req, res) => {
         db.User.findOne({
+            include: [{ model: db.Cart, as: 'carts'}],
             where: {
                 user_name: req.body.userName
             }
@@ -79,8 +79,8 @@ const userController = {
                     if (bcryptjs.compareSync(req.body.password, userToLogin.password_hash)) {
                         let userLogged = structuredClone(userToLogin.dataValues)
                         delete userLogged.password_hash
-                        delete userLogged.id
                         // Guardarlo en session
+                        console.log('ESTOY EN EN LOGIN /', userLogged);
                         req.session.userLogged = userLogged
                         if (req.body.remember) { //Si esta checked el checkbox de Recordar
                             res.cookie('user_name', req.body.userName, { maxAge: (1000 * 60) * 2 })
@@ -104,7 +104,7 @@ const userController = {
                     old: req.body
                 })
             }
-        })    
+        })
     },
     logout: (req, res) => {
         res.clearCookie('user_name')
@@ -131,7 +131,7 @@ const userController = {
                 }
             }
             UserMethod.edit(editedUser)
-        
+
             req.session.destroy()
             let userToSession = structuredClone(editedUser)
             delete userToSession.password_hash

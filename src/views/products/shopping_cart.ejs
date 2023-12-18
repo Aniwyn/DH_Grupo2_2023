@@ -11,53 +11,44 @@
     <%-include('../partials/header.ejs')%>
 
     <main>
-        <h2 class="title-cart">Mi carrito</h2>
-
-        <div class="main-container">
-            <div class="card-container">
-                <div class="image-platform">
-                    <img src="/images/caratulas/MH-rise-caratula.jpg" alt="">
-                    <p>PC</p>
+        <% if (BD.length > 0) { %>
+            <h2 class="title-cart">Mi carrito</h2>
+            <div class="main-container">
+                <div class="all-card-container">
+                    <% for( let i = 0; i < BD.length; i++ ) { %>
+                        <%-include('../partials/card--cart.ejs', {data_item: BD[i].products, quantity: BD[i].quantity, idCart: BD[i].id})%>
+                    <% } %>
                 </div>
-                <div class="middle-container">
-                    <p class="title-game">NOmbre del juego</p>
-                    <div class="ranking-container">
-                        <img src="/images/rankings/ESRB_M.svg" alt="">
-                        <img src="/images/rankings/PEGI_3.png" alt="">
+                <div class="resume-container">
+                    <h2 class="tittle-resume-container">Resumen de Compra</h2>
+                    <div class="resume-line">
+                        <h2>Precio</h2>
+                        <h2><%= subtotal %> $</h2>
                     </div>
-                    <div>
-                        <i class="fa-solid fa-star"></i>
-                        <span>Consigue un 10% de descuentos por navidad en GameBooks. La oferta termina el 10 de enero.</span>
+                    <div class="resume-line">
+                        <h2>Descuentos</h2>
+                        <h2>-<%= discount %> $</h2>
                     </div>
-                </div>
-                <span class="price-game">20$$</span>
-                <div class="button-cards">
-                    <a href=""><i class="fa-solid fa-plus"></i>Mover a la lista de deseos</a>
-                    <a href="">Eliminar</a>
+                    <div class="resume-line">
+                        <h2>Impuestos</h2>
+                        <h2><%= imposition %> $</h2>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="resume-line">
+                        <h2>Total</h2>
+                        <h2><%= subtotal - discount + imposition %> $</h2>
+                    </div>
+                    <button class="resume-button">Finalizar Compra</button>
                 </div>
             </div>
-            <div class="resume-container">
-                <h2 class="tittle-resume-container">Resumen de Compra</h2>
-                <div class="resume-line">
-                    <h2>Precio</h2>
-                    <h2>numero</h2>
+            <% } else { %>
+                <div class="mycart-container">
+                    <div class="mycart-tittle">
+                        <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                        <span>NO HAY PROD<span id="offset">U</span>CTOS AGREGADOS</span>
+                    </div>
                 </div>
-                <div class="resume-line">
-                    <h2>Descuentos</h2>
-                    <h2>numero</h2>
-                </div>
-                <div class="resume-line">
-                    <h2>Impuestos</h2>
-                    <h2>numero</h2>
-                </div>
-                <div class="separador"></div>
-                <div class="resume-line">
-                    <h2>Total</h2>
-                    <h2>numero</h2>
-                </div>
-                <button class="resume-button">Finalizar Compra</button>
-            </div>
-        </div>
+            <% } %>
     </main>
 
     <!---------------------------- Footer ---------------------------->

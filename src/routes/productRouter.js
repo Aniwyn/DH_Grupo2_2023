@@ -38,7 +38,9 @@ router.post('/create',
     validateCreateProductMiddleware,
     productController.editProduct_post
 );
-router.delete('/details/:id', productController.delete);
+router.post('/details/:id', authMiddleware, productController.postCart) 
+router.delete('/details/:id', authMiddleware, productController.delete);
+router.delete('/mycart', authMiddleware, productController.deleteCart); 
 
 /* EXPORTS */
 module.exports = router;

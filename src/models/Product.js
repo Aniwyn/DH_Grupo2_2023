@@ -264,6 +264,38 @@ const productMethod = {
                 { association: 'platforms' }
             ]
         })
+    },
+    getCart: async function(id) {
+        return await db.Cart.findAll({
+            include: [
+                {
+                    model: db.Product,
+                    as: 'products',
+                    include: [
+                        {association: 'rating_esrb'},
+                        {association: 'rating_pegi'},
+                        {association: 'platforms'},
+                    ]
+                }
+            ],
+            where: {
+                id_user: id
+            }
+        })
+    },
+    addItemCart: async function(userId, productId) {
+        await db.Cart.create({
+            id_user: userId,
+            id_product: productId,
+            quantity: 1
+        })
+    },
+    deleteItemCart: async function(idCart) {
+        await db.Cart.destroy({
+            where: {
+                id: idCart
+            }
+        })
     }
 }
 

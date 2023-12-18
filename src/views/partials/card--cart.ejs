@@ -1,0 +1,33 @@
+<div class="card-container">
+    <div class="image-platform">
+        <img src="<%= data_item.cover_image %>" alt="">
+        <div class="platform-container">
+            <% for( let i = 0; i < data_item.platforms.length; i++ ) { %>
+                <p><%= data_item.platforms[i].name %></p>
+            <% } %>
+        </div>
+    </div>
+    <div class="middle-container">
+        <p class="title-game"><%= data_item.name %></p>
+        <div class="ranking-container">
+            <img src="<%= data_item.rating_esrb.image %>" alt="">
+            <img src="<%= data_item.rating_pegi.image %>" alt="">
+        </div>
+        <div class="text-container">
+            <i class="fa-solid fa-star"></i>
+            <span>Consigue un 10% de descuentos por navidad en GameBooks. La oferta termina el 10 de enero.</span>
+        </div>
+        <div class="text-container minus">
+            <span>Autoreembolsable </span>
+            <div class="icon-round"><i class="fa-solid fa-question"></i></div>
+        </div>
+    </div>
+    <span class="price-game"><%= data_item.price %> $</span>
+    <!-- <input type="number" value="<%= quantity %>" class="count-box" min="1" max="5" pattern="[0-9]+"> -->
+    <div class="button-cards">
+        <a href=""><i class="fa-solid fa-plus"></i>Mover a la lista de deseos</a>
+        <form action="/mycart?_method=DELETE&idCart=<%= idCart %>" method="POST">
+            <button type="submit">Eliminar</button>
+        </form>
+    </div>
+</div>

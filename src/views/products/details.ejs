@@ -63,18 +63,27 @@
                     <div class="description__shopping">
                         <span class="price">$<%= data_item.price %></span>
                         <div class="shopping__button button--buy">
-                            <button>Comprar Ahora</button>
+                            <button >Comprar Ahora</button>
                         </div>
-                        <div class="shopping__button button--cart">
-                            <button>Añadir al carrito</button>
-                        </div> 
+                        <% if (locals.userLogged && locals.userLogged.carts.some(product => product.id_product === data_item.id)) { %>
+                            <form action="/mycart" method="GET">
+                                <div class="shopping__button button--cart">
+                                    <button>Ver en el carrito</button>
+                                </div> 
+                            </form>
+                        <% } else{ %>
+                            <form action="/details/<%= data_item.id %>" method="POST">
+                                <div class="shopping__button button--cart">
+                                    <button>Añadir al carrito</button>
+                                </div> 
+                            </form>
+                        <% } %>
                         <div class="shopping__button button--fav">
                             <button><i class="fa-regular fa-star"></i>Añadir a la lista de deseos</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <% console.log('SOYT LOCAAALASSSSS   ',locals) %>
             <% if (locals.isLogged && locals.userLogged.id_category == 2) { %>
                 <a href="/details/<%= data_item.id %>/edit" class="dashboard__edit">
                     <i class="fa-solid fa-screwdriver-wrench"></i>

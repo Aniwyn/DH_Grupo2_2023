@@ -124,7 +124,7 @@ function product(sequelize, DataTypes) {
 
         Product.hasMany(models.Cart, {
             as: 'carts',
-            foreign: 'id_product'
+            foreignKey: 'id_product'
         })
     }
 
