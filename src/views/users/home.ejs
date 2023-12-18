@@ -35,7 +35,7 @@
         <section>
             <h2 class="section__tittle">Mas vendidos</h2>
             <div class="section__products">
-                <% for(let i = 0; i < 4; i++) { %>
+                <% for(let i = 8; i < 12; i++) { %>
                     <%- include('../partials/card--main', {data_item: BD[i]}) %>
                 <% } %>
             </div>
@@ -53,7 +53,6 @@
     <!---------------------------- Footer ---------------------------->
 
     <%- include('../partials/footer.ejs') %>
-
 </body>
 
 </html>

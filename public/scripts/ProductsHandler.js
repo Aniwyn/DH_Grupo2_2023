@@ -11,6 +11,7 @@ function getParameterByName(name, url) {
 if (document.getElementById('prevPage') && document.getElementById('nextPage')) {
     document.getElementById('prevPage').addEventListener('click', () => {
         const currentPage = parseInt(getParameterByName('page')) || 1;
+        console.log("adasd")
         if (currentPage > 1) {
             const prevPage = currentPage - 1;
             window.location.href = `/products?page=${prevPage}`
@@ -21,12 +22,65 @@ if (document.getElementById('prevPage') && document.getElementById('nextPage')) 
         const currentPage = parseInt(getParameterByName('page')) || 1;
     
         if (currentPage < totalPages) {
-            // Ir a la página siguiente sumando 1 al número de página actual
             const nextPage = currentPage + 1;
             window.location.href = `/products?page=${nextPage}`;
         }
     })
 }
+
+
+let inputSearch = document.getElementById('search');
+let buttonSearch = document.getElementById('button-search')
+
+inputSearch.addEventListener('keypress', (event) => {
+
+    if (event.key !== 'Enter') {
+        return
+    }
+
+    toFilter()
+})
+
+buttonSearch.addEventListener('click', () => {
+    toFilter()
+})
+
+function toFilter() {
+    const searchTerm = inputSearch.value.trim()
+
+    if(inputSearch.value === '') {
+        window.location.href = `/products`
+        return
+    }
+
+    window.location.href = `/products?page=1&term=${searchTerm}`
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let pages = document.querySelectorAll(".pagination__pages")
+    let genres = document.querySelectorAll(".genre__item")
+
+    const url = new URL(window.location.href);
+    const genre = url.pathname.split("/").pop().replace("%20", " ");
+
+    console.log("AAA", url)
+    console.log("BBB", genre)
+    console.log("CCC", genres)
+
+    for (let i = 0; i < pages.length; i++) {
+        if (pages[i].innerHTML == page ) {
+            pages[i].style.color = "var(--color-yellow)"
+        }
+    }
+    
+    if (genre != "products") {
+        for (let h = 0; h < genres.length; h++) {
+            if (genres[h].innerText == genre) {
+                genres[h].style.color = "var(--color-yellow)"
+            }
+        }
+    }
+})
 
 // ----------------------- SEARCH
 
@@ -80,30 +134,3 @@ if (document.getElementById('prevPage') && document.getElementById('nextPage')) 
 //     })
 //     console.log('hola', result);
 // })
-
-let inputSearch = document.getElementById('search');
-let buttonSearch = document.getElementById('button-search')
-
-inputSearch.addEventListener('keypress', (event) => {
-
-    if (event.key !== 'Enter') {
-        return
-    }
-
-    toFilter()
-})
-
-buttonSearch.addEventListener('click', () => {
-    toFilter()
-})
-
-function toFilter() {
-    const searchTerm = inputSearch.value.trim()
-
-    if(inputSearch.value === '') {
-        window.location.href = `/products`
-        return
-    }
-
-    window.location.href = `/products?page=1&term=${searchTerm}`
-}

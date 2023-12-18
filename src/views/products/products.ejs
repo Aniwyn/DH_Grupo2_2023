@@ -3,73 +3,70 @@
 
 <head>
     <%- include('../partials/head.ejs') %>
-        <link rel="stylesheet" type="text/css" href="/styles/users/home.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/users/home.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/products/products.css" />
 </head>
 
 <body>
-
     <%- include('../partials/header.ejs') %>
 
-        <main>
-            <div class="section_products_container">
-                <section>
-                    <h2 class="section__tittle">Listado de Productos</h2>
+    <main>
+        <h2 class="section__tittle">Listado de Productos</h2>
+        <div class="products">
+            <section class="products__sidebar">
+                <label for="search" class="search__label">Busqueda</label>
+                <div class="search__wrapper">
+                    <input type="text" name="search" class="sidebar__search" id="search">
+                    <button class="search__button" id="button-search">
+                        <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                    </button>
+                </div>
+                <label class="search__label">Generos</label>
+                <ul>
+                    <% for(let i = 0; i < Genres.length; i++) { %>
+                        <li>
+                            <a href="/products/<%= Genres[i].dataValues.name %>" class="genre__item"><%= Genres[i].dataValues.name %></a>
+                        <li>
+                    <% } %>
+                </ul>
+            </section>
+            <% if (BD.length > 0) { %>
+                <section class="products__results">
                     <div class="section__products" id="card-container">
-                        <% if (BD.length > 0) { %>
-                            <% for(let i=0; i < BD.length; i++) { %>
-                                <%- include('../partials/card--main', {data_item: BD[i]}) %>
-                                    <% } %>
-                        <% } else {%>
-                            <h2>No se encontraron resultados</h2>
-                        <% } %>
-                         
-                    </div>
-                    <div>
-                        <% if (BD.length > 0) { %>
-                            <button id="prevPage">Anterior</button>
-                            <div>
-                                <% for( let i=0; i < TotalPages; i++ ) { %>
-                                    <a href="/products?page=<%=i + 1%>">
-                                        <%= (i + 1).toString() %>
-                                    </a>
-                                    <% } %>
-                            </div>
-                            <button id="nextPage">Siguiente</button>
+                        <% for(let i=0; i < BD.length; i++) { %>
+                            <%- include('../partials/card--main', {data_item: BD[i]}) %>
                         <% } %>
                     </div>
-                </section>
-                <section>
-                    <label for="search"></label>
-                    <input type="text" name="search" id="search">
-                    <h3>Categorias</h3>
-                    <% for(let i=0; i < Genres.length; i++) { %>
-                        <div id="genreContainer">
-                            <a href="/products/<%= Genres[i].dataValues.name %>"><%= Genres[i].dataValues.name %></a>
+                    <% if(TotalPages != 0) { %>
+                        <div class="results__pagination">
+                            <% if (BD.length > 0) { %>
+                                <button id="prevPage"><i class="fa-solid fa-chevron-left"></i></button>
+                                <div>
+                                    <% for( let i=0; i < TotalPages; i++ ) { %>
+                                        <a href="/products?page=<%=i + 1%>" class="pagination__pages">
+                                            <%= (i + 1).toString() %>
+                                        </a>
+                                    <% } %>
+                                </div>
+                                <button id="nextPage"><i class="fa-solid fa-chevron-right"></i></button>
+                            <% } %>
                         </div>
                     <% } %>
-                        <button id="button-search">Filtrar</button>
                 </section>
-            </div>
-        </main>
+            <% } else {%>
+                <h2>No se encontraron resultados</h2>
+            <% } %> 
+        </div>
+    </main>
 
-        <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 
-        <script>
-            const totalPages = <%- TotalPages %>;
-            const baseProducts = <%- JSON.stringify(BD) %>;
-        </script>
-
-        <script src="/scripts/ProductsHandler.js"></script>
+    <script>
+        const totalPages = <%- TotalPages %>;
+        const page = <%- Page %>;
+        const baseProducts = <%- JSON.stringify(BD) %>;
+    </script>
+    <script src="/scripts/ProductsHandler.js"></script>
 </body>
 
 </html>
-
-
-<!-- <section>
-    <h2 class="section__tittle">Listado de Productos</h2>
-    <div class="section__products">
-        <% for(let i = 0; i < BD.length; i++) { %>
-            <%- include('../partials/card--main', {data_item: BD[i]}) %>
-        <% } %>
-    </div>
-</section> -->
