@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let badge = document.querySelectorAll(".products__tag")
 
- 
     for (let i = 0; i < badge.length; i++) {
         badge[i].style.background = colors[Math.floor(Math.random() * 10)]
     }

@@ -212,7 +212,7 @@ const productMethod = {
         })
     },
     getPageGenre: async function(page) {
-        const pageSize = 5;
+        const pageSize = 6;
         const offset = (page - 1) * pageSize;
 
         const [products, genres, totalProduct] = await Promise.all([

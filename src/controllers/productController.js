@@ -52,9 +52,9 @@ const productController = {
         const searchTerm = req.query.term
         if (searchTerm) {
             const searchResult = await productMethod.search(searchTerm)
-            res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: searchResult, Genres: genres, TotalPages: divPage })
+            res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: searchResult, Genres: genres, TotalPages: 0, Page: page })
         } else {
-            res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: products, Genres: genres, TotalPages: divPage })
+            res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: products, Genres: genres, TotalPages: divPage, Page: page })
         }
     },
     products_genre: async (req,res) => {
@@ -65,7 +65,7 @@ const productController = {
 
         let productsGenre = await productMethod.getProductsByGenre(genreParam)
 
-        res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: productsGenre, Genres: genres, TotalPages: divPage })
+        res.render(path.join(__dirname, "../views/products/products.ejs"), { BD: productsGenre, Genres: genres, TotalPages: 0, Page: 0})
     },
     create: (req, res) => {
         db.Product.findAll({
