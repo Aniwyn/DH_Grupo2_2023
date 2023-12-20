@@ -80,7 +80,6 @@ const userController = {
                         let userLogged = structuredClone(userToLogin.dataValues)
                         delete userLogged.password_hash
                         // Guardarlo en session
-                        console.log('ESTOY EN EN LOGIN /', userLogged);
                         req.session.userLogged = userLogged
                         if (req.body.remember) { //Si esta checked el checkbox de Recordar
                             res.cookie('user_name', req.body.userName, { maxAge: (1000 * 60) * 2 })
@@ -117,30 +116,33 @@ const userController = {
     edit_profile: (req, res) => {
         res.render(path.join(__dirname, "../views/users/profile.ejs"), { isEdit: true })
     },
-    put: (req, res) => {
+    put: async (req, res) => {
         let avatar_image = req.file
         let userData = req.body
-        db.User.findByPk(userData.id).then(userInBD => {
-            let editedUser = {}
-            if (userData) {
-                editedUser = {
-                    ...userInBD.dataValues,
-                    user_name: userData.userName,
-                    email: userData.email,
-                    avatar: avatar_image ? avatar_image.filename : userInBD.avatar
-                }
+        let userDb = await db.User.findByPk(userData.id)
+
+        let editedUser = {}
+        if (userDb) {
+            editedUser = {
+                ...userDb.dataValues,
+                user_name: userData.userName,
+                email: userData.email,
+                avatar: avatar_image ? avatar_image.filename : userDb.avatar
             }
-            UserMethod.edit(editedUser)
+        }
+        await UserMethod.edit(editedUser)
 
-            req.session.destroy()
-            let userToSession = structuredClone(editedUser)
-            delete userToSession.password_hash
+        console.log('EDITED USER  ', editedUser);
+        let userToSession = structuredClone(editedUser)
+        delete userToSession.password_hash
 
-            // req.session.userLogged = userToSession
+        req.session.userLogged = userToSession
+        
+        if (req.coockie) {
             res.clearCookie('userName')
+        }
 
-            res.redirect('/profile')
-        })
+        res.redirect('/profile')
     }
 }
 

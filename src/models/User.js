@@ -33,9 +33,9 @@ const userMethod = {
             id_category: userData.id_category
         })
     },
-    edit: function (userData) {
-        console.log(userData);
-        db.User.update({
+    edit: async function (userData) {
+        console.log('ASDASDASDASDASD', userData);
+        return db.User.update({
             user_name: userData.user_name,
             email: userData.email,
             avatar: userData.avatar,
@@ -44,7 +44,6 @@ const userMethod = {
             where: {id: userData.id}
         })
         
-        return true
     }
 }
 

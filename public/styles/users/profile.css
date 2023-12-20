@@ -112,6 +112,8 @@
 .submit_btn {
     margin-top: 10px;
     text-decoration: none;
+    text-align: center;
+    cursor: pointer;
     color: rgb(174, 236, 255);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-shadow:
@@ -123,6 +125,23 @@
     background-color: var(--color-translucid-lightblue50);
     padding: 4px 10px;
     border-radius: 5px;
+    box-shadow:
+    0 0 1px #fff,
+    0 0 4px #fff,
+    0 0 6px var(--color-translucid-lightblue),
+    0 0 8px var(--color-translucid-lightblue),
+    0 0 10px var(--color-translucid-lightblue);
+}
+
+.submit_btn:hover {
+    color: rgb(186, 174, 255);
+    text-shadow:
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px var(--color-translucid-lightblue),
+    0 0 80px var(--color-translucid-lightblue),
+    0 0 90px var(--color-translucid-lightblue);
+    background-color: var(--color-translucid-lightblue50);
     box-shadow:
     0 0 1px #fff,
     0 0 4px #fff,
